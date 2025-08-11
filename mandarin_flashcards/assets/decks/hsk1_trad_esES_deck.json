@@ -1,0 +1,3087 @@
+{
+  "deckName": "HSK1 - Sheet1 (1)",
+  "deckVersion": 1,
+  "languagePair": {
+    "front": "zh-Hant",
+    "back": "es-ES"
+  },
+  "cards": [
+    {
+      "id": "db783bf5bf01",
+      "hanzi": "愛",
+      "simplified": "爱",
+      "pinyin": "ài",
+      "translations": {
+        "enUS": "love",
+        "esES": "como"
+      },
+      "example": {
+        "cn": "請給我愛。",
+        "pinyin": "Qǐng gěi wǒ ài.",
+        "es": "Por favor dame amor."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "c44c494571c6",
+      "hanzi": "八",
+      "simplified": "八",
+      "pinyin": "bā",
+      "translations": {
+        "enUS": "eight",
+        "esES": "ocho"
+      },
+      "example": {
+        "cn": "我每天用八。",
+        "pinyin": "Wǒ měitiān yòng bā.",
+        "es": "Yo uso ocho cada día."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "fc5b93402098",
+      "hanzi": "爸",
+      "simplified": "爸",
+      "pinyin": "bà",
+      "translations": {
+        "enUS": "dad",
+        "esES": "papá"
+      },
+      "example": {
+        "cn": "爸很好。",
+        "pinyin": "bà hěn hǎo.",
+        "es": "Papá está bien."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "4b8607f0e929",
+      "hanzi": "杯",
+      "simplified": "杯",
+      "pinyin": "bēi",
+      "translations": {
+        "enUS": "cup",
+        "esES": "taza"
+      },
+      "example": {
+        "cn": "我想要杯。",
+        "pinyin": "Wǒ xiǎng yào bēi.",
+        "es": "Quiero una taza."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "cd24b3ce0492",
+      "hanzi": "本",
+      "simplified": "本",
+      "pinyin": "běn",
+      "translations": {
+        "enUS": "measure word for books",
+        "esES": "Libro"
+      },
+      "example": {
+        "cn": "我每天用本。",
+        "pinyin": "Wǒ měitiān yòng běn.",
+        "es": "Yo uso esto todos los días"
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "401d54cd7221",
+      "hanzi": "不",
+      "simplified": "不",
+      "pinyin": "bù",
+      "translations": {
+        "enUS": "not",
+        "esES": "No"
+      },
+      "example": {
+        "cn": "我想要不。",
+        "pinyin": "Wǒ xiǎng yào bù.",
+        "es": "No quiero."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "4f0cc863cbaf",
+      "hanzi": "菜",
+      "simplified": "菜",
+      "pinyin": "cài",
+      "translations": {
+        "enUS": "dish/vegetable",
+        "esES": "verdura"
+      },
+      "example": {
+        "cn": "你有菜嗎？",
+        "pinyin": "Nǐ yǒu cài ma?",
+        "es": "¿Tienes alguna verdura?"
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "048e374def20",
+      "hanzi": "茶",
+      "simplified": "茶",
+      "pinyin": "ch á",
+      "translations": {
+        "enUS": "tea",
+        "esES": "Té"
+      },
+      "example": {
+        "cn": "我喜歡茶。",
+        "pinyin": "Wǒ xǐhuān ch á.",
+        "es": "Me gusta el té."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "ce72e7c460c1",
+      "hanzi": "吃",
+      "simplified": "吃",
+      "pinyin": "chī",
+      "translations": {
+        "enUS": "eat",
+        "esES": "comer"
+      },
+      "example": {
+        "cn": "請給我吃。",
+        "pinyin": "Qǐng gěi wǒ chī.",
+        "es": "Por favor dame un poco."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "1d2e48195234",
+      "hanzi": "出",
+      "simplified": "出",
+      "pinyin": "chū",
+      "translations": {
+        "enUS": "exit",
+        "esES": "afuera"
+      },
+      "example": {
+        "cn": "我需要出。",
+        "pinyin": "Wǒ xūyào chū.",
+        "es": "Necesito salir."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "6a5ae5d79cb2",
+      "hanzi": "穿",
+      "simplified": "穿",
+      "pinyin": "chuān",
+      "translations": {
+        "enUS": "wear",
+        "esES": "tener puesto"
+      },
+      "example": {
+        "cn": "穿很好。",
+        "pinyin": "chuān hěn hǎo.",
+        "es": "Se lleva muy bien."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "fbb536c3d99b",
+      "hanzi": "大",
+      "simplified": "大",
+      "pinyin": "dà",
+      "translations": {
+        "enUS": "big",
+        "esES": "grande"
+      },
+      "example": {
+        "cn": "大很好。",
+        "pinyin": "dà hěn hǎo.",
+        "es": "Lo grande es bueno."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "25008567819d",
+      "hanzi": "的",
+      "simplified": "的",
+      "pinyin": "de",
+      "translations": {
+        "enUS": "possessive",
+        "esES": "de"
+      },
+      "example": {
+        "cn": "我想要的。",
+        "pinyin": "Wǒ xiǎng yào de.",
+        "es": "Lo que quiero."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "94ded1fdca3e",
+      "hanzi": "點",
+      "simplified": "点",
+      "pinyin": "diǎn",
+      "translations": {
+        "enUS": "o’clock/dot",
+        "esES": "punto"
+      },
+      "example": {
+        "cn": "點很好。",
+        "pinyin": "diǎn hěn hǎo.",
+        "es": "El punto es muy bueno."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "14ba9c87145c",
+      "hanzi": "電",
+      "simplified": "电",
+      "pinyin": "diàn",
+      "translations": {
+        "enUS": "electric",
+        "esES": "electricidad"
+      },
+      "example": {
+        "cn": "我喜歡電。",
+        "pinyin": "Wǒ xǐhuān diàn.",
+        "es": "Me gusta la electricidad."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "9de3e0efd46f",
+      "hanzi": "腦",
+      "simplified": "脑",
+      "pinyin": "nǎo",
+      "translations": {
+        "enUS": "brain",
+        "esES": "cerebro"
+      },
+      "example": {
+        "cn": "你有腦嗎？",
+        "pinyin": "Nǐ yǒu nǎo ma?",
+        "es": "¿Tienes cerebro?"
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "140c91e7482e",
+      "hanzi": "視",
+      "simplified": "视",
+      "pinyin": "shì",
+      "translations": {
+        "enUS": "vision",
+        "esES": "Ver"
+      },
+      "example": {
+        "cn": "這是我的視。",
+        "pinyin": "Zhè shì wǒ de shì.",
+        "es": "Esta es mi opinión."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "9870624ea1a0",
+      "hanzi": "影",
+      "simplified": "影",
+      "pinyin": "yǐng",
+      "translations": {
+        "enUS": "shadow",
+        "esES": "película"
+      },
+      "example": {
+        "cn": "影很好。",
+        "pinyin": "yǐng hěn hǎo.",
+        "es": "La película es muy buena."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "fd14ecc7724f",
+      "hanzi": "東",
+      "simplified": "东",
+      "pinyin": "dōng",
+      "translations": {
+        "enUS": "east",
+        "esES": "Este"
+      },
+      "example": {
+        "cn": "我有很多東。",
+        "pinyin": "Wǒ yǒu hěn duō dōng.",
+        "es": "Tengo muchas cosas."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "fcc06506ea47",
+      "hanzi": "西",
+      "simplified": "西",
+      "pinyin": "xī",
+      "translations": {
+        "enUS": "west",
+        "esES": "Oeste"
+      },
+      "example": {
+        "cn": "這是我的西。",
+        "pinyin": "Zhè shì wǒ de xī.",
+        "es": "Esto es mio."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "9c72621ffe32",
+      "hanzi": "都",
+      "simplified": "都",
+      "pinyin": "dōu",
+      "translations": {
+        "enUS": "all",
+        "esES": "Todo"
+      },
+      "example": {
+        "cn": "我每天用都。",
+        "pinyin": "Wǒ měitiān yòng dōu.",
+        "es": "Lo uso todos los días."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "79d8c23bfce5",
+      "hanzi": "讀",
+      "simplified": "读",
+      "pinyin": "dú",
+      "translations": {
+        "enUS": "read",
+        "esES": "leer"
+      },
+      "example": {
+        "cn": "請給我讀。",
+        "pinyin": "Qǐng gěi wǒ dú.",
+        "es": "Por favor léemelo."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "18f10f134ad9",
+      "hanzi": "對",
+      "simplified": "对",
+      "pinyin": "duì",
+      "translations": {
+        "enUS": "correct",
+        "esES": "bien"
+      },
+      "example": {
+        "cn": "我有很多對。",
+        "pinyin": "Wǒ yǒu hěn duō duì.",
+        "es": "Tengo muchos pares."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "7b87635deba2",
+      "hanzi": "多",
+      "simplified": "多",
+      "pinyin": "duō",
+      "translations": {
+        "enUS": "many",
+        "esES": "muchos"
+      },
+      "example": {
+        "cn": "我買了一個多。",
+        "pinyin": "Wǒ mǎile yī gè duō.",
+        "es": "Compré más de uno."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "38c70f8c9a10",
+      "hanzi": "麼",
+      "simplified": "么",
+      "pinyin": "ne (in 什么/怎么)",
+      "translations": {
+        "enUS": "what/how",
+        "esES": "Qué"
+      },
+      "example": {
+        "cn": "我喜歡麼。",
+        "pinyin": "Wǒ xǐhuān ne (in 什么/怎么).",
+        "es": "¿Me gusta?"
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "e4a009a62433",
+      "hanzi": "兒",
+      "simplified": "儿",
+      "pinyin": "ér",
+      "translations": {
+        "enUS": "child",
+        "esES": "Hijo"
+      },
+      "example": {
+        "cn": "兒很好。",
+        "pinyin": "ér hěn hǎo.",
+        "es": "El niño está bien."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "9c849feb9800",
+      "hanzi": "二",
+      "simplified": "二",
+      "pinyin": "èr",
+      "translations": {
+        "enUS": "two",
+        "esES": "dos"
+      },
+      "example": {
+        "cn": "二很好。",
+        "pinyin": "èr hěn hǎo.",
+        "es": "Dos es muy bueno."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "b337a1bbb896",
+      "hanzi": "飯",
+      "simplified": "饭",
+      "pinyin": "fàn",
+      "translations": {
+        "enUS": "meal",
+        "esES": "comida"
+      },
+      "example": {
+        "cn": "我喜歡飯。",
+        "pinyin": "Wǒ xǐhuān fàn.",
+        "es": "Me gusta el arroz."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "f9cf0b749be7",
+      "hanzi": "房",
+      "simplified": "房",
+      "pinyin": "fáng",
+      "translations": {
+        "enUS": "house/room",
+        "esES": "casa"
+      },
+      "example": {
+        "cn": "這是我的房。",
+        "pinyin": "Zhè shì wǒ de fáng.",
+        "es": "Esta es mi habitación."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "36e08d3a339c",
+      "hanzi": "間",
+      "simplified": "间",
+      "pinyin": "jiān",
+      "translations": {
+        "enUS": "room",
+        "esES": "entre"
+      },
+      "example": {
+        "cn": "你有間嗎？",
+        "pinyin": "Nǐ yǒu jiān ma?",
+        "es": "¿Tienes uno?"
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "3aeb655a40e0",
+      "hanzi": "飛",
+      "simplified": "飞",
+      "pinyin": "fēi",
+      "translations": {
+        "enUS": "fly",
+        "esES": "volar"
+      },
+      "example": {
+        "cn": "我每天用飛。",
+        "pinyin": "Wǒ měitiān yòng fēi.",
+        "es": "Uso Fly todos los días."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "a3bdfe0f7463",
+      "hanzi": "機",
+      "simplified": "机",
+      "pinyin": "jī",
+      "translations": {
+        "enUS": "machine",
+        "esES": "máquina"
+      },
+      "example": {
+        "cn": "機很好。",
+        "pinyin": "jī hěn hǎo.",
+        "es": "La máquina es muy buena."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "3ac21b5f1271",
+      "hanzi": "分",
+      "simplified": "分",
+      "pinyin": "fēn",
+      "translations": {
+        "enUS": "minute",
+        "esES": "punto"
+      },
+      "example": {
+        "cn": "分很好。",
+        "pinyin": "fēn hěn hǎo.",
+        "es": "Muy buena puntuación."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "40a8519ad57f",
+      "hanzi": "鐘",
+      "simplified": "钟",
+      "pinyin": "zhōng",
+      "translations": {
+        "enUS": "clock",
+        "esES": "campana"
+      },
+      "example": {
+        "cn": "這是我的鐘。",
+        "pinyin": "Zhè shì wǒ de zhōng.",
+        "es": "Este es mi reloj."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "4ba11ffb638b",
+      "hanzi": "高",
+      "simplified": "高",
+      "pinyin": "gāo",
+      "translations": {
+        "enUS": "tall",
+        "esES": "alto"
+      },
+      "example": {
+        "cn": "我有很多高。",
+        "pinyin": "Wǒ yǒu hěn duō gāo.",
+        "es": "Tengo muchos máximos."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "09f79907a577",
+      "hanzi": "興",
+      "simplified": "兴",
+      "pinyin": "xìng",
+      "translations": {
+        "enUS": "happy",
+        "esES": "prosperar"
+      },
+      "example": {
+        "cn": "我每天用興。",
+        "pinyin": "Wǒ měitiān yòng xìng.",
+        "es": "Uso Xing todos los días."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "19fa7c9e5ea1",
+      "hanzi": "個",
+      "simplified": "个",
+      "pinyin": "gè",
+      "translations": {
+        "enUS": "measure word",
+        "esES": "individuo"
+      },
+      "example": {
+        "cn": "我喜歡個。",
+        "pinyin": "Wǒ xǐhuān gè.",
+        "es": "Me gusta uno."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "512111020dad",
+      "hanzi": "工",
+      "simplified": "工",
+      "pinyin": "gōng",
+      "translations": {
+        "enUS": "work",
+        "esES": "trabajar"
+      },
+      "example": {
+        "cn": "你有工嗎？",
+        "pinyin": "Nǐ yǒu gōng ma?",
+        "es": "¿Tienes un trabajo?"
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "7ba1fb01216d",
+      "hanzi": "作",
+      "simplified": "作",
+      "pinyin": "zuò",
+      "translations": {
+        "enUS": "make/do (as a verb)",
+        "esES": "hacer"
+      },
+      "example": {
+        "cn": "請給我作。",
+        "pinyin": "Qǐng gěi wǒ zuò.",
+        "es": "Por favor hazlo por mi"
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "5eca2cecf850",
+      "hanzi": "狗",
+      "simplified": "狗",
+      "pinyin": "gǒu",
+      "translations": {
+        "enUS": "dog",
+        "esES": "perro"
+      },
+      "example": {
+        "cn": "我有很多狗。",
+        "pinyin": "Wǒ yǒu hěn duō gǒu.",
+        "es": "Tengo muchos perros."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "b3d114c1332a",
+      "hanzi": "漢",
+      "simplified": "汉",
+      "pinyin": "Hànyŭ",
+      "translations": {
+        "enUS": "Chinese (language)",
+        "esES": "Chino"
+      },
+      "example": {
+        "cn": "我喜歡漢。",
+        "pinyin": "Wǒ xǐhuān Hànyŭ.",
+        "es": "Me gusta Han."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "ea9a35c1035b",
+      "hanzi": "語",
+      "simplified": "语",
+      "pinyin": "yŭ",
+      "translations": {
+        "enUS": "language",
+        "esES": "idioma"
+      },
+      "example": {
+        "cn": "我每天用語。",
+        "pinyin": "Wǒ měitiān yòng yŭ.",
+        "es": "Utilizo el término todos los días."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "5878b5cc0c13",
+      "hanzi": "好",
+      "simplified": "好",
+      "pinyin": "hǎo",
+      "translations": {
+        "enUS": "good",
+        "esES": "bien"
+      },
+      "example": {
+        "cn": "我需要好。",
+        "pinyin": "Wǒ xūyào hǎo.",
+        "es": "Necesito ser bueno."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "e49d5236de53",
+      "hanzi": "號",
+      "simplified": "号",
+      "pinyin": "hào",
+      "translations": {
+        "enUS": "number",
+        "esES": "Número"
+      },
+      "example": {
+        "cn": "我喜歡號。",
+        "pinyin": "Wǒ xǐhuān hào.",
+        "es": "Me gusta el No."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "1dbcfcc8059e",
+      "hanzi": "喝",
+      "simplified": "喝",
+      "pinyin": "hē",
+      "translations": {
+        "enUS": "drink",
+        "esES": "beber"
+      },
+      "example": {
+        "cn": "我需要喝。",
+        "pinyin": "Wǒ xūyào hē.",
+        "es": "Necesito beber."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "1675113bc3f7",
+      "hanzi": "和",
+      "simplified": "和",
+      "pinyin": "hé",
+      "translations": {
+        "enUS": "and",
+        "esES": "y"
+      },
+      "example": {
+        "cn": "請給我和。",
+        "pinyin": "Qǐng gěi wǒ hé.",
+        "es": "Por favor dame y."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "76e59e4dc048",
+      "hanzi": "很",
+      "simplified": "很",
+      "pinyin": "hěn",
+      "translations": {
+        "enUS": "very",
+        "esES": "muy"
+      },
+      "example": {
+        "cn": "請給我很。",
+        "pinyin": "Qǐng gěi wǒ hěn.",
+        "es": "Por favor dame mucho."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "b71ac25325a2",
+      "hanzi": "後",
+      "simplified": "后",
+      "pinyin": "hòu",
+      "translations": {
+        "enUS": "after/behind",
+        "esES": "atrás"
+      },
+      "example": {
+        "cn": "這是我的後。",
+        "pinyin": "Zhè shì wǒ de hòu.",
+        "es": "Esta es mi publicación."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "30fa1b6abdd4",
+      "hanzi": "面",
+      "simplified": "面",
+      "pinyin": "miàn",
+      "translations": {
+        "enUS": "side",
+        "esES": "cabeza"
+      },
+      "example": {
+        "cn": "我有很多面。",
+        "pinyin": "Wǒ yǒu hěn duō miàn.",
+        "es": "Tengo muchos lados."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "3b2536dc0d22",
+      "hanzi": "回",
+      "simplified": "回",
+      "pinyin": "huí",
+      "translations": {
+        "enUS": "return",
+        "esES": "devolver"
+      },
+      "example": {
+        "cn": "這是我的回。",
+        "pinyin": "Zhè shì wǒ de huí.",
+        "es": "Esta es mi respuesta."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "9cd305d9d7b1",
+      "hanzi": "會",
+      "simplified": "会",
+      "pinyin": "huì",
+      "translations": {
+        "enUS": "can/meet",
+        "esES": "reunión"
+      },
+      "example": {
+        "cn": "我有很多會。",
+        "pinyin": "Wǒ yǒu hěn duō huì.",
+        "es": "Tengo muchas reuniones."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "2e3a2412e8d6",
+      "hanzi": "火",
+      "simplified": "火",
+      "pinyin": "huǒ",
+      "translations": {
+        "enUS": "fire",
+        "esES": "fuego"
+      },
+      "example": {
+        "cn": "我每天用火。",
+        "pinyin": "Wǒ měitiān yòng huǒ.",
+        "es": "Yo uso fuego todos los días."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "c5b1173892b8",
+      "hanzi": "車",
+      "simplified": "车",
+      "pinyin": "chē",
+      "translations": {
+        "enUS": "vehicle",
+        "esES": "auto"
+      },
+      "example": {
+        "cn": "我喜歡車。",
+        "pinyin": "Wǒ xǐhuān chē.",
+        "es": "Me gustan los coches."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "1b2fe85d7756",
+      "hanzi": "站",
+      "simplified": "站",
+      "pinyin": "zhàn",
+      "translations": {
+        "enUS": "station",
+        "esES": "pararse"
+      },
+      "example": {
+        "cn": "我需要站。",
+        "pinyin": "Wǒ xūyào zhàn.",
+        "es": "Necesito estar de pie."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "85bb445de698",
+      "hanzi": "幾",
+      "simplified": "几",
+      "pinyin": "jǐ",
+      "translations": {
+        "enUS": "how many",
+        "esES": "Varios"
+      },
+      "example": {
+        "cn": "我喜歡幾。",
+        "pinyin": "Wǒ xǐhuān jǐ.",
+        "es": "Me gustan algunos."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "42b35cee26eb",
+      "hanzi": "家",
+      "simplified": "家",
+      "pinyin": "jiā",
+      "translations": {
+        "enUS": "home/family",
+        "esES": "Hogar"
+      },
+      "example": {
+        "cn": "家很好。",
+        "pinyin": "jiā hěn hǎo.",
+        "es": "El hogar es genial."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "87f2ee4969ec",
+      "hanzi": "叫",
+      "simplified": "叫",
+      "pinyin": "jiào",
+      "translations": {
+        "enUS": "call (call name)",
+        "esES": "Llamar"
+      },
+      "example": {
+        "cn": "叫很好。",
+        "pinyin": "jiào hěn hǎo.",
+        "es": "Es muy bueno."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "ddaf2b5d1945",
+      "hanzi": "今",
+      "simplified": "今",
+      "pinyin": "jīn",
+      "translations": {
+        "enUS": "present",
+        "esES": "ahora"
+      },
+      "example": {
+        "cn": "我有很多今。",
+        "pinyin": "Wǒ yǒu hěn duō jīn.",
+        "es": "Tengo mucho hoy."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "653a9a48a1f4",
+      "hanzi": "天",
+      "simplified": "天",
+      "pinyin": "tiān",
+      "translations": {
+        "enUS": "day/sky",
+        "esES": "cielo"
+      },
+      "example": {
+        "cn": "這是我的天。",
+        "pinyin": "Zhè shì wǒ de tiān.",
+        "es": "Este es mi Dios."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "604ea32952f8",
+      "hanzi": "九",
+      "simplified": "九",
+      "pinyin": "jiŭ",
+      "translations": {
+        "enUS": "nine",
+        "esES": "Nueve"
+      },
+      "example": {
+        "cn": "請給我九。",
+        "pinyin": "Qǐng gěi wǒ jiŭ.",
+        "es": "Nueve, por favor."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "e24cb1035adc",
+      "hanzi": "開",
+      "simplified": "开",
+      "pinyin": "kāi",
+      "translations": {
+        "enUS": "open/start",
+        "esES": "abierto"
+      },
+      "example": {
+        "cn": "我每天用開。",
+        "pinyin": "Wǒ měitiān yòng kāi.",
+        "es": "Lo uso todos los días."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "522cc560e47b",
+      "hanzi": "看",
+      "simplified": "看",
+      "pinyin": "kàn",
+      "translations": {
+        "enUS": "see/watch",
+        "esES": "mirar"
+      },
+      "example": {
+        "cn": "請給我看。",
+        "pinyin": "Qǐng gěi wǒ kàn.",
+        "es": "Por favor, muéstrame."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "f21f2a0554e0",
+      "hanzi": "見",
+      "simplified": "见",
+      "pinyin": "jiàn",
+      "translations": {
+        "enUS": "see",
+        "esES": "Ver"
+      },
+      "example": {
+        "cn": "你有見嗎？",
+        "pinyin": "Nǐ yǒu jiàn ma?",
+        "es": "¿Lo has visto?"
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "165b6822c013",
+      "hanzi": "塊",
+      "simplified": "块",
+      "pinyin": "kuài",
+      "translations": {
+        "enUS": "chunk/measure word",
+        "esES": "pedazo"
+      },
+      "example": {
+        "cn": "這是我的塊。",
+        "pinyin": "Zhè shì wǒ de kuài.",
+        "es": "Este es mi bloque."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "67dc6ffc60c9",
+      "hanzi": "來",
+      "simplified": "来",
+      "pinyin": "lái",
+      "translations": {
+        "enUS": "come",
+        "esES": "Venir"
+      },
+      "example": {
+        "cn": "我有很多來。",
+        "pinyin": "Wǒ yǒu hěn duō lái.",
+        "es": "Tengo mucho por delante."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "13601744d1a1",
+      "hanzi": "老",
+      "simplified": "老",
+      "pinyin": "lǎo",
+      "translations": {
+        "enUS": "old",
+        "esES": "viejo"
+      },
+      "example": {
+        "cn": "我有很多老。",
+        "pinyin": "Wǒ yǒu hěn duō lǎo.",
+        "es": "Tengo muchos viejos."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "ff6ed6bd783c",
+      "hanzi": "師",
+      "simplified": "师",
+      "pinyin": "shī",
+      "translations": {
+        "enUS": "teacher",
+        "esES": "división"
+      },
+      "example": {
+        "cn": "請給我師。",
+        "pinyin": "Qǐng gěi wǒ shī.",
+        "es": "Por favor dame un profesor."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "bfd66b07b920",
+      "hanzi": "了",
+      "simplified": "了",
+      "pinyin": "le/liao",
+      "translations": {
+        "enUS": "particle/completed action",
+        "esES": "Es"
+      },
+      "example": {
+        "cn": "了很好。",
+        "pinyin": "le/liao hěn hǎo.",
+        "es": "Muy bien."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "a768a0034942",
+      "hanzi": "冷",
+      "simplified": "冷",
+      "pinyin": "lěng",
+      "translations": {
+        "enUS": "cold",
+        "esES": "frío"
+      },
+      "example": {
+        "cn": "冷很好。",
+        "pinyin": "lěng hěn hǎo.",
+        "es": "El frío es bueno."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "548679e7e1cc",
+      "hanzi": "離",
+      "simplified": "离",
+      "pinyin": "lí",
+      "translations": {
+        "enUS": "leave/from",
+        "esES": "Dejar"
+      },
+      "example": {
+        "cn": "我每天用離。",
+        "pinyin": "Wǒ měitiān yòng lí.",
+        "es": "Lo uso todos los días."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "de37132c5835",
+      "hanzi": "六",
+      "simplified": "六",
+      "pinyin": "liù",
+      "translations": {
+        "enUS": "six",
+        "esES": "seis"
+      },
+      "example": {
+        "cn": "我需要六。",
+        "pinyin": "Wǒ xūyào liù.",
+        "es": "Necesito seis."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "9545bbb22e67",
+      "hanzi": "媽",
+      "simplified": "妈",
+      "pinyin": "mā",
+      "translations": {
+        "enUS": "mother",
+        "esES": "mamá"
+      },
+      "example": {
+        "cn": "這是我的媽。",
+        "pinyin": "Zhè shì wǒ de mā.",
+        "es": "Esta es mi mamá."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "3f12e5fe0230",
+      "hanzi": "買",
+      "simplified": "买",
+      "pinyin": "mǎi",
+      "translations": {
+        "enUS": "buy",
+        "esES": "compra"
+      },
+      "example": {
+        "cn": "我買了一個買。",
+        "pinyin": "Wǒ mǎile yī gè mǎi.",
+        "es": "Me compré uno"
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "1478a164e611",
+      "hanzi": "貓",
+      "simplified": "猫",
+      "pinyin": "māo",
+      "translations": {
+        "enUS": "cat",
+        "esES": "gato"
+      },
+      "example": {
+        "cn": "我想要貓。",
+        "pinyin": "Wǒ xiǎng yào māo.",
+        "es": "Quiero un gato."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "b54026136aa1",
+      "hanzi": "沒",
+      "simplified": "没",
+      "pinyin": "méi",
+      "translations": {
+        "enUS": "not have",
+        "esES": "sin"
+      },
+      "example": {
+        "cn": "我每天用沒。",
+        "pinyin": "Wǒ měitiān yòng méi.",
+        "es": "No lo uso todos los días."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "45a08edcbf16",
+      "hanzi": "關",
+      "simplified": "关",
+      "pinyin": "guān",
+      "translations": {
+        "enUS": "close",
+        "esES": "cerca"
+      },
+      "example": {
+        "cn": "這是我的關。",
+        "pinyin": "Zhè shì wǒ de guān.",
+        "es": "Este es mi nivel."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "f59f4dcc2608",
+      "hanzi": "係",
+      "simplified": "系",
+      "pinyin": "xì",
+      "translations": {
+        "enUS": "relation",
+        "esES": "Atar"
+      },
+      "example": {
+        "cn": "我需要係。",
+        "pinyin": "Wǒ xūyào xì.",
+        "es": "Necesito atar."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "e98becf3d2c2",
+      "hanzi": "米",
+      "simplified": "米",
+      "pinyin": "mĭ",
+      "translations": {
+        "enUS": "rice",
+        "esES": "arroz"
+      },
+      "example": {
+        "cn": "我想要米。",
+        "pinyin": "Wǒ xiǎng yào mĭ.",
+        "es": "Quiero arroz."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "b337a1bbb896",
+      "hanzi": "飯",
+      "simplified": "饭",
+      "pinyin": "fàn",
+      "translations": {
+        "enUS": "cooked rice",
+        "esES": "comida"
+      },
+      "example": {
+        "cn": "飯很好。",
+        "pinyin": "fàn hěn hǎo.",
+        "es": "La comida estuvo buena."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "8bdd5592a739",
+      "hanzi": "明",
+      "simplified": "明",
+      "pinyin": "míng",
+      "translations": {
+        "enUS": "bright",
+        "esES": "brillante"
+      },
+      "example": {
+        "cn": "我喜歡明。",
+        "pinyin": "Wǒ xǐhuān míng.",
+        "es": "Me gusta Ming."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "653a9a48a1f4",
+      "hanzi": "天",
+      "simplified": "天",
+      "pinyin": "tiān",
+      "translations": {
+        "enUS": "day",
+        "esES": "cielo"
+      },
+      "example": {
+        "cn": "請給我天。",
+        "pinyin": "Qǐng gěi wǒ tiān.",
+        "es": "Por favor dame a Dios."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "a5749b78a3b7",
+      "hanzi": "名",
+      "simplified": "名",
+      "pinyin": "míng",
+      "translations": {
+        "enUS": "name",
+        "esES": "nombre"
+      },
+      "example": {
+        "cn": "你有名嗎？",
+        "pinyin": "Nǐ yǒu míng ma?",
+        "es": "¿Eres famoso?"
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "25363d1f04dc",
+      "hanzi": "字",
+      "simplified": "字",
+      "pinyin": "zì",
+      "translations": {
+        "enUS": "character (also name character)",
+        "esES": "Personaje"
+      },
+      "example": {
+        "cn": "我買了一個字。",
+        "pinyin": "Wǒ mǎile yī gè zì.",
+        "es": "Compré una palabra."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "41731f80c609",
+      "hanzi": "哪",
+      "simplified": "哪",
+      "pinyin": "nǎ",
+      "translations": {
+        "enUS": "which",
+        "esES": "dónde"
+      },
+      "example": {
+        "cn": "你有哪嗎？",
+        "pinyin": "Nǐ yǒu nǎ ma?",
+        "es": "¿Tienes alguno?"
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "54a1207c1e6d",
+      "hanzi": "那",
+      "simplified": "那",
+      "pinyin": "nà",
+      "translations": {
+        "enUS": "that",
+        "esES": "Eso"
+      },
+      "example": {
+        "cn": "那很好。",
+        "pinyin": "nà hěn hǎo.",
+        "es": "Está bien."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "3c9840bdd641",
+      "hanzi": "呢",
+      "simplified": "呢",
+      "pinyin": "ne",
+      "translations": {
+        "enUS": "question particle",
+        "esES": "tela de lana"
+      },
+      "example": {
+        "cn": "我有很多呢。",
+        "pinyin": "Wǒ yǒu hěn duō ne.",
+        "es": "Tengo mucho."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "0b56db03f188",
+      "hanzi": "能",
+      "simplified": "能",
+      "pinyin": "néng",
+      "translations": {
+        "enUS": "can",
+        "esES": "capaz"
+      },
+      "example": {
+        "cn": "我有很多能。",
+        "pinyin": "Wǒ yǒu hěn duō néng.",
+        "es": "Tengo muchas habilidades."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "07a33029c986",
+      "hanzi": "你",
+      "simplified": "你",
+      "pinyin": "nĭ",
+      "translations": {
+        "enUS": "you",
+        "esES": "tú"
+      },
+      "example": {
+        "cn": "我想要你。",
+        "pinyin": "Wǒ xiǎng yào nĭ.",
+        "es": "Te deseo."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "ef93835c2669",
+      "hanzi": "年",
+      "simplified": "年",
+      "pinyin": "nián",
+      "translations": {
+        "enUS": "year",
+        "esES": "Año"
+      },
+      "example": {
+        "cn": "這是我的年。",
+        "pinyin": "Zhè shì wǒ de nián.",
+        "es": "Este es mi año."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "8d270395645f",
+      "hanzi": "女",
+      "simplified": "女",
+      "pinyin": "nǚ",
+      "translations": {
+        "enUS": "female",
+        "esES": "femenino"
+      },
+      "example": {
+        "cn": "你有女嗎？",
+        "pinyin": "Nǐ yǒu nǚ ma?",
+        "es": "¿Tienes una hija?"
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "e4a009a62433",
+      "hanzi": "兒",
+      "simplified": "儿",
+      "pinyin": "ér",
+      "translations": {
+        "enUS": "child (daughter)",
+        "esES": "Hijo"
+      },
+      "example": {
+        "cn": "我想要兒。",
+        "pinyin": "Wǒ xiǎng yào ér.",
+        "es": "Quiero un hijo."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "dc3dff0908e0",
+      "hanzi": "朋",
+      "simplified": "朋",
+      "pinyin": "péng",
+      "translations": {
+        "enUS": "friend",
+        "esES": "amigo"
+      },
+      "example": {
+        "cn": "我需要朋。",
+        "pinyin": "Wǒ xūyào péng.",
+        "es": "Necesito amigos."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "39eab8eb488e",
+      "hanzi": "友",
+      "simplified": "友",
+      "pinyin": "yŏu",
+      "translations": {
+        "enUS": "friend",
+        "esES": "amigo"
+      },
+      "example": {
+        "cn": "友很好。",
+        "pinyin": "yŏu hěn hǎo.",
+        "es": "Los amigos son muy buenos."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "79d3d6ad135d",
+      "hanzi": "漂",
+      "simplified": "漂",
+      "pinyin": "piāo",
+      "translations": {
+        "enUS": "beautiful",
+        "esES": "deriva"
+      },
+      "example": {
+        "cn": "我想要漂。",
+        "pinyin": "Wǒ xiǎng yào piāo.",
+        "es": "Quiero flotar."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "c1338026d832",
+      "hanzi": "亮",
+      "simplified": "亮",
+      "pinyin": "liàng",
+      "translations": {
+        "enUS": "bright",
+        "esES": "Brillante"
+      },
+      "example": {
+        "cn": "我喜歡亮。",
+        "pinyin": "Wǒ xǐhuān liàng.",
+        "es": "Me gusta lo brillante."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "16b0bdf54094",
+      "hanzi": "蘋",
+      "simplified": "苹",
+      "pinyin": "píng",
+      "translations": {
+        "enUS": "apple",
+        "esES": "manzana"
+      },
+      "example": {
+        "cn": "請給我蘋。",
+        "pinyin": "Qǐng gěi wǒ píng.",
+        "es": "Por favor dame una manzana."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "4767306defdc",
+      "hanzi": "果",
+      "simplified": "果",
+      "pinyin": "guǒ",
+      "translations": {
+        "enUS": "fruit",
+        "esES": "fruta"
+      },
+      "example": {
+        "cn": "我有很多果。",
+        "pinyin": "Wǒ yǒu hěn duō guǒ.",
+        "es": "Tengo mucha fruta."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "ffc6c32c962f",
+      "hanzi": "七",
+      "simplified": "七",
+      "pinyin": "qī",
+      "translations": {
+        "enUS": "seven",
+        "esES": "Siete"
+      },
+      "example": {
+        "cn": "我需要七。",
+        "pinyin": "Wǒ xūyào qī.",
+        "es": "Necesito siete."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "7d029dd0b684",
+      "hanzi": "錢",
+      "simplified": "钱",
+      "pinyin": "qián",
+      "translations": {
+        "enUS": "money",
+        "esES": "dinero"
+      },
+      "example": {
+        "cn": "你有錢嗎？",
+        "pinyin": "Nǐ yǒu qián ma?",
+        "es": "¿Tienes dinero?"
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "c106d5057149",
+      "hanzi": "前",
+      "simplified": "前",
+      "pinyin": "qián",
+      "translations": {
+        "enUS": "before/in front",
+        "esES": "adelante"
+      },
+      "example": {
+        "cn": "我需要前。",
+        "pinyin": "Wǒ xūyào qián.",
+        "es": "Necesito ex."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "1818280c19dc",
+      "hanzi": "請",
+      "simplified": "请",
+      "pinyin": "qǐng",
+      "translations": {
+        "enUS": "please",
+        "esES": "por favor"
+      },
+      "example": {
+        "cn": "我想要請。",
+        "pinyin": "Wǒ xiǎng yào qǐng.",
+        "es": "Quiero complacer."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "1d7a568eb7b1",
+      "hanzi": "去",
+      "simplified": "去",
+      "pinyin": "qù",
+      "translations": {
+        "enUS": "go",
+        "esES": "ir"
+      },
+      "example": {
+        "cn": "我買了一個去。",
+        "pinyin": "Wǒ mǎile yī gè qù.",
+        "es": "Compré uno para llevar."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "79ad4fd450b0",
+      "hanzi": "熱",
+      "simplified": "热",
+      "pinyin": "rè",
+      "translations": {
+        "enUS": "hot",
+        "esES": "caliente"
+      },
+      "example": {
+        "cn": "我每天用熱。",
+        "pinyin": "Wǒ měitiān yòng rè.",
+        "es": "Yo uso calor todos los días."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "66bfd9859c15",
+      "hanzi": "人",
+      "simplified": "人",
+      "pinyin": "rén",
+      "translations": {
+        "enUS": "person",
+        "esES": "gente"
+      },
+      "example": {
+        "cn": "我買了一個人。",
+        "pinyin": "Wǒ mǎile yī gè rén.",
+        "es": "Compré una persona."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "42965a9b6424",
+      "hanzi": "認",
+      "simplified": "认",
+      "pinyin": "rèn",
+      "translations": {
+        "enUS": "recognize",
+        "esES": "reconocer"
+      },
+      "example": {
+        "cn": "我喜歡認。",
+        "pinyin": "Wǒ xǐhuān rèn.",
+        "es": "Me gusta reconocer."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "d8fb1214593d",
+      "hanzi": "識",
+      "simplified": "识",
+      "pinyin": "shí",
+      "translations": {
+        "enUS": "know",
+        "esES": "conocimiento"
+      },
+      "example": {
+        "cn": "識很好。",
+        "pinyin": "shí hěn hǎo.",
+        "es": "Muy buen conocimiento."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "b8026203630d",
+      "hanzi": "三",
+      "simplified": "三",
+      "pinyin": "sān",
+      "translations": {
+        "enUS": "three",
+        "esES": "tres"
+      },
+      "example": {
+        "cn": "你有三嗎？",
+        "pinyin": "Nǐ yǒu sān ma?",
+        "es": "¿Tienes tres?"
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "efc495fa82a4",
+      "hanzi": "商",
+      "simplified": "商",
+      "pinyin": "shāng",
+      "translations": {
+        "enUS": "commerce",
+        "esES": "negocio"
+      },
+      "example": {
+        "cn": "我想要商。",
+        "pinyin": "Wǒ xiǎng yào shāng.",
+        "es": "Quiero negocios."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "06a936a4624c",
+      "hanzi": "店",
+      "simplified": "店",
+      "pinyin": "diàn",
+      "translations": {
+        "enUS": "shop/store",
+        "esES": "comercio"
+      },
+      "example": {
+        "cn": "請給我店。",
+        "pinyin": "Qǐng gěi wǒ diàn.",
+        "es": "Por favor dame la tienda."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "ed47f85495c7",
+      "hanzi": "上",
+      "simplified": "上",
+      "pinyin": "shàng",
+      "translations": {
+        "enUS": "above",
+        "esES": "superior"
+      },
+      "example": {
+        "cn": "請給我上。",
+        "pinyin": "Qǐng gěi wǒ shàng.",
+        "es": "Por favor, ven a mi lado."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "9fa52e885794",
+      "hanzi": "午",
+      "simplified": "午",
+      "pinyin": "wŭ",
+      "translations": {
+        "enUS": "noon",
+        "esES": "mediodía"
+      },
+      "example": {
+        "cn": "我需要午。",
+        "pinyin": "Wǒ xūyào wŭ.",
+        "es": "Necesito el almuerzo."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "0c58d856b5bb",
+      "hanzi": "少",
+      "simplified": "少",
+      "pinyin": "shǎo",
+      "translations": {
+        "enUS": "few",
+        "esES": "pocos"
+      },
+      "example": {
+        "cn": "我有很多少。",
+        "pinyin": "Wǒ yǒu hěn duō shǎo.",
+        "es": "Tengo mucho menos."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "f9a3d540f5eb",
+      "hanzi": "誰",
+      "simplified": "谁",
+      "pinyin": "shéi",
+      "translations": {
+        "enUS": "who",
+        "esES": "OMS"
+      },
+      "example": {
+        "cn": "我喜歡誰。",
+        "pinyin": "Wǒ xǐhuān shéi.",
+        "es": "A quien me gusta."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "0b91f84139dd",
+      "hanzi": "什",
+      "simplified": "什",
+      "pinyin": "shén",
+      "translations": {
+        "enUS": "what",
+        "esES": "Variado"
+      },
+      "example": {
+        "cn": "我買了一個什。",
+        "pinyin": "Wǒ mǎile yī gè shén.",
+        "es": "Compré un qué."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "2edef6ff1bbe",
+      "hanzi": "麼",
+      "simplified": "么",
+      "pinyin": "mê",
+      "translations": {
+        "enUS": "question ending (part of 什么)",
+        "esES": "Qué"
+      },
+      "example": {
+        "cn": "這是我的麼。",
+        "pinyin": "Zhè shì wǒ de mê.",
+        "es": "¿Esto es mío?"
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "c911525ece78",
+      "hanzi": "十",
+      "simplified": "十",
+      "pinyin": "shí",
+      "translations": {
+        "enUS": "ten",
+        "esES": "diez"
+      },
+      "example": {
+        "cn": "十很好。",
+        "pinyin": "shí hěn hǎo.",
+        "es": "Diez es muy bueno."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "4af8708d03b0",
+      "hanzi": "時",
+      "simplified": "时",
+      "pinyin": "shí",
+      "translations": {
+        "enUS": "time/hour",
+        "esES": "hora"
+      },
+      "example": {
+        "cn": "我想要時。",
+        "pinyin": "Wǒ xiǎng yào shí.",
+        "es": "Cuando yo quiera."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "159e0740fab2",
+      "hanzi": "候",
+      "simplified": "候",
+      "pinyin": "hòu",
+      "translations": {
+        "enUS": "moment",
+        "esES": "Casa"
+      },
+      "example": {
+        "cn": "候很好。",
+        "pinyin": "hòu hěn hǎo.",
+        "es": "El tiempo es bueno."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "b611d778716f",
+      "hanzi": "是",
+      "simplified": "是",
+      "pinyin": "shì",
+      "translations": {
+        "enUS": "is/am/are",
+        "esES": "Sí"
+      },
+      "example": {
+        "cn": "這是我的是。",
+        "pinyin": "Zhè shì wǒ de shì.",
+        "es": "Esto es mio."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "0dceddee4871",
+      "hanzi": "書",
+      "simplified": "书",
+      "pinyin": "shū",
+      "translations": {
+        "enUS": "book",
+        "esES": "Libro"
+      },
+      "example": {
+        "cn": "我需要書。",
+        "pinyin": "Wǒ xūyào shū.",
+        "es": "Necesito un libro."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "9f4d2ec1932d",
+      "hanzi": "水",
+      "simplified": "水",
+      "pinyin": "shuĭ",
+      "translations": {
+        "enUS": "water",
+        "esES": "agua"
+      },
+      "example": {
+        "cn": "你有水嗎？",
+        "pinyin": "Nǐ yǒu shuĭ ma?",
+        "es": "¿Tienes agua?"
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "a393982f85f6",
+      "hanzi": "果",
+      "simplified": "果",
+      "pinyin": "guŏ",
+      "translations": {
+        "enUS": "fruit",
+        "esES": "fruta"
+      },
+      "example": {
+        "cn": "請給我果。",
+        "pinyin": "Qǐng gěi wǒ guŏ.",
+        "es": "Por favor dame fruta."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "98d0bc8e3992",
+      "hanzi": "睡",
+      "simplified": "睡",
+      "pinyin": "shuì",
+      "translations": {
+        "enUS": "sleep",
+        "esES": "dormir"
+      },
+      "example": {
+        "cn": "請給我睡。",
+        "pinyin": "Qǐng gěi wǒ shuì.",
+        "es": "Por favor dejame dormir"
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "a84fa4dd839e",
+      "hanzi": "覺",
+      "simplified": "觉",
+      "pinyin": "jué",
+      "translations": {
+        "enUS": "feel/dream (as 睡觉)",
+        "esES": "Dormir"
+      },
+      "example": {
+        "cn": "這是我的覺。",
+        "pinyin": "Zhè shì wǒ de jué.",
+        "es": "Este es mi sentimiento."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "b10873c6c1fd",
+      "hanzi": "說",
+      "simplified": "说",
+      "pinyin": "shuō",
+      "translations": {
+        "enUS": "speak",
+        "esES": "explicar"
+      },
+      "example": {
+        "cn": "我喜歡說。",
+        "pinyin": "Wǒ xǐhuān shuō.",
+        "es": "Me gusta decir."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "8e9f65ead97c",
+      "hanzi": "四",
+      "simplified": "四",
+      "pinyin": "sì",
+      "translations": {
+        "enUS": "four",
+        "esES": "Cuatro"
+      },
+      "example": {
+        "cn": "我每天用四。",
+        "pinyin": "Wǒ měitiān yòng sì.",
+        "es": "Yo uso cuatro al día."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "213ca7b11365",
+      "hanzi": "歲",
+      "simplified": "岁",
+      "pinyin": "suì",
+      "translations": {
+        "enUS": "years old",
+        "esES": "edad"
+      },
+      "example": {
+        "cn": "我想要歲。",
+        "pinyin": "Wǒ xiǎng yào suì.",
+        "es": "Quiero años."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "36a2707692f6",
+      "hanzi": "他",
+      "simplified": "他",
+      "pinyin": "tā",
+      "translations": {
+        "enUS": "he",
+        "esES": "él"
+      },
+      "example": {
+        "cn": "他很好。",
+        "pinyin": "tā hěn hǎo.",
+        "es": "Él está bien."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "50b0885210fc",
+      "hanzi": "她",
+      "simplified": "她",
+      "pinyin": "tā",
+      "translations": {
+        "enUS": "she",
+        "esES": "ella"
+      },
+      "example": {
+        "cn": "這是我的她。",
+        "pinyin": "Zhè shì wǒ de tā.",
+        "es": "Esta es mi ella."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "c646ec2d0b0b",
+      "hanzi": "太",
+      "simplified": "太",
+      "pinyin": "tài",
+      "translations": {
+        "enUS": "too/excessive",
+        "esES": "también"
+      },
+      "example": {
+        "cn": "請給我太。",
+        "pinyin": "Qǐng gěi wǒ tài.",
+        "es": "Por favor dame a mi también."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "653a9a48a1f4",
+      "hanzi": "天",
+      "simplified": "天",
+      "pinyin": "tiān",
+      "translations": {
+        "enUS": "sky/day",
+        "esES": "cielo"
+      },
+      "example": {
+        "cn": "我每天用天。",
+        "pinyin": "Wǒ měitiān yòng tiān.",
+        "es": "Uso Tian todos los días."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "cd8e4c5c6aa4",
+      "hanzi": "氣",
+      "simplified": "气",
+      "pinyin": "qì",
+      "translations": {
+        "enUS": "air",
+        "esES": "gas"
+      },
+      "example": {
+        "cn": "我需要氣。",
+        "pinyin": "Wǒ xūyào qì.",
+        "es": "Necesito aire."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "adfc4ffc8004",
+      "hanzi": "聽",
+      "simplified": "听",
+      "pinyin": "tīng",
+      "translations": {
+        "enUS": "listen",
+        "esES": "escuchar"
+      },
+      "example": {
+        "cn": "我喜歡聽。",
+        "pinyin": "Wǒ xǐhuān tīng.",
+        "es": "Me gusta escuchar."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "0e354dff92ca",
+      "hanzi": "同",
+      "simplified": "同",
+      "pinyin": "tóng",
+      "translations": {
+        "enUS": "same",
+        "esES": "mismo"
+      },
+      "example": {
+        "cn": "我買了一個同。",
+        "pinyin": "Wǒ mǎile yī gè tóng.",
+        "es": "Compré uno igual."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "274d3b3f870b",
+      "hanzi": "學",
+      "simplified": "学",
+      "pinyin": "xué",
+      "translations": {
+        "enUS": "learn",
+        "esES": "estudiar"
+      },
+      "example": {
+        "cn": "我想要學。",
+        "pinyin": "Wǒ xiǎng yào xué.",
+        "es": "Quiero aprender."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "7b071c842590",
+      "hanzi": "生",
+      "simplified": "生",
+      "pinyin": "shēng",
+      "translations": {
+        "enUS": "student/life",
+        "esES": "nacido"
+      },
+      "example": {
+        "cn": "我有很多生。",
+        "pinyin": "Wǒ yǒu hěn duō shēng.",
+        "es": "Tengo muchas vidas."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "35341f135d74",
+      "hanzi": "校",
+      "simplified": "校",
+      "pinyin": "xiào",
+      "translations": {
+        "enUS": "school",
+        "esES": "escuela"
+      },
+      "example": {
+        "cn": "你有校嗎？",
+        "pinyin": "Nǐ yǒu xiào ma?",
+        "es": "¿Tienes una escuela?"
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "1ab2a668d051",
+      "hanzi": "喂",
+      "simplified": "喂",
+      "pinyin": "wèi",
+      "translations": {
+        "enUS": "hello (on phone)",
+        "esES": "Hola"
+      },
+      "example": {
+        "cn": "請給我喂。",
+        "pinyin": "Qǐng gěi wǒ wèi.",
+        "es": "Por favor, alimentame."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "772a32a504d9",
+      "hanzi": "我",
+      "simplified": "我",
+      "pinyin": "wŏ",
+      "translations": {
+        "enUS": "I",
+        "esES": "I"
+      },
+      "example": {
+        "cn": "我想要我。",
+        "pinyin": "Wǒ xiǎng yào wŏ.",
+        "es": "Me quiero a mí mismo."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "f70106d34c55",
+      "hanzi": "們",
+      "simplified": "们",
+      "pinyin": "mén",
+      "translations": {
+        "enUS": "plural marker",
+        "esES": "Nosotros"
+      },
+      "example": {
+        "cn": "我每天用們。",
+        "pinyin": "Wǒ měitiān yòng mén.",
+        "es": "Los uso todos los días."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "e9fd57a668fc",
+      "hanzi": "五",
+      "simplified": "五",
+      "pinyin": "wŭ",
+      "translations": {
+        "enUS": "five",
+        "esES": "cinco"
+      },
+      "example": {
+        "cn": "我有很多五。",
+        "pinyin": "Wǒ yǒu hěn duō wŭ.",
+        "es": "Tengo muchos cincos."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "090c35614eb6",
+      "hanzi": "喜",
+      "simplified": "喜",
+      "pinyin": "xĭ",
+      "translations": {
+        "enUS": "joy",
+        "esES": "felicidad"
+      },
+      "example": {
+        "cn": "我買了一個喜。",
+        "pinyin": "Wǒ mǎile yī gè xĭ.",
+        "es": "Compré un Xi."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "c547bc9006f6",
+      "hanzi": "歡",
+      "simplified": "欢",
+      "pinyin": "huān",
+      "translations": {
+        "enUS": "joyful",
+        "esES": "jubiloso"
+      },
+      "example": {
+        "cn": "我買了一個歡。",
+        "pinyin": "Wǒ mǎile yī gè huān.",
+        "es": "Compré un Huan."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "fc10740493e5",
+      "hanzi": "下",
+      "simplified": "下",
+      "pinyin": "xià",
+      "translations": {
+        "enUS": "down",
+        "esES": "Abajo"
+      },
+      "example": {
+        "cn": "你有下嗎？",
+        "pinyin": "Nǐ yǒu xià ma?",
+        "es": "¿Tienes alguno?"
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "9fa52e885794",
+      "hanzi": "午",
+      "simplified": "午",
+      "pinyin": "wŭ",
+      "translations": {
+        "enUS": "afternoon",
+        "esES": "mediodía"
+      },
+      "example": {
+        "cn": "你有午嗎？",
+        "pinyin": "Nǐ yǒu wŭ ma?",
+        "es": "¿Tienes almuerzo?"
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "d3a5fb1e88a7",
+      "hanzi": "雨",
+      "simplified": "雨",
+      "pinyin": "yŭ",
+      "translations": {
+        "enUS": "rain",
+        "esES": "lluvia"
+      },
+      "example": {
+        "cn": "我需要雨。",
+        "pinyin": "Wǒ xūyào yŭ.",
+        "es": "Necesito lluvia."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "616ea717d8af",
+      "hanzi": "先",
+      "simplified": "先",
+      "pinyin": "xiān",
+      "translations": {
+        "enUS": "first",
+        "esES": "Primero"
+      },
+      "example": {
+        "cn": "請給我先。",
+        "pinyin": "Qǐng gěi wǒ xiān.",
+        "es": "Por favor dame primero."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "7b071c842590",
+      "hanzi": "生",
+      "simplified": "生",
+      "pinyin": "shēng",
+      "translations": {
+        "enUS": "life (as 先生 Mr./Teacher)",
+        "esES": "nacido"
+      },
+      "example": {
+        "cn": "我每天用生。",
+        "pinyin": "Wǒ měitiān yòng shēng.",
+        "es": "Lo uso todos los días."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "38ceaf9c7f8a",
+      "hanzi": "現",
+      "simplified": "现",
+      "pinyin": "xiàn",
+      "translations": {
+        "enUS": "present",
+        "esES": "ahora"
+      },
+      "example": {
+        "cn": "我買了一個現。",
+        "pinyin": "Wǒ mǎile yī gè xiàn.",
+        "es": "Compré uno ahora."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "756286adcd44",
+      "hanzi": "在",
+      "simplified": "在",
+      "pinyin": "zài",
+      "translations": {
+        "enUS": "at/exist",
+        "esES": "existir"
+      },
+      "example": {
+        "cn": "這是我的在。",
+        "pinyin": "Zhè shì wǒ de zài.",
+        "es": "Esta es mi presencia."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "a24002a9e3ad",
+      "hanzi": "想",
+      "simplified": "想",
+      "pinyin": "xiăng",
+      "translations": {
+        "enUS": "think/want",
+        "esES": "pensar"
+      },
+      "example": {
+        "cn": "請給我想。",
+        "pinyin": "Qǐng gěi wǒ xiăng.",
+        "es": "Por favor, dame alguna reflexión."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "d92031e6b04f",
+      "hanzi": "小",
+      "simplified": "小",
+      "pinyin": "xiăo",
+      "translations": {
+        "enUS": "small",
+        "esES": "Pequeño"
+      },
+      "example": {
+        "cn": "小很好。",
+        "pinyin": "xiăo hěn hǎo.",
+        "es": "Lo pequeño es bueno."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "0d95a0e041d9",
+      "hanzi": "姐",
+      "simplified": "姐",
+      "pinyin": "jiě",
+      "translations": {
+        "enUS": "older sister (as 小姐 Miss)",
+        "esES": "hermana"
+      },
+      "example": {
+        "cn": "請給我姐。",
+        "pinyin": "Qǐng gěi wǒ jiě.",
+        "es": "Por favor dáselo a mi hermana."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "2b65de5c07fe",
+      "hanzi": "寫",
+      "simplified": "写",
+      "pinyin": "xiĕ",
+      "translations": {
+        "enUS": "write",
+        "esES": "Escribir"
+      },
+      "example": {
+        "cn": "寫很好。",
+        "pinyin": "xiĕ hěn hǎo.",
+        "es": "Muy bien escrito."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "14c3c2fd1dd2",
+      "hanzi": "謝",
+      "simplified": "谢",
+      "pinyin": "xiè",
+      "translations": {
+        "enUS": "thank",
+        "esES": "Gracias"
+      },
+      "example": {
+        "cn": "你有謝嗎？",
+        "pinyin": "Nǐ yǒu xiè ma?",
+        "es": "¿Me das las gracias?"
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "14c3c2fd1dd2",
+      "hanzi": "謝",
+      "simplified": "谢",
+      "pinyin": "xiè",
+      "translations": {
+        "enUS": "thank",
+        "esES": "Gracias"
+      },
+      "example": {
+        "cn": "你有謝嗎？",
+        "pinyin": "Nǐ yǒu xiè ma?",
+        "es": "¿Me das las gracias?"
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "1c48130e3176",
+      "hanzi": "星",
+      "simplified": "星",
+      "pinyin": "xīng",
+      "translations": {
+        "enUS": "star (as 星期 week)",
+        "esES": "estrella"
+      },
+      "example": {
+        "cn": "你有星嗎？",
+        "pinyin": "Nǐ yǒu xīng ma?",
+        "es": "¿Tienes una estrella?"
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "4826f6b82127",
+      "hanzi": "期",
+      "simplified": "期",
+      "pinyin": "qī",
+      "translations": {
+        "enUS": "period",
+        "esES": "Esperar"
+      },
+      "example": {
+        "cn": "這是我的期。",
+        "pinyin": "Zhè shì wǒ de qī.",
+        "es": "Este es mi periodo"
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "2e4d5d7c51e5",
+      "hanzi": "一",
+      "simplified": "一",
+      "pinyin": "yī",
+      "translations": {
+        "enUS": "one",
+        "esES": "uno"
+      },
+      "example": {
+        "cn": "我喜歡一。",
+        "pinyin": "Wǒ xǐhuān yī.",
+        "es": "Me gusta uno."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "9471ea2105a2",
+      "hanzi": "衣",
+      "simplified": "衣",
+      "pinyin": "yī",
+      "translations": {
+        "enUS": "clothes",
+        "esES": "Ropa"
+      },
+      "example": {
+        "cn": "我喜歡衣。",
+        "pinyin": "Wǒ xǐhuān yī.",
+        "es": "Me gusta la ropa."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "e2faf4ee0923",
+      "hanzi": "服",
+      "simplified": "服",
+      "pinyin": "fú",
+      "translations": {
+        "enUS": "clothes",
+        "esES": "Ropa"
+      },
+      "example": {
+        "cn": "請給我服。",
+        "pinyin": "Qǐng gěi wǒ fú.",
+        "es": "Por favor, sirveme."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "204c2c1fe1b5",
+      "hanzi": "醫",
+      "simplified": "医",
+      "pinyin": "yī",
+      "translations": {
+        "enUS": "doctor",
+        "esES": "médico"
+      },
+      "example": {
+        "cn": "我想要醫。",
+        "pinyin": "Wǒ xiǎng yào yī.",
+        "es": "Quiero tratamiento médico."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "7b071c842590",
+      "hanzi": "生",
+      "simplified": "生",
+      "pinyin": "shēng",
+      "translations": {
+        "enUS": "life/doctor",
+        "esES": "nacido"
+      },
+      "example": {
+        "cn": "生很好。",
+        "pinyin": "shēng hěn hǎo.",
+        "es": "La vida es muy buena."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "b7a2cd39c0b6",
+      "hanzi": "院",
+      "simplified": "院",
+      "pinyin": "yuàn",
+      "translations": {
+        "enUS": "institution",
+        "esES": "hospital"
+      },
+      "example": {
+        "cn": "我喜歡院。",
+        "pinyin": "Wǒ xǐhuān yuàn.",
+        "es": "Me gusta el patio."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "dbefc4347925",
+      "hanzi": "椅",
+      "simplified": "椅",
+      "pinyin": "yĭ",
+      "translations": {
+        "enUS": "chair",
+        "esES": "silla"
+      },
+      "example": {
+        "cn": "我有很多椅。",
+        "pinyin": "Wǒ yǒu hěn duō yĭ.",
+        "es": "Tengo muchas sillas."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "2c0dfacf2546",
+      "hanzi": "子",
+      "simplified": "子",
+      "pinyin": "zǐ",
+      "translations": {
+        "enUS": "child/seed *(also in character)*",
+        "esES": "hijo"
+      },
+      "example": {
+        "cn": "這是我的子。",
+        "pinyin": "Zhè shì wǒ de zǐ.",
+        "es": "Este es mi hijo."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "fdc1ac4c1616",
+      "hanzi": "有",
+      "simplified": "有",
+      "pinyin": "yŏu",
+      "translations": {
+        "enUS": "have",
+        "esES": "tener"
+      },
+      "example": {
+        "cn": "有很好。",
+        "pinyin": "yŏu hěn hǎo.",
+        "es": "Hay muy bueno."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "a0e5ab5e7299",
+      "hanzi": "月",
+      "simplified": "月",
+      "pinyin": "yuè",
+      "translations": {
+        "enUS": "moon/month",
+        "esES": "luna"
+      },
+      "example": {
+        "cn": "這是我的月。",
+        "pinyin": "Zhè shì wǒ de yuè.",
+        "es": "Este es mi mes."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "03b4e983826a",
+      "hanzi": "再",
+      "simplified": "再",
+      "pinyin": "zài",
+      "translations": {
+        "enUS": "again",
+        "esES": "De nuevo"
+      },
+      "example": {
+        "cn": "我想要再。",
+        "pinyin": "Wǒ xiǎng yào zài.",
+        "es": "Quiero otra vez."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "f21f2a0554e0",
+      "hanzi": "見",
+      "simplified": "见",
+      "pinyin": "jiàn",
+      "translations": {
+        "enUS": "see (as 再见 farewell)",
+        "esES": "Ver"
+      },
+      "example": {
+        "cn": "我每天用見。",
+        "pinyin": "Wǒ měitiān yòng jiàn.",
+        "es": "Lo uso todos los días."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "ba9ef7d77330",
+      "hanzi": "怎",
+      "simplified": "怎",
+      "pinyin": "zěn",
+      "translations": {
+        "enUS": "how",
+        "esES": "Cómo"
+      },
+      "example": {
+        "cn": "我有很多怎。",
+        "pinyin": "Wǒ yǒu hěn duō zěn.",
+        "es": "Tengo mucho de cómo."
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "99cefe1b0931",
+      "hanzi": "麼",
+      "simplified": "么",
+      "pinyin": "mê (part of 怎么/怎么样)",
+      "translations": {
+        "enUS": null,
+        "esES": "Qué"
+      },
+      "example": {
+        "cn": null,
+        "pinyin": null,
+        "es": null
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "03b0b0efd101",
+      "hanzi": "樣",
+      "simplified": "样",
+      "pinyin": "yàng",
+      "translations": {
+        "enUS": "appearance",
+        "esES": "Muestra"
+      },
+      "example": {
+        "cn": null,
+        "pinyin": null,
+        "es": null
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "f6eb31b74d32",
+      "hanzi": "這",
+      "simplified": "这",
+      "pinyin": "zhè",
+      "translations": {
+        "enUS": "this",
+        "esES": "este"
+      },
+      "example": {
+        "cn": null,
+        "pinyin": null,
+        "es": null
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "d2cd2a64a2ac",
+      "hanzi": "中",
+      "simplified": "中",
+      "pinyin": "zhōng",
+      "translations": {
+        "enUS": "middle",
+        "esES": "medio"
+      },
+      "example": {
+        "cn": null,
+        "pinyin": null,
+        "es": null
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "593df5375800",
+      "hanzi": "國",
+      "simplified": "国",
+      "pinyin": "guó",
+      "translations": {
+        "enUS": "country",
+        "esES": "país"
+      },
+      "example": {
+        "cn": null,
+        "pinyin": null,
+        "es": null
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "f480960b0118",
+      "hanzi": "住",
+      "simplified": "住",
+      "pinyin": "zhù",
+      "translations": {
+        "enUS": "live",
+        "esES": "vivir"
+      },
+      "example": {
+        "cn": null,
+        "pinyin": null,
+        "es": null
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "77ed8436794b",
+      "hanzi": "桌",
+      "simplified": "桌",
+      "pinyin": "zhuō",
+      "translations": {
+        "enUS": "table",
+        "esES": "mesa"
+      },
+      "example": {
+        "cn": null,
+        "pinyin": null,
+        "es": null
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "2c0dfacf2546",
+      "hanzi": "子",
+      "simplified": "子",
+      "pinyin": "zǐ",
+      "translations": {
+        "enUS": "child/seed *(also in 桌子)*",
+        "esES": "hijo"
+      },
+      "example": {
+        "cn": null,
+        "pinyin": null,
+        "es": null
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "f15fea0356b8",
+      "hanzi": "做",
+      "simplified": "做",
+      "pinyin": "zuò",
+      "translations": {
+        "enUS": "do",
+        "esES": "Hacer"
+      },
+      "example": {
+        "cn": null,
+        "pinyin": null,
+        "es": null
+      },
+      "hsk": 1,
+      "tags": []
+    },
+    {
+      "id": "696ebaa1d75b",
+      "hanzi": "坐",
+      "simplified": "坐",
+      "pinyin": "zuò",
+      "translations": {
+        "enUS": "sit",
+        "esES": "sentarse"
+      },
+      "example": {
+        "cn": null,
+        "pinyin": null,
+        "es": null
+      },
+      "hsk": 1,
+      "tags": []
+    }
+  ]
+}
