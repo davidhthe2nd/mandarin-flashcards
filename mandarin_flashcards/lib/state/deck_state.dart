@@ -1,20 +1,20 @@
+// lib/state/deck_state.dart
 import 'dart:math';
 import 'package:flutter/foundation.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
 import '../models/flashcard.dart';
 import '../models/card_progress.dart';
-import '../models/enums.dart';
+import '../models/enums.dart';          // AnswerQuality, LearningStatus
 import '../services/deck_loader.dart';
 import '../state/options_state.dart';
-import '../models/enums.dart';
 
 class DeckState extends ChangeNotifier {
   DeckState(this._progressBoxName);
 
   // ---- Hive (per-card progress) ----
   final String _progressBoxName;
-  late Box _progressBox;
+  late Box<CardProgress> _progressBox;
 
   // ---- All cards & today's due queue ----
   final _rng = Random();
@@ -45,7 +45,7 @@ class DeckState extends ChangeNotifier {
   /// Call this after OptionsState.init() in your app bootstrap:
   ///   await deck.init(options, 'assets/data/hsk1.csv');
   Future<void> init(OptionsState opts, String assetPath) async {
-    _progressBox = await Hive.openBox(_progressBoxName);
+    _progressBox = await Hive.openBox<CardProgress>(_progressBoxName);
 
     // Use your real loader (CSV/JSON) that returns a deck with a .cards list
     final deck = await DeckLoader.loadFromAsset(assetPath);
@@ -65,34 +65,19 @@ class DeckState extends ChangeNotifier {
     if (_current == null) {
       _t("Answer called but no current card");
       return;
-  }
+    }
 
+    final now = DateTime.now();
     final cardId = _current!.id;
 
     // Look up or create progress
-    final existing = _progressBox.get(cardId);
-    final progress = existing == null
-        ? CardProgress(cardId: cardId)
-        : CardProgress.fromJson(Map<String, dynamic>.from(existing));
+    final progress = _readProgressFor(cardId);
 
-    // Update stats
-    progress.recordAnswer(quality);
-
-    // Schedule next due (placeholder logic)
-    switch (quality) {
-      case AnswerQuality.wrong:
-        progress.setNextDue(const Duration(hours: 8));
-        break;
-      case AnswerQuality.unsure:
-        progress.setNextDue(const Duration(days: 1));
-        break;
-      case AnswerQuality.correct:
-        progress.setNextDue(const Duration(days: 2));
-        break;
-    }
+    // Apply scheduling (updates timesSeen, lastReviewed, nextDue, status, lastAnswer)
+    _schedule(progress, quality, now);
 
     // Persist to Hive
-    await _progressBox.put(cardId, progress.toJson());
+    await _progressBox.put(cardId, progress);
 
     // Move to next card
     if (_idx < _order.length - 1) {
@@ -177,12 +162,19 @@ class DeckState extends ChangeNotifier {
   }
 
   // ---- Helpers ----
-  Flashcard _lookup(String id) =>
-      _all.firstWhere((c) => c.id == id, orElse: () {
+  Flashcard _lookup(String id) {
+    if (_all.isEmpty) {
+      throw StateError('Deck is empty; cannot lookup "$id".');
+    }
+    return _all.firstWhere(
+      (c) => c.id == id,
+      orElse: () {
         // If content set changed, this prevents a crash; you can also choose to skip.
         _t("Lookup miss for id=$id");
         return _all.first;
-      });
+      },
+    );
+  }
 
   void _t(String msg) {
     if (kDebugMode) debugPrint("[DeckState] $msg");
@@ -190,27 +182,15 @@ class DeckState extends ChangeNotifier {
 
   // ---- Persistence helpers ----------
   CardProgress _readProgressFor(String id) {
-    final raw = _progressBox.get(id);
-
-    // Happy path: previously saved JSON-like map
-    if (raw is Map) {
-      try {
-        return CardProgress.fromJson(Map<String, dynamic>.from(raw));
-      } catch (_) {
-        // fall through to default
-      }
-    }
+    final existing = _progressBox.get(id);
+    if (existing != null) return existing;
 
     // Default for unseen cards
     final cp = CardProgress(cardId: id, status: LearningStatus.toLearn);
-    _writeProgressFor(cp);
+    _progressBox.put(id, cp);
     return cp;
-  }
+    }
 
-  void _writeProgressFor(CardProgress cp) {
-    _progressBox.put(cp.cardId, cp.toJson());
-  }
-  
   /// Reset all progress: clears Hive progress box and rebuilds queue.
   Future<void> resetProgress(OptionsState opts, String assetPath) async {
     await _progressBox.clear();
@@ -220,5 +200,4 @@ class DeckState extends ChangeNotifier {
     notifyListeners();
     _t("Progress reset");
   }
-
 }

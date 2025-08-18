@@ -2,13 +2,16 @@ import 'package:hive/hive.dart';
 
 class Flashcard {
   final String id;
-  final String hanzi;        // Traditional
-  final String? simplified;  // Optional Simplified form
+  final String hanzi;        
+  final String? simplified;  
   final String pinyin;
   final Map<String, String?> translations; // enUS, esES
   final Example? example;
   final int hsk;
   final List<String> tags;
+
+  /// New: optional audio file/URL reference
+  final String? audio; // e.g. "assets/audio/ni3.mp3" or a URL
 
   Flashcard({
     required this.id,
@@ -19,6 +22,7 @@ class Flashcard {
     this.example,
     required this.hsk,
     required this.tags,
+    this.audio,
   });
 
   factory Flashcard.fromJson(Map<String, dynamic> json) {
@@ -33,6 +37,7 @@ class Flashcard {
           : null,
       hsk: json['hsk'] as int,
       tags: List<String>.from(json['tags'] ?? []),
+      audio: json['audio'] as String?, // 👈 pickup audio field
     );
   }
 
@@ -43,12 +48,14 @@ class Flashcard {
       'simplified': simplified,
       'pinyin': pinyin,
       'translations': translations,
-      'example': example?.toJson(), // use ?. to call only if not null
+      'example': example?.toJson(),
       'hsk': hsk,
       'tags': tags,
+      'audio': audio, // 👈 save audio field
     };
   }
 }
+
 
 class Example {
   final String? cn;      // Mandarin example sentence
@@ -82,28 +89,27 @@ extension FlashcardView on Flashcard {
     final direct = translations[langCode];
     if (direct != null && direct.trim().isNotEmpty) return direct;
 
-    // Fallback: first non-empty translation in the map (values may be null)
     for (final v in translations.values) {
       if (v != null && v.trim().isNotEmpty) return v;
     }
     return null;
   }
 
-  /// The “Chinese side” text to show (we use traditional hanzi; you can
-  /// later add an option to prefer simplified).
+  /// The “Chinese side” text (using Traditional by default).
   String get chineseSide => hanzi;
 
-  /// Builds the FRONT text according to invertPair:
-  /// - invertPair == false  => Chinese (hanzi)
-  /// - invertPair == true   => Translation (in chosen language, fallback to any)
+  /// Simplified public API: these let `ChooseState`/UI call `.prompt` / `.answer`
+  /// without caring about details.
+  String get prompt => chineseSide; // by default: hanzi
+  String get answer => translationFor('enUS') ?? '—'; // default to English
+
+  /// Builds the FRONT text according to invertPair.
   String frontText({required bool invertPair, required String langCode}) {
     if (!invertPair) return chineseSide;
     return translationFor(langCode) ?? chineseSide;
   }
 
-  /// Builds the BACK text according to invertPair:
-  /// - invertPair == false  => Translation
-  /// - invertPair == true   => Chinese (hanzi)
+  /// Builds the BACK text according to invertPair.
   String backText({required bool invertPair, required String langCode}) {
     if (!invertPair) {
       return translationFor(langCode) ?? '—';
@@ -111,10 +117,10 @@ extension FlashcardView on Flashcard {
     return chineseSide;
   }
 
-  /// Optional helper for pinyin display (front or hint line).
+  /// Optional helper for pinyin display.
   String get pinyinText => pinyin;
 
-  /// Optional helpers for example sentences (if you want to show them)
+  /// Optional helpers for example sentences.
   String? get exampleChinese => example?.cn;
   String? get examplePinyin => example?.pinyin;
   String? get exampleEs => example?.es;

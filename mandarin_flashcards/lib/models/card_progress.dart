@@ -1,88 +1,141 @@
-import 'enums.dart';
+// lib/models/card_progress.dart
+import 'package:hive/hive.dart';
+import 'enums.dart'; // AnswerQuality, LearningStatus
 
-/// Tracks the learning progress for a single flashcard.
+const int kCardProgressTypeId = 101;
+const int kLearningStatusTypeId = 102;
+
 class CardProgress {
-  final String cardId;           // Link to Flashcard.id
-  LearningStatus status;         // Current learning pile
-  AnswerQuality? lastAnswer;     // Last result (can be null if never answered)
-  int timesSeen;                 // How many times shown to the user
-  DateTime? lastReviewed;        // Last time this card was reviewed
-  DateTime? nextDue;             // When this card becomes due again
+  final String cardId;
+  int timesSeen;
+  DateTime? lastReviewed;
+  DateTime? nextDue;
+
+  // NEW: what the user last answered (wrong/unsure/correct)
+  AnswerQuality? lastAnswer;
+
+  // Learning lifecycle status
+  LearningStatus status;
 
   CardProgress({
     required this.cardId,
-    this.status = LearningStatus.toLearn,
-    this.lastAnswer,
     this.timesSeen = 0,
     this.lastReviewed,
     this.nextDue,
+    this.lastAnswer,
+    this.status = LearningStatus.toLearn,
   });
 
-  /// Update progress when the user answers a card.
-  /// (Scheduling is handled by DeckState; this does not change nextDue.)
-  void recordAnswer(AnswerQuality quality) {
-    lastAnswer = quality;
-    timesSeen++;
-    lastReviewed = DateTime.now();
-
-    switch (quality) {
-      case AnswerQuality.wrong:
-        status = LearningStatus.toLearn;
-        break;
-      case AnswerQuality.unsure:
-        status = LearningStatus.reinforce;
-        break;
-      case AnswerQuality.correct:
-        status = LearningStatus.learned;
-        break;
-    }
-  }
-
-  /// Helper used by DeckState to set the next due time.
-  void setNextDue(Duration interval, {DateTime? from}) {
-    final base = from ?? DateTime.now();
-    nextDue = base.add(interval);
-  }
-
-  /// Create from JSON (backward-compatible).
-  factory CardProgress.fromJson(Map<String, dynamic> json) {
-    // Defensive parsing for older / inconsistent data.
-    int _safeIndex(List values, Object? raw, int fallback) {
-      if (raw is int && raw >= 0 && raw < values.length) return raw;
-      return fallback;
-    }
-
+  CardProgress copyWith({
+    String? cardId,
+    int? timesSeen,
+    DateTime? lastReviewed,
+    DateTime? nextDue,
+    AnswerQuality? lastAnswer,
+    LearningStatus? status,
+  }) {
     return CardProgress(
-      cardId: json['cardId'] as String,
-      status: LearningStatus.values[
-          _safeIndex(LearningStatus.values, json['status'], LearningStatus.toLearn.index)
-      ],
-      lastAnswer: json['lastAnswer'] == null
-          ? null
-          : AnswerQuality.values[
-              _safeIndex(AnswerQuality.values, json['lastAnswer'], 0)
-            ],
-      timesSeen: (json['timesSeen'] is int)
-          ? json['timesSeen'] as int
-          : int.tryParse('${json['timesSeen']}') ?? 0,
-      lastReviewed: json['lastReviewed'] != null
-          ? DateTime.tryParse(json['lastReviewed'] as String)
-          : null,
-      nextDue: json['nextDue'] != null
-          ? DateTime.tryParse(json['nextDue'] as String)
-          : null,
+      cardId: cardId ?? this.cardId,
+      timesSeen: timesSeen ?? this.timesSeen,
+      lastReviewed: lastReviewed ?? this.lastReviewed,
+      nextDue: nextDue ?? this.nextDue,
+      lastAnswer: lastAnswer ?? this.lastAnswer,
+      status: status ?? this.status,
     );
   }
 
-  /// Convert to JSON for persistence.
-  Map<String, dynamic> toJson() {
-    return {
-      'cardId': cardId,
-      'status': status.index,
-      'lastAnswer': lastAnswer?.index,
-      'timesSeen': timesSeen,
-      'lastReviewed': lastReviewed?.toIso8601String(),
-      'nextDue': nextDue?.toIso8601String(),
-    };
+  @override
+  String toString() {
+    return 'CardProgress(cardId: $cardId, timesSeen: $timesSeen, '
+        'lastReviewed: $lastReviewed, nextDue: $nextDue, '
+        'lastAnswer: $lastAnswer, status: $status)';
+  }
+}
+
+/// Manual adapter for the LearningStatus enum (stores index as a byte).
+class LearningStatusAdapter extends TypeAdapter<LearningStatus> {
+  @override
+  final int typeId = kLearningStatusTypeId;
+
+  @override
+  LearningStatus read(BinaryReader reader) {
+    final idx = reader.readByte();
+    if (idx < 0 || idx >= LearningStatus.values.length) {
+      return LearningStatus.toLearn;
+    }
+    return LearningStatus.values[idx];
+  }
+
+  @override
+  void write(BinaryWriter writer, LearningStatus obj) {
+    writer.writeByte(obj.index);
+  }
+}
+
+/// Manual adapter for CardProgress.
+/// Order in write() MUST match order in read().
+class CardProgressAdapter extends TypeAdapter<CardProgress> {
+  @override
+  final int typeId = kCardProgressTypeId;
+
+  @override
+  CardProgress read(BinaryReader reader) {
+    final cardId = reader.readString();
+    final timesSeen = reader.readInt();
+
+    final hasLast = reader.readBool();
+    final lastMs = hasLast ? reader.readInt() : null;
+    final lastReviewed =
+        (lastMs != null) ? DateTime.fromMillisecondsSinceEpoch(lastMs) : null;
+
+    final hasNext = reader.readBool();
+    final nextMs = hasNext ? reader.readInt() : null;
+    final nextDue =
+        (nextMs != null) ? DateTime.fromMillisecondsSinceEpoch(nextMs) : null;
+
+    // NEW: lastAnswer as a nullable enum index
+    final hasLastAnswer = reader.readBool();
+    AnswerQuality? lastAnswer;
+    if (hasLastAnswer) {
+      final byte = reader.readByte();
+      if (byte >= 0 && byte < AnswerQuality.values.length) {
+        lastAnswer = AnswerQuality.values[byte];
+      }
+    }
+
+    final status = reader.read() as LearningStatus; // via LearningStatusAdapter
+
+    return CardProgress(
+      cardId: cardId,
+      timesSeen: timesSeen,
+      lastReviewed: lastReviewed,
+      nextDue: nextDue,
+      lastAnswer: lastAnswer,
+      status: status,
+    );
+  }
+
+  @override
+  void write(BinaryWriter writer, CardProgress obj) {
+    writer
+      ..writeString(obj.cardId)
+      ..writeInt(obj.timesSeen)
+      ..writeBool(obj.lastReviewed != null);
+    if (obj.lastReviewed != null) {
+      writer.writeInt(obj.lastReviewed!.millisecondsSinceEpoch);
+    }
+
+    writer.writeBool(obj.nextDue != null);
+    if (obj.nextDue != null) {
+      writer.writeInt(obj.nextDue!.millisecondsSinceEpoch);
+    }
+
+    // NEW: lastAnswer as a nullable enum index
+    writer.writeBool(obj.lastAnswer != null);
+    if (obj.lastAnswer != null) {
+      writer.writeByte(obj.lastAnswer!.index);
+    }
+
+    writer.write(obj.status); // uses LearningStatusAdapter
   }
 }
