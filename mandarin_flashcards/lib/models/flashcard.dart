@@ -1,3 +1,5 @@
+import 'package:hive/hive.dart';
+
 class Flashcard {
   final String id;
   final String hanzi;        // Traditional
@@ -70,4 +72,50 @@ class Example {
       'es': es,
     };
   }
+}
+
+// --- View helpers for rendering in Choose/Learn screens ---
+extension FlashcardView on Flashcard {
+  /// Returns the best translation for a given language code (e.g., 'enUS', 'esES'),
+  /// falling back to the first non-empty translation if the requested one is missing.
+  String? translationFor(String langCode) {
+    final direct = translations[langCode];
+    if (direct != null && direct.trim().isNotEmpty) return direct;
+
+    // Fallback: first non-empty translation in the map (values may be null)
+    for (final v in translations.values) {
+      if (v != null && v.trim().isNotEmpty) return v;
+    }
+    return null;
+  }
+
+  /// The “Chinese side” text to show (we use traditional hanzi; you can
+  /// later add an option to prefer simplified).
+  String get chineseSide => hanzi;
+
+  /// Builds the FRONT text according to invertPair:
+  /// - invertPair == false  => Chinese (hanzi)
+  /// - invertPair == true   => Translation (in chosen language, fallback to any)
+  String frontText({required bool invertPair, required String langCode}) {
+    if (!invertPair) return chineseSide;
+    return translationFor(langCode) ?? chineseSide;
+  }
+
+  /// Builds the BACK text according to invertPair:
+  /// - invertPair == false  => Translation
+  /// - invertPair == true   => Chinese (hanzi)
+  String backText({required bool invertPair, required String langCode}) {
+    if (!invertPair) {
+      return translationFor(langCode) ?? '—';
+    }
+    return chineseSide;
+  }
+
+  /// Optional helper for pinyin display (front or hint line).
+  String get pinyinText => pinyin;
+
+  /// Optional helpers for example sentences (if you want to show them)
+  String? get exampleChinese => example?.cn;
+  String? get examplePinyin => example?.pinyin;
+  String? get exampleEs => example?.es;
 }

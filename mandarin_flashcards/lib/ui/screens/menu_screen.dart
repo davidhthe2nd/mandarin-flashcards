@@ -3,13 +3,14 @@ import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 
 import '../../state/deck_state.dart';
+import '../../state/options_state.dart';
 
 class MenuScreen extends StatelessWidget {
   const MenuScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final due = context.select<DeckState, int>((s) => s.dueCount);
+    final due = context.select<DeckState, int>((s) => s.remainingToday);
 
     return Scaffold(
       appBar: AppBar(title: const Text('Mandarin Flashcards')),
@@ -48,7 +49,9 @@ class MenuScreen extends StatelessWidget {
                       ),
                     );
                     if (ok == true && context.mounted) {
-                      await context.read<DeckState>().resetProgress();
+                      final deck = context.read<DeckState>();
+                      final opts = context.read<OptionsState>();
+                      await deck.resetProgress(opts, 'assets/decks/hsk1_trad_esES_deck.json');
                       if (context.mounted) {
                         ScaffoldMessenger.of(context).showSnackBar(
                           const SnackBar(content: Text('Progress reset.')),

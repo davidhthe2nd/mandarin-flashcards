@@ -1,62 +1,76 @@
+// lib/services/deck_loader.dart
 import 'dart:convert';
 import 'package:flutter/services.dart' show rootBundle;
-import 'package:flutter/foundation.dart' show FlutterError;
 
 import '../models/flashcard.dart';
 
-/// Simple wrapper for a deck and its metadata.
 class Deck {
-  final String deckName;
-  final int deckVersion;
-  /// e.g., {"front": "zh-Hant", "back": "es-ES"}
-  final Map<String, String> languagePair;
   final List<Flashcard> cards;
-
-  Deck({
-    required this.deckName,
-    required this.deckVersion,
-    required this.languagePair,
-    required this.cards,
-  });
-
-  factory Deck.fromJson(Map<String, dynamic> json) {
-    final rawCards = (json['cards'] as List? ?? []);
-    final cards = rawCards
-        .whereType<Map<String, dynamic>>() // be safe with types
-        .map((m) => Flashcard.fromJson(m))
-        .toList();
-
-    final lp = Map<String, dynamic>.from(json['languagePair'] ?? {});
-    return Deck(
-      deckName: (json['deckName'] as String?) ?? 'UnknownDeck',
-      deckVersion: (json['deckVersion'] as int?) ?? 1,
-      languagePair: {
-        'front': (lp['front'] as String?) ?? 'zh-Hant',
-        'back' : (lp['back']  as String?) ?? 'es-ES',
-      },
-      cards: cards,
-    );
-  }
+  Deck(this.cards);
 }
 
 class DeckLoader {
-  /// Load a Deck from a bundled asset JSON file.
+  /// Loads a deck from an asset file (CSV or JSON).
   static Future<Deck> loadFromAsset(String assetPath) async {
-    try {
-      final jsonStr = await rootBundle.loadString(assetPath);
-      final data = json.decode(jsonStr);
-      if (data is! Map<String, dynamic>) {
-        throw const FormatException('Deck JSON root must be an object.');
+    if (assetPath.toLowerCase().endsWith('.csv')) {
+      final raw = await rootBundle.loadString(assetPath);
+      return _fromCsv(raw);
+    } else if (assetPath.toLowerCase().endsWith('.json')) {
+      final raw = await rootBundle.loadString(assetPath);
+      return _fromJson(raw);
+    } else {
+      throw UnsupportedError('Unsupported deck format: $assetPath');
+    }
+  }
+
+  static Deck _fromCsv(String csvText) {
+    final lines = const LineSplitter().convert(csvText);
+    if (lines.isEmpty) return Deck([]);
+
+    // Assume first line is headers
+    final headers = lines.first.split(',');
+    final cards = <Flashcard>[];
+
+    for (final line in lines.skip(1)) {
+      if (line.trim().isEmpty) continue;
+      final cols = line.split(',');
+
+      // Map columns by header
+      final map = <String, String>{};
+      for (int i = 0; i < headers.length && i < cols.length; i++) {
+        map[headers[i].trim()] = cols[i].trim();
       }
-      return Deck.fromJson(data);
-    } on FlutterError catch (e) {
-      // Asset not found or pubspec not configured
-      throw Exception(
-        'Failed to load asset "$assetPath". '
-        'Check pubspec.yaml assets section. Original error: $e',
+
+      // Build Flashcard from the row
+      cards.add(
+        Flashcard(
+          id: map['id'] ?? '${cards.length}',
+          hanzi: map['hanzi'] ?? '',
+          simplified: map['simplified'],
+          pinyin: map['pinyin'] ?? '',
+          translations: {
+            'enUS': map['enUS'],
+            'esES': map['esES'],
+          },
+          example: null, // TODO: parse if CSV contains it
+          hsk: int.tryParse(map['hsk'] ?? '0') ?? 0,
+          tags: (map['tags'] ?? '').split(';').where((t) => t.isNotEmpty).toList(),
+        ),
       );
-    } on FormatException catch (e) {
-      throw Exception('Invalid JSON in "$assetPath": $e');
+    }
+
+    return Deck(cards);
+  }
+
+  static Deck _fromJson(String jsonText) {
+    final decoded = json.decode(jsonText);
+    if (decoded is List) {
+      final cards = decoded.map<Flashcard>((e) {
+        return Flashcard.fromJson(Map<String, dynamic>.from(e));
+      }).toList();
+      return Deck(cards);
+    } else {
+      throw FormatException('JSON deck must be an array of cards');
     }
   }
 }
