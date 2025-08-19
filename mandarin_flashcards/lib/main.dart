@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mandarin_flashcards/ui/screens/menu_screen.dart';
 import 'package:provider/provider.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
@@ -6,6 +7,7 @@ import 'state/options_state.dart';
 import 'state/deck_state.dart';
 import 'state/hive_keys.dart'; // kOptionsBox, kProgressBox
 import 'ui/screens/flashcard_screen.dart';
+import 'ui/screens/menu_screen.dart';
 
 import 'models/card_progress.dart';
 
@@ -56,7 +58,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Mandarin Flashcards',
       theme: theme,
-      home: const HomeGate(),
+      home: const MainMenuScreen(),
     );
   }
 }
@@ -74,7 +76,7 @@ class HomeGate extends StatelessWidget {
     if (deck.current == null && deck.isEmpty) {
       return const EmptyOrLoaderScreen(); // shows text; not blank 🌙
     }
-    return const FlashcardScreen(); // or LearnScreen if that’s your primary 🌙
+    return const MainMenuScreen(); // or LearnScreen if that’s your primary 🌙
   }
 }
 
