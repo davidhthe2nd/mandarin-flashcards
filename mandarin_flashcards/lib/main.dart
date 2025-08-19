@@ -5,30 +5,29 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'state/options_state.dart';
 import 'state/deck_state.dart';
 import 'state/hive_keys.dart'; // kOptionsBox, kProgressBox
-import "ui/screens/flashcard_screen.dart";
+import 'ui/screens/flashcard_screen.dart';
 
-import 'package:hive_flutter/hive_flutter.dart';
 import 'models/card_progress.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Hive.initFlutter();
+  await Hive.initFlutter(); // keep a single init 🌙
+
+  // REGISTER ADAPTERS FIRST — BEFORE opening any boxes
+  if (!Hive.isAdapterRegistered(kLearningStatusTypeId)) {
+    Hive.registerAdapter(LearningStatusAdapter()); // new: register enum adapter early 🌙
+  }
+  if (!Hive.isAdapterRegistered(kCardProgressTypeId)) {
+    Hive.registerAdapter(CardProgressAdapter());   // new: register model adapter early 🌙
+  }
 
   // 1) Init options (blocking)
   final options = OptionsState(kOptionsBox);
-  await options.init();
+  await options.init(); // uses Hive boxes safely (adapters are ready) 🌙
 
-  // 2) Init deck (blocking) — use your JSON path
+  // 2) Init deck (blocking) — use your JSON path (make sure it’s in pubspec assets)
   final deck = DeckState(kProgressBox);
-  await deck.init(options, 'assets/decks/hsk1_trad_esES_deck.json');
-
-  await Hive.initFlutter();
-  if (!Hive.isAdapterRegistered(kLearningStatusTypeId)) {
-    Hive.registerAdapter(LearningStatusAdapter());
-  }
-  if (!Hive.isAdapterRegistered(kCardProgressTypeId)) {
-  Hive.registerAdapter(CardProgressAdapter());
-  }
+  await deck.init(options, 'assets/decks/hsk1_trad_esES_deck.json'); // adapters already registered 🌙
 
   // 3) Run app with pre-initialized providers
   runApp(
@@ -47,7 +46,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // (Optional) you can read options here to set theme dynamically
     final opts = context.watch<OptionsState>();
     final theme = ThemeData(
       brightness: opts.darkMode ? Brightness.dark : Brightness.light,
@@ -71,12 +69,12 @@ class HomeGate extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final deck = context.watch<DeckState>();
-    // If you ever make init non-blocking, you can show a loader here.
+
+    // If queue is empty, show a friendly empty screen instead of a blank one.
     if (deck.current == null && deck.isEmpty) {
-      // Might be "no cards due" rather than loading. Handle both cases in your UI.
-      return const EmptyOrLoaderScreen();
+      return const EmptyOrLoaderScreen(); // shows text; not blank 🌙
     }
-    return const FlashcardScreen(); // replace with your actual screen widget
+    return const FlashcardScreen(); // or LearnScreen if that’s your primary 🌙
   }
 }
 

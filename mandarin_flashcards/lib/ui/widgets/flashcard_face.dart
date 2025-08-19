@@ -14,25 +14,42 @@ class FlashcardFace extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final t = Theme.of(context).textTheme;
-    return Container(
-      key: ValueKey('$title|${subtitle ?? ''}|${footnote ?? ''}'),
-      padding: const EdgeInsets.all(20),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(16),
-        border: Border.all(width: 1.0, color: Theme.of(context).dividerColor),
-      ),
+    final theme = Theme.of(context);
+    return ConstrainedBox(
+      constraints: const BoxConstraints(maxWidth: 720), // new: keep readable line length 🌙
       child: Column(
         mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.center,   // new: nicer multi-line centering 🌙
         children: [
-          Text(title, textAlign: TextAlign.center, style: t.displaySmall),
-          if (subtitle != null) ...[
+          // TITLE
+          Text(
+            title,
+            style: theme.textTheme.displayMedium,
+            softWrap: true,                 // new: allow wrapping 🌙
+            overflow: TextOverflow.visible, // new: no ellipsis unless you set maxLines 🌙
+            textAlign: TextAlign.center,    // new: center long lines 🌙
+          ),
+
+          if (subtitle != null && subtitle!.isNotEmpty) ...[
             const SizedBox(height: 8),
-            Text(subtitle!, textAlign: TextAlign.center, style: t.titleLarge),
+            Text(
+              subtitle!,
+              style: theme.textTheme.titleLarge,
+              softWrap: true,                 // new 🌙
+              overflow: TextOverflow.visible, // new 🌙
+              textAlign: TextAlign.center,    // new 🌙
+            ),
           ],
-          if (footnote != null) ...[
-            const SizedBox(height: 8),
-            Text(footnote!, textAlign: TextAlign.center, style: t.bodyMedium),
+
+          if (footnote != null && footnote!.isNotEmpty) ...[
+            const SizedBox(height: 12),
+            Text(
+              footnote!,
+              style: theme.textTheme.bodyMedium,
+              softWrap: true,                 // new 🌙
+              overflow: TextOverflow.visible, // new 🌙
+              textAlign: TextAlign.center,    // new 🌙
+            ),
           ],
         ],
       ),

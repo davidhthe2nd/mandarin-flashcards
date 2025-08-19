@@ -29,6 +29,12 @@ class DeckState extends ChangeNotifier {
   /// Cached current card (null when queue exhausted).
   Flashcard? _current;
 
+  // NEW: Busy flag so UI can disable buttons / show spinner
+  bool isBusy = false; // NEW
+
+  // NEW: Remember the last daily target used to build queue (for refresh())
+  int _lastLimit = 0; // NEW
+
   // ---- Public getters for UI ----
   Flashcard? get current => _current;
   bool get isEmpty => _order.isEmpty;
@@ -51,43 +57,54 @@ class DeckState extends ChangeNotifier {
     final deck = await DeckLoader.loadFromAsset(assetPath);
     _all = deck.cards;
 
-    _buildDueQueue(limit: opts.dailyTarget);
+    _buildDueQueue(limit: (opts.dailyTarget <= 0 ? 20 : opts.dailyTarget)); // new: default to 20 if unset 🌙
+    _lastLimit = (opts.dailyTarget <= 0 ? 20 : opts.dailyTarget);           // new 🌙
 
     _idx = 0;
     _current = isEmpty ? null : _lookup(_order[_idx]);
 
-    _t("Init: all=${_all.length}, dueToday=${_order.length}, target=${opts.dailyTarget}");
-    notifyListeners();
+    _t("Init: all=${_all.length}, target=$_lastLimit"); // CHANGED: clearer log 🌙
+    if (_all.isEmpty) {
+      _t("WARNING: deck loaded 0 cards. Check JSON format & assets path."); // new 🌙
+    } else {
+      _t("Sample ids: ${_all.take(3).map((c) => c.id).toList()}"); // new 🌙
+    }
   }
 
   // ---- Answer flow: ❌ / ❓ / ✔️ ----
   Future<void> answer(AnswerQuality quality) async {
-    if (_current == null) {
-      _t("Answer called but no current card");
+    // NEW: guard against re-entrancy and null current
+    if (isBusy || _current == null) {
+      _t("Answer ignored (busy=$isBusy, current=${_current?.id})");
       return;
     }
 
-    final now = DateTime.now();
-    final cardId = _current!.id;
+    _setBusy(true); // NEW
+    try {
+      final now = DateTime.now();
+      final cardId = _current!.id;
 
-    // Look up or create progress
-    final progress = _readProgressFor(cardId);
+      // Look up or create progress
+      final progress = _readProgressFor(cardId);
 
-    // Apply scheduling (updates timesSeen, lastReviewed, nextDue, status, lastAnswer)
-    _schedule(progress, quality, now);
+      // Apply scheduling (updates timesSeen, lastReviewed, nextDue, status, lastAnswer)
+      _schedule(progress, quality, now);
 
-    // Persist to Hive
-    await _progressBox.put(cardId, progress);
+      // Persist to Hive
+      await _progressBox.put(cardId, progress);
 
-    // Move to next card
-    if (_idx < _order.length - 1) {
-      _idx++;
-      _current = _lookup(_order[_idx]);
-    } else {
-      _current = null; // session finished
+      // Move to next card (same behavior as before)
+      if (_idx < _order.length - 1) {
+        _idx++;
+        _current = _lookup(_order[_idx]);
+      } else {
+        _current = null; // session finished
+      }
+
+      notifyListeners();
+    } finally {
+      _setBusy(false); // NEW
     }
-
-    notifyListeners();
   }
 
   /// Advance to the next due card; when finished, clear queue/current.
@@ -104,6 +121,21 @@ class DeckState extends ChangeNotifier {
     }
     _t("Advance: idx=$_idx/${_order.length}, current=${_current?.id}");
     notifyListeners();
+  }
+
+  // NEW: Rebuild the due queue using the last known daily target.
+  Future<void> refresh() async { // NEW
+    if (isBusy) return;          // NEW
+    _setBusy(true);              // NEW
+    try {
+      _buildDueQueue(limit: _lastLimit);
+      _idx = 0;
+      _current = isEmpty ? null : _lookup(_order[_idx]);
+      _t("Refreshed: dueToday=${_order.length}, limit=$_lastLimit");
+      notifyListeners();
+    } finally {
+      _setBusy(false);
+    }
   }
 
   // ---- Queue building ----
@@ -180,6 +212,12 @@ class DeckState extends ChangeNotifier {
     if (kDebugMode) debugPrint("[DeckState] $msg");
   }
 
+  // NEW: centralize busy state changes
+  void _setBusy(bool v) { // NEW
+    isBusy = v;
+    notifyListeners();
+  }
+
   // ---- Persistence helpers ----------
   CardProgress _readProgressFor(String id) {
     final existing = _progressBox.get(id);
@@ -189,12 +227,13 @@ class DeckState extends ChangeNotifier {
     final cp = CardProgress(cardId: id, status: LearningStatus.toLearn);
     _progressBox.put(id, cp);
     return cp;
-    }
+  }
 
   /// Reset all progress: clears Hive progress box and rebuilds queue.
   Future<void> resetProgress(OptionsState opts, String assetPath) async {
     await _progressBox.clear();
-    _buildDueQueue(limit: opts.dailyTarget);
+    _buildDueQueue(limit: (opts.dailyTarget <= 0 ? 20 : opts.dailyTarget)); // new 🌙
+    _lastLimit = (opts.dailyTarget <= 0 ? 20 : opts.dailyTarget);           // new 🌙
     _idx = 0;
     _current = isEmpty ? null : _lookup(_order[_idx]);
     notifyListeners();
