@@ -1,63 +1,88 @@
 import 'package:flutter/material.dart';
-import 'package:hive_flutter/hive_flutter.dart';
+import 'package:mandarin_flashcards/ui/screens/menu_screen.dart';
 import 'package:provider/provider.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
 import 'state/options_state.dart';
 import 'state/deck_state.dart';
-import "app_router.dart";
-import "theme.dart" as app_theme;
+import 'state/hive_keys.dart'; // kOptionsBox, kProgressBox
 
-void main() async {
+import 'models/card_progress.dart';
+
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Hive.initFlutter(); // 🔹 Initialize Hive once, before runApp
+  await Hive.initFlutter(); // keep a single init 🌙
+  // REGISTER ADAPTERS FIRST — BEFORE opening any boxes
+  if (!Hive.isAdapterRegistered(kLearningStatusTypeId)) {
+    Hive.registerAdapter(LearningStatusAdapter()); // new: register enum adapter early 🌙
+  }
+  if (!Hive.isAdapterRegistered(kCardProgressTypeId)) {
+    Hive.registerAdapter(CardProgressAdapter());   // new: register model adapter early 🌙
+  }
 
-  // Open boxes here (step 18) so providers can receive them
-  final progressBox = await Hive.openBox('cardsProgress');
-  final optionsBox  = await Hive.openBox('options');
+  // 1) Init options (blocking)
+  final options = OptionsState(kOptionsBox);
+  await options.init(); // uses Hive boxes safely (adapters are ready) 🌙
 
-  // Set default options if first run (step 19)
-  if (!optionsBox.containsKey('prefs')) {
-  optionsBox.put('prefs', {
-    'showPinyin': true,
-    'invertPair': false,
-  });
-}
+  // 2) Init deck (blocking) — use your JSON path (make sure it’s in pubspec assets)
+  final deck = DeckState(kProgressBox);
+  await deck.init(options, 'assets/decks/hsk1_trad_esES_deck.json'); // adapters already registered 🌙
 
-  runApp(MyApp(
-    progressBoxName: progressBox.name,
-    optionsBoxName: optionsBox.name,
-  ));
+  // 3) Run app with pre-initialized providers
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider<OptionsState>.value(value: options),
+        ChangeNotifierProvider<DeckState>.value(value: deck),
+      ],
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({
-    super.key,
-    required this.progressBoxName,
-    required this.optionsBoxName,
-  });
-
-  final String progressBoxName;
-  final String optionsBoxName;
+  const MyApp({super.key});
 
   @override
-Widget build(BuildContext context) {
-  return MultiProvider(
-    providers: [
-      ChangeNotifierProvider(create: (_) => OptionsState(optionsBoxName)),
-      ChangeNotifierProvider(create: (_) => DeckState(progressBoxName)
-        ..loadDeck('assets/decks/hsk1_trad_esES_deck.json')),
-    ],
-    child: Consumer<OptionsState>( // 👈 opts is only valid inside here
-      builder: (context, opts, _) {
-        return MaterialApp.router(
-          title: 'Mandarin Flashcards',
-          theme: app_theme.buildtheme(),
-          darkTheme: app_theme.buildDarkTheme(),
-          themeMode: opts.darkMode ? ThemeMode.dark : ThemeMode.light,
-          routerConfig: appRouter,
-        );
-      },
-    ),
-  );
+  Widget build(BuildContext context) {
+    final opts = context.watch<OptionsState>();
+    final theme = ThemeData(
+      brightness: opts.darkMode ? Brightness.dark : Brightness.light,
+      colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepOrange),
+      useMaterial3: true,
+    );
+
+    return MaterialApp(
+      title: 'Mandarin Flashcards',
+      theme: theme,
+      home: const MainMenuScreen(),
+    );
+  }
+}
+
+/// Simple gate in case you later want a splash screen.
+/// Right now deck/options are already loaded (blocking), so we go straight in.
+class HomeGate extends StatelessWidget {
+  const HomeGate({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final deck = context.watch<DeckState>();
+
+    // If queue is empty, show a friendly empty screen instead of a blank one.
+    if (deck.current == null && deck.isEmpty) {
+      return const EmptyOrLoaderScreen(); // shows text; not blank 🌙
+    }
+    return const MainMenuScreen(); // or LearnScreen if that’s your primary 🌙
+  }
+}
+
+class EmptyOrLoaderScreen extends StatelessWidget {
+  const EmptyOrLoaderScreen({super.key});
+  @override
+  Widget build(BuildContext context) {
+    return const Scaffold(
+      body: Center(child: Text('Loading / No cards due')),
+    );
   }
 }

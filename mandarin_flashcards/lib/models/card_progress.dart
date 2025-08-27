@@ -1,64 +1,141 @@
-import 'enums.dart';
+// lib/models/card_progress.dart
+import 'package:hive/hive.dart';
+import 'enums.dart'; // AnswerQuality, LearningStatus
 
-/// Tracks the learning progress for a single flashcard.
+const int kCardProgressTypeId = 101;
+const int kLearningStatusTypeId = 102;
+
 class CardProgress {
-  final String cardId;           // Link to Flashcard.id
-  LearningStatus status;         // Current learning pile
-  AnswerQuality? lastAnswer;     // Last result (can be null if never answered)
-  int timesSeen;                  // How many times shown to the user
-  DateTime? lastReviewed;         // Last time this card was reviewed
+  final String cardId;
+  int timesSeen;
+  DateTime? lastReviewed;
+  DateTime? nextDue;
+
+  // NEW: what the user last answered (wrong/unsure/correct)
+  AnswerQuality? lastAnswer;
+
+  // Learning lifecycle status
+  LearningStatus status;
 
   CardProgress({
     required this.cardId,
-    this.status = LearningStatus.toLearn,
-    this.lastAnswer,
     this.timesSeen = 0,
     this.lastReviewed,
+    this.nextDue,
+    this.lastAnswer,
+    this.status = LearningStatus.toLearn,
   });
 
-  /// Update progress when the user answers a card.
-  void recordAnswer(AnswerQuality quality) {
-    lastAnswer = quality;
-    timesSeen++;
-    lastReviewed = DateTime.now();
-
-    // Update status based on answer quality
-    switch (quality) {
-      case AnswerQuality.wrong:
-        status = LearningStatus.toLearn;
-        break;
-      case AnswerQuality.unsure:
-        status = LearningStatus.reinforce;
-        break;
-      case AnswerQuality.correct:
-        status = LearningStatus.learned;
-        break;
-    }
-  }
-
-  /// Create from JSON (e.g., loading saved progress)
-  factory CardProgress.fromJson(Map<String, dynamic> json) {
+  CardProgress copyWith({
+    String? cardId,
+    int? timesSeen,
+    DateTime? lastReviewed,
+    DateTime? nextDue,
+    AnswerQuality? lastAnswer,
+    LearningStatus? status,
+  }) {
     return CardProgress(
-      cardId: json['cardId'] as String,
-      status: LearningStatus.values[json['status'] as int],
-      lastAnswer: json['lastAnswer'] != null
-          ? AnswerQuality.values[json['lastAnswer'] as int]
-          : null,
-      timesSeen: json['timesSeen'] as int,
-      lastReviewed: json['lastReviewed'] != null
-          ? DateTime.parse(json['lastReviewed'] as String)
-          : null,
+      cardId: cardId ?? this.cardId,
+      timesSeen: timesSeen ?? this.timesSeen,
+      lastReviewed: lastReviewed ?? this.lastReviewed,
+      nextDue: nextDue ?? this.nextDue,
+      lastAnswer: lastAnswer ?? this.lastAnswer,
+      status: status ?? this.status,
     );
   }
 
-  /// Convert to JSON (e.g., for saving progress)
-  Map<String, dynamic> toJson() {
-    return {
-      'cardId': cardId,
-      'status': status.index,
-      'lastAnswer': lastAnswer?.index,
-      'timesSeen': timesSeen,
-      'lastReviewed': lastReviewed?.toIso8601String(),
-    };
+  @override
+  String toString() {
+    return 'CardProgress(cardId: $cardId, timesSeen: $timesSeen, '
+        'lastReviewed: $lastReviewed, nextDue: $nextDue, '
+        'lastAnswer: $lastAnswer, status: $status)';
+  }
+}
+
+/// Manual adapter for the LearningStatus enum (stores index as a byte).
+class LearningStatusAdapter extends TypeAdapter<LearningStatus> {
+  @override
+  final int typeId = kLearningStatusTypeId;
+
+  @override
+  LearningStatus read(BinaryReader reader) {
+    final idx = reader.readByte();
+    if (idx < 0 || idx >= LearningStatus.values.length) {
+      return LearningStatus.toLearn;
+    }
+    return LearningStatus.values[idx];
+  }
+
+  @override
+  void write(BinaryWriter writer, LearningStatus obj) {
+    writer.writeByte(obj.index);
+  }
+}
+
+/// Manual adapter for CardProgress.
+/// Order in write() MUST match order in read().
+class CardProgressAdapter extends TypeAdapter<CardProgress> {
+  @override
+  final int typeId = kCardProgressTypeId;
+
+  @override
+  CardProgress read(BinaryReader reader) {
+    final cardId = reader.readString();
+    final timesSeen = reader.readInt();
+
+    final hasLast = reader.readBool();
+    final lastMs = hasLast ? reader.readInt() : null;
+    final lastReviewed =
+        (lastMs != null) ? DateTime.fromMillisecondsSinceEpoch(lastMs) : null;
+
+    final hasNext = reader.readBool();
+    final nextMs = hasNext ? reader.readInt() : null;
+    final nextDue =
+        (nextMs != null) ? DateTime.fromMillisecondsSinceEpoch(nextMs) : null;
+
+    // NEW: lastAnswer as a nullable enum index
+    final hasLastAnswer = reader.readBool();
+    AnswerQuality? lastAnswer;
+    if (hasLastAnswer) {
+      final byte = reader.readByte();
+      if (byte >= 0 && byte < AnswerQuality.values.length) {
+        lastAnswer = AnswerQuality.values[byte];
+      }
+    }
+
+    final status = reader.read() as LearningStatus; // via LearningStatusAdapter
+
+    return CardProgress(
+      cardId: cardId,
+      timesSeen: timesSeen,
+      lastReviewed: lastReviewed,
+      nextDue: nextDue,
+      lastAnswer: lastAnswer,
+      status: status,
+    );
+  }
+
+  @override
+  void write(BinaryWriter writer, CardProgress obj) {
+    writer
+      ..writeString(obj.cardId)
+      ..writeInt(obj.timesSeen)
+      ..writeBool(obj.lastReviewed != null);
+    if (obj.lastReviewed != null) {
+      writer.writeInt(obj.lastReviewed!.millisecondsSinceEpoch);
+    }
+
+    writer.writeBool(obj.nextDue != null);
+    if (obj.nextDue != null) {
+      writer.writeInt(obj.nextDue!.millisecondsSinceEpoch);
+    }
+
+    // NEW: lastAnswer as a nullable enum index
+    writer.writeBool(obj.lastAnswer != null);
+    if (obj.lastAnswer != null) {
+      writer.writeByte(obj.lastAnswer!.index);
+    }
+
+    writer.write(obj.status); // uses LearningStatusAdapter
   }
 }

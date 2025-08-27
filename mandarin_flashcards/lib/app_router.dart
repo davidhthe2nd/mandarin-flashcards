@@ -8,7 +8,7 @@ import 'ui/screens/options_screen.dart';
 
 final appRouter = GoRouter(
   routes: [
-    GoRoute(path: '/', builder: (context, state) => const MenuScreen()),
+    GoRoute(path: '/', builder: (context, state) => const MainMenuScreen()),
     GoRoute(path: '/learn', builder: (context, state) => const LearnScreen()),
     GoRoute(path: '/options', builder: (context, state) => const OptionsScreen()),
   ],
