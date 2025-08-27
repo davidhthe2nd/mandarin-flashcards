@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import 'package:mandarin_flashcards/app_router.dart';
 import 'package:mandarin_flashcards/ui/screens/options_screen.dart';
 import 'package:provider/provider.dart';
 
 import '../../state/deck_state.dart';
-import '../../state/options_state.dart';
 import '../screens/learn_screen.dart'; 
 
 class MainMenuScreen extends StatelessWidget {

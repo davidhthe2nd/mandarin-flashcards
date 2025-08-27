@@ -22,7 +22,7 @@ class DailyProgressHeader extends StatelessWidget {
         Row(
           children: [
             Text(
-              "Today's progress",
+              "Progress",
               style: Theme.of(context).textTheme.titleMedium,
             ),
             const Spacer(),

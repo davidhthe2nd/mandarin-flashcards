@@ -25,15 +25,15 @@ class AnswerButtons extends StatelessWidget {
       children: [
         FilledButton.tonal(
           onPressed: enabled ? onWrong : null,
-          child: const Text('Wrong'),
+          child: const Text('I forgot'),
         ),
         FilledButton.tonal(
           onPressed: enabled ? onUnsure : null,
-          child: const Text('Unsure'),
+          child: const Text('Almost'),
         ),
         FilledButton.tonal(
           onPressed: enabled ? onCorrect : null,
-          child: const Text('Correct'),
+          child: const Text('I got it'),
         ),
       ],
     );

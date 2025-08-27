@@ -53,7 +53,7 @@ class _LearnScreenState extends State<LearnScreen> {
         actions: [
           // new: quick toggles so you can switch study mode on the fly 🌙
           Row(children: [
-            const Text('Pinyin'),
+            const Text('Show pinyin'),
             Switch(
               value: opts.showPinyin,
               onChanged: (v) => context.read<OptionsState>().toggleShowPinyin(v), // new: persist + notify 🌙
@@ -115,7 +115,7 @@ class _LearnScreenState extends State<LearnScreen> {
                           if (isFront)
                             FilledButton(
                               onPressed: () => setState(() => isFront = false),
-                              child: const Text('Show answer'),
+                              child: const Text('Flip card'),
                             )
                           else
                             // Prefer this if your AnswerButtons supports an `enabled` flag:

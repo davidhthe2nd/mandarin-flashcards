@@ -6,15 +6,12 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'state/options_state.dart';
 import 'state/deck_state.dart';
 import 'state/hive_keys.dart'; // kOptionsBox, kProgressBox
-import 'ui/screens/flashcard_screen.dart';
-import 'ui/screens/menu_screen.dart';
 
 import 'models/card_progress.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Hive.initFlutter(); // keep a single init 🌙
-
   // REGISTER ADAPTERS FIRST — BEFORE opening any boxes
   if (!Hive.isAdapterRegistered(kLearningStatusTypeId)) {
     Hive.registerAdapter(LearningStatusAdapter()); // new: register enum adapter early 🌙
