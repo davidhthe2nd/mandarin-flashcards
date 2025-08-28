@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../../state/options_state.dart';
+import '../../utils/colors.dart'; // theming helpers
 
 class OptionsScreen extends StatelessWidget {
   const OptionsScreen({super.key});
@@ -38,6 +39,46 @@ class OptionsScreen extends StatelessWidget {
           ),
 
           const Divider(),
+          SwitchListTile(
+            title: const Text('Dark mode'),
+            value: opts.darkMode,
+            onChanged: (v) => context.read<OptionsState>().setDarkMode(v),
+          ),
+          ListTile(
+            title: const Text('Theme palette'),
+            subtitle: Text(TestPalettes.names[opts.activePaletteIndex]),
+            trailing: DropdownButton<int>(
+              value: opts.activePaletteIndex,
+              onChanged: (idx) {
+                if (idx != null) {
+                  context.read<OptionsState>().setActivePaletteIndex(idx);
+                }
+              },
+              items: List.generate(TestPalettes.all.length, (i) {
+                return DropdownMenuItem(
+                  value: i,
+                  child: Text(TestPalettes.names[i]),
+                );
+              }),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+            child: Wrap(
+              spacing: 8,
+              children: TestPalettes.all[opts.activePaletteIndex].map((hex) {
+                return Container(
+                  width: 24,
+                  height: 24,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Color(int.parse(hex.replaceFirst('#', '0xFF'))),
+                    border: Border.all(color: Theme.of(context).colorScheme.outlineVariant),
+                  ),
+                );
+              }).toList(),
+            ),
+          ),
 
           const SizedBox(height: 24),
           const Text(
@@ -50,11 +91,11 @@ class OptionsScreen extends StatelessWidget {
             subtitle: Text('Adjust character and pinyin size'),
             enabled: false,
           ),
-          const ListTile(
-            title: Text('Theme'),
-            subtitle: Text('Light / Dark'),
-            enabled: false,
-          ),
+          
+
+          const Divider(),
+
+          
         ],
       ),
     );

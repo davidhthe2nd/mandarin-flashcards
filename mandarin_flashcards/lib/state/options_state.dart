@@ -2,12 +2,15 @@ import 'package:flutter/foundation.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
 import 'hive_keys.dart';
+import '/utils/colors.dart'; // theming helpers
 
 class OptionsState extends ChangeNotifier {
   OptionsState(this._optionsBoxName);
 
   final String _optionsBoxName;
   late final Box _box;
+
+  int _activePaletteIndex = 0; // NEW
 
   bool _showPinyin = true;
   bool _invertPair = false;
@@ -18,11 +21,15 @@ class OptionsState extends ChangeNotifier {
   bool get invertPair => _invertPair;
   bool get darkMode => _darkMode; // 🌙 new
   int get dailyTarget => _dailyTarget;
+  int get activePaletteIndex => _activePaletteIndex;
 
   /// Initialize the box and load options.
   Future<void> init() async {
     _box = await Hive.openBox(_optionsBoxName);
     await _read();
+    _darkMode = _box.get('darkMode', defaultValue: false) as bool;
+    _activePaletteIndex = _box.get(kActivePaletteIndex, defaultValue: 0) as int; // NEW
+    notifyListeners();
   }
 
   Future<void> _read() async {
@@ -82,6 +89,18 @@ class OptionsState extends ChangeNotifier {
   Future<void> setDailyTarget(int value) async {
     _dailyTarget = value.clamp(1, 200);
     await _write();
+    notifyListeners();
+  }
+
+  Future<void> setDarkMode(bool value) async {
+    _darkMode = value;
+    await _box.put('darkMode', value);
+    notifyListeners();
+  }
+
+  Future<void> setActivePaletteIndex(int idx) async { // NEW
+    _activePaletteIndex = idx.clamp(0, TestPalettes.all.length - 1);
+    await _box.put(kActivePaletteIndex, _activePaletteIndex);
     notifyListeners();
   }
 }

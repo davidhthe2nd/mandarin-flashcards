@@ -21,8 +21,8 @@ class MainMenuScreen extends StatelessWidget {
             children: [
               Card(
                 child: ListTile(
-                  title: const Text("Today's learning"),
-                  subtitle: Text('${deck.position}/${deck.totalToday} due'),
+                  title: const Text("Start Learning"),
+                  subtitle: Text('Daily goal' '${deck.position}/${deck.totalToday} due'),
                   trailing: const Icon(Icons.play_arrow),
                   onTap: () => Navigator.of(context).push(
                     MaterialPageRoute(builder: (_) => const LearnScreen()),

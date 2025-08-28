@@ -158,7 +158,7 @@ class _EmptyState extends StatelessWidget {
         const SizedBox(height: 8),
         FilledButton(
           onPressed: deck.isBusy ? null : () => deck.refresh(), // new: one-tap rebuild of due queue 🌙
-          child: const Text('Refresh queue'),
+          child: const Text('Keep learning'),
         ),
         const SizedBox(height: 8),
         TextButton(

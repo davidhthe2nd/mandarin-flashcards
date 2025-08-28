@@ -54,11 +54,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final opts = context.watch<OptionsState>();
-    final isDark = context.watch<OptionsState>().darkMode;
-    final scheme = buildSchemeFromPalette(
-      dark: isDark,
-      palette: TestPalettes.paletteA, // swap to try others
-    );
+    final isDark = opts.darkMode;
+
+    final palette = TestPalettes.all[opts.activePaletteIndex];
+    final scheme  = buildSchemeFromPalette(dark: isDark, palette: palette);
 
     final theme = ThemeData(
       colorScheme: scheme,
@@ -79,6 +78,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Mandarin Flashcards',
       theme: theme,
+      darkTheme: ThemeData(
+        colorScheme: buildSchemeFromPalette(dark: true, palette: palette),
+        useMaterial3: true,
+      ),
+      themeMode: isDark ? ThemeMode.dark : ThemeMode.light,
       home: const MainMenuScreen(),
     );
   }
