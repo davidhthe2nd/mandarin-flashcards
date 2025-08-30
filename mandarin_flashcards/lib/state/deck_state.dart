@@ -5,9 +5,70 @@ import 'package:hive_flutter/hive_flutter.dart';
 
 import '../models/flashcard.dart';
 import '../models/card_progress.dart';
-import '../models/enums.dart';          // AnswerQuality, LearningStatus
+import '../models/enums.dart'; // AnswerQuality, LearningStatus
 import '../services/deck_loader.dart';
 import '../state/options_state.dart';
+
+// new 🌙 (REPLACE your previous _Buckets + _bucketize)
+
+// Buckets we want for mixing: toLearn, forgotten (derived), almost(reinforce), learned
+class _Buckets { // new 🌙
+  final List<Flashcard> toLearn;
+  final List<Flashcard> forgotten;    // derived: toLearn + lastAnswer == wrong
+  final List<Flashcard> almost;       // LearningStatus.reinforce
+  final List<Flashcard> learned;      // LearningStatus.learned
+  _Buckets({
+    required this.toLearn,
+    required this.forgotten,
+    required this.almost,
+    required this.learned,
+  });
+}
+
+// We must read progress via your DeckState's _readProgressFor, so accept a reader fn
+_Buckets _bucketize( // new 🌙
+  List<Flashcard> cards,
+  Random rng,
+  CardProgress Function(String) readProgress,
+) {
+  final toLearn    = <Flashcard>[];
+  final forgotten  = <Flashcard>[];
+  final almost     = <Flashcard>[];
+  final learned    = <Flashcard>[];
+
+  for (final c in cards) {
+    final p = readProgress(c.id); // new 🌙
+    switch (p.status) {
+      case LearningStatus.toLearn:
+        if (p.lastAnswer == AnswerQuality.wrong) {
+          forgotten.add(c);       // wrong → treat as "forgotten"
+        } else {
+          toLearn.add(c);         // unseen/new or non-wrong last answer
+        }
+        break;
+      case LearningStatus.reinforce:
+        almost.add(c);            // "almost there"
+        break;
+      case LearningStatus.learned:
+        learned.add(c);
+        break;
+    }
+  }
+
+  // shuffle within buckets for variety
+  toLearn.shuffle(rng);
+  forgotten.shuffle(rng);
+  almost.shuffle(rng);
+  learned.shuffle(rng);
+
+  return _Buckets(
+    toLearn: toLearn,
+    forgotten: forgotten,
+    almost: almost,
+    learned: learned,
+  );
+}
+
 
 class DeckState extends ChangeNotifier {
   DeckState(this._progressBoxName);
@@ -42,6 +103,16 @@ class DeckState extends ChangeNotifier {
   int get totalToday => _order.length;
   int get remainingToday => _order.isEmpty ? 0 : (_order.length - _idx);
 
+  // Weights for selecting cards
+  double weightToLearn = 0.60;
+  double weightForgotten = 0.30;
+  double weightAlmost = 0.10;
+
+  // Optional: cap how many cards to prepare for a session
+  int? _sessionTarget; // null -> use your existing daily goal if you have one
+
+  List<Flashcard> _pool = <Flashcard>[]; // new 🌙 filtered by options
+
   /// Convenience: current progress for the active card.
   CardProgress? get currentProgress =>
       (_current == null) ? null : _readProgressFor(_current!.id);
@@ -56,16 +127,21 @@ class DeckState extends ChangeNotifier {
     // Use your real loader (CSV/JSON) that returns a deck with a .cards list
     final deck = await DeckLoader.loadFromAsset(assetPath);
     _all = deck.cards;
+    _pool = _all; // default // new 🌙
 
-    _buildDueQueue(limit: (opts.dailyTarget <= 0 ? 20 : opts.dailyTarget)); // new: default to 20 if unset 🌙
-    _lastLimit = (opts.dailyTarget <= 0 ? 20 : opts.dailyTarget);           // new 🌙
+    _applyHSKFilter(opts.hskLevels);                                   // new 🌙
+    rebuildDueQueueWeighted(target: (opts.dailyTarget <= 0 ? 20 : opts.dailyTarget)); // new 🌙
 
     _idx = 0;
     _current = isEmpty ? null : _lookup(_order[_idx]);
 
-    _t("Init: all=${_all.length}, target=$_lastLimit"); // CHANGED: clearer log 🌙
+    _t(
+      "Init: all=${_all.length}, target=$_lastLimit",
+    ); // CHANGED: clearer log 🌙
     if (_all.isEmpty) {
-      _t("WARNING: deck loaded 0 cards. Check JSON format & assets path."); // new 🌙
+      _t(
+        "WARNING: deck loaded 0 cards. Check JSON format & assets path.",
+      ); // new 🌙
     } else {
       _t("Sample ids: ${_all.take(3).map((c) => c.id).toList()}"); // new 🌙
     }
@@ -124,11 +200,12 @@ class DeckState extends ChangeNotifier {
   }
 
   // NEW: Rebuild the due queue using the last known daily target.
-  Future<void> refresh() async { // NEW
-    if (isBusy) return;          // NEW
-    _setBusy(true);              // NEW
+  Future<void> refresh() async {
+    // NEW
+    if (isBusy) return; // NEW
+    _setBusy(true); // NEW
     try {
-      _buildDueQueue(limit: _lastLimit);
+      rebuildDueQueueWeighted(target: _lastLimit); // new 🌙
       _idx = 0;
       _current = isEmpty ? null : _lookup(_order[_idx]);
       _t("Refreshed: dueToday=${_order.length}, limit=$_lastLimit");
@@ -157,7 +234,9 @@ class DeckState extends ChangeNotifier {
       ..clear()
       ..addAll(dueIds.take(limit));
 
-    _t("Queue built: kept=${_order.length} (found due=${dueIds.length}, limit=$limit)");
+    _t(
+      "Queue built: kept=${_order.length} (found due=${dueIds.length}, limit=$limit)",
+    );
   }
 
   // ---- Scheduling heuristic (swap for SM-2 later if desired) ----
@@ -213,7 +292,8 @@ class DeckState extends ChangeNotifier {
   }
 
   // NEW: centralize busy state changes
-  void _setBusy(bool v) { // NEW
+  void _setBusy(bool v) {
+    // NEW
     isBusy = v;
     notifyListeners();
   }
@@ -232,11 +312,96 @@ class DeckState extends ChangeNotifier {
   /// Reset all progress: clears Hive progress box and rebuilds queue.
   Future<void> resetProgress(OptionsState opts, String assetPath) async {
     await _progressBox.clear();
-    _buildDueQueue(limit: (opts.dailyTarget <= 0 ? 20 : opts.dailyTarget)); // new 🌙
-    _lastLimit = (opts.dailyTarget <= 0 ? 20 : opts.dailyTarget);           // new 🌙
+    rebuildDueQueueWeighted(
+      target: (opts.dailyTarget <= 0 ? 20 : opts.dailyTarget),
+    ); // new 🌙
+    _lastLimit = (opts.dailyTarget <= 0 ? 20 : opts.dailyTarget); // new 🌙
     _idx = 0;
     _current = isEmpty ? null : _lookup(_order[_idx]);
     notifyListeners();
     _t("Progress reset");
   }
+
+  // new 🌙
+  void rebuildDueQueueWeighted({int? target}) {
+    final buckets = _bucketize(_pool, _rng, _readProgressFor); // fix to use _pool // new 🌙
+
+    final desired = target ?? _sessionTarget ?? _lastLimit ?? 20;
+
+    int nToLearn = (desired * weightToLearn).round().clamp(
+      0,
+      buckets.toLearn.length,
+    );
+    int nForgotten = (desired * weightForgotten).round().clamp(
+      0,
+      buckets.forgotten.length,
+    );
+    int nAlmost = (desired * weightAlmost).round().clamp(
+      0,
+      buckets.almost.length,
+    );
+
+    final queue = <String>[
+      ...buckets.toLearn.take(nToLearn).map((c) => c.id),
+      ...buckets.forgotten.take(nForgotten).map((c) => c.id),
+      ...buckets.almost.take(nAlmost).map((c) => c.id),
+    ];
+
+    void topUp(List<Flashcard> src, int alreadyTook) {
+      if (queue.length >= desired) return;
+      final remain = src.skip(alreadyTook);
+      final can = desired - queue.length;
+      if (can > 0) {
+        queue.addAll(remain.take(can).map((c) => c.id));
+      }
+    }
+
+    topUp(buckets.toLearn, nToLearn);
+    topUp(buckets.forgotten, nForgotten);
+    topUp(buckets.almost, nAlmost);
+    topUp(buckets.learned, 0);
+
+    _order
+      ..clear()
+      ..addAll(queue);
+
+    _idx = 0;
+    _current = isEmpty ? null : _lookup(_order[_idx]);
+
+    _lastLimit = desired;
+    _t(
+      "Weighted queue built: kept=${_order.length}, desired=$desired",
+    ); // new 🌙
+    notifyListeners();
+  }
+
+  void _applyHSKFilter(Set<int> levels) { // new 🌙
+  // Adjust this selector if your field name differs (e.g., card.hsk or card.tags.contains)
+    _pool = _all.where((c) {
+    final int level = c.hsk; // <— if your model uses `hsk`, change to `c.hsk` // new 🌙
+    return levels.contains(level);
+  }).toList();
+    _t('HSK filter -> levels=$levels, pool=${_pool.length}'); // new 🌙
+  }
+
+  void applyHSKAndRequeue(Set<int> levels, {int? target}) { // new 🌙
+  _applyHSKFilter(levels);
+  rebuildDueQueueWeighted(target: target ?? _lastLimit);
+  notifyListeners();
+  }
+
+  void setMix({double? toLearn, double? forgotten, double? almost}) {
+  if (toLearn   != null) weightToLearn   = toLearn;
+  if (forgotten != null) weightForgotten = forgotten;
+  if (almost    != null) weightAlmost    = almost;
+  final sum = weightToLearn + weightForgotten + weightAlmost;
+  if (sum > 0) {
+    weightToLearn   /= sum;
+    weightForgotten /= sum;
+    weightAlmost    /= sum;
+  } else {
+    weightToLearn = 1; weightForgotten = 0; weightAlmost = 0;
+  }
+  notifyListeners();
+}
 }

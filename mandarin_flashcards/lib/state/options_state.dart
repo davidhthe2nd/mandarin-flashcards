@@ -23,12 +23,43 @@ class OptionsState extends ChangeNotifier {
   int get dailyTarget => _dailyTarget;
   int get activePaletteIndex => _activePaletteIndex;
 
+  // new 🌙 control card mixing ratios
+  double _mixToLearn = 0.60; // new 🌙
+  double _mixForgotten = 0.30; // new 🌙
+  double _mixAlmost = 0.10; // new 🌙
+
+  double get mixToLearn => _mixToLearn; // new 🌙
+  double get mixForgotten => _mixForgotten; // new 🌙
+  double get mixAlmost => _mixAlmost; // new 🌙
+
+  // HSK levels (1 to 6); default to HSK 1 only
+  final Set<int> _hskLevels = {1, 2};
+  Set<int> get hskLevels => _hskLevels;
+
+  double exampleScale = 1.15; // new 🌙 fallback if you don’t persist it yet
+
   /// Initialize the box and load options.
   Future<void> init() async {
     _box = await Hive.openBox(_optionsBoxName);
     await _read();
     _darkMode = _box.get('darkMode', defaultValue: false) as bool;
-    _activePaletteIndex = _box.get(kActivePaletteIndex, defaultValue: 0) as int; // NEW
+    _activePaletteIndex = _box.get(kActivePaletteIndex, defaultValue: 0) as int;
+
+    final savedLevels = (_box.get(kHSKLevelsKey) as List?)?.cast<int>() ?? [1];
+    _hskLevels
+      ..clear()
+      ..addAll(savedLevels);
+
+    // new 🌙 – read the mix (fallback to defaults)
+    _mixToLearn = (_box.get(kMixToLearn, defaultValue: _mixToLearn) as num)
+        .toDouble();
+    _mixForgotten =
+        (_box.get(kMixForgotten, defaultValue: _mixForgotten) as num)
+            .toDouble();
+    _mixAlmost = (_box.get(kMixAlmost, defaultValue: _mixAlmost) as num)
+        .toDouble();
+    _normalizeMix(); // keep sums ≈ 1.0 // new 🌙
+
     notifyListeners();
   }
 
@@ -44,7 +75,7 @@ class OptionsState extends ChangeNotifier {
 
     _showPinyin = (map['showPinyin'] as bool?) ?? true;
     _invertPair = (map['invertPair'] as bool?) ?? false;
-    _darkMode   = (map['darkMode']   as bool?) ?? false;
+    _darkMode = (map['darkMode'] as bool?) ?? false;
 
     final dt = map['dailyTarget'];
     if (dt is num) {
@@ -59,30 +90,28 @@ class OptionsState extends ChangeNotifier {
   }
 
   Future<void> _write() async {
-    final data = <String, dynamic>{
-      'showPinyin': _showPinyin,
-      'invertPair': _invertPair,
-      'darkMode': _darkMode,
-      'dailyTarget': _dailyTarget,
-    };
-    await _box.put(kOptionsPrefsKey, data);
-  }
+  final data = <String, dynamic>{
+    'showPinyin': _showPinyin,
+    'invertPair': _invertPair,
+    'darkMode': _darkMode,
+    'dailyTarget': _dailyTarget,
+  };
+  await _box.put(kOptionsPrefsKey, data);
+  // also persist mix // new 🌙
+  await _box.put(kMixToLearn,   _mixToLearn);
+  await _box.put(kMixForgotten, _mixForgotten);
+  await _box.put(kMixAlmost,    _mixAlmost);
+}
 
-  void toggleShowPinyin(bool value) {
+  Future<void> toggleShowPinyin(bool value) async {
     _showPinyin = value;
-    _write();
+    await _write();
     notifyListeners();
   }
 
-  void toggleInvertPair(bool value) {
+  Future<void> toggleInvertPair(bool value) async {
     _invertPair = value;
-    _write();
-    notifyListeners();
-  }
-
-  void toggleDarkMode(bool value) {
-    _darkMode = value;
-    _write();
+    await _write();
     notifyListeners();
   }
 
@@ -98,9 +127,46 @@ class OptionsState extends ChangeNotifier {
     notifyListeners();
   }
 
-  Future<void> setActivePaletteIndex(int idx) async { // NEW
+  Future<void> setActivePaletteIndex(int idx) async {
+    // NEW
     _activePaletteIndex = idx.clamp(0, TestPalettes.all.length - 1);
     await _box.put(kActivePaletteIndex, _activePaletteIndex);
     notifyListeners();
   }
+
+  // new 🌙
+  Future<void> toggleHSK(int level, bool include) async {
+    if (include) {
+      _hskLevels.add(level);
+    } else {
+      _hskLevels.remove(level);
+    }
+    await _box.put(kHSKLevelsKey, _hskLevels.toList()..sort());
+    notifyListeners();
+  }
+
+  // new 🌙
+  bool includesHSK(int level) => _hskLevels.contains(level);
+
+  void _normalizeMix() {
+  final sum = _mixToLearn + _mixForgotten + _mixAlmost;
+  if (sum <= 0) {
+    _mixToLearn = 1; _mixForgotten = 0; _mixAlmost = 0;
+  } else {
+    _mixToLearn   /= sum;
+    _mixForgotten /= sum;
+    _mixAlmost    /= sum;
+  }
+}
+
+// new 🌙 – set all three in one go (values can be 0–1 or 0–100)
+Future<void> setMix({double? toLearn, double? forgotten, double? almost}) async {
+  if (toLearn   != null) _mixToLearn   = (toLearn   > 1) ? toLearn   / 100 : toLearn;
+  if (forgotten != null) _mixForgotten = (forgotten > 1) ? forgotten / 100 : forgotten;
+  if (almost    != null) _mixAlmost    = (almost    > 1) ? almost    / 100 : almost;
+
+  _normalizeMix();
+  await _write();
+  notifyListeners();
+}
 }

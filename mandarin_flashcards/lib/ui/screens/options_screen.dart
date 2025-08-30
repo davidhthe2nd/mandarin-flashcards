@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 
 import '../../state/options_state.dart';
 import '../../utils/colors.dart'; // theming helpers
+import "../../state/deck_state.dart"; // new: to update mix 🌙
 
 class OptionsScreen extends StatelessWidget {
   const OptionsScreen({super.key});
@@ -10,6 +11,7 @@ class OptionsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final opts = context.watch<OptionsState>();
+    final deck = context.read<DeckState>();
 
     return Scaffold(
       appBar: AppBar(title: const Text('Options')),
@@ -29,13 +31,6 @@ class OptionsScreen extends StatelessWidget {
             subtitle: const Text('Spanish → Chinese (front shows Spanish)'),
             value: opts.invertPair,
             onChanged: (v) => context.read<OptionsState>().toggleInvertPair(v),
-          ),
-
-          SwitchListTile(
-            title: const Text('Dark mode'),
-            subtitle: const Text('Use a dark theme throughout the app'),
-            value: opts.darkMode,
-            onChanged: (v) => context.read<OptionsState>().toggleDarkMode(v),
           ),
 
           const Divider(),
@@ -73,10 +68,101 @@ class OptionsScreen extends StatelessWidget {
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     color: Color(int.parse(hex.replaceFirst('#', '0xFF'))),
-                    border: Border.all(color: Theme.of(context).colorScheme.outlineVariant),
+                    border: Border.all(
+                      color: Theme.of(context).colorScheme.outlineVariant,
+                    ),
                   ),
                 );
               }).toList(),
+            ),
+          ),
+
+          // Title
+          const SizedBox(height: 16),
+          Text('Study mix', style: Theme.of(context).textTheme.titleMedium),
+          const SizedBox(height: 8),
+
+          // To-learn
+          Row(
+            children: [
+              const SizedBox(width: 88, child: Text('To-learn')),
+              Expanded(
+                child: Slider(
+                  value: (opts.mixToLearn * 100),
+                  min: 0,
+                  max: 100,
+                  divisions: 20,
+                  label: '${(opts.mixToLearn * 100).round()}%',
+                  onChanged: (v) async {
+                    await context.read<OptionsState>().setMix(toLearn: v);
+                    deck.setMix(
+                      toLearn: context.read<OptionsState>().mixToLearn,
+                      forgotten: context.read<OptionsState>().mixForgotten,
+                      almost: context.read<OptionsState>().mixAlmost,
+                    );
+                    deck.rebuildDueQueueWeighted();
+                  },
+                ),
+              ),
+            ],
+          ),
+
+          // Forgotten
+          Row(
+            children: [
+              const SizedBox(width: 88, child: Text('Forgotten')),
+              Expanded(
+                child: Slider(
+                  value: (opts.mixForgotten * 100),
+                  min: 0,
+                  max: 100,
+                  divisions: 20,
+                  label: '${(opts.mixForgotten * 100).round()}%',
+                  onChanged: (v) async {
+                    await context.read<OptionsState>().setMix(forgotten: v);
+                    deck.setMix(
+                      toLearn: context.read<OptionsState>().mixToLearn,
+                      forgotten: context.read<OptionsState>().mixForgotten,
+                      almost: context.read<OptionsState>().mixAlmost,
+                    );
+                    deck.rebuildDueQueueWeighted();
+                  },
+                ),
+              ),
+            ],
+          ),
+
+          // Almost
+          Row(
+            children: [
+              const SizedBox(width: 88, child: Text('Almost')),
+              Expanded(
+                child: Slider(
+                  value: (opts.mixAlmost * 100),
+                  min: 0,
+                  max: 100,
+                  divisions: 20,
+                  label: '${(opts.mixAlmost * 100).round()}%',
+                  onChanged: (v) async {
+                    await context.read<OptionsState>().setMix(almost: v);
+                    deck.setMix(
+                      toLearn: context.read<OptionsState>().mixToLearn,
+                      forgotten: context.read<OptionsState>().mixForgotten,
+                      almost: context.read<OptionsState>().mixAlmost,
+                    );
+                    deck.rebuildDueQueueWeighted();
+                  },
+                ),
+              ),
+            ],
+          ),
+
+          // Summary
+          Padding(
+            padding: const EdgeInsets.only(top: 4),
+            child: Text(
+              'Total: ${((opts.mixToLearn + opts.mixForgotten + opts.mixAlmost) * 100).round()}%',
+              style: Theme.of(context).textTheme.bodySmall,
             ),
           ),
 
@@ -91,11 +177,8 @@ class OptionsScreen extends StatelessWidget {
             subtitle: Text('Adjust character and pinyin size'),
             enabled: false,
           ),
-          
 
           const Divider(),
-
-          
         ],
       ),
     );
