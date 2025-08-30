@@ -52,15 +52,14 @@ android {
 
     buildTypes {
         getByName("release") {
-            isMinifyEnabled = false
-            // ✅ sign with your release keystore (fallback to debug if missing)
-            signingConfig = if (keystorePropertiesFile.exists())
-                signingConfigs.getByName("release")
-            else
-                signingConfigs.getByName("debug")
+            getByName("release") {
+        isMinifyEnabled = false          // keep code shrinking OFF (R8)
+        isShrinkResources = false        // must be OFF if minify is OFF
+        signingConfig = signingConfigs.getByName("release")
         }
         // (debug stays as default)
     }
+}
 }
 
 flutter {
