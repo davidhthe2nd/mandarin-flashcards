@@ -31,7 +31,6 @@ android {
 
     defaultConfig {
         applicationId = "com.badidea.flashcards"
-        // ✅ use Flutter extension values, not the bogus "flutter.000"
         minSdk = flutter.minSdkVersion
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
