@@ -244,7 +244,7 @@ class _BackFace extends StatelessWidget {
     final t = Theme.of(context).textTheme;
 
     // Back face = meaning-first. If you later support other locales, swap 'esES'.
-    final es = card.translations['esES'] ?? '';
+    final es = card.esES ?? '';
 
     // When invert==true your LearnScreen already swaps which side is shown first.
     // Here we always render the "meaning" layout for the back.

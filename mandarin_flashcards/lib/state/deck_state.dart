@@ -113,6 +113,9 @@ class DeckState extends ChangeNotifier {
 
   List<Flashcard> _pool = <Flashcard>[]; // new 🌙 filtered by options
 
+  DeckSource _currentSource = DeckSource.hsk;
+  DeckSource get currentSource => _currentSource;
+
   /// Convenience: current progress for the active card.
   CardProgress? get currentProgress =>
       (_current == null) ? null : _readProgressFor(_current!.id);
@@ -121,31 +124,13 @@ class DeckState extends ChangeNotifier {
   ///
   /// Call this after OptionsState.init() in your app bootstrap:
   ///   await deck.init(options, 'assets/data/hsk1.csv');
-  Future<void> init(OptionsState opts, String assetPath) async {
-    _progressBox = await Hive.openBox<CardProgress>(_progressBoxName);
-
-    // Use your real loader (CSV/JSON) that returns a deck with a .cards list
-    final deck = await DeckLoader.loadFromAsset(assetPath);
-    _all = deck.cards;
-    _pool = _all; // default // new 🌙
-
-    _applyHSKFilter(opts.hskLevels);                                   // new 🌙
-    rebuildDueQueueWeighted(target: (opts.dailyTarget <= 0 ? 20 : opts.dailyTarget)); // new 🌙
-
-    _idx = 0;
-    _current = isEmpty ? null : _lookup(_order[_idx]);
-
-    _t(
-      "Init: all=${_all.length}, target=$_lastLimit",
-    ); // CHANGED: clearer log 🌙
-    if (_all.isEmpty) {
-      _t(
-        "WARNING: deck loaded 0 cards. Check JSON format & assets path.",
-      ); // new 🌙
-    } else {
-      _t("Sample ids: ${_all.take(3).map((c) => c.id).toList()}"); // new 🌙
-    }
-  }
+  Future<void> init(OptionsState opts, {DeckSource source = DeckSource.hsk}) async {
+  // Opening the box is a one-time operation
+  _progressBox = await Hive.openBox<CardProgress>(_progressBoxName);
+  
+  // Use the new loading logic to populate the state
+  await loadSource(source, opts); 
+}
 
   // ---- Answer flow: ❌ / ❓ / ✔️ ----
   Future<void> answer(AnswerQuality quality) async {
@@ -210,6 +195,33 @@ class DeckState extends ChangeNotifier {
       _current = isEmpty ? null : _lookup(_order[_idx]);
       _t("Refreshed: dueToday=${_order.length}, limit=$_lastLimit");
       notifyListeners();
+    } finally {
+      _setBusy(false);
+    }
+  }
+
+  /// Swaps the active deck and rebuilds the queue
+  Future<void> loadSource(DeckSource source, OptionsState opts) async {
+    _setBusy(true);
+    _currentSource = source;
+    
+    // Determine path based on selection
+    final String assetPath = (source == DeckSource.hsk)
+        ? 'assets/decks/hsk_master.csv' 
+        : 'assets/decks/textbook_master.csv';
+
+    try {
+      final deck = await DeckLoader.loadFromAsset(assetPath);
+      _all = deck.cards;
+      
+      // Filter by HSK if in HSK mode, or keep full list for Textbook
+      if (source == DeckSource.hsk) {
+        _applyHSKFilter(opts.hskLevels);
+      } else {
+        _pool = _all; // Show all textbook cards by default
+      }
+
+      rebuildDueQueueWeighted(target: opts.dailyTarget);
     } finally {
       _setBusy(false);
     }

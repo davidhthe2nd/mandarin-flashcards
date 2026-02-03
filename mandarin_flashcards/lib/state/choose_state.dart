@@ -104,11 +104,11 @@ class ChooseState extends ChangeNotifier {
   /// (Use these in your UI to show the right side of the card.)
   String frontText(Flashcard card) {
     // If invertPair => show "answer" as prompt; else show "prompt"
-    return _options.invertPair ? card.answer : card.prompt;
+    return _options.invertPair ? card.esES : card.hanzi;
   }
 
   String backText(Flashcard card) {
-    return _options.invertPair ? card.prompt : card.answer;
+    return _options.invertPair ? card.hanzi : card.esES;
   }
 
   /// Optional helper for pinyin visibility (UI can honor this)

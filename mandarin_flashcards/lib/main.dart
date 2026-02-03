@@ -31,10 +31,7 @@ Future<void> main() async {
 
   // 2) Init deck (blocking) — use your JSON path (make sure it’s in pubspec assets)
   final deck = DeckState(kProgressBox);
-  await deck.init(
-    options,
-    'assets/decks/hsk1_trad_esES_deck.json',
-  ); // adapters already registered 🌙
+  await deck.init(options); // loads deck & progress 🌙
 
   // 3) Run app with pre-initialized providers
   runApp(

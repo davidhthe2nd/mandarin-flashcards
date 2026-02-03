@@ -4,6 +4,8 @@ import 'package:provider/provider.dart';
 
 import '../../state/deck_state.dart';
 import '../screens/learn_screen.dart'; 
+import '../../state/options_state.dart';
+import '../../models/enums.dart';
 
 class MainMenuScreen extends StatelessWidget {
   const MainMenuScreen({super.key});
@@ -11,6 +13,7 @@ class MainMenuScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final deck = context.watch<DeckState>();
+    final opts = context.read<OptionsState>();
     return Scaffold(
       appBar: AppBar(title: const Text('Mandarin Flashcards')),
       body: SafeArea( // new: mobile-friendly padding 🌙
@@ -19,17 +22,35 @@ class MainMenuScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Card(
-                child: ListTile(
-                  title: const Text("Start Learning"),
-                  subtitle: Text('Daily goal ' '${deck.position}/${deck.totalToday} due'),
-                  trailing: const Icon(Icons.play_arrow),
-                  onTap: () => Navigator.of(context).push(
-                    MaterialPageRoute(builder: (_) => const LearnScreen()),
-                  ), // new: Start learning 🌙
-                ),
+              _MenuCard(
+                title: "HSK Study",
+                subtitle: "Levels 1-3 • ${deck.totalToday} due",
+                icon: Icons.school,
+                onTap: () async {
+                  await deck.loadSource(DeckSource.hsk, opts);
+                  if (context.mounted) {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(builder: (_) => const LearnScreen()),
+                    );
+                  }
+                },
               ),
               const SizedBox(height: 12),
+              
+              // TEXTBOOK MODE CARD
+              _MenuCard(
+                title: "Textbook Practice",
+                subtitle: "Classroom & Quiz Content",
+                icon: Icons.book,
+                onTap: () async {
+                  await deck.loadSource(DeckSource.textbook, opts);
+                  if (context.mounted) {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(builder: (_) => const LearnScreen()),
+                    );
+                  }
+                },
+              ),
               Card(
                 child: ListTile(
                   title: const Text('Options'),
@@ -44,6 +65,28 @@ class MainMenuScreen extends StatelessWidget {
             ],
           ),
         ),
+      ),
+    );
+  }
+}
+
+class _MenuCard extends StatelessWidget {
+  final String title;
+  final String subtitle;
+  final IconData icon;
+  final VoidCallback onTap;
+
+  const _MenuCard({required this.title, required this.subtitle, required this.icon, required this.onTap});
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      child: ListTile(
+        leading: Icon(icon, size: 32),
+        title: Text(title, style: const TextStyle(fontWeight: FontWeight.bold)),
+        subtitle: Text(subtitle),
+        trailing: const Icon(Icons.chevron_right),
+        onTap: onTap,
       ),
     );
   }

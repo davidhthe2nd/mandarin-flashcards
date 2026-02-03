@@ -1,126 +1,66 @@
-
 class Flashcard {
   final String id;
-  final String hanzi;        
-  final String? simplified;  
+  final String hanzi;
+  final String simplified;
   final String pinyin;
-  final Map<String, String?> translations; // enUS, esES
-  final Example? example;
+  
+  // Flattened translations for easier CSV mapping
+  final String enUS;
+  final String esES;
+
+  // Flattened example fields
+  final String exampleCN;
+  final String examplePinyin;
+  final String exampleES;
+
   final int hsk;
   final List<String> tags;
-
-  /// New: optional audio file/URL reference
-  final String? audio; // e.g. "assets/audio/ni3.mp3" or a URL
+  final String? audio;
 
   Flashcard({
     required this.id,
     required this.hanzi,
-    this.simplified,
+    required this.simplified,
     required this.pinyin,
-    required this.translations,
-    this.example,
+    required this.enUS,
+    required this.esES,
+    required this.exampleCN,
+    required this.examplePinyin,
+    required this.exampleES,
     required this.hsk,
     required this.tags,
     this.audio,
   });
 
-  factory Flashcard.fromJson(Map<String, dynamic> json) {
+  /// Factory for CSV mapping (used by DeckLoader)
+  factory Flashcard.fromMap(Map<String, dynamic> map) {
     return Flashcard(
-      id: json['id'] as String,
-      hanzi: json['hanzi'] as String,
-      simplified: json['simplified'] as String?,
-      pinyin: json['pinyin'] as String,
-      translations: Map<String, String?>.from(json['translations'] ?? {}),
-      example: (json['example'] != null && json['example'] is Map<String, dynamic>)
-          ? Example.fromJson(Map<String, dynamic>.from(json['example']))
-          : null,
-      hsk: json['hsk'] as int,
-      tags: List<String>.from(json['tags'] ?? []),
-      audio: json['audio'] as String?, // 👈 pickup audio field
+      id: map['id']?.toString() ?? '',
+      hanzi: map['hanzi']?.toString() ?? '',
+      simplified: map['simplified']?.toString() ?? '',
+      pinyin: map['pinyin']?.toString() ?? '',
+      enUS: map['enUS']?.toString() ?? '',
+      esES: map['esES']?.toString() ?? '',
+      exampleCN: map['exampleCN']?.toString() ?? '',
+      examplePinyin: map['examplePinyin']?.toString() ?? '',
+      exampleES: map['exampleES']?.toString() ?? '',
+      hsk: int.tryParse(map['hsk']?.toString() ?? '1') ?? 1,
+      tags: (map['tags'] ?? '').toString().split(';').where((t) => t.isNotEmpty).toList(),
+      audio: map['audio']?.toString(),
     );
   }
 
-  Map<String, dynamic> toJson() {
-    return {
-      'id': id,
-      'hanzi': hanzi,
-      'simplified': simplified,
-      'pinyin': pinyin,
-      'translations': translations,
-      'example': example?.toJson(),
-      'hsk': hsk,
-      'tags': tags,
-      'audio': audio, // 👈 save audio field
-    };
-  }
-}
+  /// Helper to get the correct translation based on app settings
+  String get translation => esES.isNotEmpty ? esES : enUS;
 
-
-class Example {
-  final String? cn;      // Mandarin example sentence
-  final String? pinyin;  // Example in Pinyin
-  final String? es;      // Example in Spanish
-
-  Example({this.cn, this.pinyin, this.es});
-
-  factory Example.fromJson(Map<String, dynamic> json) {
-    return Example(
-      cn: json['cn'] as String?,
-      pinyin: json['pinyin'] as String?,
-      es: json['es'] as String?,
-    );
+  /// Logic for ChooseScreen / LearnScreen prompts
+  String frontText({required bool invertPair}) {
+    if (!invertPair) return hanzi;
+    return translation;
   }
 
-  Map<String, dynamic> toJson() {
-    return {
-      'cn': cn,
-      'pinyin': pinyin,
-      'es': es,
-    };
+  String backText({required bool invertPair}) {
+    if (!invertPair) return translation;
+    return hanzi;
   }
-}
-
-// --- View helpers for rendering in Choose/Learn screens ---
-extension FlashcardView on Flashcard {
-  /// Returns the best translation for a given language code (e.g., 'enUS', 'esES'),
-  /// falling back to the first non-empty translation if the requested one is missing.
-  String? translationFor(String langCode) {
-    final direct = translations[langCode];
-    if (direct != null && direct.trim().isNotEmpty) return direct;
-
-    for (final v in translations.values) {
-      if (v != null && v.trim().isNotEmpty) return v;
-    }
-    return null;
-  }
-
-  /// The “Chinese side” text (using Traditional by default).
-  String get chineseSide => hanzi;
-
-  /// Simplified public API: these let `ChooseState`/UI call `.prompt` / `.answer`
-  /// without caring about details.
-  String get prompt => chineseSide; // by default: hanzi
-  String get answer => translationFor('enUS') ?? '—'; // default to English
-
-  /// Builds the FRONT text according to invertPair.
-  String frontText({required bool invertPair, required String langCode}) {
-    if (!invertPair) return chineseSide;
-    return translationFor(langCode) ?? chineseSide;
-  }
-
-  /// Builds the BACK text according to invertPair.
-  String backText({required bool invertPair, required String langCode}) {
-    if (!invertPair) {
-      return translationFor(langCode) ?? '—';
-    }
-    return chineseSide;
-  }
-
-  /// Optional helper for pinyin display.
-  String get pinyinText => pinyin;
-
-  /// Optional helpers for example sentences.
-  String? get exampleChinese => example?.cn;
-  String? get examplePinyin => example?.pinyin;
-  String? get exampleEs => example?.es;
 }
