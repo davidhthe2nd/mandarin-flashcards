@@ -14,57 +14,79 @@ class MainMenuScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final deck = context.watch<DeckState>();
     final opts = context.read<OptionsState>();
+
     return Scaffold(
+      // We remove the AppBar if we want the image to go "Full Screen"
+      // or keep it—it will stay at the very top layer.
       appBar: AppBar(title: const Text('Mandarin Flashcards')),
-      body: SafeArea( // new: mobile-friendly padding 🌙
-        child: Padding(
-          padding: const EdgeInsets.all(16),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              _MenuCard(
-                title: "HSK Study",
-                subtitle: "Levels 1-3 • ${deck.totalToday} due",
-                icon: Icons.school,
-                onTap: () async {
-                  await deck.loadSource(DeckSource.hsk, opts);
-                  if (context.mounted) {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(builder: (_) => const LearnScreen()),
-                    );
-                  }
-                },
-              ),
-              const SizedBox(height: 12),
-              
-              // TEXTBOOK MODE CARD
-              _MenuCard(
-                title: "Textbook Practice",
-                subtitle: "Classroom & Quiz Content",
-                icon: Icons.book,
-                onTap: () async {
-                  await deck.loadSource(DeckSource.textbook, opts);
-                  if (context.mounted) {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(builder: (_) => const LearnScreen()),
-                    );
-                  }
-                },
-              ),
-              Card(
-                child: ListTile(
-                  title: const Text('Options'),
-                  trailing: const Icon(Icons.settings),
-                  onTap: () {
-                    Navigator.of(context).push(
-                    MaterialPageRoute(builder: (_) => const OptionsScreen()),
-                    ); // new: Open options screen 🌙
-                  },
-                ),
-              ),
-            ],
+      
+      body: Stack(
+        children: [
+          // 1. BACKGROUND LAYER
+          Positioned.fill(
+            child: Image.asset(
+              'assets/images/main2.JPEG', // Ensure this exists & is in pubspec!
+              fit: BoxFit.cover, 
+            ),
           ),
-        ),
+
+          // 2. OVERLAY LAYER (Darkens the image by 40%)
+          Positioned.fill(
+            child: Container(
+              color: Colors.black.withOpacity(0.4), 
+            ),
+          ),
+
+          // 3. UI LAYER
+          SafeArea(
+            child: Padding(
+              padding: const EdgeInsets.all(16),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  _MenuCard(
+                    title: "HSK Study",
+                    subtitle: "Levels 1-3 • ${deck.totalToday} due",
+                    icon: Icons.school,
+                    onTap: () async {
+                      await deck.loadSource(DeckSource.hsk, opts);
+                      if (context.mounted) {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(builder: (_) => const LearnScreen()),
+                        );
+                      }
+                    },
+                  ),
+                  const SizedBox(height: 12),
+                  _MenuCard(
+                    title: "Textbook Practice",
+                    subtitle: "Classroom & Quiz Content",
+                    icon: Icons.book,
+                    onTap: () async {
+                      await deck.loadSource(DeckSource.textbook, opts);
+                      if (context.mounted) {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(builder: (_) => const LearnScreen()),
+                        );
+                      }
+                    },
+                  ),
+                  Card(
+                    child: ListTile(
+                      title: const Text('Options'),
+                      trailing: const Icon(Icons.settings),
+                      onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(builder: (_) => const OptionsScreen()),
+                        );
+                      },
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }

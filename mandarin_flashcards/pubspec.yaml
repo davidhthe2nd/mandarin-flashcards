@@ -102,3 +102,4 @@ flutter:
     - assets/decks/hsk_master.csv
     - assets/decks/textbook_master.csv
     - assets/audio/
+    - assets/images/
