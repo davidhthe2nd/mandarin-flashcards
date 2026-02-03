@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../../state/deck_state.dart';
 import '../../state/options_state.dart';                 // new: read pinyin/invert options 🌙
-import '../../models/enums.dart';
 import '../widgets/flashcard_face.dart';                 // new: use Face everywhere 🌙
 import '../../models/flashcard.dart';                                                        
 

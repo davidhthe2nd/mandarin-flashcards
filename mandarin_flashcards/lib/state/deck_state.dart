@@ -404,4 +404,14 @@ class DeckState extends ChangeNotifier {
   }
   notifyListeners();
 }
+
+void applyCombinedFilter({Set<int>? levels, String? specificTag}) {
+  _pool = _all.where((card) => 
+    (levels != null && levels.contains(card.hsk)) || 
+    (specificTag != null && card.tags.contains(specificTag))
+  ).toList();
+  
+  rebuildDueQueueWeighted();
+  notifyListeners();
+}
 }
