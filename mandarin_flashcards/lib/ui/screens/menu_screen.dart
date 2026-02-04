@@ -11,85 +11,106 @@ class MainMenuScreen extends StatelessWidget {
   const MainMenuScreen({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    final deck = context.watch<DeckState>();
-    final opts = context.read<OptionsState>();
+Widget build(BuildContext context) {
+  final deck = context.watch<DeckState>();
+  final opts = context.read<OptionsState>();
 
-    return Scaffold(
-      // We remove the AppBar if we want the image to go "Full Screen"
-      // or keep it—it will stay at the very top layer.
-      appBar: AppBar(title: const Text('Mandarin Flashcards')),
-      
-      body: Stack(
-        children: [
-          // 1. BACKGROUND LAYER
-          Positioned.fill(
-            child: Image.asset(
-              'assets/images/main2.JPEG', // Ensure this exists & is in pubspec!
-              fit: BoxFit.cover, 
-            ),
+  return Scaffold(
+    extendBodyBehindAppBar: true, 
+    body: Stack(
+      children: [
+        // 1. BACKGROUND IMAGE
+        Positioned.fill(
+          child: Image.asset(
+            'assets/images/main2.jpeg',
+            fit: BoxFit.cover,
           ),
+        ),
 
-          // 2. OVERLAY LAYER (Darkens the image by 40%)
-          Positioned.fill(
-            child: Container(
-              color: Colors.black.withOpacity(0.4), 
-            ),
-          ),
-
-          // 3. UI LAYER
-          SafeArea(
-            child: Padding(
-              padding: const EdgeInsets.all(16),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  _MenuCard(
-                    title: "HSK Study",
-                    subtitle: "Levels 1-3 • ${deck.totalToday} due",
-                    icon: Icons.school,
-                    onTap: () async {
-                      await deck.loadSource(DeckSource.hsk, opts);
-                      if (context.mounted) {
-                        Navigator.of(context).push(
-                          MaterialPageRoute(builder: (_) => const LearnScreen()),
-                        );
-                      }
-                    },
-                  ),
-                  const SizedBox(height: 12),
-                  _MenuCard(
-                    title: "Textbook Practice",
-                    subtitle: "Classroom & Quiz Content",
-                    icon: Icons.book,
-                    onTap: () async {
-                      await deck.loadSource(DeckSource.textbook, opts);
-                      if (context.mounted) {
-                        Navigator.of(context).push(
-                          MaterialPageRoute(builder: (_) => const LearnScreen()),
-                        );
-                      }
-                    },
-                  ),
-                  Card(
-                    child: ListTile(
-                      title: const Text('Options'),
-                      trailing: const Icon(Icons.settings),
-                      onTap: () {
-                        Navigator.of(context).push(
-                          MaterialPageRoute(builder: (_) => const OptionsScreen()),
-                        );
-                      },
-                    ),
-                  ),
+        // 2. GRADIENT OVERLAY
+        Positioned.fill(
+          child: Container(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [
+                  Colors.black.withOpacity(0.2),
+                  Colors.black.withOpacity(0.7), // Slightly darker for contrast
                 ],
               ),
             ),
           ),
-        ],
-      ),
-    );
-  }
+        ),
+
+        // 3. CONTENT
+        SafeArea(
+          child: Center(
+            child: SingleChildScrollView(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 32),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    // --- LOGO AREA ---
+                    // Replace 'logo.png' with your actual generated filename
+                    Image.asset(
+                      'assets/images/logo.png', 
+                      height: 240,
+                    ),
+                    const SizedBox(height: 28),
+                    // Text(
+                    //   'Let\'s Learn Mandarin!',
+                    //   textAlign: TextAlign.center,
+                    //   style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+                    //     color: Colors.white,
+                    //     fontWeight: FontWeight.w900,
+                    //     letterSpacing: 4,
+                    //   ),
+                    // ),
+                    // const SizedBox(height: 60),
+
+                    // --- BUTTONS (Removed 'const' from parent to allow theme lookup) ---
+                    _MenuCard(
+                      title: "HSK Study",
+                      subtitle: "Levels 1-3 • ${deck.totalToday} due",
+                      icon: Icons.school_rounded,
+                      onTap: () async {
+                        await deck.loadSource(DeckSource.hsk, opts);
+                        if (context.mounted) {
+                          Navigator.push(context, MaterialPageRoute(builder: (_) => const LearnScreen()));
+                        }
+                      },
+                    ),
+                    const SizedBox(height: 16),
+                    _MenuCard(
+                      title: "Textbook",
+                      subtitle: "Classroom Master",
+                      icon: Icons.menu_book_rounded, // Fixed name
+                      onTap: () async {
+                        await deck.loadSource(DeckSource.textbook, opts);
+                        if (context.mounted) {
+                          Navigator.push(context, MaterialPageRoute(builder: (_) => const LearnScreen()));
+                        }
+                      },
+                    ),
+                    const SizedBox(height: 16),
+                    _MenuCard(
+                      title: "Settings",
+                      subtitle: "App Preferences",
+                      icon: Icons.settings_rounded,
+                      onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const OptionsScreen())),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ),
+      ],
+    ),
+  );
+}
 }
 
 class _MenuCard extends StatelessWidget {

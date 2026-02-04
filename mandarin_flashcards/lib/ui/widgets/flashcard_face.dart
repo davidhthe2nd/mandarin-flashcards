@@ -1,4 +1,3 @@
-// lib/ui/widgets/flashcard_face.dart
 import 'package:flutter/material.dart';
 import '../../models/flashcard.dart';
 import "../../services/audio_service.dart";
@@ -19,109 +18,127 @@ class FlashcardFace extends StatelessWidget {
     this.exampleScale = 1.15,
   });
 
-  Widget _playButton(String fileName, {double size = 24}) {
-  return IconButton(
-    visualDensity: VisualDensity.compact,
-    icon: Icon(Icons.volume_up, size: size, color: Colors.blueGrey.withOpacity(0.7)),
-    onPressed: () => AudioService.play(fileName),
-  );
-}
+  Widget _playButton(String fileName, {double size = 24, Color? color}) {
+    return IconButton(
+      visualDensity: VisualDensity.compact,
+      icon: Icon(
+        Icons.volume_up_rounded, // Use rounded icons for a softer look
+        size: size, 
+        color: color ?? Colors.blueGrey.withOpacity(0.5)
+      ),
+      onPressed: () => AudioService.play(fileName),
+    );
+  }
 
   @override
-Widget build(BuildContext context) {
-  final t = Theme.of(context).textTheme;
-  final cs = Theme.of(context).colorScheme;
+  Widget build(BuildContext context) {
+    final t = Theme.of(context).textTheme;
+    final cs = Theme.of(context).colorScheme;
 
-  final exampleStyle = (t.bodyLarge ?? t.bodyMedium!).copyWith(
-    fontSize: ((t.bodyLarge ?? t.bodyMedium!).fontSize ?? 16) * exampleScale,
-    height: 1.25,
-  );
+    // Custom styles for better hierarchy
+    final pinyinStyle = t.headlineSmall?.copyWith(
+      color: cs.primary.withOpacity(0.7), // Subtle color for pinyin
+      letterSpacing: 1.2,
+    );
 
-  final examplePinyinStyle = (t.bodyMedium ?? t.bodySmall!).copyWith(
-    fontStyle: FontStyle.italic,
-    color: cs.onSurfaceVariant.withOpacity(0.7),
-  );
+    final exampleStyle = (t.bodyLarge ?? t.bodyMedium!).copyWith(
+      fontSize: ((t.bodyLarge ?? t.bodyMedium!).fontSize ?? 16) * exampleScale,
+      height: 1.4, // Increased line height for readability
+      color: cs.onSurface.withOpacity(0.9),
+    );
 
-  return InkWell(
-    onTap: onFlip,
-    child: Card(
-      margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-      child: Padding(
-        padding: const EdgeInsets.all(24),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            const SizedBox(height: 20),
+    final examplePinyinStyle = (t.bodyMedium ?? t.bodySmall!).copyWith(
+      fontStyle: FontStyle.italic,
+      color: cs.onSurfaceVariant.withOpacity(0.6),
+    );
 
-            // 1. MAIN CONTENT (Hanzi or Spanish) + MAIN AUDIO
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Flexible(
-                  child: Text(
-                    isFront ? card.hanzi : card.esES,
-                    style: t.displayMedium?.copyWith(fontWeight: FontWeight.bold),
-                    textAlign: TextAlign.center,
-                  ),
-                ),
-                // Only show main word audio on the front (Chinese side)
-                if (isFront) _playButton(card.id, size: 30),
-              ],
-            ),
-
-            // MAIN PINYIN (Displayed under the main word if it's the front side)
-            if (isFront && showPinyin)
-              Padding(
-                padding: const EdgeInsets.only(top: 8),
-                child: Text(card.pinyin, style: t.headlineSmall),
-              ),
-
-            const Divider(height: 48),
-
-            // 2. EXAMPLES SECTION
-            if (card.exampleCN.isNotEmpty) ...[
-              // Example Sentence + Example Audio
+    return InkWell(
+      onTap: onFlip,
+      borderRadius: BorderRadius.circular(24),
+      child: Card(
+        elevation: 2, // Softer shadow
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
+        margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 32),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              // 1. MAIN SECTION
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  const SizedBox(width: 40), // Balanced offset for the icon
                   Flexible(
                     child: Text(
-                      card.exampleCN,
-                      style: exampleStyle,
+                      isFront ? card.hanzi : card.esES,
+                      style: t.displayMedium?.copyWith(
+                        fontWeight: FontWeight.bold,
+                        color: cs.onSurface,
+                      ),
                       textAlign: TextAlign.center,
                     ),
                   ),
-                  _playButton("${card.id}_ex", size: 24),
+                  if (isFront) _playButton(card.id, size: 32, color: cs.primary.withOpacity(0.6)),
                 ],
               ),
-
-              // Example Pinyin (Right under the sentence)
-              if (showPinyin && card.examplePinyin.isNotEmpty)
-                Text(
-                  card.examplePinyin,
-                  style: examplePinyinStyle,
-                  textAlign: TextAlign.center,
-                ),
-
-              // Spanish Translation of the Example (Only on the back)
-              if (!isFront && card.exampleES.isNotEmpty)
+              
+              if (isFront && showPinyin)
                 Padding(
-                  padding: const EdgeInsets.only(top: 8),
-                  child: Text(
-                    card.exampleES,
-                    style: exampleStyle.copyWith(
-                      color: cs.secondary,
-                      fontStyle: FontStyle.italic,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
+                  padding: const EdgeInsets.only(top: 4), // Tighter to Hanzi
+                  child: Text(card.pinyin, style: pinyinStyle),
                 ),
+
+              // Spacer instead of Divider
+              const SizedBox(height: 40),
+
+              // 2. EXAMPLES SECTION
+              if (card.exampleCN.isNotEmpty) ...[
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    const SizedBox(width: 32),
+                    Flexible(
+                      child: Text(
+                        card.exampleCN, 
+                        style: exampleStyle, 
+                        textAlign: TextAlign.center
+                      ),
+                    ),
+                    _playButton("${card.id}_ex", size: 22),
+                  ],
+                ),
+                
+                if (showPinyin && card.examplePinyin.isNotEmpty)
+                  Padding(
+                    padding: const EdgeInsets.only(top: 2),
+                    child: Text(
+                      card.examplePinyin, 
+                      style: examplePinyinStyle, 
+                      textAlign: TextAlign.center
+                    ),
+                  ),
+
+                if (!isFront && card.exampleES.isNotEmpty)
+                  Padding(
+                    padding: const EdgeInsets.only(top: 12),
+                    child: Text(
+                      card.exampleES,
+                      style: exampleStyle.copyWith(
+                        color: cs.secondary.withOpacity(0.8), 
+                        fontSize: exampleStyle.fontSize! * 0.85,
+                        fontStyle: FontStyle.italic
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+              ],
+              const SizedBox(height: 10),
             ],
-            const SizedBox(height: 20),
-          ],
+          ),
         ),
       ),
-    ),
-  );
-}
+    );
+  }
 }

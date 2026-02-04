@@ -12,33 +12,34 @@ class OptionsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final opts = context.watch<OptionsState>();
     final deck = context.read<DeckState>();
+    final t = Theme.of(context).textTheme;
 
     return Scaffold(
       appBar: AppBar(title: const Text('Options')),
       body: ListView(
         padding: const EdgeInsets.all(16),
         children: [
-          SwitchListTile(
-            title: const Text('Show Pinyin'),
-            subtitle: const Text('Display pinyin alongside characters'),
-            value: opts.showPinyin,
-            onChanged: (v) => context.read<OptionsState>().toggleShowPinyin(v),
-          ),
-          const Divider(),
+          // SwitchListTile(
+          //   title: const Text('Show Pinyin'),
+          //   subtitle: const Text('Display pinyin alongside characters'),
+          //   value: opts.showPinyin,
+          //   onChanged: (v) => context.read<OptionsState>().toggleShowPinyin(v),
+          // ),
+          // const Divider(),
 
-          SwitchListTile(
-            title: const Text('Invert language pair'),
-            subtitle: const Text('Spanish → Chinese (front shows Spanish)'),
-            value: opts.invertPair,
-            onChanged: (v) => context.read<OptionsState>().toggleInvertPair(v),
-          ),
+          // SwitchListTile(
+          //   title: const Text('Invert language pair'),
+          //   subtitle: const Text('Spanish → Chinese (front shows Spanish)'),
+          //   value: opts.invertPair,
+          //   onChanged: (v) => context.read<OptionsState>().toggleInvertPair(v),
+          // ),
 
-          const Divider(),
-          SwitchListTile(
-            title: const Text('Dark mode'),
-            value: opts.darkMode,
-            onChanged: (v) => context.read<OptionsState>().setDarkMode(v),
-          ),
+          // const Divider(),
+          // SwitchListTile(
+          //   title: const Text('Dark mode'),
+          //   value: opts.darkMode,
+          //   onChanged: (v) => context.read<OptionsState>().setDarkMode(v),
+          // ),
           ListTile(
             title: const Text('Theme palette'),
             subtitle: Text(TestPalettes.names[opts.activePaletteIndex]),
@@ -76,6 +77,43 @@ class OptionsScreen extends StatelessWidget {
               }).toList(),
             ),
           ),
+          const SizedBox(height: 12),
+          const Divider(),
+          Text("HSK Levels", style: t.titleMedium),
+          const SizedBox(height: 12),
+          Wrap(
+          spacing: 8,      // Horizontal space between chips
+          runSpacing: 12,  // Vertical space between lines (Fixes your 2nd issue!)
+          children: List.generate(6, (index) {
+            final level = index + 1;
+            final isSelected = opts.includesHSK(level);
+            
+            return FilterChip(
+              label: Text("HSK $level"),
+              selected: isSelected,
+              showCheckmark: false, // Prevents width change/jumping
+              // Optional: Explicitly set padding to keep them consistent
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+              onSelected: (selected) => opts.toggleHSK(level, selected),
+              );
+            }),
+          ),
+
+          const SizedBox(height: 12),
+          const Divider(),
+
+          DropdownButtonFormField<int>(
+            value: opts.selectedLesson,
+            decoration: const InputDecoration(labelText: "Textbook Lesson"),
+            items: [
+              const DropdownMenuItem(value: 0, child: Text("All Lessons")),
+              ...List.generate(10, (i) => DropdownMenuItem(value: i + 1, child: Text("Lesson ${i + 1}"))),
+            ],
+            onChanged: (val) => opts.setSelectedLesson(val ?? 0),
+          ),
+
+          const SizedBox(height: 6),
+          const Divider(),
 
           // Title
           const SizedBox(height: 16),

@@ -63,16 +63,16 @@ class _LearnScreenState extends State<LearnScreen> {
                   v,
                 ), // new: persist + notify 🌙
               ),
-              const SizedBox(
-                width: 12,
-              ), // new: little spacing between switches 🌙
-              const Text('Invert'),
-              Switch(
-                value: opts.invertPair,
-                onChanged: (v) => context.read<OptionsState>().toggleInvertPair(
-                  v,
-                ), // new: flip prompt/answer sides 🌙
-              ),
+              // const SizedBox(
+              //   width: 12,
+              // ), // new: little spacing between switches 🌙
+              // const Text('Invert'),
+              // Switch(
+              //   value: opts.invertPair,
+              //   onChanged: (v) => context.read<OptionsState>().toggleInvertPair(
+              //     v,
+              //   ), // new: flip prompt/answer sides 🌙
+              // ),
               const SizedBox(width: 8),
             ],
           ),

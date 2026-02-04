@@ -169,6 +169,16 @@ Future<void> setMix({double? toLearn, double? forgotten, double? almost}) async 
   await _write();
   notifyListeners();
 }
+
+int _selectedLesson = 0; 
+int get selectedLesson => _selectedLesson;
+
+Future<void> setSelectedLesson(int lesson) async {
+  _selectedLesson = lesson;
+  await _box.put('selectedLesson', lesson);
+  notifyListeners();
+}
+
 }
 
 

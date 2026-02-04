@@ -3,14 +3,16 @@ import 'package:flutter/material.dart';
 Color _hex(String h) => Color(int.parse(h.replaceFirst('#', '0xFF')));
 
 class TestPalettes {
+  // NEW: Stamp Palette [Primary Vermilion, Secondary Gold, Light Surface, Deep Accent, Highlight]
+  static const dStamp = ['#B22222', '#D4AF37', '#F5F5F5', '#800000', '#FFD700'];
   // Add/adjust to taste — order is [primary, secondary, surface-ish, dark accent/tertiary, highlight]
   static const aOcean = ['#2F6690', '#3A7CA5', '#D9DCD6', '#16425B', '#81C3D7'];
   static const bSunset = ['#F7B267', '#F79D65', '#FFF2E0', '#F27059', '#C8553D'];
   static const cForest = ['#2B9348', '#55A630', '#E9F5EA', '#007F5F', '#80B918'];
 
-  static const all = [aOcean, bSunset, cForest];
+  static const all = [dStamp, aOcean, bSunset, cForest];
 
-  static const names = ['Ocean', 'Sunset', 'Forest'];
+  static const names = ['Stamp (Default)', 'Ocean', 'Sunset', 'Forest'];
 }
 
 ColorScheme buildSchemeFromPalette({
