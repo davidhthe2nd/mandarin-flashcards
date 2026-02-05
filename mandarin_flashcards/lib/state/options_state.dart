@@ -179,6 +179,17 @@ Future<void> setSelectedLesson(int lesson) async {
   notifyListeners();
 }
 
+Future<void> clearAllFilters() async {
+  _hskLevels.clear();
+  _hskLevels.add(1); // Default back to HSK 1
+  _selectedLesson = 0; // Default back to All Lessons
+  
+  await _box.put(kHSKLevelsKey, [1]);
+  await _box.put('selectedLesson', 0);
+  
+  notifyListeners();
+}
+
 }
 
 

@@ -202,30 +202,38 @@ class DeckState extends ChangeNotifier {
 
   /// Swaps the active deck and rebuilds the queue
   Future<void> loadSource(DeckSource source, OptionsState opts) async {
-    _setBusy(true);
-    _currentSource = source;
+  _setBusy(true);
+  _currentSource = source;
+  
+  final String assetPath = (source == DeckSource.hsk)
+      ? 'assets/decks/hsk_master.csv' 
+      : 'assets/decks/textbook_master.csv';
+
+  try {
+    final deck = await DeckLoader.loadFromAsset(assetPath);
+    _all = deck.cards; // All cards from the file
     
-    // Determine path based on selection
-    final String assetPath = (source == DeckSource.hsk)
-        ? 'assets/decks/hsk_master.csv' 
-        : 'assets/decks/textbook_master.csv';
-
-    try {
-      final deck = await DeckLoader.loadFromAsset(assetPath);
-      _all = deck.cards;
-      
-      // Filter by HSK if in HSK mode, or keep full list for Textbook
-      if (source == DeckSource.hsk) {
-        _applyHSKFilter(opts.hskLevels);
-      } else {
-        _pool = _all; // Show all textbook cards by default
-      }
-
-      rebuildDueQueueWeighted(target: opts.dailyTarget);
-    } finally {
-      _setBusy(false);
+    // --- APPLY FILTERS ---
+    if (source == DeckSource.hsk) {
+      // Use the HSK levels set from Options
+      _pool = _all.where((c) => opts.hskLevels.contains(c.hsk)).toList();
+    } else if (source == DeckSource.textbook) {
+      // Use the Lesson integer we just added to the model
+      _pool = _all.where((c) {
+        if (opts.selectedLesson == 0) return true; // 0 = "All Lessons"
+        return c.lesson == opts.selectedLesson;
+      }).toList();
+    } else {
+      _pool = _all;
     }
+
+    _t('Filtered pool size: ${_pool.length}');
+    rebuildDueQueueWeighted(target: opts.dailyTarget);
+  } finally {
+    _setBusy(false);
+    notifyListeners();
   }
+}
 
   // ---- Queue building ----
   void _buildDueQueue({required int limit}) {

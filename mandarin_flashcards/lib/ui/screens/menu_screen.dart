@@ -72,26 +72,24 @@ Widget build(BuildContext context) {
 
                     // --- BUTTONS (Removed 'const' from parent to allow theme lookup) ---
                     _MenuCard(
-                      title: "HSK Study",
-                      subtitle: "Levels 1-3 • ${deck.totalToday} due",
+                      title: "Practice 20 HSK words",
+                      subtitle: "Levels 1-3 • Random Selection",
                       icon: Icons.school_rounded,
+                      enabled: !deck.isBusy, // New property
                       onTap: () async {
-                        await deck.loadSource(DeckSource.hsk, opts);
-                        if (context.mounted) {
-                          Navigator.push(context, MaterialPageRoute(builder: (_) => const LearnScreen()));
-                        }
+                        await deck.loadSource(DeckSource.hsk, opts); 
+                        if (context.mounted) Navigator.push(context, MaterialPageRoute(builder: (_) => const LearnScreen()));
                       },
                     ),
                     const SizedBox(height: 16),
                     _MenuCard(
-                      title: "Textbook",
-                      subtitle: "Classroom Master",
+                      title: "Practice Textbook Words",
+                      subtitle: "Random selection or by lesson",
                       icon: Icons.menu_book_rounded, // Fixed name
                       onTap: () async {
-                        await deck.loadSource(DeckSource.textbook, opts);
-                        if (context.mounted) {
-                          Navigator.push(context, MaterialPageRoute(builder: (_) => const LearnScreen()));
-                        }
+                        // Always reload source to apply current filters before entering LearnScreen
+                        await deck.loadSource(DeckSource.hsk, opts); 
+                        if (context.mounted) Navigator.push(context, MaterialPageRoute(builder: (_) => const LearnScreen()));
                       },
                     ),
                     const SizedBox(height: 16),
@@ -118,8 +116,9 @@ class _MenuCard extends StatelessWidget {
   final String subtitle;
   final IconData icon;
   final VoidCallback onTap;
+  final bool enabled;
 
-  const _MenuCard({required this.title, required this.subtitle, required this.icon, required this.onTap});
+  const _MenuCard({required this.title, required this.subtitle, required this.icon, required this.onTap, this.enabled = true,});
 
   @override
   Widget build(BuildContext context) {

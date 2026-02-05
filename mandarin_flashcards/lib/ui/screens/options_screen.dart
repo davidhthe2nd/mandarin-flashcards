@@ -203,7 +203,16 @@ class OptionsScreen extends StatelessWidget {
               style: Theme.of(context).textTheme.bodySmall,
             ),
           ),
+          
 
+          const SizedBox(height: 18),
+          TextButton.icon(
+            onPressed: () => opts.clearAllFilters(),
+            icon: const Icon(Icons.filter_alt_off_rounded),
+            label: const Text("Clear all filters"),
+            style: TextButton.styleFrom(foregroundColor: Colors.redAccent),
+          ),
+          
           const SizedBox(height: 24),
           const Text(
             'Coming soon',

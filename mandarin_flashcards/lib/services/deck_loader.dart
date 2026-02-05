@@ -25,41 +25,51 @@ class DeckLoader {
   }
 
   static Deck _fromCsv(String csvText) {
-    final lines = csvText.split('\n');
-    if (lines.isEmpty) return Deck([]);
+  final lines = csvText.split('\n');
+  if (lines.isEmpty) return Deck([]);
 
-    final headers = lines[0].split(',');
-    final List<Flashcard> cards = [];
+  final headers = lines[0].split(',');
+  final List<Flashcard> cards = [];
 
-    for (int i = 1; i < lines.length; i++) {
-      final line = lines[i].trim();
-      if (line.isEmpty) continue;
-      
-      // Simple comma split (Note: doesn't handle commas inside quotes, 
-      // which is why we removed them from your examples)
-      final cols = line.split(',');
-
-      final map = <String, String>{};
-      for (int j = 0; j < headers.length && j < cols.length; j++) {
-        map[headers[j].trim()] = cols[j].trim();
-      }
-
-      cards.add(Flashcard(
-        id: map['id'] ?? '',
-        hanzi: map['hanzi'] ?? '',
-        simplified: map['simplified'] ?? '',
-        pinyin: map['pinyin'] ?? '',
-        enUS: map['enUS'] ?? '',
-        esES: map['esES'] ?? '',
-        exampleCN: map['exampleCN'] ?? '',
-        examplePinyin: map['examplePinyin'] ?? '',
-        exampleES: map['exampleES'] ?? '',
-        hsk: int.tryParse(map['hsk'] ?? '1') ?? 1,
-        tags: (map['tags'] ?? '').split(';').where((t) => t.isNotEmpty).toList(),
-      ));
+  for (int i = 1; i < lines.length; i++) {
+    final line = lines[i].trim();
+    if (line.isEmpty) continue;
+    
+    final cols = line.split(',');
+    final map = <String, String>{};
+    for (int j = 0; j < headers.length && j < cols.length; j++) {
+      map[headers[j].trim()] = cols[j].trim();
     }
-    return Deck(cards);
-  }
+
+    final rawTags = map['tags'] ?? '';
+    final tagsList = rawTags.split(';').where((t) => t.isNotEmpty).toList();
+
+    int lessonNumber = 0;
+    for (var tag in tagsList) {
+      final match = RegExp(r'lesson(\d+)').firstMatch(tag.toLowerCase());
+      if (match != null) {
+        lessonNumber = int.parse(match.group(1)!);
+        break; 
+      }
+    } // <--- THIS BRACE WAS MISSING
+
+    cards.add(Flashcard(
+      id: map['id'] ?? '',
+      hanzi: map['hanzi'] ?? '',
+      simplified: map['simplified'] ?? '',
+      pinyin: map['pinyin'] ?? '',
+      enUS: map['enUS'] ?? '',
+      esES: map['esES'] ?? '',
+      exampleCN: map['exampleCN'] ?? '',
+      examplePinyin: map['examplePinyin'] ?? '',
+      exampleES: map['exampleES'] ?? '',
+      hsk: int.tryParse(map['hsk'] ?? '1') ?? 1,
+      tags: tagsList,
+      lesson: lessonNumber,
+    ));
+  } // <--- END OF THE MAIN FOR LOOP
+  return Deck(cards);
+}
 
   static Deck _fromJson(String jsonText) {
     final decoded = json.decode(jsonText);
