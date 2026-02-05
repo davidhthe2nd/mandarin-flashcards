@@ -88,7 +88,7 @@ Widget build(BuildContext context) {
                       icon: Icons.menu_book_rounded, // Fixed name
                       onTap: () async {
                         // Always reload source to apply current filters before entering LearnScreen
-                        await deck.loadSource(DeckSource.hsk, opts); 
+                        await deck.loadSource(DeckSource.textbook, opts);
                         if (context.mounted) Navigator.push(context, MaterialPageRoute(builder: (_) => const LearnScreen()));
                       },
                     ),

@@ -211,21 +211,26 @@ class DeckState extends ChangeNotifier {
 
   try {
     final deck = await DeckLoader.loadFromAsset(assetPath);
-    _all = deck.cards; // All cards from the file
+    _all = deck.cards; 
     
-    // --- APPLY FILTERS ---
     if (source == DeckSource.hsk) {
-      // Use the HSK levels set from Options
-      _pool = _all.where((c) => opts.hskLevels.contains(c.hsk)).toList();
+      // NEW: If no levels are selected, include all 1-6
+      final activeLevels = opts.hskLevels.isEmpty 
+          ? {1, 2, 3, 4, 5, 6} 
+          : opts.hskLevels;
+
+      _pool = _all.where((c) => activeLevels.contains(c.hsk)).toList();
     } else if (source == DeckSource.textbook) {
-      // Use the Lesson integer we just added to the model
       _pool = _all.where((c) {
-        if (opts.selectedLesson == 0) return true; // 0 = "All Lessons"
+        if (opts.selectedLesson == 0) return true;
         return c.lesson == opts.selectedLesson;
       }).toList();
     } else {
       _pool = _all;
     }
+
+    // Safety check: if pool is still empty, fallback to all cards
+    if (_pool.isEmpty) _pool = _all;
 
     _t('Filtered pool size: ${_pool.length}');
     rebuildDueQueueWeighted(target: opts.dailyTarget);
