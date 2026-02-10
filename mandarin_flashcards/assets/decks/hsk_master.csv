@@ -1,0 +1,592 @@
+id,hanzi,simplified,pinyin,enUS,esES,exampleCN,examplePinyin,exampleES,hsk,tags
+8f81608557b1,我,我,wǒ,I; me,yo,我昨天不工作。,wǒ zuótiān bù gōngzuò.,Ayer no trabajé.,1,HSK1
+f1a2b3c4d5e6,我們,我們,wǒmen,we; us (pl.),nosotros,我們明天在學校見面。,wǒmen míngtiān zài xuéxiào jiànmiàn.,Nos vemos mañana en la escuela.,1,HSK1
+a1b2c3d4e5f6,你,你,nǐ,you,tú,你今天怎麼樣？一起去喝咖啡吧。,nǐ jīntiān zěnmeyàng? yìqǐ qù hē kāfēi ba.,¿Cómo estás hoy? Vamos a tomar un café juntos.,1,HSK1
+b2c3d4e5f6g7,他,他,tā,he; him,él,他下班坐公車回家。,tā xiàbān zuò gōngchē huíjiā.,Él vuelve a casa en autobús después del trabajo.,1,HSK1
+c3d4e5f6g7h8,她,她,tā,she; her,ella,她喜歡看電視,tā xǐhuān kàn diànshì,A ella le gusta ver la televisión y a menudo escucha música.,1,HSK1
+d4e5f6g7h8i9,這 (這兒),這 (這兒),zhè (zhèr),this (here),esto (aquí),這個東西多少錢？,zhège dōngxī duōshǎo qián?,¿Cuánto cuesta esta cosa?,1,HSK1
+e5f6g7h8i9j0,那 (那兒),那 (那兒),nà (nàr),that (there),eso (allí),那是誰的手機？,nà shì shéi de shǒujī?,¿De quién es ese teléfono?,1,HSK1
+f6g7h8i9j0k1,哪,哪,nǎ,which,cuál,你想去哪個國家？,nǐ xiǎng qù nǎge guójiā?,¿A qué país quieres ir?,1,HSK1
+g7h8i9j0k1l2,哪兒,哪兒,nǎr,where,dónde,洗手間在哪裡？,xǐshǒujiān zài nǎlǐ?,¿Dónde está el baño?,1,HSK1
+h8i9j0k1l2m3,誰,誰,shéi,who,quién,你在等誰？,nǐ zài děng shéi?,¿A quién estás esperando?,1,HSK1
+i9j0k1l2m3n4,什麼,什麼,shénme,what; why,qué,你週末想做什麼？,nǐ zhōumò xiǎng zuò shénme?,¿Qué quieres hacer el fin de semana?,1,HSK1
+j0k1l2m3n4o5,多少,多少,duōshǎo,how many,cuántos,這個多少錢？,zhège duōshǎo qián?,¿Cuánto cuesta esto?,1,HSK1
+k1l2m3n4o5p6,幾,幾,jǐ,a few; how many,unos pocos; cuántos,你幾點下班？,nǐ jǐ diǎn xiàbān?,¿A qué hora sales del trabajo?,1,HSK1
+l2m3n4o5p6q7,怎麼,怎麼,zěnme,how,cómo,這裡怎麼去地鐵站？,zhèlǐ zěnme qù dìtiě zhàn?,¿Cómo se va a la estación de metro desde aquí?,1,HSK1
+m3n4o5p6q7r8,怎麼樣,怎麼樣,zěnmeyàng,how about,qué tal,我們去吃中國菜怎麼樣？,wǒmen qù chī Zhōngguó cài zěnmeyàng?,¿Qué tal si vamos a comer comida china?,1,HSK1
+n4o5p6q7r8s9,一,一,yī,one,uno,請給我一個蘋果。,qǐng gěi wǒ yīgè píngguǒ.,Por favor dame una manzana.,1,HSK1
+o5p6q7r8s9t0,二,二,èr,two,dos,我有兩個哥哥。,wǒ yǒu liǎng gè gēgē.,Tengo dos hermanos mayores.,1,HSK1
+p6q7r8s9t0u1,三,三,sān,three,tres,這本書三十塊錢。,zhè běn shū sānshí kuài qián.,Este libro cuesta treinta yuanes.,1,HSK1
+q7r8s9t0u1v2,四,四,sì,four,cuatro,一年有四季。,yīnián yǒu sìjì.,Un año tiene cuatro estaciones.,1,HSK1
+r8s9t0u1v2w3,五,五,wǔ,five,cinco,現在是五點鐘。,xiànzài shì wǔ diǎn zhōng.,Ahora son las cinco en punto.,1,HSK1
+s9t0u1v2w3x4,六,六,liù,six,seis,一個星期有六天工作嗎？,yī gè xīngqī yǒu liù tiān gōngzuò ma?,¿Se trabaja seis días a la semana?,1,HSK1
+t0u1v2w3x4y5,七,七,qī,seven,siete,我每天七點起床。,wǒ měitiān qī diǎn qǐchuáng.,Me levanto a las siete todos los días.,1,HSK1
+u1v2w3x4y5z6,八,八,bā,eight,ocho,他今年八歲了。,tā jīnnián bā suì le.,Él tiene ocho años este año.,1,HSK1
+v2w3x4y5z6a7,九,九,jiǔ,nine,nueve,這杯咖啡九塊錢。,zhè bēi kāfēi jiǔ kuài qián.,Esta taza de café cuesta nueve yuanes.,1,HSK1
+w3x4y5z6a7b8,十,十,shí,ten,diez,我有十個好朋友。,wǒ yǒu shí gè hǎo péngyǒu.,Tengo diez buenos amigos.,1,HSK1
+x4y5z6a7b8c9,個,個,gè,clasificador,clasificador,我想要一個西瓜。,wǒ xiǎng yào yīgè xīguā.,Quiero una sandía.,1,HSK1
+y5z6a7b8c9d0,歲,歲,suì,años de edad,años de edad,我妹妹今年五歲。,wǒ mèimei jīnnián wǔ suì.,Mi hermana menor tiene cinco años este año.,1,HSK1
+z6a7b8c9d0e1,本,本,běn,clasificador (libros),clasificador (libros),桌子上有一本書。,zhuōzi shàng yǒu yī běn shū.,Hay un libro sobre la mesa.,1,HSK1
+a7b8c9d0e1f2,有些,有些,xiē,algunos,algunos,這裡有些蘋果很甜。,zhèlǐ yǒuxiē píngguǒ hěn tián.,Algunas manzanas aquí son muy dulces.,1,HSK1
+b8c9d0e1f2g3,塊,塊,kuài,trozo; moneda,trozo; moneda,請給我一塊蛋糕。,qǐng gěi wǒ yīkuài dàngāo.,Por favor dame un trozo de pastel.,1,HSK1
+c9d0e1f2g3h4,不,不,bù,no,no,我今天不買衣服。,wǒ jīntiān bù mǎi yīfú.,Hoy no compro ropa.,1,HSK1
+d0e1f2g3h4i5,沒,沒,méi,no tener; no,no tener; no,我昨天沒吃晚餐。,wǒ zuótiān méi chī wǎncān.,Ayer no cené.,1,HSK1
+e1f2g3h4i5j6,很,很,hěn,muy,muy,這杯茶很好喝。,zhè bēi chá hěn hǎohē.,Este té está muy rico.,1,HSK1
+f2g3h4i5j6k7,太,太,tài,demasiado,demasiado,這件衣服太大了。,zhè jiàn yīfú tài dà le.,Esta ropa es demasiado grande.,1,HSK1
+g3h8i9j0k1l2,都,都,dōu,todos,todos,我們都是學生。,wǒmen dōu shì xuésheng.,Todos somos estudiantes.,1,HSK1
+h4i5j6k7l8m9,和,和,hé,y,y,我和朋友去喝茶。,wǒ hé péngyǒu qù hēchá.,Yo y mi amigo vamos a tomar té.,1,HSK1
+i5j6k7l8m9n0,在,在,zài,estar; en,estar; en,他在家睡覺。,tā zài jiā shuìjiào.,Él está en casa durmiendo.,1,HSK1
+j6k7l8m9n0o1,的,的,de,partícula posesiva,partícula posesiva,這是我的書。,zhè shì wǒ de shū.,Este es mi libro.,1,HSK1
+k7l8m9n0o1p2,了,了,le,partícula gramatical,partícula gramatical,我吃飯了。,wǒ chīfàn le.,Ya he comido.,1,HSK1
+l8m9n0o1p2q3,嗎,嗎,ma,partícula de pregunta,partícula de pregunta,你好嗎？,nǐ hǎo ma?,¿Cómo estás?,1,HSK1
+m9n0o1p2q3r4,呢,呢,ne,partícula de pregunta,partícula de pregunta,你呢？,nǐ ne?,¿Y tú?,1,HSK1
+n0o1p2q3r4s5,餵,喂,wèi,hola (teléfono),hola (teléfono),喂請問王先生在嗎？,wèi qǐngwèn Wáng xiānshēng zài ma?,Hola ¿se encuentra el Sr. Wang?,1,HSK1
+o1p2q3r4s5t6,家,家,jiā,casa; familia,casa; familia,我家有四口人。,wǒ jiā yǒu sì kǒu rén.,En mi familia hay cuatro personas.,1,HSK1
+p2q3r4s5t6u7,學校,学校,xuéxiào,escuela,escuela,我在學校學漢語。,wǒ zài xuéxiào xué hànyǔ.,Estudio chino en la escuela.,1,HSK1
+q3r4s5t6u7v8,飯店,饭店,fàndiàn,restaurante,restaurante,這家飯店的菜很好吃。,zhè jiā fàndiàn de cài hěn hǎochī.,La comida de este restaurante es muy rica.,1,HSK1
+r4s5t6u7v8w9,商店,商店,shāngdiàn,tienda,tienda,我去商店買東西。,wǒ qù shāngdiàn mǎi dōngxī.,Voy a la tienda a comprar cosas.,1,HSK1
+s5t6u7v8w9x0,醫院,医院,yīyuàn,hospital,hospital,他在醫院工作。,tā zài yīyuàn gōngzuò.,Él trabaja en un hospital.,1,HSK1
+t6u1v2w3x4y5,火車站,火车站,huǒchēzhàn,estación de tren,estación de tren,火車站在哪裡？,huǒchēzhàn zài nǎlǐ?,¿Dónde está la estación de tren?,1,HSK1
+u1v2w3x4y5z6,中國,中国,zhōngguó,China,China,我想去中國旅遊。,wǒ xiǎng qù Zhōngguó lǚyóu.,Quiero ir a viajar a China.,1,HSK1
+v2w3x4y5z6a7,北京,北京,běijīng,Pekín,Pekín,北京是很漂亮的城市。,Běijīng shì hěn piàoliang de chéngshì.,Pekín es una ciudad muy bonita.,1,HSK1
+w3x4y5z6a7b8,上,上,shàng,arriba; sobre,arriba; sobre,桌子上有一本書。,zhuōzi shàng yǒu yī běn shū.,Hay un libro sobre la mesa.,1,HSK1
+x4y5z6a7b8c9,下,下,xià,abajo; debajo,abajo; debajo,椅子下面有一隻貓。,yǐzi xiàmiàn yǒu yī zhī māo.,Hay un gato debajo de la silla.,1,HSK1
+y5z6a7b8c9d0,前面,前面,qiánmiàn,frente; delante,frente; delante,他在我前面。,tā zài wǒ qiánmiàn.,Él está delante de mí.,1,HSK1
+z6a7b8c9d0e1,後面,后面,hòumiàn,detrás,detrás,商店在學校後面。,shāngdiàn zài xuéxiào hòumiàn.,La tienda está detrás de la escuela.,1,HSK1
+a7b8c9d0e1f2,裡面,里面,lǐmiàn,adentro; dentro,adentro; dentro,書在書包裡面。,shū zài shūbāo lǐmiàn.,El libro está dentro de la mochila.,1,HSK1
+b8c9d0e1f2g3,今天,今天,jīntiān,hoy,hoy,今天天氣很好。,jīntiān tiānqì hěn hǎo.,Hoy hace muy buen tiempo.,1,HSK1
+c9d0e1f2g3h4,明天,明天,míngtiān,mañana,mañana,明天是星期一。,míngtiān shì xīngqīyī.,Mañana es lunes.,1,HSK1
+d0e1f2g3h4i5,昨天,昨天,zuótiān,ayer,ayer,昨天下午下雨了。,zuótiān xiàwǔ xiàyǔ le.,Ayer por la tarde llovió.,1,HSK1
+e1f2g3h4i5j6,上午,上午,shàngwǔ,mañana (am),mañana (am),我上午八點上課。,wǒ shàngwǔ bā diǎn shàngkè.,Tengo clase a las ocho de la mañana.,1,HSK1
+f2g3h4i5j6k7,中午,中午,zhōngwǔ,mediodía,mediodía,我們中午一起吃飯吧。,wǒmen zhōngwǔ yìqǐ chīfàn ba.,Comamos juntos al mediodía.,1,HSK1
+g3h8i9j0k1l2,下午,下午,xiàwǔ,tarde (pm),tarde (pm),下午我去商店。,xiàwǔ wǒ qù shāngdiàn.,Por la tarde voy a la tienda.,1,HSK1
+h4i5j6k7l8m9,年,年,nián,año,año,我在中國住了三年。,wǒ zài Zhōngguó zhùle sān nián.,Viví en China tres años.,1,HSK1
+i5j6k7l8m9n0,月,月,yuè,mes,mes,一年有十二個月。,yī nián yǒu shí'èr gè yuè.,Un año tiene doce meses.,1,HSK1
+j6k7l8m9n0o1,日,日,rì,día,día,今天是五月一號（日）。,jīntiān shì wǔ yuè yī hào (rì).,Hoy es uno de mayo.,1,HSK1
+k7l8m9n0o1p2,星期,星期,xīngqī,semana,semana,一個星期有七天。,yī gè xīngqī yǒu qī tiān.,Una semana tiene siete días.,1,HSK1
+l8m9n0o1p2q3,點,点,diǎn,en punto; hora,en punto; hora,現在是三點。,xiànzài shì sān diǎn.,Ahora son las tres.,1,HSK1
+m9n0o1p2q3r4,分鐘,分钟,fēnzhōng,minuto,minuto,我等了你十分鐘。,wǒ děngle nǐ shí fēnzhōng.,Te esperé diez minutos.,1,HSK1
+n0o1p2q3r4s5,現在,现在,xiànzài,ahora,ahora,現在幾點？,xiànzài jǐ diǎn?,¿Qué hora es ahora?,1,HSK1
+o1p2q3r4s5t6,時候,时候,shíhou,momento; tiempo,momento; tiempo,你什麼時候回家？,nǐ shénme shíhou huí jiā?,¿Cuándo vuelves a casa?,1,HSK1
+p2q3r4s5t6u7,爸爸,爸爸,bàba,papá,papá,我爸爸是老師。,wǒ bàba shì lǎoshī.,Mi papá es profesor.,1,HSK1
+q3r4s5t6u7v8,媽媽,妈妈,māma,mamá,mamá,我媽媽很漂亮。,wǒ māma hěn piàoliang.,Mi mamá es muy bonita.,1,HSK1
+r4s5t6u7v8w9,兒子,儿子,érzi,hijo,hijo,我有兩個兒子。,wǒ yǒu liǎng gè érzi.,Tengo dos hijos.,1,HSK1
+s5t6u7v8w9x0,女兒,女儿,nǚ'ér,hija,hija,我女兒三歲了。,wǒ nǚ'ér sān suì le.,Mi hija tiene tres años.,1,HSK1
+t6u1v2w3x4y5,老師,老师,lǎoshī,profesor,profesor,王老師在教漢語。,Wáng lǎoshī zài jiāo hànyǔ.,El profesor Wang está enseñando chino.,1,HSK1
+u1v2w3x4y5z6,學生,学生,xuésheng,estudiante,estudiante,他是我的學生。,tā shì wǒ de xuésheng.,Él es mi estudiante.,1,HSK1
+v2w3x4y5z6a7,同學,同学,tóngxué,compañero de clase,compañero de clase,他們是我的同學。,tāmen shì wǒ de tóngxué.,Ellos son mis compañeros de clase.,1,HSK1
+w3x4y5z6a7b8,朋友,朋友,péngyǒu,amigo,amigo,他是我最好的朋友。,tā shì wǒ zuì hǎo de péngyǒu.,Él es mi mejor amigo.,1,HSK1
+x4y5z6a7b8c9,醫生,医生,yīshēng,médico,médico,我去醫院看醫生。,wǒ qù yīyuàn kàn yīshēng.,Voy al hospital a ver al médico.,1,HSK1
+y5z6a7b8c9d0,先生,先生,xiānsheng,señor; esposo,señor; esposo,王先生在辦公室。,Wáng xiānsheng zài bàngōngshì.,El Sr. Wang está en la oficina.,1,HSK1
+z6a7b8c9d0e1,小姐,小姐,xiǎojiě,señorita,señorita,李小姐很客氣。,Lǐ xiǎojiě hěn kèqi.,La Srta. Li es muy amable.,1,HSK1
+a7b8c9d0e1f2,衣服,衣服,yīfu,ropa,ropa,這件衣服很漂亮。,zhè jiàn yīfu hěn piàoliang.,Esta ropa es muy bonita.,1,HSK1
+b8c9d0e1f2g3,水,水,shuǐ,agua,agua,請給我一杯水。,qǐng gěi wǒ yī bēi shuǐ.,"Por favor, dame un vaso de agua.",1,HSK1
+c9d0e1f2g3h4,水果,水果,shuǐguǒ,fruta,fruta,你想吃什麼水果？,nǐ xiǎng chī shénme shuǐguǒ?,¿Qué fruta quieres comer?,1,HSK1
+d0e1f2g3h4i5,蘋果,苹果,píngguǒ,manzana,manzana,紅色的蘋果很好吃。,hóngsè de píngguǒ hěn hǎochī.,Las manzanas rojas son muy ricas.,1,HSK1
+e1f2g3h4i5j6,茶,茶,chá,té,té,中國人喜歡喝熱茶。,Zhōngguórén xǐhuān hē rè chá.,A los chinos les gusta beber té caliente.,1,HSK1
+f2g3h4i5j6k7,米飯,米饭,mǐfàn,arroz cocido,arroz cocido,我每天中午都吃米飯。,wǒ měitiān zhōngwǔ dōu chī mǐfàn.,Como arroz todos los días al mediodía.,1,HSK1
+g3h8i9j0k1l2,菜,菜,cài,plato; verdura,plato; verdura,這道菜的味道不錯。,zhè dào cài de wèidào bùcuò.,El sabor de este plato no está mal.,1,HSK1
+h4i5j6k7l8m9,杯子,杯子,bēizi,vaso; taza,vaso; taza,桌子上有一個杯子。,zhuōzi shàng yǒu yīgè bēizi.,Hay una taza sobre la mesa.,1,HSK1
+i5j6k7l8m9n0,錢,钱,qián,dinero,dinero,你有多少錢？,nǐ yǒu duōshǎo qián?,¿Cuánto dinero tienes?,1,HSK1
+j6k7l8m9n0o1,飛機,飞机,fēijī,avión,avión,我坐飛機去北京。,wǒ zuò fēijī qù Běijīng.,Voy a Pekín en avión.,1,HSK1
+k7l8m9n0o1p2,出租車,出租车,chūzūchē,taxi,taxi,我們打出租車去飯店吧。,wǒmen dǎ chūzūchē qù fàndiàn ba.,Vayamos al restaurante en taxi.,1,HSK1
+l8m9n0o1p2q3,電視,电视,diànshì,televisión,televisión,我喜歡看電視。,wǒ xǐhuān kàn diànshì.,Me gusta ver la televisión.,1,HSK1
+m9n0o1p2q3r4,電腦,电脑,diànnǎo,computadora,computadora,他在用電腦工作。,tā zài yòng diànnǎo gōngzuò.,Él está trabajando con la computadora.,1,HSK1
+n0o1p2q3r4s5,電影,电影,diànyǐng,película,película,你昨天看了什麼電影？,nǐ zuótiān kànle shénme diànyǐng?,¿Qué película viste ayer?,1,HSK1
+o1p2q3r4s5t6,天氣,天气,tiānqì,tiempo; clima,tiempo; clima,明天的天氣怎麼樣？,míngtiān de tiānqì zěnmeyàng?,¿Cómo será el tiempo mañana?,1,HSK1
+p2q3r4s5t6u7,貓,猫,māo,gato,gato,我有一隻小黑貓。,wǒ yǒu yī zhī xiǎo hēi māo.,Tengo un pequeño gato negro.,1,HSK1
+q3r4s5t6u7v8,狗,狗,gǒu,perro,perro,那隻狗在跑步。,nà zhī gǒu zài pǎobù.,Ese perro está corriendo.,1,HSK1
+r4s5t6u7v8w9,東西,东西,dōngxi,cosa; objeto,cosa; objeto,他在商店買東西。,tā zài shāngdiàn mǎi dōngxi.,Él está comprando cosas en la tienda.,1,HSK1
+s5t6u7v8w9x0,人,人,rén,persona,persona,商店裡有很多人。,shāngdiàn lǐ yǒu hěn duō rén.,Hay mucha gente en la tienda.,1,HSK1
+t6u1v2w3x4y5,名字,名字,míngzi,nombre,nombre,你的名字叫什麼？,nǐ de míngzi jiào shénme?,¿Cómo te llamas?,1,HSK1
+u1v2w3x4y5z6,書,书,shū,libro,libro,我喜歡看中文書。,wǒ xǐhuān kàn Zhōngwén shū.,Me gusta leer libros en chino.,1,HSK1
+v2w3x4y5z6a7,漢語,汉语,hànyǔ,idioma chino,idioma chino,漢語不難學。,Hànyǔ bù nán xué.,El idioma chino no es difícil de aprender.,1,HSK1
+w3x4y5z6a7b8,字,字,zì,carácter; letra,carácter; letra,我不認識這個字。,wǒ bù rènshi zhège zì.,No reconozco este carácter.,1,HSK1
+x4y5z6a7b8c9,桌子,桌子,zhuōzi,mesa,mesa,電腦在桌子上。,diànnǎo zài zhuōzi shàng.,La computadora está sobre la mesa.,1,HSK1
+y5z6a7b8c9d0,椅子,椅子,yǐzi,silla,silla,請坐在椅子上。,qǐng zuò zài yǐzi shàng.,"Por favor, siéntate en la silla.",1,HSK1
+z6a7b8c9d0e1,謝謝,谢谢,xièxie,gracias,gracias,謝謝你的幫助。,xièxie nǐ de bāngzhù.,Gracias por tu ayuda.,1,HSK1
+a7b8c9d0e1f2,不客氣,不客气,bù kèqi,de nada,de nada,不客氣 這是應該的。,bù kèqi zhè shì yīnggāi de.,De nada es lo que debía hacer.,1,HSK1
+b8c9d0e1f2g3,再見,再见,zàijiàn,adiós,adiós,老師 再見！,Lǎoshī zàijiàn!,¡Adiós profesor!,1,HSK1
+c9d0e1f2g3h4,請,请,qǐng,por favor; invitar,por favor; invitar,請進 請坐。,qǐng jìn qǐng zuò.,Pase por favor; tome asiento.,1,HSK1
+d0e1f2g3h4i5,對不起,对不起,duìbuqǐ,lo siento,lo siento,對不起 我遲到了。,duìbuqǐ wǒ chídào le.,Lo siento llego tarde.,1,HSK1
+e1f2g3h4i5j6,沒關係,没关系,méiguānxi,no importa,no importa,沒關係 我不介意。,méiguānxi wǒ bù jièyì.,No importa no me importa.,1,HSK1
+f2g3h4i5j6k7,聽,听,tīng,escuchar,escuchar,你聽 那是誰在唱歌？,nǐ tīng nà shì shéi zài chànggē?,Escucha ¿quién está cantando?,1,HSK1
+g3h8i9j0k1l2,說,说,shuō,hablar; decir,hablar; decir,你會說漢語嗎？,nǐ huì shuō Hànyǔ ma?,¿Sabes hablar chino?,1,HSK1
+h4i5j6k7l8m9,讀,读,dú,leer,leer,他在讀一本很有意思的書。,tā zài dú yī běn hěn yǒuyìsi de shū.,Él está leyendo un libro muy interesante.,1,HSK1
+i5j6k7l8m9n0,寫,写,xiě,escribir,escribir,我每天都寫漢字。,wǒ měitiān dōu xiě Hànzì.,Escribo caracteres chinos todos los días.,1,HSK1
+j6k7l8m9n0o1,看,看,kàn,ver; mirar,ver; mirar,你看 那邊有隻大狗。,nǐ kàn nàbiān yǒu zhī dà gǒu.,Mira hay un perro grande allí.,1,HSK1
+k7l8m9n0o1p2,看見,看见,kànjiàn,ver; divisar,ver; divisar,我昨天在商店看見他了。,wǒ zuótiān zài shāngdiàn kànjiàn tā le.,Ayer lo vi en la tienda.,1,HSK1
+l8m9n0o1p2q3,叫,叫,jiào,llamarse; gritar,llamarse; gritar,他叫什麼名字？,tā jiào shénme míngzi?,¿Cómo se llama él?,1,HSK1
+m9n0o1p2q3r4,來,来,lái,venir,venir,歡迎來我家玩。,huānyíng lái wǒ jiā wán.,Bienvenido a mi casa a pasar el rato.,1,HSK1
+n0o1p2q3r4s5,回,回,huí,volver; regresar,volver; regresar,我下午五點回家。,wǒ xiàwǔ wǔ diǎn huí jiā.,Vuelvo a casa a las cinco de la tarde.,1,HSK1
+o1p2q3r4s5t6,去,去,qù,ir,ir,我想去商店買水果,wǒ xiǎng qù shāngdiàn mǎi shuǐguǒ,Quiero ir a la tienda a comprar fruta,1,HSK1
+p2q3r4s5t6u7,吃,吃,chī,comer,comer,我們去餐廳吃飯吧,wǒmen qù cāntīng chīfàn ba,Vamos a comer al restaurante,1,HSK1
+q3r4s5t6u7v8,喝,喝,hē,beber,beber,你想喝茶還是喝咖啡,nǐ xiǎng hē chá háishì hē kāfēi,Quieres beber té o café,1,HSK1
+r4s5t6u7v8w9,睡覺,睡觉,shuìjiào,dormir,dormir,他現在在房間睡覺,tā xiànzài zài fángjiān shuìjiào,Él ahora está durmiendo en la habitación,1,HSK1
+s5t6u7v8w9x0,打電話,打电话,dǎ diànhuà,llamar por teléfono,llamar por teléfono,他在給爸爸打電話,tā zài gěi bàba dǎ diànhuà,Él le está llamando por teléfono a su papá,1,HSK1
+t6u1v2w3x4y5,做,做,zuò,hacer,hacer,你在做什麼工作,nǐ zài zuò shénme gōngzuò,Qué trabajo haces,1,HSK1
+u1v2w3x4y5z6,買,买,mǎi,comprar,comprar,我想買一件新衣服,wǒ xiǎng mǎi yī jiàn xīn yīfu,Quiero comprar una ropa nueva,1,HSK1
+v2w3x4y5z6a7,開,开,kāi,abrir; conducir,abrir; conducir,他會開車去上班,tā huì kāichē qù shàngbān,Él sabe conducir al trabajo,1,HSK1
+w3x4y5z6a7b8,坐,坐,zuò,sentarse; viajar en,sentarse; viajar en,請坐下喝杯熱茶,qǐng zuòxià hē bēi rè chá,Por favor siéntate a beber una taza de té caliente,1,HSK1
+x4y5z6a7b8c9,住,住,zhù,vivir; residir,vivir; residir,我住在北京三年了,wǒ zhù zài Běijīng sān nián le,Vivo en Pekín desde hace tres años,1,HSK1
+y5z6a7b8c9d0,學習,学习,xuéxí,estudiar,estudiar,他在大學學習漢語,tā zài dàxué xuéxí Hànyǔ,Él estudia chino en la universidad,1,HSK1
+z6a7b8c9d0e1,工作,工作,gōngzuò,trabajar; trabajo,trabajar; trabajo,我爸爸在醫院工作,wǒ bàba zài yīyuàn gōngzuò,Mi papá trabaja en un hospital,1,HSK1
+a7b8c9d0e1f2,下雨,下雨,xiàyǔ,llover,llover,昨天下午下雨了,zuótiān xiàwǔ xiàyǔ le,Ayer por la tarde llovió,1,HSK1
+b8c9d0e1f2g3,愛,爱,ài,amar,amar,我愛我的家和朋友,wǒ ài wǒ de jiā hé péngyǒu,Amo a mi familia y amigos,1,HSK1
+c9d0e1f2g3h4,想,想,xiǎng,querer; pensar,querer; pensar,我想去中國看長城,wǒ xiǎng qù Zhōngguó kàn Chángchéng,Quiero ir a China a ver la Gran Muralla,1,HSK1
+d0e1f2g3h4i5,喜歡,喜欢,xǐhuān,gustar,gustar,她喜歡聽音樂看電影,tā xǐhuān tīng yīnyuè kàn diànyǐng,A ella le gusta escuchar música y ver películas,1,HSK1
+e1f2g3h4i5j6,認識,认识,rènshi,conocer,conocer,很高興認識你,hěn gāoxìng rènshi nǐ,Mucho gusto en conocerte,1,HSK1
+f2g3h4i5j6k7,會,会,huì,saber; poder,saber; poder,我會說一點兒漢語,wǒ huì shuō yīdiǎnr Hànyǔ,Sé hablar un poco de chino,1,HSK1
+g3h8i9j0k1l2,能,能,néng,poder; ser capaz,poder; ser capaz,你在這裡能看見他嗎,nǐ zài zhèlǐ néng kànjiàn tā ma,Puedes verle desde aquí,1,HSK1
+h4i5j6k7l8m9,漂亮,漂亮,piàoliang,bonito; hermoso,bonito; hermoso,這朵花真漂亮,zhè duǒ huā zhēn piàoliang,Esta flor es realmente bonita,1,HSK1
+i5j6k7l8m9n0,高興,高兴,gāoxìng,feliz; alegre,feliz; alegre,我今天很高興,wǒ jīntiān hěn gāoxìng,Hoy estoy muy feliz,1,HSK1
+j6k7l8m9n0o1,好,好,hǎo,bueno; bien,bueno; bien,他是我的好朋友,tā shì wǒ de hǎo péngyǒu,Él es mi buen amigo,1,HSK1
+k7l8m9n0o1p2,大,大,dà,grande,grande,這個蘋果很大很好吃,zhège píngguǒ hěn dà hěn hǎochī,Esta manzana es muy grande y rica,1,HSK1
+l8m9n0o1p2q3,小,小,xiǎo,pequeño,pequeño,那隻小貓真可愛,nà zhī xiǎo māo zhēn kě'ài,Ese gatito es realmente lindo,1,HSK1
+m9n0o1p2q3r4,多,多,duō,mucho; muchos,mucho; muchos,商店裡有很多人,shāngdiàn lǐ yǒu hěn duō rén,Hay mucha gente en la tienda,1,HSK1
+n0o1p2q3r4s5,少,少,shǎo,poco; pocos,poco; pocos,杯子裡的水很少,bēizi lǐ de shuǐ hěn shǎo,Hay muy poca agua en el vaso,1,HSK1
+o1p2q3r4s5t6,冷,冷,lěng,frío,frío,今天的天氣很冷,jīntiān de tiānqì hěn lěng,Hoy hace mucho frío,1,HSK1
+p2q3r4s5t6u7,熱,热,rè,caliente; calor,caliente; calor,這杯咖啡太熱了,zhè bēi kāfēi tài rè le,Este café está demasiado caliente,1,HSK1
+q3r4s5t6u7v8,點兒,点儿,diǎnr,un poco,un poco,我想喝點兒水,wǒ xiǎng hē diǎnr shuǐ,Quiero beber un poco de agua,1,HSK1
+r4s5t6u7v8w9,些,些,xiē,algunos,algunos,這些東西是誰的,zhèxiē dōngxi shì shéi de,De quién son estas cosas,1,HSK1
+s5t6u7v8w9x0,太...了,太...了,tài...le,demasiado,demasiado,這件衣服太貴了,zhè jiàn yīfu tài guì le,Esta ropa es demasiado cara,1,HSK1
+t6u1v2w3x4y5,都,都,dōu,todos,todos,我們都是中國人,wǒmen dōu shì Zhōngguórén,Todos somos chinos,1,HSK1
+u1v2w3x4y5z6,看,看,kàn,mirar; ver,mirar; ver,你看那是什麼東西,nǐ kàn nà shì shénme dōngxi,Mira qué es aquello,1,HSK1
+v2w3x4y5z6a7,想,想,xiǎng,pensar; querer,pensar; querer,我想回家睡覺了,wǒ xiǎng huíjiā shuìjiào le,Ya quiero volver a casa a dormir,1,HSK1
+h2a1b2c3d4e5,吧,吧,ba,partícula sugerencia,partícula sugerencia,我們去吃飯吧,wǒmen qù chīfàn ba,Vamos a comer,2,HSK2
+h2b2c3d4e5f6,白,白,bái,blanco,blanco,這件衣服是白色的,zhè jiàn yīfu shì báisè de,Esta ropa es de color blanco,2,HSK2
+h2c3d4e5f6g7,百,百,bǎi,cien,cien,這本書一百塊錢,zhè běn shū yībǎi kuài qián,Este libro cuesta cien yuanes,2,HSK2
+h2d4e5f6g7h8,幫助,帮助,bāngzhù,ayudar,ayudar,謝謝你的幫助,xièxie nǐ de bāngzhù,Gracias por tu ayuda,2,HSK2
+h2e5f6g7h8i9,報紙,报纸,bàozhǐ,periódico,periódico,我每天早上看報紙,wǒ měitiān zǎoshang kàn bàozhǐ,Leo el periódico cada mañana,2,HSK2
+h2f6g7h8i9j0,比,比,bǐ,comparar; que,comparar; que,他比我高,tā bǐ wǒ gāo,Él es más alto que yo,2,HSK2
+h2g7h8i9j0k1,別,别,bié,no; otro,no; otro,別忘了帶雨傘,bié wàngle dài yǔsǎn,No olvides traer el paraguas,2,HSK2
+h2h8i9j0k1l2,長,长,cháng,largo,largo,這條路很長,zhè tiáo lù hěn cháng,Este camino es muy largo,2,HSK2
+h2i9j0k1l2m3,唱歌,唱歌,chànggē,cantar,cantar,她唱歌唱得很好聽,tā chànggē chàng de hěn hǎotīng,Ella canta muy bien,2,HSK2
+h2j0k1l2m3n4,出,出,chū,salir,salir,他已經出去了,tā yǐjīng chūqù le,Él ya ha salido,2,HSK2
+h2k1l2m3n4o5,穿,穿,chuān,vestir; usar,vestir; usar,今天很冷多穿點衣服,jīntiān hěn lěng duō chuān diǎn yīfu,Hoy hace frío ponte más ropa,2,HSK2
+h2l2m3n4o5p6,次,次,cì,vez,vez,我去過北京三次,wǒ qùguò Běijīng sān cì,He estado en Pekín tres veces,2,HSK2
+h2m3n4o5p6q7,從,从,cóng,desde,desde,我從家到學校要十分鐘,wǒ cóng jiā dào xuéxiào yào shí fēnzhōng,Tardo diez minutos desde casa a la escuela,2,HSK2
+h2n4o5p6q7r8,錯,错,cuò,error; equivocado,error; equivocado,對不起我錯了,duìbuqǐ wǒ cuò le,Lo siento me he equivocado,2,HSK2
+h2o5p6q7r8s9,打籃球,打篮球,dǎ lánqiú,jugar baloncesto,jugar baloncesto,我們下午去打籃球吧,wǒmen xiàwǔ qù dǎ lánqiú ba,Vamos a jugar al baloncesto esta tarde,2,HSK2
+h2p6q7r8s9t0,大家,大家,dàjiā,todos,todos,請大家安靜,qǐng dàjiā ānjìng,Por favor que todos guarden silencio,2,HSK2
+h2q7r8s9t0u1,到,到,dào,llegar,llegar,火車快到了,huǒchē kuài dào le,El tren está por llegar,2,HSK2
+h2r8s9t0u1v2,得,得,de,partícula de grado,partícula de grado,他跑得很快,tā pǎo de hěn kuài,Él corre muy rápido,2,HSK2
+h2s9t0u1v2w3,等,等,děng,esperar,esperar,我在門口等你,wǒ zài ménkǒu děng nǐ,Te espero en la puerta,2,HSK2
+h2t0u1v2w3x4,弟弟,弟弟,dìdi,hermano menor,hermano menor,我弟弟是學生,wǒ dìdi shì xuésheng,Mi hermano menor es estudiante,2,HSK2
+h2u1v2w3x4y5,第一,第一,dì-yī,primero,primero,這是我第一次來中國,zhè shì wǒ dì-yī cì lái Zhōngguó,Esta es mi primera vez en China,2,HSK2
+h2v2w3x4y5z6,懂,懂,dǒng,entender,entender,你懂我的意思嗎,nǐ dǒng wǒ de yìsi ma,Entiendes lo que quiero decir,2,HSK2
+h2w3x4y5z6a7,對,对,duì,correcto; hacia,correcto; hacia,你說得很對,nǐ shuō de hěn duì,Lo que dices es correcto,2,HSK2
+h2x4y5z6a7b8,對,对,duì,hacia; para,hacia; para,跑步對身體很好,pǎobù duì shēntǐ hěn hǎo,Correr es bueno para el cuerpo,2,HSK2
+h2y5z6a7b8c9,房間,房间,fángjiān,habitación,habitación,我的房間很乾淨,wǒ de fángjiān hěn gānjìng,Mi habitación está muy limpia,2,HSK2
+h2z6a7b8c9d0,非常,非常,fēicháng,muy; extremadamente,muy; extremadamente,今天的天氣非常熱,jīntiān de tiānqì fēicháng rè,Hoy el clima es extremadamente caluroso,2,HSK2
+h2a7b8c9d0e1,服務員,服务员,fúwùyuán,camarero,camarero,服務員請給我菜單,fúwùyuán qǐng gěi wǒ càidān,Camarero por favor deme el menú,2,HSK2
+h2b8c9d0e1f2,高,高,gāo,alto,alto,他的個子很高,tā de gèzi hěn gāo,Él es muy alto,2,HSK2
+h2c9d0e1f2g3,告訴,告诉,gàosu,decir; contar,decir; contar,請告訴我你的電話號碼,qǐng gàosu wǒ nǐ de diànhuà hàomǎ,Por favor dime tu número de teléfono,2,HSK2
+h2d0e1f2g3h4,哥哥,哥哥,gēge,hermano mayor,hermano mayor,我哥哥在公司工作,wǒ gēge zài gōngsī gōngzuò,Mi hermano mayor trabaja en una empresa,2,HSK2
+h2e1f2g3h4i5,給,给,gěi,dar; para,dar; para,請給我一杯水,qǐng gěi wǒ yī bēi shuǐ,Por favor dame un vaso de agua,2,HSK2
+h2f2g3h4i5j6,公共汽車,公共汽车,gōnggòng qìchē,autobús,autobús,我坐公共汽車去學校,wǒ zuò gōnggòng qìchē qù xuéxiào,Voy a la escuela en autobús,2,HSK2
+h2g3h4i5j6k7,公司,公司,gōngsī,empresa,empresa,他在一家很大的公司工作,tā zài yī jiā hěn dà de gōngsī gōngzuò,Él trabaja en una empresa muy grande,2,HSK2
+h2h4i5j6k7l8,狗,狗,gǒu,perro,perro,這隻狗很聽話,zhè zhī gǒu hěn tīnghuà,Este perro es muy obediente,2,HSK2
+h2i5j6k7l8m9,貴,贵,guì,caro,caro,這件衣服太貴了,zhè jiàn yīfu tài guì le,Esta ropa es demasiado cara,2,HSK2
+h2j6k7l8m9n0,過,过,guò,pasar; partícula experiencia,pasar; partícula experiencia,時間過得真快,shíjiān guò de zhēn kuài,El tiempo pasa realmente rápido,2,HSK2
+h2k7l8m9n0o1,還,还,hái,aún; todavía,aún; todavía,他還沒起床呢,tā hái méi qǐchuáng ne,Él todavía no se ha levantado,2,HSK2
+h2l8m9n0o1p2,孩子,孩子,háizi,niño; hijo,niño; hijo,校園裡有很多孩子,xiàoyuán lǐ yǒu hěn duō háizi,Hay muchos niños en el campus,2,HSK2
+h2m9n0o1p2q3,好吃,好吃,hǎochī,rico; delicioso,rico; delicioso,這家飯店的菜很好吃,zhè jiā fàndiàn de cài hěn hǎochī,La comida de este restaurante es deliciosa,2,HSK2
+h2n0o1p2q3r4,黑,黑,hēi,negro,negro,我有一雙黑色的鞋子,wǒ yǒu yī shuāng hēisè de xiézi,Tengo un par de zapatos negros,2,HSK2
+h2o1p2q3r4s5,紅,红,hóng,rojo,rojo,她穿了一件紅色的毛衣,tā chuānle yī jiàn hóngsè de máoyī,Ella se puso un jersey rojo,2,HSK2
+h2p2q3r4s5t6,歡迎,欢迎,huānyíng,bienvenido,bienvenido,歡迎來到北京,huānyíng láidào Běijīng,Bienvenido a Pekín,2,HSK2
+h2q3r4s5t6u7,回答,回答,huídá,responder,responder,請回答我的問題,qǐng huídá wǒ de wèntí,Por favor responde a mi pregunta,2,HSK2
+h2r4s5t6u7v8,機場,机场,jīchǎng,aeropuerto,aeropuerto,我現在去機場接朋友,wǒ xiànzài qù jīchǎng jiē péngyǒu,Ahora voy al aeropuerto a recoger a un amigo,2,HSK2
+h2s5t6u7v8w9,雞蛋,鸡蛋,jīdàn,huevo,huevo,我早餐吃了一個雞蛋,wǒ zǎocān chīle yīgè jīdàn,Desayuné un huevo,2,HSK2
+h2t6u7v8w9x0,件,件,jiàn,clasificador (ropa),clasificador (ropa),這件毛衣很漂亮,zhè jiàn máoyī hěn piàoliang,Este jersey es muy bonito,2,HSK2
+h2u7v8w9x0y1,教室,教室,jiàoshì,aula,aula,學生們都在教室裡,xuéshengmen dōu zài jiàoshì lǐ,Los estudiantes están todos en el aula,2,HSK2
+h2v8w9x0y1z2,姐姐,姐姐,jiějie,hermana mayor,hermana mayor,我姐姐是醫生,wǒ jiějie shì yīshēng,Mi hermana mayor es médico,2,HSK2
+h2w9x0y1z2a3,介紹,介绍,jièshào,presentar,presentar,我來介紹一下我的朋友,wǒ lái jièshào yīxià wǒ de péngyǒu,Permítame presentar a mi amigo,2,HSK2
+h2x0y1z2a3b4,進,进,jìn,entrar,entrar,請進快坐下吧,qǐng jìn kuài zuòxià ba,Por favor entra y siéntate rápido,2,HSK2
+h2y1z2a3b4c5,近,近,jìn,cerca,cerca,我家離學校很近,wǒ jiā lí xuéxiào hěn jìn,Mi casa está muy cerca de la escuela,2,HSK2
+h2z2a3b4c5d6,就,就,jiù,entonces; inmediatamente,entonces; inmediatamente,我就要下班了,wǒ jiù yào xiàbān le,Ya casi voy a salir del trabajo,2,HSK2
+h2a3b4c5d6e7,覺得,觉得,juéde,sentir; pensar,sentir; pensar,我覺得這本書很有意思,wǒ juéde zhè běn shū hěn yǒuyìsi,Pienso que este libro es muy interesante,2,HSK2
+h2b4c5d6e7f8,咖啡,咖啡,kāfēi,café,café,你想喝咖啡還是喝茶,nǐ xiǎng hē kāfēi háishì hē chá,Quieres beber café o té,2,HSK2
+h2c5d6e7f8g9,開始,开始,kāishǐ,empezar,empezar,我們現在開始上課,wǒmen xiànzài kāishǐ shàngkè,Empezamos la clase ahora,2,HSK2
+h2d6e7f8g9h0,考試,考试,kǎoshì,examen,examen,明天的考試很重要,míngtiān de kǎoshì hěn zhòngyào,El examen de mañana es muy importante,2,HSK2
+h2e7f8g9h0i1,可能,可能,kěnéng,posible; quizás,posible; quizás,明天可能會下雨,míngtiān kěnéng huì xiàyǔ,Mañana es posible que llueva,2,HSK2
+h2f8g9h0i1j2,可以,可以,kěyǐ,poder; estar permitido,poder; estar permitido,我可以坐在這裡嗎,wǒ kěyǐ zuò zài zhèlǐ ma,Puedo sentarme aquí,2,HSK2
+h2g9h0i1j2k3,課,课,kè,clase; lección,clase; lección,今天的課很有趣,jīntiān de kè hěn yǒuqù,La lección de hoy es muy interesante,2,HSK2
+h2h0i1j2k3l4,快,快,kuài,rápido,rápido,火車開得很快,huǒchē kāi de hěn kuài,El tren va muy rápido,2,HSK2
+h2i1j2k3l4m5,快樂,快乐,kuàilè,feliz,feliz,祝你生日快樂,zhù nǐ shēngrì kuàilè,Te deseo un feliz cumpleaños,2,HSK2
+h2j2k3l4m5n6,累,累,lèi,cansado,cansado,工作了一天我很累,gōngzuòle yītiān wǒ hěn lèi,Después de trabajar todo el día estoy muy cansado,2,HSK2
+h2k3l4m5n6o7,離,离,lí,distancia de,distancia de,我家離超市很遠,wǒ jiā lí chāoshì hěn yuǎn,Mi casa está lejos del supermercado,2,HSK2
+h2l4m5n6o7p8,兩,两,liǎng,dos (cantidad),dos (cantidad),桌上有兩個蘋果,zhuō shàng yǒu liǎng gè píngguǒ,Hay dos manzanas sobre la mesa,2,HSK2
+h2m5n6o7p8q9,路,路,lù,camino; calle,camino; calle,這條路很寬,zhè tiáo lù hěn kuān,Este camino es muy ancho,2,HSK2
+h2n6o7p8q9r0,旅遊,旅游,lǚyóu,viajar,viajar,我們明年去中國旅遊,wǒmen míngnián qù Zhōngguó lǚyóu,El año que viene viajaremos a China,2,HSK2
+h2o7p8q9r0s1,賣,卖,mài,vender,vender,這個商店賣水果,zhège shāngdiàn mài shuǐguǒ,Esta tienda vende fruta,2,HSK2
+h2p8q9r0s1t2,慢,慢,màn,lento,lento,請說得慢一點兒,qǐng shuō de màn yīdiǎnr,Por favor habla un poco más lento,2,HSK2
+h2q9r0s1t2u3,忙,忙,máng,ocupado,ocupado,我最近工作很忙,wǒ zuìjìn gōngzuò hěn máng,Últimamente estoy muy ocupado con el trabajo,2,HSK2
+h2r0s1t2u3v4,每,每,měi,cada,cada,我每天早上跑步,wǒ měitiān zǎoshang pǎobù,Corro cada mañana,2,HSK2
+h2s1t2u3v4w5,妹妹,妹妹,mèimei,hermana menor,hermana menor,我的妹妹很聰明,wǒ de mèimei hěn cōngming,Mi hermana menor es muy inteligente,2,HSK2
+h2t2u3v4w5x6,門,门,mén,puerta,puerta,請把門打開,qǐng bǎ mén dǎkāi,Por favor abre la puerta,2,HSK2
+h2u3v4w5x6y7,男人,男人,nánrén,hombre,hombre,他是個很好的男人,tā shì gè hěn hǎo de nánrén,Él es un buen hombre,2,HSK2
+h2v4w5x6y7z8,您,您,nín,usted,usted,老師您好,lǎoshī nín hǎo,Hola profesor (formal),2,HSK2
+h2w5x6y7z8a9,牛奶,牛奶,niúnǎi,leche,leche,我喜歡喝熱牛奶,wǒ xǐhuān hē rè niúnǎi,Me gusta beber leche caliente,2,HSK2
+h2x6y7z8a9b0,女人,女人,nǚrén,mujer,mujer,那個女人在看書,nàge nǚrén zài kànshū,Esa mujer está leyendo un libro,2,HSK2
+h2y7z8a9b0c1,旁邊,旁边,pángbiān,lado; al lado,lado; al lado,學校旁邊有一家書店,xuéxiào pángbiān yǒu yī jiā shūdiàn,Al lado de la escuela hay una librería,2,HSK2
+h2z7a9b0c1d2,跑步,跑步,pǎobù,correr,correr,我每天早上都去跑步,wǒ měitiān zǎoshang dōu qù pǎobù,Voy a correr todas las mañanas,2,HSK2
+h2a8b9c0d1e2,便宜,便宜,piányi,barato,barato,這件衣服很便宜,zhè jiàn yīfu hěn piányi,Esta ropa es muy barata,2,HSK2
+h2b9c0d1e2f3,票,票,piào,billete; entrada,billete; entrada,火車票多少錢,huǒchēpiào duōshǎo qián,Cuánto cuesta el billete de tren,2,HSK2
+h2c0d1e2f3g4,妻子,妻子,qīzi,esposa,esposa,他的妻子是醫生,tā de qīzi shì yīshēng,Su esposa es médico,2,HSK2
+h2d1e2f3g4h5,起床,起床,qǐchuáng,levantarse de la cama,levantarse de la cama,我每天六點起床,wǒ měitiān liù diǎn qǐchuáng,Me levanto a las seis todos los días,2,HSK2
+h2e2f3g4h5i6,千,千,qiān,mil,mil,這個電腦要五千塊,zhège diànnǎo yào wǔqiān kuài,Esta computadora cuesta cinco mil yuanes,2,HSK2
+h2f3g4h5i6j7,鉛筆,铅笔,qiānbǐ,lápiz,lápiz,請借我一支鉛筆,qǐng jiè wǒ yī zhī qiānbǐ,Por favor préstame un lápiz,2,HSK2
+h2g4h5i6j7k8,晴,晴,qíng,despejado; soleado,despejado; soleado,今天的天氣很晴朗,jīntiān de tiānqì hěn qínglǎng,El tiempo hoy está muy soleado,2,HSK2
+h2h5i6j7k8l9,去年,去年,qùnián,el año pasado,el año pasado,去年我去中國旅遊了,qùnián wǒ qù Zhōngguó lǚyóule,El año pasado viajé a China,2,HSK2
+h2i6j7k8l9m0,讓,让,ràng,dejar; permitir,dejar; permitir,請讓他進來吧,qǐng ràng tā jìnlái ba,Por favor déjalo entrar,2,HSK2
+h2j7k8l9m0n1,上班,上班,shàngbān,ir a trabajar,ir a trabajar,我每天八點上班,wǒ měitiān bā diǎn shàngbān,Empiezo a trabajar a las ocho todos los días,2,HSK2
+h2k8l9m0n1o2,身體,身体,shēntǐ,cuerpo; salud,cuerpo; salud,多運動對身體好,duō yùndòng duì shēntǐ hǎo,Hacer mucho ejercicio es bueno para la salud,2,HSK2
+h2l9m0n1o2p3,生病,生病,shēngbìng,enfermarse,enfermarse,他生病了不能來上課,tā shēngbìngle bùnéng lái shàngkè,Él se ha enfermado y no puede venir a clase,2,HSK2
+h2m0n1o2p3q4,生日,生日,shēngrì,cumpleaños,cumpleaños,明天是我的生日,míngtiān shì wǒ de shēngrì,Mañana es mi cumpleaños,2,HSK2
+h2n1o2p3q4r5,時間,时间,shíjiān,tiempo,tiempo,我沒有時間去商店,wǒ méiyǒu shíjiān qù shāngdiàn,No tengo tiempo para ir a la tienda,2,HSK2
+h2o2p3q4r5s6,事情,事情,shìqing,asunto; cosa,asunto; cosa,這件事情很麻煩,zhè jiàn shìqing hěn máfan,Este asunto es muy problemático,2,HSK2
+h2p3q4r5s6t7,手錶,手表,shǒubiǎo,reloj de pulsera,reloj de pulsera,我的手錶停了,wǒ de shǒubiǎo tíngle,Mi reloj se ha parado,2,HSK2
+h2q4r5s6t7u8,手機,手机,shǒujī,teléfono móvil,teléfono móvil,他在玩手機,tā zài wán shǒujī,Él está jugando con el móvil,2,HSK2
+h2r5s6t7u8v9,說話,说话,shuōhuà,hablar,hablar,請不要在圖書館說話,qǐng bùyào zài túshūguǎn shuōhuà,Por favor no hablen en la biblioteca,2,HSK2
+h2s6t7u8v9x0,送,送,sòng,entregar; regalar,entregar; regalar,我想送你一個禮物,wǒ xiǎng sòng nǐ yīgè lǐwù,Quiero darte un regalo,2,HSK2
+h2t7u8v9x0y1,雖然,虽然,suīrán,aunque,aunque,雖然很累但我很高興,suīrán hěn lèi dàn wǒ hěn gāoxìng,Aunque estoy cansado estoy muy feliz,2,HSK2
+h2u8v9x0y1z2,但是,但是,dànshì,pero,pero,他很有錢但是不快樂,tā hěn yǒuqián dànshì bù kuàilè,Él tiene mucho dinero pero no es feliz,2,HSK2
+h2v9x0y1z2a3,所以,所以,suǒyǐ,por lo tanto; así que,por lo tanto; así que,因為下雨了所以我不去了,yīnwèi xiàyǔle suǒyǐ wǒ bù qùle,Como está lloviendo no voy a ir,2,HSK2
+h2w9x0y1z2a3,它,它,tā,ello; eso,ello; eso,我看見一隻狗它很可愛,wǒ kànjiàn yī zhī gǒu tā hěn kě'ài,He visto un perro es muy lindo,2,HSK2
+h2x0y1z2a3b4,踢足球,踢足球,tī zúqiú,jugar fútbol,jugar fútbol,我們一起去踢足球吧,wǒmen yìqǐ qù tī zúqiú ba,Vamos a jugar al fútbol juntos,2,HSK2
+h2y1z2a3b4c5,題,题,tí,pregunta; tema,pregunta; tema,這道題很難,zhè dào tí hěn nán,Esta pregunta es muy difícil,2,HSK2
+h2z1a2b3c4d5,跳舞,跳舞,tiàowǔ,bailar,bailar,她跳舞跳得非常美,tā tiàowǔ tiào de fēicháng měi,Ella baila de forma muy hermosa,2,HSK2
+h2a2b3c4d5e6,外,外,wài,afuera; exterior,afuera; exterior,外邊在下雨,wàibian zài xiàyǔ,Afuera está lloviendo,2,HSK2
+h2b3c4d5e6f7,完,完,wán,terminar,terminar,我的作業寫完了,wǒ de zuòyè xiě wánle,He terminado mis deberes,2,HSK2
+h2c4d5e6f7g8,玩,玩,wán,jugar; divertirse,jugar; divertirse,孩子們在公園玩,háizimen zài gōngyuán wán,Los niños están jugando en el parque,2,HSK2
+h2d5e6f7g8h9,晚上,晚上,wǎnshang,noche,noche,我晚上十一點睡覺,wǒ wǎnshang shíyī diǎn shuìjiào,Me duermo a las once de la noche,2,HSK2
+h2e6f7g8h9i0,為什麼,为什么,wèishéme,por qué,por qué,你為什麼不來上課,nǐ wèishéme bù lái shàngkè,Por qué no viniste a clase,2,HSK2
+h2f7g8h9i0j1,問,问,wèn,preguntar,preguntar,我可以問一個問題嗎,wǒ kěyǐ wèn yīgè wèntí ma,Puedo hacer una pregunta,2,HSK2
+h2g8h9i0j1k2,問題,问题,wèntí,pregunta; problema,pregunta; problema,我有一個問題,wǒ yǒu yīgè wèntí,Tengo una pregunta,2,HSK2
+h2h9i0j1k2l3,西瓜,西瓜,xīguā,sandía,sandía,夏天吃西瓜很舒服,xiàtiān chī xīguā hěn shūfú,Comer sandía en verano es muy agradable,2,HSK2
+h2i0j1k2l3m4,希望,希望,xīwàng,esperanza; desear,esperanza; desear,我希望明天是晴天,wǒ xīwàng míngtiān shì qíngtiān,Deseo que mañana esté soleado,2,HSK2
+h2j1k2l3m4o5,洗,洗,xǐ,lavar,lavar,飯前要洗手,fàn qián yào xǐshǒu,Hay que lavarse las manos antes de comer,2,HSK2
+h2k2l3m4o5p6,小時,小时,xiǎoshí,hora (duración),hora (duración),我每天看一個小時書,wǒ měitiān kàn yīgè xiǎoshí shū,Leo libros una hora al día,2,HSK2
+h2l3m4o5p6q7,笑,笑,xiào,reír; sonreír,reír; sonreír,他笑得很開心,tā xiào de hěn kāixīn,Él ríe muy feliz,2,HSK2
+h2m4o5p6q7r8,新,新,xīn,nuevo,nuevo,我買了一輛新車,wǒ mǎile yī liàng xīn chē,He comprado un coche nuevo,2,HSK2
+h2n4o5p6q7r8,姓,姓,xìng,apellido; apellidarse,apellido; apellidarse,他姓王叫王明,tā xìng Wáng jiào Wáng Míng,Él se apellida Wang y se llama Wang Ming,2,HSK2
+h2o5p6q7r8s9,休息,休息,xiūxí,descansar,descansar,工作累了就休息一下,gōngzuò lèile jiù xiūxí yīxià,Si estás cansado del trabajo descansa un poco,2,HSK2
+h2p6q7r8s9t0,雪,雪,xuě,nieve,nieve,北京冬天的雪很美,Běijīng dōngtiān de xuě hěn měi,La nieve de Pekín en invierno es hermosa,2,HSK2
+h2q7r8s9t0u1,顏色,颜色,yánsè,color,color,你喜歡什麼顏色,nǐ xǐhuān shénme yánsè,Qué color te gusta,2,HSK2
+h2r8s9t0u1v2,眼睛,眼睛,yǎnjīng,ojo,ojo,她的眼睛很漂亮,tā de yǎnjīng hěn piàoliang,Sus ojos son muy bonitos,2,HSK2
+h2s9t0u1v2w3,羊肉,羊肉,yángròu,cordero,cordero,我不喜歡吃羊肉,wǒ bù xǐhuān chī yángròu,No me gusta comer carne de cordero,2,HSK2
+h2t0u1v2w3x4,藥,药,yào,medicina,medicina,吃完藥早點睡覺吧,chī wán yào zǎodiǎn shuìjiào ba,Después de tomar la medicina duérmete temprano,2,HSK2
+h2u1v2w3x4y5,要,要,yào,querer; deber,querer; deber,我要去超市買東西,wǒ yào qù chāoshì mǎi dōngxi,Quiero ir al supermercado a comprar cosas,2,HSK2
+h2v2w3x4y5z6,也,也,yě,también,también,我也是學生,wǒ yěshì xuésheng,Yo también soy estudiante,2,HSK2
+h2w3x4y5z6a7,一下,一下,yīxià,un momento; un poco,un momento; un poco,請等我一下,qǐng děng wǒ yīxià,Por favor espérame un momento,2,HSK2
+h2x4y5z6a7b8,一起,一起,yìqǐ,juntos,juntos,我們一起去吃飯吧,wǒmen yìqǐ qù chīfàn ba,Vamos a comer juntos,2,HSK2
+h2y5z6a7b8c9,已經,已经,yǐjīng,ya,ya,我已經吃過飯了,wǒ yǐjīng chīguò fàn le,Ya he comido,2,HSK2
+h2z6a7b8c9d0,意思,意思,yìsi,significado; interés,significado; interés,這個字是什麼意思,zhège zì shì shénme yìsi,Qué significa este carácter,2,HSK2
+h2a7b8c9d0e1,因為,因为,yīnwèi,porque,porque,因為天黑了所以我要回家,yīnwèi tiānhēile suǒyǐ wǒ yào huíjiā,Porque oscureció por eso me voy a casa,2,HSK2
+h2b8c9d0e1f2,陰,阴,yīn,nublado,nublado,今天的天氣很陰,jīntiān de tiānqì hěn yīn,El tiempo hoy está muy nublado,2,HSK2
+h2c9d0e1f2g3,游泳,游泳,yóuyǒng,nadar,nadar,他游泳游得很好,tā yóuyǒng yóu de hěn hǎo,Él nada muy bien,2,HSK2
+h2d9e0f1g2h3,右邊,右边,yòubiān,derecha,derecha,商店在銀行的右邊,shāngdiàn zài yínháng de yòubiān,La tienda está a la derecha del banco,2,HSK2
+h2e0f1g2h3i4,魚,鱼,yú,pez; pescado,pez; pescado,多吃魚對身體好,duō chī yú duì shēntǐ hǎo,Comer mucho pescado es bueno para la salud,2,HSK2
+h2f1g2h3i4j5,遠,远,yuǎn,lejos,lejos,火車站離我家不遠,huǒchēzhàn lí wǒ jiā bù yuǎn,La estación de tren no está lejos de mi casa,2,HSK2
+h2g2h3i4j5k6,運動,运动,yùndòng,deporte; hacer ejercicio,deporte; hacer ejercicio,我喜歡做運動,wǒ xǐhuān zuò yùndòng,Me gusta hacer deporte,2,HSK2
+h2h3i4j5k6l7,再,再,zài,otra vez; de nuevo,otra vez; de nuevo,明天我再給你打電話,míngtiān wǒ zài gěi nǐ dǎ diànhuà,Mañana te llamo otra vez,2,HSK2
+h2i4j5k6l7m8,早上,早上,zǎoshang,mañana (temprano),mañana (temprano),我每天早上六點起床,wǒ měitiān zǎoshang liù diǎn qǐchuáng,Me levanto a las seis cada mañana,2,HSK2
+h2j5k6l7m8n9,丈夫,丈夫,zhàngfu,esposo,esposo,她的丈夫是老師,tā de zhàngfu shì lǎoshī,Su esposo es profesor,2,HSK2
+h2k6l7m8n9o0,找,找,zhǎo,buscar,buscar,他在找他的手機,tā zài zhǎo tā de shǒujī,Él está buscando su móvil,2,HSK2
+h2l7m8n9o0p1,著,着,zhe,partícula estado continuo,partícula estado continuo,門開著呢,mén kāizhe ne,La puerta está abierta,2,HSK2
+h2m8n9o0p1q2,真,真,zhēn,realmente; verdadero,realmente; verdadero,這件衣服真漂亮,zhè jiàn yīfu zhēn piàoliang,Esta ropa es realmente bonita,2,HSK2
+h2n9o0p1q2r3,正在,正在,zhèngzài,en proceso de; justo ahora,en proceso de; justo ahora,他在正在看電視,tā zài zhèngzài kàn diànshì,Él está justo ahora viendo la televisión,2,HSK2
+h2o0p1q2r3s4,知道,知道,zhīdào,saber; conocer,saber; conocer,你知道他在哪裡嗎,nǐ zhīdào tā zài nǎlǐ ma,Sabes dónde está él,2,HSK2
+h2p1q2r3s4t5,準備,准备,zhǔnbèi,preparar,preparar,我在準備明天的考試,wǒ zài zhǔnbèi míngtiān de kǎoshì,Estoy preparando el examen de mañana,2,HSK2
+h2q2r3s4t5u6,自行車,自行车,zìxíngchē,bicicleta,bicicleta,我騎自行車去上學,wǒ qí zìxíngchē qù shàngxué,Voy a la escuela en bicicleta,2,HSK2
+h2r3s4t5u6v7,走,走,zǒu,caminar; irse,caminar; irse,我們走著去超市吧,wǒmen zǒuzhe qù chāoshì ba,Vayamos caminando al supermercado,2,HSK2
+h2s4t5u6v7w8,最,最,zuì,el más; súper,el más; súper,這是我最喜歡的書,zhè shì wǒ zuì xǐhuān de shū,Este es mi libro favorito,2,HSK2
+h2t5u6v7w8x9,左邊,左边,zuǒbiān,izquierda,izquierda,圖書館在學校的左邊,túshūguǎn zài xuéxiào de zuǒbiān,La biblioteca está a la izquierda de la escuela,2,HSK2
+h3a1b2c3d4e5,啊,啊,a,ah,ah,這朵花真漂亮啊,zhè duǒ huā zhēn piàoliang a,Esta flor es realmente hermosa,3,HSK3
+h3b2c3d4e5f6,矮,矮,ǎi,bajo,bajo,弟弟比我矮一點兒,dìdi bǐ wǒ ǎi yīdiǎnr,Mi hermano menor es un poco más bajo que yo,3,HSK3
+h3c3d4e5f6g7,愛好,爱好,àihào,pasatiempo; hobby,pasatiempo; hobby,我的愛好是看電影,wǒ de àihào shì kàn diànyǐng,Mi pasatiempo es ver películas,3,HSK3
+h3d4e5f6g7h8,安靜,安静,ānjìng,quieto; tranquilo,quieto; tranquilo,圖書館裡很安靜,túshūguǎn lǐ hěn ānjìng,La biblioteca está muy tranquila,3,HSK3
+h3e5f6g7h8i9,把,把,bǎ,partícula objeto directo,partícula objeto directo,請把書放在桌子上,qǐng bǎ shū fàng zài zhuōzi shàng,Por favor pon el libro sobre la mesa,3,HSK3
+h3f6g7h8i9j0,班,班,bān,clase; turno,clase; turno,我們班有三十個學生,wǒmen bān yǒu sānshí gè xuésheng,En nuestra clase hay treinta alumnos,3,HSK3
+h3g7h8i9j0k1,搬,搬,bān,mover; mudarse,mover; mudarse,我們下個月要搬家,wǒmen xià gè yuè yào bānjiā,Nos mudaremos el mes que viene,3,HSK3
+h3h8i9j0k1l2,半,半,bàn,mitad; medio,mitad; medio,現在是三點半,xiànzài shì sān diǎn bàn,Ahora son las tres y media,3,HSK3
+h3i9j0k1l2m3,辦法,办法,bànfǎ,forma; método,forma; método,你有什麼好辦法嗎,nǐ yǒu shénme hǎo bànfǎ ma,¿Tienes alguna buena idea?,3,HSK3
+h3j0k1l2m3n4,辦公室,办公室,bàngōngshì,oficina,oficina,王經理在辦公室裡,Wáng jīnglǐ zài bàngōngshì lǐ,El gerente Wang está en la oficina,3,HSK3
+h3k1l2m3n4o5,幫忙,帮忙,bāngmáng,ayudar; auxilio,ayudar; auxilio,謝謝你過來幫忙,xièxie nǐ guòlái bāngmáng,Gracias por venir a ayudar,3,HSK3
+h3l2m3n4o5p6,包,包,bāo,bolsa; paquete,bolsa; paquete,我的包在椅子上,wǒ de bāo zài yǐzi shàng,Mi bolso está en la silla,3,HSK3
+h3m3n4o5p6q7,飽,饱,bǎo,lleno; satisfecho,lleno; satisfecho,我已經吃飽了,wǒ yǐjīng chībǎo le,Ya estoy satisfecho,3,HSK3
+h3n4o5p6q7r8,北方,北方,běifāng,norte,norte,北方冬天的天氣很冷,běifāng dōngtiān de tiānqì hěn lěng,El clima del norte en invierno es muy frío,3,HSK3
+h3o5p6q7r8s9,被,被,bèi,partícula pasiva,partícula pasiva,我的手機被他拿走了,wǒ de shǒujī bèi tā názǒu le,Él se llevó mi teléfono,3,HSK3
+h3p6q7r8s9t0,鼻子,鼻子,bízi,nariz,nariz,她的鼻子很高,tā de bízi hěn gāo,Su nariz es alta,3,HSK3
+h3q7r8s9t0u1,比較,比较,bǐjiào,relativamente; comparar,relativamente; comparar,今天天氣比較熱,jīntiān tiānqì bǐjiào rè,Hoy hace bastante calor,3,HSK3
+h3r8s9t0u1v2,比賽,比赛,bǐsài,partido; competencia,partido; competencia,明天的足球比賽很精彩,míngtiān de zúqiú bǐsài hěn jīngcǎi,El partido de fútbol de mañana será genial,3,HSK3
+h3s9t0u1v2w3,筆記本,笔记本,bǐjìběn,cuaderno; portátil,cuaderno; portátil,我在筆記本上寫字,wǒ zài bǐjìběn shàng xiězì,Escribo en el cuaderno,3,HSK3
+h3t0u1v2w3x4,必須,必须,bìxū,deber; tener que,deber; tener que,你必須明天完成作業,nǐ bìxū míngtiān wánchéng zuòyè,Debes terminar los deberes mañana,3,HSK3
+h3u1v2w3x4y5,變化,变化,biànhuà,cambio; cambiar,cambio; cambiar,北京這些年的變化很大,Běijīng zhèxiē nián de biànhuà hěn dà,Pekín ha cambiado mucho estos años,3,HSK3
+h3v2w3x4y5z6,別人,别人,biéren,otros; otras personas,otros; otras personas,不要拿別人的東西,bùyào ná biéren de dōngxi,No tomes las cosas de los demás,3,HSK3
+h3w3x4y5z6a7,冰箱,冰箱,bīngxiāng,refrigerador,refrigerador,冰箱裡有牛奶嗎,bīngxiāng lǐ yǒu niúnǎi ma,¿Hay leche en la nevera?,3,HSK3
+h3x4y5z6a7b8,菜單,菜单,càidān,menú,menú,服務員請給我菜單,fúwùyuán qǐng gěi wǒ càidān,Camarero por favor deme el menú,3,HSK3
+h3y5z6a7b8c9,參加,参加,cānjiā,participar,participar,你想參加這次活動嗎,nǐ xiǎng cānjiā zhè cì huódòng ma,¿Quieres participar en esta actividad?,3,HSK3
+h3z6a7b8c9d0,草,草,cǎo,hierba; pasto,hierba; pasto,小狗在草地上跑,xiǎogǒu zài cǎodì shàng pǎo,El perrito corre en la hierba,3,HSK3
+h3a7b8c9d0e1,層,层,céng,piso; capa,piso; capa,我家住在三層,wǒ jiā zhù zài sān céng,Vivo en el tercer piso,3,HSK3
+h3b8c9d0e1f2,差,差,chà,malo; pobre; faltar,malo; pobre; faltar,現在差十分一點,xiànzài chà shí fēn yī diǎn,Faltan diez para la una,3,HSK3
+h3c9d0e1f2g3,超市,超市,chāoshì,supermercado,supermercado,我去超市買水果,wǒ qù chāoshì mǎi shuǐguǒ,Voy al supermercado a comprar fruta,3,HSK3
+h3d0e1f2g3h4,襯衫,衬衫,chènshān,camisa,camisa,這件白襯衫很漂亮,zhè jiàn bái chènshān hěn piàoliang,Esta camisa blanca es muy bonita,3,HSK3
+h3e1f2g3h4i5,成績,成绩,chéngjì,nota; logro,nota; logro,他的考試成績很好,tā de kǎoshì chéngjì hěn hǎo,Su nota del examen es muy buena,3,HSK3
+h3f2g3h4i5j6,城市,城市,chéngshì,ciudad,ciudad,上海是一個大城市,Shànghǎi shì yīgè dà chéngshì,Shanghái es una gran ciudad,3,HSK3
+h3g3h4i5j6k7,遲到,迟到,chídào,llegar tarde,llegar tarde,對不起我遲到了,duìbuqǐ wǒ chídào le,Lo siento he llegado tarde,3,HSK3
+h3h4i5j6k7l8,除了,除了,chúle,además de; excepto,además de; excepto,除了他大家都來了,chúle tā dàjiā dōu lái le,Han venido todos excepto él,3,HSK3
+h3i5j6k7l8m9,船,船,chuán,bote; barco,bote; barco,我們坐船去那座島,wǒmen zuò chuán qù nà zuò dǎo,Vamos a esa isla en barco,3,HSK3
+h3j6k7l8m9n0,春,春,chūn,primavera,primavera,春天是花開的季節,chūntiān shì huā kāi de jìjié,La primavera es la estación en la que florecen las flores,3,HSK3
+h3k7l8m9n0o1,詞典,词典,cídiǎn,diccionario,diccionario,我需要一本漢語詞典,wǒ xūyào yī běn Hànyǔ cídiǎn,Necesito un diccionario de chino,3,HSK3
+h3l8m9n0o1p2,聰明,聪明,cōngming,inteligente; listo,inteligente; listo,這個孩子很聰明,zhège háizi hěn cōngming,Este niño es muy inteligente,3,HSK3
+h3m9n0o1p2q3,打掃,打扫,dǎsǎo,limpiar; barrer,limpiar; barrer,請打掃一下房間,qǐng dǎsǎo yīxià fángjiān,Por favor limpia la habitación,3,HSK3
+h3n0o1p2q3r4,打算,打算,dǎsuàn,planear; intención,planear; intención,我打算明天去旅遊,wǒ dǎsuàn míngtiān qù lǚyóu,Pienso ir de viaje mañana,3,HSK3
+h3o1p2q3r4s5,帶,带,dài,llevar; traer,llevar; traer,出門記得帶雨傘,chūmén jìde dài yǔsǎn,Recuerda traer un paraguas al salir,3,HSK3
+h3p2q3r4s5t6,擔心,担心,dānxīn,preocuparse,preocuparse,別擔心一切都會好的,bié dānxīn yīqiè dōu huì hǎo de,No te preocupes todo saldrá bien,3,HSK3
+h3q3r4s5t6u7,蛋糕,蛋糕,dàngāo,pastel; tarta,pastel; tarta,祝你生日快樂這是你的蛋糕,zhù nǐ shēngrì kuàilè zhè shì nǐ de dàngāo,Feliz cumpleaños este es tu pastel,3,HSK3
+h3r4s5t6u7v8,當然,当然,dāngrán,por supuesto,por supuesto,我當然會參加你的婚禮,wǒ dāngrán huì cānjiā nǐ de hūnlǐ,Por supuesto que asistiré a tu boda,3,HSK3
+h3s5t6u7v8w9,地,地,de,partícula adverbial,partícula adverbial,他開心地笑了起來,tā kāixīn de xiào le qǐlái,Él comenzó a reír felizmente,3,HSK3
+h3t6u7v8w9x0,燈,灯,dēng,lámpara; luz,lámpara; luz,房間裡的燈壞了,fángjiān lǐ de dēng huài le,La luz de la habitación se ha roto,3,HSK3
+h3u7v8w9x0y1,地方,地方,dìfang,lugar; sitio,lugar; sitio,這是一個漂亮的地方,zhè shì yīgè piàoliang de dìfang,Este es un lugar hermoso,3,HSK3
+h3v8w9x0y1z2,地鐵,地铁,dìtiě,metro,metro,我每天坐地鐵上班,wǒ měitiān zuò dìtiě shàngbān,Tomo el metro al trabajo todos los días,3,HSK3
+h3w9x0y1z2a3,地圖,地图,dìtú,mapa,mapa,手機上有地圖很方便,shǒujī shàng yǒu dìtú hěn fāngbiàn,Tener un mapa en el móvil es muy conveniente,3,HSK3
+h3x0y1z2a3b4,電梯,电梯,diàntī,ascensor,ascensor,電梯在哪裡,diàntī zài nǎlǐ,Dónde está el ascensor,3,HSK3
+h3y1z2a3b4c5,電子郵件,电子邮件,diànzǐ yóujiàn,correo electrónico,correo electrónico,請給我發電子郵件,qǐng gěi wǒ fā diànzǐ yóujiàn,Por favor envíame un correo electrónico,3,HSK3
+h3z2a3b4c5d6,東,东,dōng,este (punto cardinal),este (punto cardinal),太陽從東方升起,tàiyáng cóng dōngfāng shēngqǐ,El sol sale por el este,3,HSK3
+h3a3b4c5d6e7,冬,冬,dōng,invierno,invierno,冬天的天氣很冷,dōngtiān de tiānqì hěn lěng,El clima de invierno es muy frío,3,HSK3
+h3b4c5d6e7f8,動物,动物,dòngwù,animal,animal,這家動物園有很多猴子,zhè jiā dòngwùyuán yǒu hěn duō hóuzi,Este zoológico tiene muchos monos,3,HSK3
+h3c5d6e7f8g9,短,短,duǎn,corto,corto,這條褲子太短了,zhè tiáo kùzi tài duǎn le,Estos pantalones son demasiado cortos,3,HSK3
+h3d6e7f8g9h0,段,段,duàn,párrafo; sección,párrafo; sección,這段路非常難走,zhè duàn lù fēicháng nán zǒu,Este tramo de camino es muy difícil de caminar,3,HSK3
+h3e7f8g9h0i1,鍛煉,锻炼,duànliàn,hacer ejercicio,hacer ejercicio,我每天下午都去鍛煉,wǒ měitiān xiàwǔ dōu qù duànliàn,Voy a entrenar todas las tardes,3,HSK3
+h3f8g9h0i1j2,多麼,多么,duōme,cuán; qué tan,cuán; qué tan,這裡的風景多麼美啊,zhèlǐ de fēngjǐng duōme měi a,Qué hermoso es el paisaje aquí,3,HSK3
+h3g9h0i1j2k3,餓,饿,è,hambre; hambriento,hambre; hambriento,我餓了想吃點東西,wǒ è le xiǎng chī diǎnr dōngxi,Tengo hambre quiero comer algo,3,HSK3
+h3h0i1j2k3l4,耳朵,耳朵,ěrduo,oreja,oreja,兔子的耳朵很長,tùzi de ěrduo hěn cháng,Las orejas del conejo son muy largas,3,HSK3
+h3i1j2k3l4m5,發,发,fā,enviar; emitir,enviar; emitir,我已經把文件發給你了,wǒ yǐjīng bǎ wénjiàn fā gěi nǐ le,Ya te he enviado el archivo,3,HSK3
+h3j2k3l4m5n6,發燒,发烧,fāshāo,fiebre; tener fiebre,fiebre; tener fiebre,他生病發燒了,tā shēngbìng fāshāo le,Él está enfermo y tiene fiebre,3,HSK3
+h3k3l4m5n6o7,發現,发现,fāxiàn,descubrir,descubrir,我發現桌子上有個手機,wǒ fāxiàn zhuōzi shàng yǒu gè shǒujī,Descubrí que hay un móvil sobre la mesa,3,HSK3
+h3l4m5n6o7p8,方便,方便,fāngbiàn,conveniencia; fácil,conveniencia; fácil,坐地鐵去那裡很方便,zuò dìtiě qù nàlǐ hěn fāngbiàn,Ir allí en metro es muy conveniente,3,HSK3
+h3m5n6o7p8q9,放,放,fàng,poner; colocar,poner; colocar,請把杯子放在桌子上,qǐng bǎ bēizi fàng zài zhuōzi shàng,Por favor pon la taza sobre la mesa,3,HSK3
+h3n6o7p8q9r0,放心,放心,fàngxīn,estar tranquilo,estar tranquilo,請放心我會照顧好他的,qǐng fàngxīn wǒ huì zhàogù hǎo tā de,Por favor estate tranquilo yo lo cuidaré bien,3,HSK3
+h3o7p8q9r0s1,分,分,fēn,minuto; dividir,minuto; dividir,現在是三點十分,xiànzài shì sān diǎn shí fēn,Ahora son las tres y diez,3,HSK3
+h3p8q9r0s1t2,附近,附近,fùjìn,cerca; cercanías,cerca; cercanías,我家附近有一個公園,wǒ jiā fùjìn yǒu yīgè gōngyuán,Hay un parque cerca de mi casa,3,HSK3
+h3q9r0s1t2u3,複習,复习,fùxí,repasar,repasar,明天考試今天得複習,míngtiān kǎoshì jīntiān děi fùxí,Mañana es el examen hoy tengo que repasar,3,HSK3
+h3r0s1t2u3v4,乾淨,干净,gānjìng,limpio,limpio,你的房間真乾淨,nǐ de fángjiān zhēn gānjìng,Tu habitación está realmente limpia,3,HSK3
+h3s1t2u3v4w5,敢,敢,gǎn,atreverse,atreverse,我不敢一個人在家睡覺,wǒ bù gǎn yīgè rén zài jiā shuìjiào,No me atrevo a dormir solo en casa,3,HSK3
+h3t2u3v4w5x6,感冒,感冒,gǎnmào,resfriado; resfriarse,resfriado; resfriarse,他感冒了不能來上班,tā gǎnmàole bùnéng lái shàngbān,Él se ha resfriado y no puede venir a trabajar,3,HSK3
+h3u3v4w5x6y7,剛才,刚才,gāngcái,hace un momento,hace un momento,剛才是誰在說話,gāngcái shì shéi zài shuōhuà,Quién estaba hablando hace un momento,3,HSK3
+h3v4w5x6y7z8,跟,跟,gēn,con; seguir,con; seguir,我想跟你一起去商店,wǒ xiǎng gēn nǐ yìqǐ qù shāngdiàn,Quiero ir a la tienda contigo,3,HSK3
+h3w5x6y7z8a9,根據,根据,gēnjù,según; de acuerdo a,según; de acuerdo a,根據天氣預報明天會下雪,gēnjù tiānqì yùbào míngtiān huì xiàxuě,Según el pronóstico del tiempo mañana nevará,3,HSK3
+h3x6y7z8a9b0,更,更,gèng,más,más,今天比昨天更冷,jīntiān bǐ zuótiān gèng lěng,Hoy hace aún más frío que ayer,3,HSK3
+h3y7z8a9b0c1,公斤,公斤,gōngjīn,kilogramo,kilogramo,我要買五公斤蘋果,wǒ yào mǎi wǔ gōngjīn píngguǒ,Quiero comprar cinco kilos de manzanas,3,HSK3
+h3z7a9b0c1d2,公園,公园,gōngyuán,parque,parque,我們去公園散步吧,wǒmen qù gōngyuán sànbù ba,Vamos a dar un paseo al parque,3,HSK3
+h3a8b9c0d1e2,故事,故事,gùshì,historia; cuento,historia; cuento,奶奶每天給我講故事,nǎinai měitiān gěi wǒ jiǎng gùshì,Mi abuela me cuenta cuentos todos los días,3,HSK3
+h3b9c0d1e2f3,刮風,刮风,guāfēng,hacer viento,hacer viento,外面正在刮風,wàimiàn zhèngzài guāfēng,Afuera está haciendo viento ahora mismo,3,HSK3
+h3c0d1e2f3g4,關於,关于,guānyú,sobre; acerca de,sobre; acerca de,這本關於中國歷史的書很好,zhè běn guānyú Zhōngguó lìshǐ de shū hěn hǎo,Este libro sobre historia china es muy bueno,3,HSK3
+h3d1e2f3g4h5,關係,关系,guānxi,relación,relación,他們兩個人的關係很好,tāmen liǎng gè rén de guānxi hěn hǎo,La relación entre ellos dos es muy buena,3,HSK3
+h3e2f3g4h5i6,關心,关心,guānxīn,preocuparse por; cuidar,preocuparse por; cuidar,爸爸很關心我的身體,bàba hěn guānxīn wǒ de shēntǐ,Papá se preocupa mucho por mi salud,3,HSK3
+h3f3g4h5i6j7,關於,关于,guānyú,sobre; acerca de,sobre; acerca de,這是一本關於中國的書,zhè shì yī běn guānyú Zhōngguó de shū,Este es un libro sobre China,3,HSK3
+h3g4h5i6j7k8,國家,国家,guójiā,país; nación,país; nación,你想去哪個國家旅遊,nǐ xiǎng qù nǎge guójiā lǚyóu,¿A qué país quieres ir de viaje?,3,HSK3
+h3h5i6j7k8l9,果汁,果汁,guǒzhī,jugo; zumo,jugo; zumo,請給我一杯橙汁,qǐng gěi wǒ yī bēi chéngzhī,Por favor dame un vaso de zumo de naranja,3,HSK3
+h3i6j7k8l9m0,過去,过去,guòqù,pasado,pasado,過去的事就讓它過去吧,guòqù de shì jiù ràng tā guòqù ba,Deja que el pasado sea pasado,3,HSK3
+h3j7k8l9m0n1,害怕,害怕,hàipà,tener miedo,tener miedo,我不害怕一個人睡覺,wǒ bù hàipà yīgè rén zài jiā shuìjiào,No tengo miedo de dormir solo,3,HSK3
+h3k8l9m0n1o2,河,河,hé,río,río,我家門前有一條小河,wǒ jiā mén qián yǒu yī tiáo xiǎohé,Hay un pequeño río frente a mi casa,3,HSK3
+h3l9m0n1o2p3,黑板,黑板,hēibǎn,pizarrón,pizarrón,請看黑板上的字,qǐng kàn hēibǎn shàng de zì,Por favor mira las letras en la pizarra,3,HSK3
+h3m0n1o2p3q4,護照,护照,hùzhào,pasaporte,pasaporte,出國旅遊要帶護照,chūguó lǚyóu yào dài hùzhào,Hay que llevar el pasaporte para viajar al extranjero,3,HSK3
+h3n1o2p3q4r5,花,花,huā,flor,flor,花園裡的紅花真漂亮,huāyuán lǐ de hónghuā zhēn piàoliang,Las flores rojas del jardín son realmente hermosas,3,HSK3
+h3o2p3q4r5s6,花,花,huā,gastar,gastar,他花了很多錢買衣服,tā huāle hěn duō qián mǎi yīfu,Él gastó mucho dinero comprando ropa,3,HSK3
+h3p3q4r5s6t7,花園,花园,huāyuán,jardín,jardín,我們在花園裡種花,wǒmen zài huāyuán lǐ zhònghuā,Plantamos flores en el jardín,3,HSK3
+h3q4r5s6t7u8,畫,画,huà,dibujo; pintar,dibujo; pintar,她畫畫畫得很漂亮,tā huàhuà huà de hěn piàoliang,Ella dibuja de forma muy hermosa,3,HSK3
+h3r5s6t7u8v9,壞,坏,huài,malo; roto,malo; roto,我的電腦壞了,wǒ de diànnǎo huài le,Mi computadora se ha roto,3,HSK3
+h3s6t7u8v9x0,還,还,huán,devolver,devolver,別忘了明天把書還給我,bié wàngle míngtiān bǎ shū huán gěi wǒ,No olvides devolverme el libro mañana,3,HSK3
+h3t7u8v9x0y1,環境,环境,huánjìng,ambiente; entorno,ambiente; entorno,這裡的環境很安靜,zhèlǐ de huánjìng hěn ānjìng,El entorno aquí es muy tranquilo,3,HSK3
+h3u8v9x0y1z2,換,换,huàn,cambiar; canjear,cambiar; canjear,我想去銀行換錢,wǒ xiǎng qù yínháng huànqián,Quiero ir al banco a cambiar dinero,3,HSK3
+h3v9x0y1z2a3,黃,黄,huáng,amarillo,amarillo,這朵黃色的花很香,zhè duǒ huángsè de huā hěn xiāng,Esta flor amarilla huele muy bien,3,HSK3
+h3w9x0y1z2a3,會議,会议,huìyì,reunión; conferencia,reunión; conferencia,下午兩點有個重要會議,xiàwǔ liǎng diǎn yǒu gè zhòngyào huìyì,Hay una reunión importante a las dos de la tarde,3,HSK3
+h3x0y1z2a3b4,或者,或者,huòzhě,o (en afirmación),o (en afirmación),你可以喝茶或者喝咖啡,nǐ kěyǐ hē chá huòzhě hē kāfēi,Puedes beber té o café,3,HSK3
+h3y1z2a3b4c5,幾乎,几乎,jīhū,casi,casi,這件事我幾乎忘了,zhè jiàn shì wǒ jīhū wàngle,Casi me olvido de este asunto,3,HSK3
+h3z2a3b4c5d6,機會,机会,jīhuì,oportunidad,oportunidad,這是一個很好的機會,zhè shì yīgè hěn hǎo de jīhuì,Esta es una gran oportunidad,3,HSK3
+h3a3b4c5d6e7,極,极,jí,extremadamente; polo,extremadamente; polo,今天的天氣熱極了,jīntiān de tiānqì rè jíle,El clima de hoy es extremadamente caluroso,3,HSK3
+h3b4c5d6e7f8,記得,记得,jìde,recordar,recordar,我不記得他的名字了,wǒ bù jìde tā de míngzi le,No recuerdo su nombre,3,HSK3
+h3c5d6e7f8g9,季節,季节,jìjié,estación; temporada,estación; temporada,你最喜歡哪個季節,nǐ zuì xǐhuān nǎge jìjié,¿Cuál es tu estación favorita?,3,HSK3
+h3d6e7f8g9h0,檢查,检查,jiǎnchá,revisar; examinar,revisar; examinar,寫完作業要檢查一下,xiě wán zuòyè yào jiǎnchá yīxià,Hay que revisar los deberes después de escribirlos,3,HSK3
+h3e7f8g9h0i1,簡單,简单,jiǎndān,fácil; simple,fácil; simple,這道題很簡單,zhè dào tí hěn jiǎndān,Esta pregunta es muy simple,3,HSK3
+h3f8g9h0i1j2,健康,健康,jiànkāng,salud; saludable,salud; saludable,多吃水果身體健康,duō chī shuǐguǒ shēntǐ jiànkāng,Comer mucha fruta es saludable para el cuerpo,3,HSK3
+h3g9h0i1j2k3,見面,见面,jiànmiàn,verse; encontrarse,verse; encontrarse,我們明天在學校見面吧,wǒmen míngtiān zài xuéxiào jiànmiàn ba,Encontrémonos mañana en la escuela,3,HSK3
+h3h0i1j2k3l4,講,讲,jiǎng,hablar; explicar,hablar; explicar,老師在給我們講課,lǎoshī zài gěi wǒmen jiǎngkè,El profesor nos está dando la lección,3,HSK3
+h3i1j2k3l4m5,教,教,jiāo,enseñar,enseñar,他在大學教漢語,tā zài dàxué jiāo Hànyǔ,Él enseña chino en la universidad,3,HSK3
+h3j2k3l4m5n6,腳,脚,jiǎo,pie,pie,我的腳受傷了,wǒ de jiǎo shòushāng le,Mi pie está herido,3,HSK3
+h3k3l4m5n6o7,角,角,jiǎo,esquina; ángulo; jiao,esquina; ángulo; jiao,一塊錢等於十角,yīkuài qián děngyú shí jiǎo,Un yuan equivale a diez jiao,3,HSK3
+h3l4m5n6o7p8,接,接,jiē,recoger; recibir,recoger; recibir,我去機場接我的朋友,wǒ qù jīchǎng jiē wǒ de péngyǒu,Voy al aeropuerto a recoger a mi amigo,3,HSK3
+h3m5n6o7p8q9,街道,街道,jiēdào,calle; avenida,calle; avenida,這條街道很寬,zhè tiáo jiēdào hěn kuān,Esta calle es muy ancha,3,HSK3
+h3n6o7p8q9r0,節目,节目,jiémù,programa,programa,電視節目很好看,diànshì jiémù hěn hǎokàn,El programa de televisión es muy bueno,3,HSK3
+h3o7p8q9r0s1,節日,节日,jiérì,día festivo; festival,día festivo; festival,今天是春節這是一個大節日,jīntiān shì chūnjié zhè shì yīgè dà jiérì,Hoy es el festival de primavera; este es un gran festival,3,HSK3
+h3p8q9r0s1t2,結婚,结婚,jiéhūn,casarse,casarse,他們下個月要結婚了,tāmen xià gè yuè yào jiéhūn le,Ellos se casarán el mes que viene,3,HSK3
+h3q9r0s1t2u3,結束,结束,jiéshù,terminar; finalizar,terminar; finalizar,會議下午三點結束,huìyì xiàwǔ sān diǎn jiéshù,La reunión termina a las tres de la tarde,3,HSK3
+h3r0s1t2u3v4,解決,解决,jiějué,resolver,resolver,我們得想辦法解決這個問題,wǒmen děi xiǎng bànfǎ jiějué zhège wèn tí,Tenemos que encontrar una manera de resolver este problema,3,HSK3
+h3s1t2u3v4w5,借,借,jiè,prestar; pedir prestado,prestar; pedir prestado,你能借我一支筆嗎,nǐ néng jiè wǒ yī zhī bǐ ma,¿Me puedes prestar un bolígrafo?,3,HSK3
+h3t2u3v4w5x6,經常,经常,jīngcháng,frecuentemente; a menudo,frecuentemente; a menudo,他經常去圖書館看書,tā jīngcháng qù túshūguǎn kànshū,Él va a menudo a la biblioteca a leer,3,HSK3
+h3u3v4w5x6y7,經過,经过,jīngguò,pasar por; a través de,pasar por; a través de,我每天上學都經過這家店,wǒ měitiān shàngxué dōu jīngguò zhè jiā diàn,Paso por esta tienda todos los días para ir a la escuela,3,HSK3
+h3v4w5x6y7z8,經理,经理,jīnglǐ,gerente; mánager,gerente; mánager,他是這家公司的經理,tā shì zhè jiā gōngsī de jīnglǐ,Él es el gerente de esta empresa,3,HSK3
+h3w5x6y7z8a9,久,久,jiǔ,mucho tiempo,mucho tiempo,這本書我看了很久才看完,zhè běn shū wǒ kànle hěnjiǔ cái kàn wán,Tardé mucho tiempo en terminar de leer este libro,3,HSK3
+h3x6y7z8a9b0,舊,旧,jiù,viejo; usado,viejo; usado,這件衣服已經很舊了,zhè jiàn yīfu yǐjīng hěn jiù le,Esta ropa ya está muy vieja,3,HSK3
+h3y7z8a9b0c1,句子,句子,jùzi,frase; oración,frase; oración,請用這個詞造一個句子,qǐng yòng zhège cí zào yīgè jùzi,Por favor haz una oración con esta palabra,3,HSK3
+h3z7a9b0c1d2,決定,决定,juédìng,decidir; decisión,decidir; decisión,我決定明年去中國旅遊,wǒ juédìng míngnián qù Zhōngguó lǚyóu,He decidido viajar a China el año que viene,3,HSK3
+h3a8b9c0d1e2,可愛,可爱,kě'ài,lindo; tierno,lindo; tierno,這隻小貓真可愛,zhè zhī xiǎo māo zhēn kě'ài,Este gatito es realmente lindo,3,HSK3
+h3b9c0d1e2f3,渴,渴,kě,sed; sediento,sed; sediento,我渴了想喝點水,wǒ kě le xiǎng hē diǎnr shuǐ,Tengo sed quiero beber un poco de agua,3,HSK3
+h3c0d1e2f3g4,刻,刻,kè,cuarto de hora,cuarto de hora,現在是三點一刻,xiànzài shì sān diǎn yī kè,Ahora son las tres y cuarto,3,HSK3
+h3d1e2f3g4h5,客人,客人,kèrén,invitado; cliente,invitado; cliente,家裡今天來了很多客人,jiālǐ jīntiān láile hěnduō kèrén,Hoy han venido muchos invitados a casa,3,HSK3
+h3e2f3g4h5i6,空調,空调,kōngtiáo,aire acondicionado,aire acondicionado,請把空調打開吧,qǐng bǎ kōngtiáo dǎkāi ba,Por favor enciende el aire acondicionado,3,HSK3
+h3f3g4h5i6j7,口,口,kǒu,boca; clasificador,boca; clasificador,我家有五口人,wǒ jiā yǒu wǔ kǒu rén,En mi familia hay cinco personas,3,HSK3
+h3g4h5i6j7k8,哭,哭,kū,llorar,llorar,那個孩子在哭,nàge háizi zài kū,Ese niño está llorando,3,HSK3
+h3h5i6j7k8l9,褲子,裤子,kùzi,pantalones,pantalones,這條褲子太長了,zhè tiáo kùzi tài cháng le,Estos pantalones son demasiado largos,3,HSK3
+h3i6j7k8l9m0,筷子,筷子,kuàizi,palillos,palillos,中國人習慣用筷子吃飯,Zhōngguórén xíguàn yòng kuàizi chīfàn,Los chinos acostumbran a comer con palillos,3,HSK3
+h3j7k8l9m0n1,藍,蓝,lán,azul,azul,他穿著一件藍色的襯衫,tā chuānzhe yī jiàn lánsè de chènshān,Él lleva puesta una camisa azul,3,HSK3
+h3k8l9m0n1o2,老,老,lǎo,viejo; anciano,viejo; anciano,那位老人很有精神,nà wèi lǎorén hěn yǒu jīngshén,Ese anciano tiene mucha energía,3,HSK3
+h3l9m0n1o2p3,離開,离开,líkāi,dejar; partir,dejar; partir,他明天就要離開北京了,tā míngtiān jiù yào líkāi Běijīng le,Él partirá de Pekín mañana mismo,3,HSK3
+h3m0n1o2p3q4,禮物,礼物,lǐwù,regalo,regalo,這是送給你的生日禮物,zhè shì sòng gěi nǐ de shēngrì lǐwù,Este es un regalo de cumpleaños para ti,3,HSK3
+h3n1o2p3q4r5,歷史,历史,lìshǐ,historia,historia,我對中國歷史很感興趣,wǒ duì Zhōngguó lìshǐ hěn gǎn xìngqù,Estoy muy interesado en la historia de China,3,HSK3
+h3o2p3q4r5s6,臉,脸,liǎn,cara,cara,洗臉以後舒服多了,xǐliǎn yǐhòu shūfu duō le,Me siento mucho mejor después de lavarme la cara,3,HSK3
+h3p3q4r5s6t7,練習,练习,liànxí,practicar; ejercicio,practicar; ejercicio,你得每天練習說漢語,nǐ děi měitiān liànxí shuō Hànyǔ,Tienes que practicar hablar chino todos los días,3,HSK3
+h3q4r5s6t7u8,輛,辆,liàng,clasificador vehículos,clasificador vehículos,我家有一輛新車,wǒ jiā yǒu yī liàng xīn chē,Mi familia tiene un coche nuevo,3,HSK3
+h3r5s6t7u8v9,聊天,聊天,liáotiān,charlar; platicar,charlar; platicar,我們在咖啡店聊天,wǒmen zài kāfēidiàn liáotiān,Estamos charlando en la cafetería,3,HSK3
+h3s6t7u8v9x0,了解,了解,liǎojiě,entender; conocer bien,entender; conocer bien,我很了解他的愛好,wǒ hěn liǎojiě tā de àihào,Conozco muy bien sus aficiones,3,HSK3
+h3t7u8v9x0y1,鄰居,邻居,línjū,vecino,vecino,我的鄰居人很好,wǒ de línjū rén hěn hǎo,Mi vecino es muy buena persona,3,HSK3
+h3u8v9x0y1z2,留學,留学,liúxué,estudiar en el extranjero,estudiar en el extranjero,他打算去美國留學,tā dǎsuàn qù Měiguó liúxué,Él piensa ir a estudiar a Estados Unidos,3,HSK3
+h3v9x0y1z2a3,樓,楼,lóu,edificio; piso,edificio; piso,我住在五樓,wǒ zhù zài wǔ lóu,Vivo en el quinto piso,3,HSK3
+h3w9x0y1z2a3,綠,绿,lǜ,verde,verde,樹葉在春天變綠了,shùyè zài chūntiān biàn lǜ le,Las hojas de los árboles se vuelven verdes en primavera,3,HSK3
+h3x0y1z2a3b4,馬,马,mǎ,caballo,caballo,他在農場騎馬,tā zài nóngchǎng qímǎ,Él monta a caballo en la granja,3,HSK3
+h3y1z2a3b4c5,馬上,马上,mǎshàng,inmediatamente,inmediatamente,我馬上就到家了,wǒ mǎshàng jiù dào jiā le,Llegaré a casa enseguida,3,HSK3
+h3z2a3b4c5d6,滿意,满意,mǎnyì,satisfecho,satisfecho,他對這份工作很滿意,tā duì zhè fèn gōngzuò hěn mǎnyì,Él está muy satisfecho con este trabajo,3,HSK3
+h3a3b4c5d6e7,帽子,帽子,màozi,sombrero; gorra,sombrero; gorra,這頂帽子很適合你,zhè dǐng màozi hěn shìhé nǐ,Esta gorra te queda muy bien,3,HSK3
+h3b4c5d6e7f8,米,米,mǐ,metro; arroz,metro; arroz,他身高一米八,tā shēngāo yī mǐ bā,Él mide un metro ochenta,3,HSK3
+h3c5d6e7f8g9,麵包,面包,miànbāo,pan,pan,我早餐吃麵包喝牛奶,wǒ zǎocān chī miànbāo hē niúnǎi,Desayuno pan y bebo leche,3,HSK3
+h3d6e7f8g9h0,麵條,面条,miàntiáo,fideos,fideos,我最喜歡吃牛肉麵條,wǒ zuì xǐhuān chī niúròu miàntiáo,Lo que más me gusta comer son fideos con ternera,3,HSK3
+h3e7f8g9h0i1,明白,明白,míngbai,entender; claro,entender; claro,我現在明白你的意思了,wǒ xiànzài míngbai nǐ de yìsi le,Ahora entiendo lo que quieres decir,3,HSK3
+h3f8g9h0i1j2,拿,拿,ná,tomar; agarrar,tomar; agarrar,請把那本書拿給我,qǐng bǎ nà běn shū ná gěi wǒ,Por favor pásame aquel libro,3,HSK3
+h3g9h0i1j2k3,奶奶,奶奶,nǎinai,abuela paterna,abuela paterna,我奶奶今年八十歲了,wǒ nǎinai jīnnián bāshí suì le,Mi abuela tiene ochenta años este año,3,HSK3
+h3h0i1j2k3l4,南,南,nán,sur,sur,我家在學校的南方,wǒ jiā zài xuéxiào de nánfāng,Mi casa está al sur de la escuela,3,HSK3
+h3i1j2k3l4m5,難,难,nán,difícil,difícil,這道題對我來說很難,zhè dào tí duì wǒ lái shuō hěn nán,Esta pregunta es muy difícil para mí,3,HSK3
+h3j2k3l4m5n6,難過,难过,nánguò,triste; sentirse mal,triste; sentirse mal,聽了這個消息我很難過,tīngle zhège xiāoxi wǒ hěn nánguò,Me puse muy triste al oír esta noticia,3,HSK3
+h3k3l4m5n6o7,年級,年级,niánjí,grado; año escolar,grado; año escolar,我妹妹現在讀三年級,wǒ mèimei xiànzài dú sān niánjí,Mi hermana menor está ahora en tercer grado,3,HSK3
+h3l4m5n6o7p8,年輕,年轻,niánqīng,joven,joven,王老師看起來很年輕,Wáng lǎoshī kàn qǐlái hěn niánqīng,El profesor Wang se ve muy joven,3,HSK3
+h3m5n6o7p8q9,鳥,鸟,niǎo,pájaro,pájaro,樹上有幾隻小鳥,shù shàng yǒu jǐ zhī xiǎo niǎo,Hay unos pajaritos en el árbol,3,HSK3
+h3n6o7p8q9r0,努力,努力,nǔlì,esforzado; trabajador,esforzado; trabajador,只要努力就能學好漢語,zhǐyào nǔlì jiù néng xuéhǎo Hànyǔ,Si te esfuerzas podrás aprender bien chino,3,HSK3
+h3o7p8q9r0s1,爬山,爬山,páshān,escalar; hacer senderismo,escalar; hacer senderismo,我們週末去爬山吧,wǒmen zhōumò qù páshān ba,Vayamos a la montaña el fin de semana,3,HSK3
+h3p8q9r0s1t2,盤子,盘子,pánzi,plato; bandeja,plato; bandeja,盤子裡有一些水果,pánzi lǐ yǒu yīxiē shuǐguǒ,Hay algo de fruta en el plato,3,HSK3
+h3q9r0s1t2u3,胖,胖,pàng,gordo,gordo,這隻小貓長胖了,zhè zhī xiǎo māo zhǎng pàng le,Este gatito ha engordado,3,HSK3
+h3r0s1t2u3v4,啤酒,啤酒,píjiǔ,cerveza,cerveza,爸爸喜歡喝冰啤酒,bàba xǐhuān hē bīng píjiǔ,A papá le gusta beber cerveza fría,3,HSK3
+h3s1t2u3v4w5,葡萄,葡萄,pútáo,uva,uva,這些紫色葡萄很甜,zhèxiē zǐsè pútáo hěn tián,Estas uvas moradas son muy dulces,3,HSK3
+h3t2u3v4w5x6,普通話,普通话,pǔtōnghuà,mandarín estándar,mandarín estándar,她的普通話說得很標準,tā de pǔtōnghuà shuō de hěn biāozhǔn,Su mandarín es muy estándar,3,HSK3
+h3u3v4w5x6y7,其實,其实,qíshí,en realidad; de hecho,en realidad; de hecho,其實我不喜歡喝咖啡,qíshí wǒ bù xǐhuān hē kāfēi,De hecho no me gusta beber café,3,HSK3
+h3v4w5x6y7z8,其他,其他,qítā,otros; el resto,otros; el resto,除了這件還有其他顏色嗎,chúle zhè jiàn hái yǒu qítā yánsè ma,¿Aparte de esta hay otros colores?,3,HSK3
+h3w5x6y7z8a9,騎,骑,qí,montar (bici/caballo),montar (bici/caballo),他每天騎自行車上班,tā měitiān qí zìxíngchē shàngbān,Él va al trabajo en bicicleta todos los días,3,HSK3
+h3x6y7z8a9b0,奇怪,奇怪,qíguài,extraño; raro,extraño; raro,這件事情真奇怪,zhè jiàn shìqing zhēn qíguài,Este asunto es realmente extraño,3,HSK3
+h3y7z8a9b0c1,起床,起床,qǐchuáng,levantarse,levantarse,我每天早上六點起床,wǒ měitiān zǎoshang liù diǎn qǐchuáng,Me levanto a las seis cada mañana,3,HSK3
+h3z7a9b0c1d2,公斤,公斤,gōngjīn,kilogramo,kilogramo,這袋蘋果有三公斤重,zhè dài píngguǒ yǒu sān gōngjīn zhòng,Esta bolsa de manzanas pesa tres kilos,3,HSK3
+h3a8b9c0d1e2,水平,水平,shuǐpíng,nivel; estándar,nivel; estándar,他的漢語水平提高了很多,tā de Hànyǔ shuǐpíng tígāole hěnduō,Su nivel de chino ha mejorado mucho,3,HSK3
+h3b9c0d1e2f3,漂亮,漂亮,piàoliang,bonito; guapo,bonito; guapo,這件裙子真漂亮,zhè jiàn qúnzi zhēn piàoliang,Esta falda es realmente bonita,3,HSK3
+h3c0d1e2f3g4,清楚,清楚,qīngchu,claro; nítido,claro; nítido,我聽不清楚你說什麼,wǒ tīng bù qīngchu nǐ shuō shénme,No oigo claramente lo que dices,3,HSK3
+h3d1e2f3g4h5,秋,秋,qiū,otoño,otoño,秋天的天氣最舒服,qiūtiān de tiānqì zuì shūfu,El clima de otoño es el más cómodo,3,HSK3
+h3e2f3g4h5i6,裙子,裙子,qúnzi,falda; vestido,falda; vestido,她今天穿了一件紅裙子,tā jīntiān chuānle yī jiàn hóng qúnzi,Ella hoy se puso una falda roja,3,HSK3
+h3f3g4h5i6j7,然後,然后,ránhòu,luego; después,luego; después,我們先吃飯然後去電影院,wǒmen xiān chīfàn ránhòu qù diànyǐngyuàn,Primero comeremos y luego iremos al cine,3,HSK3
+h3g4h5i6j7k8,熱情,热情,rèqíng,entusiasta; cálido,entusiasta; cálido,這裡的人們非常熱情,zhèlǐ de rénmen fēicháng rèqíng,La gente aquí es muy entusiasta,3,HSK3
+h3h5i6j7k8l9,認為,认为,rènwéi,pensar; considerar,pensar; considerar,我認為這個辦法很好,wǒ rènwéi zhège bànfǎ hěn hǎo,Opino que este método es muy bueno,3,HSK3
+h3i6j7k8l9m0,認真,认真,rènzhēn,serio; concienzudo,serio; concienzudo,他學習漢語非常認真,tā xuéxí Hànyǔ fēicháng rènzhēn,Él estudia chino muy seriamente,3,HSK3
+h3j7k8l9m0n1,容易,容易,róngyì,fácil,fácil,學寫漢字並不容易,xué xiě Hànzì bìng bù róngyì,Aprender a escribir caracteres no es fácil,3,HSK3
+h3k8l9m0n1o2,如果,如果,rúguǒ,si (condicional),si (condicional),如果明天下雨我就不去了,rúguǒ míngtiān xiàyǔ wǒ jiù bù qùle,Si mañana llueve no iré,3,HSK3
+h3l9m0n1o2p3,傘,伞,sǎn,paraguas,paraguas,外面下雨了記得帶傘,wàimiàn xiàyǔle jìde dài sǎn,Afuera llueve recuerda traer el paraguas,3,HSK3
+h3m0n1o2p3q4,上網,上网,shàngwǎng,navegar por internet,navegar por internet,他每天晚上都上網看新聞,tā měitiān wǎnshang dōu shàngwǎng kàn xīnwén,Él navega por internet cada noche para ver noticias,3,HSK3
+h3n1o2p3q4r5,聲音,声音,shēngyīn,voz; sonido,voz; sonido,請大聲一點兒我聽不見,qǐng dàshēng yīdiǎnr wǒ tīng bùjiàn,Por favor un poco más alto que no oigo,3,HSK3
+h3o2p3q4r5s6,世界,世界,shìjiè,mundo,mundo,我想去看看外面的世界,wǒ xiǎng qù kànkan wàimiàn de shìjiè,Quiero ir a ver el mundo exterior,3,HSK3
+h3p3q4r5s6t7,試,试,shì,probar; intentar,probar; intentar,這件衣服我可以試試嗎,zhè jiàn yīfu wǒ kěyǐ shìshi ma,¿Puedo probarme esta ropa?,3,HSK3
+h3q4r5s6t7u8,瘦,瘦,shòu,delgado; flaco,delgado; flaco,他最近瘦了很多,tā zuìjìn shòule hěnduō,Él ha adelgazado mucho últimamente,3,HSK3
+h3r5s6t7u8v9,叔叔,叔叔,shūshu,tío; señor,tío; señor,王叔叔對人很客氣,Wáng shūshu duì rén hěn kèqi,El tío Wang es muy amable con la gente,3,HSK3
+h3s5t6u7v8w9,舒服,舒服,shūfu,cómodo,cómodo,坐在沙發上很舒服,zuò zài shāfā shàng hěn shūfu,Sentarse en el sofá es muy cómodo,3,HSK3
+h3t6u7v8w9x0,樹,树,shù,árbol,árbol,公園裡有很多大樹,gōngyuán lǐ yǒu hěnduō dàshù,Hay muchos árboles grandes en el parque,3,HSK3
+h3u7v8w9x0y1,數學,数学,shùxué,matemáticas,matemáticas,我不喜歡上數學課,wǒ bù xǐhuān shàng shùxué kè,No me gusta ir a clase de matemáticas,3,HSK3
+h3v8w9x0y1z2,刷牙,刷牙,shuāyá,lavarse los dientes,lavarse los dientes,睡覺前要記得刷牙,shuìjiào qián yào jìde shuāyá,Recuerda cepillarte los dientes antes de dormir,3,HSK3
+h3w9x0y1z2a3,雙,双,shuāng,par (clasificador),par (clasificador),我想買一雙新鞋子,wǒ xiǎng mǎi yī shuāng xīn xiézi,Quiero comprar un par de zapatos nuevos,3,HSK3
+h3x0y1z2a3b4,水平,水平,shuǐpíng,nivel,nivel,你的漢語水平提高得很快,nǐ de Hànyǔ shuǐpíng tígāo de hěn kuài,Tu nivel de chino está mejorando rápido,3,HSK3
+h3y1z2a3b4c5,司機,司机,sījī,conductor,conductor,那位司機師傅人很好,nà wèi sījī shīfu rén hěn hǎo,Ese señor conductor es muy amable,3,HSK3
+h3z2a3b4c5d6,太陽,太阳,tàiyáng,sol,sol,今天的太陽很大,jīntiān de tàiyáng hěn dà,Hoy el sol está muy fuerte,3,HSK3
+h3a3b4c5d6e7,特別,特别,tèbié,especial; especialmente,especial; especialmente,這道菜特別好吃,zhè dào cài tèbié hǎochī,Este plato está especialmente rico,3,HSK3
+h3b4c5d6e7f8,疼,疼,téng,dolor; doler,dolor; doler,我的牙疼得厲害,wǒ de yá téng de lìhai,Me duele muchísimo el diente,3,HSK3
+h3c5d6e7f8g9,提高,提高,tígāo,mejorar; elevar,mejorar; elevar,多練習能提高聽力,duō liànxí néng tígāo tīnglì,Practicar mucho puede mejorar el oído,3,HSK3
+h3d6e7f8g9h0,體育,体育,tǐyù,deportes; educación física,deportes; educación física,他很喜歡體育運動,tā hěn xǐhuān tǐyù yùndòng,A él le gustan mucho los deportes,3,HSK3
+h3e7f8g9h0i1,甜,甜,tián,dulce,dulce,這個西瓜非常甜,zhège xīguā fēicháng tián,Esta sandía es muy dulce,3,HSK3
+h3f8g9h0i1j2,條,条,tiáo,clasificador (objetos largos),clasificador (objetos largos),這條褲子很適合你,zhè tiáo kùzi hěn shìhé nǐ,Estos pantalones te quedan muy bien,3,HSK3
+h3g9h0i1j2k3,同事,同事,tóngshì,colega; compañero de trabajo,colega; compañero de trabajo,我的同事們都很友好,wǒ de tóngshìmen dōu hěn yǒuhǎo,Mis colegas son todos muy amigables,3,HSK3
+h3h0i1j2k3l4,同意,同意,tóngyì,estar de acuerdo,estar de acuerdo,我完全同意你的看法,wǒ wánquán tóngyì nǐ de kànfǎ,Estoy totalmente de acuerdo con tu punto de vista,3,HSK3
+h3i1j2k3l4m5,頭髮,头发,tóufa,cabello; pelo,cabello; pelo,她的頭髮很長,tā de tóufa hěn cháng,Su cabello es muy largo,3,HSK3
+h3j2k3l4m5n6,突然,突然,tūrán,repente; de repente,repente; de repente,天突然下起雨來了,tiān tūrán xià qǐ yǔ lái le,De repente empezó a llover,3,HSK3
+h3k3l4m5n6o7,圖書館,图书馆,túshūguǎn,biblioteca,biblioteca,圖書館裡不能大聲說話,túshūguǎn lǐ bùnéng dàshēng shuōhuà,No se puede hablar alto en la biblioteca,3,HSK3
+h3l4m5n6o7p8,腿,腿,tuǐ,pierna,pierna,他的腿受傷了,tā de tuǐ shòushāng le,Se ha lesionado la pierna,3,HSK3
+h3m5n6o7p8q9,忘記,忘记,wàngjì,olvidar,olvidar,我忘記帶鑰匙了,wǒ wàngjì dài yàoshi le,Olvidé traer las llaves,3,HSK3
+h3n6o7p8q9r0,萬,万,wàn,diez mil,diez mil,這台電腦要一萬塊,zhè tái diànnǎo yào yīwàn kuài,Esta computadora cuesta diez mil yuanes,3,HSK3
+h3o7p8q9r0s1,習慣,习惯,xíguàn,hábito; acostumbrarse,hábito; acostumbrarse,我已經習慣這裡的生活了,wǒ yǐjīng xíguàn zhèlǐ de shēnghuó le,Ya me he acostumbrado a la vida aquí,3,HSK3
+h3p8q9r0s1t2,洗手間,洗手间,xǐshǒujiān,baño; aseo,baño; aseo,請問洗手間在哪裡,qǐngwèn xǐshǒujiān zài nǎlǐ,Perdone dónde está el baño,3,HSK3
+h3q9r0s1t2u3,洗澡,洗澡,xǐzǎo,bañarse; ducharse,bañarse; ducharse,我每天早上洗澡,wǒ měitiān zǎoshang xǐzǎo,Me ducho todas las mañanas,3,HSK3
+h3r0s1t2u3v4,夏,夏,xià,verano,verano,北京的夏天非常熱,Běijīng de xiàtiān fēicháng rè,El verano en Pekín es muy caluroso,3,HSK3
+h3s1t2u3v4w5,先,先,xiān,primero; antes,primero; antes,我們得先去超市買東西,wǒmen děi xiān qù chāoshì mǎi dōngxi,Primero tenemos que ir al supermercado a comprar cosas,3,HSK3
+h3t2u3v4w5x6,相信,相信,xiāngxìn,creer; confiar,creer; confiar,我相信你一定能做到,wǒ xiāngxìn nǐ yīdìng néng zuò dào,Creo que sin duda podrás hacerlo,3,HSK3
+h3u3v4w5x6y7,香蕉,香蕉,xiāngjiāo,plátano; banano,plátano; banano,我最喜歡吃的水果是香蕉,wǒ zuì xǐhuān chī de shuǐguǒ shì xiāngjiāo,Mi fruta favorita es el plátano,3,HSK3
+h3v4w5x6y7z8,向,向,xiàng,hacia; a,hacia; a,向左轉就是超市,xiàng zuǒ zhuǎn jiùshì chāoshì,Gira a la izquierda y ahí está el supermercado,3,HSK3
+h3w5x6y7z8a9,像,像,xiàng,parecerse; como,parecerse; como,他長得很像他爸爸,tā zhǎng de hěn xiàng tā bàba,Él se parece mucho a su papá,3,HSK3
+h3x6y7z8a9b0,小心,小心,xiǎoxīn,tener cuidado,tener cuidado,路上車多請小心,lùshàng chē duō qǐng xiǎoxīn,Hay muchos coches en la carretera ten cuidado,3,HSK3
+h3y7z8a9b0c1,校長,校长,xiàozhǎng,director de escuela,director de escuela,校長正在開會,xiàozhǎng zhèngzài kāihuì,El director está en una reunión,3,HSK3
+h3z7a9b0c1d2,新聞,新闻,xīnwén,noticias,noticias,我每天晚上看新聞,wǒ měitiān wǎnshang kàn xīnwén,Veo las noticias todas las noches,3,HSK3
+h3a8b9c0d1e2,新鮮,新鲜,xīnxiān,fresco,fresco,這些水果非常新鮮,zhèxiē shuǐguǒ fēicháng xīnxiān,Estas frutas están muy frescas,3,HSK3
+h3b9c0d1e2f3,信用卡,信用卡,xìnyòngkǎ,tarjeta de crédito,tarjeta de crédito,我可以用信用卡付錢嗎,wǒ kěyǐ yòng xìnyòngkǎ fùqián ma,Puedo pagar con tarjeta de crédito,3,HSK3
+h3c0d1e2f3g4,行李箱,行李箱,xínglǐxiāng,maleta,maleta,我的行李箱太重了,wǒ de xínglǐxiāng tài zhòng le,Mi maleta pesa demasiado,3,HSK3
+h3d1e2f3g4h5,熊貓,熊猫,xióngmāo,panda,panda,熊貓是中國的國寶,xióngmāo shì Zhōngguó de guóbǎo,El panda es el tesoro nacional de China,3,HSK3
+h3e2f3g4h5i6,需要,需要,xūyào,necesitar,necesitar,我需要你的幫助,wǒ xūyào nǐ de bāngzhù,Necesito tu ayuda,3,HSK3
+h3f3g4h5i6j7,選擇,选择,xuǎnzé,elegir; elección,elegir; elección,你得自己做選擇,nǐ děi zìjǐ zuò xuǎnzé,Tienes que hacer la elección tú mismo,3,HSK3
+h3g4h5i6j7k8,眼鏡,眼镜,yǎnjìng,gafas,gafas,我的眼鏡不見了,wǒ de yǎnjìng bùjiàn le,Mis gafas han desaparecido,3,HSK3
+h3h5i6j7k8l9,爺爺,爷爷,yéye,abuelo paterno,abuelo paterno,爺爺每天去公園散步,yéye měitiān qù gōngyuán sànbù,Mi abuelo va al parque a pasear todos los días,3,HSK3
+h3i6j7k8l9m0,一般,一般,yībān,general; común,general; común,我一般早上七點起床,wǒ yībān zǎoshang qī diǎn qǐchuáng,Generalmente me levanto a las siete,3,HSK3
+h3j7k8l9m0n1,一邊,一边,yībiān,al mismo tiempo,al mismo tiempo,他喜歡一邊吃飯一邊看電視,tā xǐhuān yībiān chīfàn yībiān kàn diànshì,A él le gusta comer mientras ve la tele,3,HSK3
+h3k8l9m0n1o2,一定,一定,yīdìng,cierto; sin duda,cierto; sin duda,明天我一定準時到,míngtiān wǒ yīdìng zhǔnshí dào,Mañana llegaré puntual sin duda,3,HSK3
+h3l9m0n1o2p3,一共,一共,yīgòng,en total,en total,這些東西一共五十塊,zhèxiē dōngxi yīgòng wǔshí kuài,Estas cosas cuestan cincuenta yuanes en total,3,HSK3
+h3m0n1o2p3q4,一會兒,一会儿,yīhuìr,un momento,un momento,請等我一會兒,qǐng děng wǒ yīhuìr,Por favor espérame un rato,3,HSK3
+h3n1o2p3q4r5,一樣,一样,yīyàng,igual; mismo,igual; mismo,他的愛好跟我的一樣,tā de àihào gēn wǒ de yīyàng,Su afición es igual a la mía,3,HSK3
+h3o2p3q4r5s6,一直,一直,yīzhí,siempre; recto,siempre; recto,向前一直走就到了,xiàng qián yīzhí zǒu jiù dào le,Sigue recto y llegarás,3,HSK3
+h3p3q4r5s6t7,以前,以前,yǐqián,antes,antes,以前我不認識他,yǐqián wǒ bù rènshi tā,Antes no le conocía,3,HSK3
+h3q4r5s6t7u8,以為,以为,yǐwéi,pensar erróneamente,pensar erróneamente,我以為今天會下雨,wǒ yǐwéi jīntiān huì xiàyǔ,Creía que hoy llovería,3,HSK3
+h3r5s6t7u8v9,意見,意见,yìjiàn,opinión; queja,opinión; queja,你有什麼意見嗎,nǐ yǒu shénme yìjiàn ma,¿Tienes alguna opinión?,3,HSK3
+h3s6t7u8v9x0,意思,意思,yìsi,significado; interés,significado; interés,這個詞是什麼意思,zhège cí shì shénme yìsi,Qué significa esta palabra,3,HSK3
+h3t7u8v9x0y1,銀行,银行,yínháng,banco,banco,我去銀行換錢,wǒ qù yínháng huànqián,Voy al banco a cambiar dinero,3,HSK3
+h3u8v9x0y1z2,飲料,饮料,yǐnliào,bebida,bebida,你想喝什麼飲料,nǐ xiǎng hē shénme yǐnliào,¿Qué bebida quieres tomar?,3,HSK3
+h3v9x0y1z2a3,應該,应该,yīnggāi,debería,debería,你應該早點睡覺,nǐ yīnggāi zǎodiǎn shuìjiào,Deberías dormir más temprano,3,HSK3
+h3w9x0y1z2a3,影響,影响,yǐngxiǎng,influencia; afectar,influencia; afectar,環境會影響一個人的健康,huánjìng huì yǐngxiǎng yīgè rén de jiànkāng,El entorno influye en la salud de una persona,3,HSK3
+h3x0y1z2a3b4,用,用,yòng,usar,usar,我可以用你的筆嗎,wǒ kěyǐ yòng nǐ de bǐ ma,¿Puedo usar tu bolígrafo?,3,HSK3
+h3y1z2a3b4c5,遊戲,游戏,yóuxì,juego,juego,他在電腦上玩遊戲,tā zài diànnǎo shàng wán yóuxì,Él está jugando a juegos en el ordenador,3,HSK3
+h3z2a3b4c5d6,有名,有名,yǒumíng,famoso,famoso,長城在世界上面很有名,Chángchéng zài shìjiè shàngmiàn hěn yǒumíng,La Gran Muralla es muy famosa en el mundo,3,HSK3
+h3a3b4c5d6e7,又,又,yòu,otra vez (pasado),otra vez (pasado),今天又下雨了,jīntiān yòu xiàyǔ le,Hoy ha vuelto a llover,3,HSK3
+h3b4c5d6e7f8,遇到,遇到,yùdào,encontrarse con,encontrarse con,我在路上遇到了一個老朋友,wǒ zài lùshàng yùdào le yīgè lǎo péngyǒu,Me encontré con un viejo amigo en el camino,3,HSK3
+h3c5d6e7f8g9,願意,愿意,yuànyì,querer; estar dispuesto,querer; estar dispuesto,你願意跟我去旅遊嗎,nǐ yuànyì gēn wǒ qù lǚyóu ma,¿Estás dispuesto a ir de viaje conmigo?,3,HSK3
+h3d6e7f8g9h0,月亮,月亮,yuèliang,luna,luna,今晚的月亮很圓,jīn wǎn de yuèliang hěn yuán,La luna de esta noche está muy redonda,3,HSK3
+h3e7f8g9h0i1,越...越...,越...越...,yuè...yuè...,cuanto más... más...,cuanto más... más...,他的漢語說得越來越好,tā de Hànyǔ shuō de yuè lái yuè hǎo,Él habla chino cada vez mejor,3,HSK3
+h3f8g9h0i1j2,雲,云,yún,nube,nube,天上有幾朵白雲,tiānshàng yǒu jǐ duǒ báiyún,Hay unas nubes blancas en el cielo,3,HSK3
+h3g9h0i1j2k3,站,站,zhàn,estación; pararse,estación; pararse,火車站在哪裡,huǒchēzhàn zài nǎlǐ,Dónde está la estación de tren,3,HSK3
+h3h0i1j2k3l4,長,长,zhǎng,crecer,crecer,這個孩子長得很快,zhège háizi zhǎng de hěn kuài,Este niño crece muy rápido,3,HSK3
+h3i1j2k3l4m5,着急,着急,zháojí,preocuparse; ansioso,preocuparse; ansioso,別著急時間還早,bié zháojí shíjiān hái zǎo,No te preocupes que aún es pronto,3,HSK3
+h3j2k3l4m5n6,照顧,照顾,zhàogù,cuidar,cuidar,請照顧好你的身體,qǐng zhàogù hǎo nǐ de shēntǐ,Por favor cuida bien de tu salud,3,HSK3
+h3k3l4m5n6o7,照片,照片,zhàopiàn,foto,foto,這張照片真好看,zhè zhāng zhàopiàn zhēn hǎokàn,Esta foto es realmente bonita,3,HSK3
+h3l4m5n6o7p8,照相機,照相机,zhàoxiàngjī,cámara de fotos,cámara de fotos,我的照相機壞了,wǒ de zhàoxiàngjī huài le,Mi cámara de fotos se ha roto,3,HSK3
+h3m5n6o7p8q9,只,只,zhǐ,solo; solamente,solo; solamente,我只有十塊錢,wǒ zhǐyǒu shí kuài qián,Solo tengo diez yuanes,3,HSK3
+h3n6o7p8q9r0,中間,中间,zhōngjiān,medio; centro,medio; centro,他在這兩本書中間,tā zài zhè liǎng běn shū zhōngjiān,Él está en medio de estos dos libros,3,HSK3
+h3o7p8q9r0s1,中文,中文,zhōngwén,idioma chino,idioma chino,他在學習中文,tā zài xuéxí Zhōngwén,Él está estudiando chino,3,HSK3
+h3p8q9r0s1t2,終於,终于,zhōngyú,finalmente; por fin,finalmente; por fin,比賽終於結束了,bǐsài zhōngyú jiéshù le,El partido por fin ha terminado,3,HSK3
+h3q9r0s1t2u3,種,种,zhǒng,tipo; clase,tipo; clase,我不喜歡這種顏色,wǒ bù xǐhuān zhè zhǒng yánsè,No me gusta este tipo de color,3,HSK3
+h3r0s1t2u3v4,重要,重要,zhòngyào,importante,importante,這是一個很重要的問題,zhè shì yīgè hěn zhòngyào de wèntí,Este es un problema muy importante,3,HSK3
+h3s1t2u3v4w5,週末,周末,zhōumò,fin de semana,fin de semana,你週末想去哪裡玩,nǐ zhōumò xiǎng qù nǎlǐ wán,Dónde quieres ir el fin de semana,3,HSK3
+h3t2u3v4w5x6,主要,主要,zhǔyào,principal,principal,這是我們的主要任務,zhè shì wǒmen de zhǔyào rènwu,Esta es nuestra tarea principal,3,HSK3
+h3u3v4w5x6y7,注意,注意,zhùyì,prestar atención,prestar atención,請注意聽我說話,qǐng zhùyì tīng wǒ shuōhuà,Por favor presta atención a lo que digo,3,HSK3
+h3v4w5x6y7z8,字典,字典,zìdiǎn,diccionario,diccionario,我買了一本新字典,wǒ mǎile yī běn xīn zìdiǎn,He comprado un diccionario nuevo,3,HSK3
+h3w5x6y7z8a9,自己,自己,zìjǐ,uno mismo,uno mismo,我喜歡自己一個人旅遊,wǒ xǐhuān zìjǐ yīgè rén lǚyóu,Me gusta viajar solo yo mismo,3,HSK3
+h3x6y7z8a9b0,總是,总是,zǒngshì,siempre,siempre,他總是遲到,tā zǒngshì chídào,Él siempre llega tarde,3,HSK3
+h3y7z8a9b0c1,最近,最近,zuìjìn,últimamente,últimamente,最近你身體怎麼樣,zuìjìn nǐ shēntǐ zěnmeyàng,Cómo has estado de salud últimamente,3,HSK3
+h3z7a9b0c1d2,作業,作业,zuòyè,tarea; deberes,tarea; deberes,老師佈置了很多作業,lǎoshī bùzhì le hěnduō zuòyè,El profesor puso muchos deberes,3,HSK3
+h3a8b9c0d1e2,作用,作用,zuòyòng,función; efecto,función; efecto,這種藥起作用了,zhè zhǒng yào qǐ zuòyòng le,Esta medicina ha hecho efecto,3,HSK3

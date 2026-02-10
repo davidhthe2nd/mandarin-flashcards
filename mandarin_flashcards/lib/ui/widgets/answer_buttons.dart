@@ -17,25 +17,45 @@ class AnswerButtons extends StatelessWidget {
   final bool enabled;
 
   @override
-  Widget build(BuildContext context) {
-    return Wrap(
-      alignment: WrapAlignment.center,
-      spacing: 12,
-      runSpacing: 12,
-      children: [
-        FilledButton.tonal(
-          onPressed: enabled ? onWrong : null,
-          child: const Text('I forgot'),
-        ),
-        FilledButton.tonal(
-          onPressed: enabled ? onUnsure : null,
-          child: const Text('Almost'),
-        ),
-        FilledButton.tonal(
-          onPressed: enabled ? onCorrect : null,
-          child: const Text('I got it'),
-        ),
-      ],
+Widget build(BuildContext context) {
+  final cs = Theme.of(context).colorScheme;
+
+  // Helper to create a subtle tonal style
+  ButtonStyle subtleStyle(Color baseColor) {
+    return FilledButton.styleFrom(
+      backgroundColor: baseColor.withOpacity(0.08), // Even lower opacity (8%)
+      foregroundColor: baseColor.withOpacity(0.8),  // Muted text
+      elevation: 0,                                // Flat look
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
     );
   }
+
+  return Wrap(
+    alignment: WrapAlignment.center,
+    spacing: 12,
+    runSpacing: 12,
+    children: [
+      // 1. FORGOT (Subtle Coral/Red)
+      FilledButton(
+        onPressed: enabled ? onWrong : null,
+        style: subtleStyle(Colors.redAccent.shade200),
+        child: const Text('I forgot'),
+      ),
+
+      // 2. ALMOST (Subtle Amber/Sand)
+      FilledButton(
+        onPressed: enabled ? onUnsure : null,
+        style: subtleStyle(Colors.orangeAccent.shade100),
+        child: const Text('Almost'),
+      ),
+
+      // 3. GOT IT (Subtle Mint/Green)
+      FilledButton(
+        onPressed: enabled ? onCorrect : null,
+        style: subtleStyle(Colors.tealAccent.shade700),
+        child: const Text('I got it'),
+      ),
+    ],
+  );
+}
 }

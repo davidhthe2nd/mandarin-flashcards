@@ -30,15 +30,8 @@ class ChooseScreen extends StatelessWidget {
     }
 
     final Flashcard card = choose.current!;
-    final front = card.frontText(
-      invertPair: opts.invertPair,
-      langCode: 'enUS', // you can make this configurable
-    );
-    final back = card.backText(
-      invertPair: opts.invertPair,
-      langCode: 'enUS',
-    );
-
+    final front = card.frontText(invertPair: opts.invertPair);
+    final back = card.backText(invertPair: opts.invertPair);
     return Scaffold(
       appBar: AppBar(title: Text('Choose (${choose.remaining})')),
       body: Padding(
@@ -55,9 +48,9 @@ class ChooseScreen extends StatelessWidget {
             const SizedBox(height: 12),
 
             // Optional pinyin
-            if (opts.showPinyin && card.pinyinText.isNotEmpty)
+            if (opts.showPinyin && card.pinyin.isNotEmpty)
               Text(
-                card.pinyinText,
+                card.pinyin,
                 style: Theme.of(context).textTheme.titleMedium,
               ),
 

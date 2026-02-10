@@ -4,46 +4,131 @@ import 'package:provider/provider.dart';
 
 import '../../state/deck_state.dart';
 import '../screens/learn_screen.dart'; 
+import '../../state/options_state.dart';
+import '../../models/enums.dart';
 
 class MainMenuScreen extends StatelessWidget {
   const MainMenuScreen({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    final deck = context.watch<DeckState>();
-    return Scaffold(
-      appBar: AppBar(title: const Text('Mandarin Flashcards')),
-      body: SafeArea( // new: mobile-friendly padding 🌙
-        child: Padding(
-          padding: const EdgeInsets.all(16),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              Card(
-                child: ListTile(
-                  title: const Text("Today's learning"),
-                  subtitle: Text('${deck.position}/${deck.totalToday} due'),
-                  trailing: const Icon(Icons.play_arrow),
-                  onTap: () => Navigator.of(context).push(
-                    MaterialPageRoute(builder: (_) => const LearnScreen()),
-                  ), // new: Start learning 🌙
-                ),
-              ),
-              const SizedBox(height: 12),
-              Card(
-                child: ListTile(
-                  title: const Text('Options'),
-                  trailing: const Icon(Icons.settings),
-                  onTap: () {
-                    Navigator.of(context).push(
-                    MaterialPageRoute(builder: (_) => const OptionsScreen()),
-                    ); // new: Open options screen 🌙
-                  },
-                ),
-              ),
-            ],
+Widget build(BuildContext context) {
+  final deck = context.watch<DeckState>();
+  final opts = context.read<OptionsState>();
+
+  return Scaffold(
+    extendBodyBehindAppBar: true, 
+    body: Stack(
+      children: [
+        // 1. BACKGROUND IMAGE
+        Positioned.fill(
+          child: Image.asset(
+            'assets/images/main2.JPEG',
+            fit: BoxFit.cover,
           ),
         ),
+
+        // 2. GRADIENT OVERLAY
+        Positioned.fill(
+          child: Container(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [
+                  Colors.black.withOpacity(0.2),
+                  Colors.black.withOpacity(0.7), // Slightly darker for contrast
+                ],
+              ),
+            ),
+          ),
+        ),
+
+        // 3. CONTENT
+        SafeArea(
+          child: Center(
+            child: SingleChildScrollView(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 32),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    // --- LOGO AREA ---
+                    // Replace 'logo.png' with your actual generated filename
+                    Image.asset(
+                      'assets/images/logo.png', 
+                      height: 240,
+                    ),
+                    const SizedBox(height: 28),
+                    // Text(
+                    //   'Let\'s Learn Mandarin!',
+                    //   textAlign: TextAlign.center,
+                    //   style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+                    //     color: Colors.white,
+                    //     fontWeight: FontWeight.w900,
+                    //     letterSpacing: 4,
+                    //   ),
+                    // ),
+                    // const SizedBox(height: 60),
+
+                    // --- BUTTONS (Removed 'const' from parent to allow theme lookup) ---
+                    _MenuCard(
+                      title: "HSK Practice",
+                      subtitle: "Levels 1-3 • Random Selection",
+                      icon: Icons.school_rounded,
+                      enabled: !deck.isBusy, // New property
+                      onTap: () async {
+                        await deck.loadSource(DeckSource.hsk, opts); 
+                        if (context.mounted) Navigator.push(context, MaterialPageRoute(builder: (_) => const LearnScreen()));
+                      },
+                    ),
+                    const SizedBox(height: 16),
+                    _MenuCard(
+                      title: "Textbook Practice",
+                      subtitle: "Random selection or by lesson",
+                      icon: Icons.menu_book_rounded, // Fixed name
+                      onTap: () async {
+                        // Always reload source to apply current filters before entering LearnScreen
+                        await deck.loadSource(DeckSource.textbook, opts);
+                        if (context.mounted) Navigator.push(context, MaterialPageRoute(builder: (_) => const LearnScreen()));
+                      },
+                    ),
+                    const SizedBox(height: 16),
+                    _MenuCard(
+                      title: "Settings",
+                      subtitle: "App Preferences",
+                      icon: Icons.settings_rounded,
+                      onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const OptionsScreen())),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ),
+      ],
+    ),
+  );
+}
+}
+
+class _MenuCard extends StatelessWidget {
+  final String title;
+  final String subtitle;
+  final IconData icon;
+  final VoidCallback onTap;
+  final bool enabled;
+
+  const _MenuCard({required this.title, required this.subtitle, required this.icon, required this.onTap, this.enabled = true,});
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      child: ListTile(
+        leading: Icon(icon, size: 32),
+        title: Text(title, style: const TextStyle(fontWeight: FontWeight.bold)),
+        subtitle: Text(subtitle),
+        trailing: const Icon(Icons.chevron_right),
+        onTap: onTap,
       ),
     );
   }

@@ -18,3 +18,5 @@ enum DeckType {
   // hsk2TradEs,
   // hsk1TradEn,
 }
+
+enum DeckSource { hsk, textbook }

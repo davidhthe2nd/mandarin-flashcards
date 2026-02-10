@@ -8,16 +8,21 @@ import 'state/deck_state.dart';
 import 'state/hive_keys.dart'; // kOptionsBox, kProgressBox
 
 import 'models/card_progress.dart';
+import 'utils/colors.dart'; // theming helpers
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Hive.initFlutter(); // keep a single init 🌙
   // REGISTER ADAPTERS FIRST — BEFORE opening any boxes
   if (!Hive.isAdapterRegistered(kLearningStatusTypeId)) {
-    Hive.registerAdapter(LearningStatusAdapter()); // new: register enum adapter early 🌙
+    Hive.registerAdapter(
+      LearningStatusAdapter(),
+    ); // new: register enum adapter early 🌙
   }
   if (!Hive.isAdapterRegistered(kCardProgressTypeId)) {
-    Hive.registerAdapter(CardProgressAdapter());   // new: register model adapter early 🌙
+    Hive.registerAdapter(
+      CardProgressAdapter(),
+    ); // new: register model adapter early 🌙
   }
 
   // 1) Init options (blocking)
@@ -26,7 +31,7 @@ Future<void> main() async {
 
   // 2) Init deck (blocking) — use your JSON path (make sure it’s in pubspec assets)
   final deck = DeckState(kProgressBox);
-  await deck.init(options, 'assets/decks/hsk1_trad_esES_deck.json'); // adapters already registered 🌙
+  await deck.init(options); // loads deck & progress 🌙
 
   // 3) Run app with pre-initialized providers
   runApp(
@@ -46,15 +51,35 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final opts = context.watch<OptionsState>();
+    final isDark = opts.darkMode;
+
+    final palette = TestPalettes.all[opts.activePaletteIndex];
+    final scheme  = buildSchemeFromPalette(dark: isDark, palette: palette);
+
     final theme = ThemeData(
-      brightness: opts.darkMode ? Brightness.dark : Brightness.light,
-      colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepOrange),
+      colorScheme: scheme,
       useMaterial3: true,
+      appBarTheme: AppBarTheme(
+        backgroundColor: scheme.surface,
+        foregroundColor: scheme.onSurface,
+      ),
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ElevatedButton.styleFrom(
+          minimumSize: const Size.fromHeight(48),
+          backgroundColor: scheme.primary,
+          foregroundColor: scheme.onPrimary,
+        ),
+      ),
     );
 
     return MaterialApp(
       title: 'Mandarin Flashcards',
       theme: theme,
+      darkTheme: ThemeData(
+        colorScheme: buildSchemeFromPalette(dark: true, palette: palette),
+        useMaterial3: true,
+      ),
+      themeMode: isDark ? ThemeMode.dark : ThemeMode.light,
       home: const MainMenuScreen(),
     );
   }
@@ -81,8 +106,6 @@ class EmptyOrLoaderScreen extends StatelessWidget {
   const EmptyOrLoaderScreen({super.key});
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(child: Text('Loading / No cards due')),
-    );
+    return const Scaffold(body: Center(child: Text('Loading / No cards due')));
   }
 }
