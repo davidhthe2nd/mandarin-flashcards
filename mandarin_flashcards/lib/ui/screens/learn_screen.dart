@@ -10,6 +10,7 @@ import '../../models/flashcard.dart';
 import '../widgets/flashcard_face.dart';
 import '../widgets/answer_buttons.dart';
 import '../widgets/daily_progress_header.dart';
+import '../screens/summary_screen.dart';
 
 class LearnScreen extends StatefulWidget {
   const LearnScreen({super.key});
@@ -23,6 +24,10 @@ class _LearnScreenState extends State<LearnScreen> {
   bool _celebratedToday = false; // new: one-shot guard per session 🌙
   // controller for unifying card height
   static const double _kCardViewportHeight = 380; // try 360–420 if you want
+
+  int _correctCount = 0;
+  int _unsureCount = 0;
+  int _wrongCount = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -139,11 +144,11 @@ class _LearnScreenState extends State<LearnScreen> {
                                 enabled: !deck
                                     .isBusy, // new: prevent double-taps during async work 🌙
                                 onWrong: () =>
-                                    _answer(context, AnswerQuality.wrong),
+                                    _handleAnswer(AnswerQuality.wrong),
                                 onUnsure: () =>
-                                    _answer(context, AnswerQuality.unsure),
+                                    _handleAnswer(AnswerQuality.unsure),
                                 onCorrect: () =>
-                                    _answer(context, AnswerQuality.correct),
+                                    _handleAnswer(AnswerQuality.correct),
                               ),
                             // If your AnswerButtons does NOT have `enabled`, use this instead (requires its callbacks to be nullable):
                             // AnswerButtons(
@@ -159,10 +164,37 @@ class _LearnScreenState extends State<LearnScreen> {
     );
   }
 
-  void _answer(BuildContext context, AnswerQuality q) {
-    context.read<DeckState>().answer(q);
-    setState(() => isFront = true);
+  // void _answer(BuildContext context, AnswerQuality q) {
+  //   context.read<DeckState>().answer(q);
+  //   setState(() => isFront = true);
+  // }
+
+  void _handleAnswer(AnswerQuality quality) async {
+  // 1. Record the stat locally before moving to the next card
+  setState(() {
+    if (quality == AnswerQuality.correct) _correctCount++;
+    if (quality == AnswerQuality.unsure) _unsureCount++;
+    if (quality == AnswerQuality.wrong) _wrongCount++;
+  setState(() => isFront = true);
+  });
+
+  // 2. Submit the answer to DeckState
+  final deck = context.read<DeckState>();
+  await deck.answer(quality);
+
+  // 3. Check if we are finished
+  if (deck.current == null && mounted) {
+    Navigator.of(context).pushReplacement(
+      MaterialPageRoute(
+        builder: (_) => SummaryScreen(
+          correct: _correctCount,
+          unsure: _unsureCount,
+          wrong: _wrongCount,
+        ),
+      ),
+    );
   }
+}
 }
 
 class _EmptyState extends StatelessWidget {

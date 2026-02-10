@@ -22,7 +22,7 @@ Widget build(BuildContext context) {
         // 1. BACKGROUND IMAGE
         Positioned.fill(
           child: Image.asset(
-            'assets/images/main2.jpeg',
+            'assets/images/main2.JPEG',
             fit: BoxFit.cover,
           ),
         ),
@@ -72,7 +72,7 @@ Widget build(BuildContext context) {
 
                     // --- BUTTONS (Removed 'const' from parent to allow theme lookup) ---
                     _MenuCard(
-                      title: "Practice 20 HSK words",
+                      title: "HSK Practice",
                       subtitle: "Levels 1-3 • Random Selection",
                       icon: Icons.school_rounded,
                       enabled: !deck.isBusy, // New property
@@ -83,7 +83,7 @@ Widget build(BuildContext context) {
                     ),
                     const SizedBox(height: 16),
                     _MenuCard(
-                      title: "Practice Textbook Words",
+                      title: "Textbook Practice",
                       subtitle: "Random selection or by lesson",
                       icon: Icons.menu_book_rounded, // Fixed name
                       onTap: () async {
