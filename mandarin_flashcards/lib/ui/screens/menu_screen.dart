@@ -42,7 +42,19 @@ Widget build(BuildContext context) {
             ),
           ),
         ),
-
+        // 2.5 Language selector (top-right)
+        Positioned(
+          top: MediaQuery.of(context).padding.top + 10,
+          right: 16,
+          child: PopupMenuButton<String>(
+            icon: const Icon(Icons.language_rounded, color: Colors.white, size: 30),
+            onSelected: (String code) => opts.setLocale(code),
+            itemBuilder: (context) => [
+              const PopupMenuItem(value: 'en', child: Text("🇺🇸 English")),
+              const PopupMenuItem(value: 'es', child: Text("🇪🇸 Español")),
+            ],
+          ),
+        ),
         // 3. CONTENT
         SafeArea(
           child: Center(

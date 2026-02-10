@@ -9,6 +9,8 @@ import 'state/hive_keys.dart'; // kOptionsBox, kProgressBox
 
 import 'models/card_progress.dart';
 import 'utils/colors.dart'; // theming helpers
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -80,6 +82,9 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       themeMode: isDark ? ThemeMode.dark : ThemeMode.light,
+      locale: Locale(opts.localeCode), // Tells the app which .arb file to use
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
       home: const MainMenuScreen(),
     );
   }

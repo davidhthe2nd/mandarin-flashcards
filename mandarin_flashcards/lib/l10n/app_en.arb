@@ -1,0 +1,13 @@
+{
+  "@@locale": "en",
+  "appTitle": "Mandarin Progress",
+  "@appTitle": {
+    "description": "The title of the application"
+  },
+  "studyHsk": "HSK Study",
+  "studyTextbook": "Textbook",
+  "settings": "Settings",
+  "mastered": "Mastered",
+  "almostThere": "Almost there",
+  "needPractice": "Need practice"
+}
