@@ -95,29 +95,143 @@ abstract class AppLocalizations {
     Locale('es')
   ];
 
-  /// The title of the application
+  /// No description provided for @appTitle.
   ///
   /// In en, this message translates to:
-  /// **'Mandarin Progress'**
+  /// **'Mandarin Flashcards'**
   String get appTitle;
 
   /// No description provided for @studyHsk.
   ///
   /// In en, this message translates to:
-  /// **'HSK Study'**
+  /// **'HSK Practice'**
   String get studyHsk;
+
+  /// No description provided for @hskSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Levels 1-3 • Random Selection'**
+  String get hskSubtitle;
 
   /// No description provided for @studyTextbook.
   ///
   /// In en, this message translates to:
-  /// **'Textbook'**
+  /// **'Textbook Practice'**
   String get studyTextbook;
+
+  /// No description provided for @textbookSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Random selection or by lesson'**
+  String get textbookSubtitle;
 
   /// No description provided for @settings.
   ///
   /// In en, this message translates to:
   /// **'Settings'**
   String get settings;
+
+  /// No description provided for @settingsSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'App Preferences'**
+  String get settingsSubtitle;
+
+  /// No description provided for @optionsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Options'**
+  String get optionsTitle;
+
+  /// No description provided for @themePalette.
+  ///
+  /// In en, this message translates to:
+  /// **'Theme palette'**
+  String get themePalette;
+
+  /// No description provided for @hskLevels.
+  ///
+  /// In en, this message translates to:
+  /// **'HSK Levels'**
+  String get hskLevels;
+
+  /// No description provided for @textbookLesson.
+  ///
+  /// In en, this message translates to:
+  /// **'Textbook Lesson'**
+  String get textbookLesson;
+
+  /// No description provided for @allLessons.
+  ///
+  /// In en, this message translates to:
+  /// **'All Lessons'**
+  String get allLessons;
+
+  /// No description provided for @lesson.
+  ///
+  /// In en, this message translates to:
+  /// **'Lesson {number}'**
+  String lesson(int number);
+
+  /// No description provided for @studyMix.
+  ///
+  /// In en, this message translates to:
+  /// **'Study mix'**
+  String get studyMix;
+
+  /// No description provided for @toLearn.
+  ///
+  /// In en, this message translates to:
+  /// **'To-learn'**
+  String get toLearn;
+
+  /// No description provided for @forgotten.
+  ///
+  /// In en, this message translates to:
+  /// **'Forgotten'**
+  String get forgotten;
+
+  /// No description provided for @almost.
+  ///
+  /// In en, this message translates to:
+  /// **'Almost'**
+  String get almost;
+
+  /// No description provided for @clearFilters.
+  ///
+  /// In en, this message translates to:
+  /// **'Clear all filters'**
+  String get clearFilters;
+
+  /// No description provided for @comingSoon.
+  ///
+  /// In en, this message translates to:
+  /// **'Coming soon'**
+  String get comingSoon;
+
+  /// No description provided for @fontSize.
+  ///
+  /// In en, this message translates to:
+  /// **'Font size'**
+  String get fontSize;
+
+  /// No description provided for @fontSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Adjust character and pinyin size'**
+  String get fontSubtitle;
+
+  /// No description provided for @showPinyin.
+  ///
+  /// In en, this message translates to:
+  /// **'Show pinyin'**
+  String get showPinyin;
+
+  /// No description provided for @summaryWordsReviewed.
+  ///
+  /// In en, this message translates to:
+  /// **'You reviewed {total} words.'**
+  String summaryWordsReviewed(int total);
 
   /// No description provided for @mastered.
   ///
@@ -136,6 +250,48 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Need practice'**
   String get needPractice;
+
+  /// No description provided for @studyMore.
+  ///
+  /// In en, this message translates to:
+  /// **'Study 20 More'**
+  String get studyMore;
+
+  /// No description provided for @backToMenu.
+  ///
+  /// In en, this message translates to:
+  /// **'Back to Main Menu'**
+  String get backToMenu;
+
+  /// No description provided for @flipCard.
+  ///
+  /// In en, this message translates to:
+  /// **'Flip card'**
+  String get flipCard;
+
+  /// No description provided for @iForgot.
+  ///
+  /// In en, this message translates to:
+  /// **'I forgot'**
+  String get iForgot;
+
+  /// No description provided for @iGotIt.
+  ///
+  /// In en, this message translates to:
+  /// **'I got it'**
+  String get iGotIt;
+
+  /// No description provided for @learnTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Learn'**
+  String get learnTitle;
+
+  /// No description provided for @studyMixTotal.
+  ///
+  /// In en, this message translates to:
+  /// **'Total: {percentage}%'**
+  String studyMixTotal(int percentage);
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

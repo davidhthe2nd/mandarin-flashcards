@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import '../../state/options_state.dart';
 import '../../utils/colors.dart'; // theming helpers
 import "../../state/deck_state.dart"; // new: to update mix 🌙
+import "../../l10n/app_localizations.dart";
 
 class OptionsScreen extends StatelessWidget {
   const OptionsScreen({super.key});
@@ -13,9 +14,11 @@ class OptionsScreen extends StatelessWidget {
     final opts = context.watch<OptionsState>();
     final deck = context.read<DeckState>();
     final t = Theme.of(context).textTheme;
+    final l10n = AppLocalizations.of(context)!;
+    final totalPercent = ((opts.mixToLearn + opts.mixForgotten + opts.mixAlmost) * 100).round();
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Options')),
+      appBar: AppBar(title: Text(l10n.optionsTitle)),
       body: ListView(
         padding: const EdgeInsets.all(16),
         children: [
@@ -41,7 +44,7 @@ class OptionsScreen extends StatelessWidget {
           //   onChanged: (v) => context.read<OptionsState>().setDarkMode(v),
           // ),
           ListTile(
-            title: const Text('Theme palette'),
+            title: Text(l10n.themePalette),
             subtitle: Text(TestPalettes.names[opts.activePaletteIndex]),
             trailing: DropdownButton<int>(
               value: opts.activePaletteIndex,
@@ -79,7 +82,7 @@ class OptionsScreen extends StatelessWidget {
           ),
           const SizedBox(height: 12),
           const Divider(),
-          Text("HSK Levels", style: t.titleMedium),
+          Text(l10n.hskLevels, style: t.titleMedium),
           const SizedBox(height: 12),
           Wrap(
           spacing: 8,      // Horizontal space between chips
@@ -104,10 +107,10 @@ class OptionsScreen extends StatelessWidget {
 
           DropdownButtonFormField<int>(
             value: opts.selectedLesson,
-            decoration: const InputDecoration(labelText: "Textbook Lesson"),
+            decoration: InputDecoration(labelText: l10n.textbookLesson),
             items: [
-              const DropdownMenuItem(value: 0, child: Text("All Lessons")),
-              ...List.generate(10, (i) => DropdownMenuItem(value: i + 1, child: Text("Lesson ${i + 1}"))),
+              DropdownMenuItem(value: 0, child: Text(l10n.allLessons)),
+              ...List.generate(10, (i) => DropdownMenuItem(value: i + 1, child: Text(l10n.lesson(i + 1)))),
             ],
             onChanged: (val) => opts.setSelectedLesson(val ?? 0),
           ),
@@ -117,13 +120,13 @@ class OptionsScreen extends StatelessWidget {
 
           // Title
           const SizedBox(height: 16),
-          Text('Study mix', style: Theme.of(context).textTheme.titleMedium),
+          Text(l10n.studyMix, style: Theme.of(context).textTheme.titleMedium),
           const SizedBox(height: 8),
 
           // To-learn
           Row(
             children: [
-              const SizedBox(width: 88, child: Text('To-learn')),
+              SizedBox(width: 88, child: Text(l10n.toLearn)),
               Expanded(
                 child: Slider(
                   value: (opts.mixToLearn * 100),
@@ -148,7 +151,7 @@ class OptionsScreen extends StatelessWidget {
           // Forgotten
           Row(
             children: [
-              const SizedBox(width: 88, child: Text('Forgotten')),
+              SizedBox(width: 88, child: Text(l10n.forgotten)),
               Expanded(
                 child: Slider(
                   value: (opts.mixForgotten * 100),
@@ -173,7 +176,7 @@ class OptionsScreen extends StatelessWidget {
           // Almost
           Row(
             children: [
-              const SizedBox(width: 88, child: Text('Almost')),
+              SizedBox(width: 88, child: Text(l10n.almost)),
               Expanded(
                 child: Slider(
                   value: (opts.mixAlmost * 100),
@@ -199,7 +202,7 @@ class OptionsScreen extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(top: 4),
             child: Text(
-              'Total: ${((opts.mixToLearn + opts.mixForgotten + opts.mixAlmost) * 100).round()}%',
+              l10n.studyMixTotal(totalPercent),
               style: Theme.of(context).textTheme.bodySmall,
             ),
           ),
@@ -209,19 +212,19 @@ class OptionsScreen extends StatelessWidget {
           TextButton.icon(
             onPressed: () => opts.clearAllFilters(),
             icon: const Icon(Icons.filter_alt_off_rounded),
-            label: const Text("Clear all filters"),
+            label: Text(l10n.clearFilters),
             style: TextButton.styleFrom(foregroundColor: Colors.redAccent),
           ),
           
           const SizedBox(height: 24),
-          const Text(
-            'Coming soon',
+          Text(
+            l10n.comingSoon,
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
           const SizedBox(height: 8),
-          const ListTile(
-            title: Text('Font size'),
-            subtitle: Text('Adjust character and pinyin size'),
+          ListTile(
+            title: Text(l10n.fontSize),
+            subtitle: Text(l10n.fontSubtitle),
             enabled: false,
           ),
 

@@ -9,7 +9,7 @@ import 'state/hive_keys.dart'; // kOptionsBox, kProgressBox
 
 import 'models/card_progress.dart';
 import 'utils/colors.dart'; // theming helpers
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'l10n/app_localizations.dart';
 
 
 Future<void> main() async {

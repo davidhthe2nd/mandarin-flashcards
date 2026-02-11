@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
 import '../../models/flashcard.dart';
 import "../../services/audio_service.dart";
+import "../../state/options_state.dart";
 
 class FlashcardFace extends StatelessWidget {
   final Flashcard card;
@@ -22,7 +25,7 @@ class FlashcardFace extends StatelessWidget {
     return IconButton(
       visualDensity: VisualDensity.compact,
       icon: Icon(
-        Icons.volume_up_rounded, // Use rounded icons for a softer look
+        Icons.volume_up_rounded,
         size: size, 
         color: color ?? Colors.blueGrey.withOpacity(0.5)
       ),
@@ -32,18 +35,27 @@ class FlashcardFace extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Watch OptionsState to react to language (localeCode) changes
+    final opts = context.watch<OptionsState>();
     final t = Theme.of(context).textTheme;
     final cs = Theme.of(context).colorScheme;
 
+    // Determine the main text and example translation based on current locale
+    final mainText = isFront 
+        ? card.hanzi 
+        : card.getTranslation(opts.localeCode);
+
+    final exampleTranslation = card.getTranslation(opts.localeCode);
+
     // Custom styles for better hierarchy
     final pinyinStyle = t.headlineSmall?.copyWith(
-      color: cs.primary.withOpacity(0.7), // Subtle color for pinyin
+      color: cs.primary.withOpacity(0.7),
       letterSpacing: 1.2,
     );
 
     final exampleStyle = (t.bodyLarge ?? t.bodyMedium!).copyWith(
       fontSize: ((t.bodyLarge ?? t.bodyMedium!).fontSize ?? 16) * exampleScale,
-      height: 1.4, // Increased line height for readability
+      height: 1.4,
       color: cs.onSurface.withOpacity(0.9),
     );
 
@@ -56,7 +68,7 @@ class FlashcardFace extends StatelessWidget {
       onTap: onFlip,
       borderRadius: BorderRadius.circular(24),
       child: Card(
-        elevation: 2, // Softer shadow
+        elevation: 2,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
         margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
         child: Padding(
@@ -64,14 +76,14 @@ class FlashcardFace extends StatelessWidget {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              // 1. MAIN SECTION
+              // 1. MAIN SECTION (Hanzi or Translation)
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const SizedBox(width: 40), // Balanced offset for the icon
+                  const SizedBox(width: 40), 
                   Flexible(
                     child: Text(
-                      isFront ? card.hanzi : card.esES,
+                      mainText,
                       style: t.displayMedium?.copyWith(
                         fontWeight: FontWeight.bold,
                         color: cs.onSurface,
@@ -85,11 +97,10 @@ class FlashcardFace extends StatelessWidget {
               
               if (isFront && showPinyin)
                 Padding(
-                  padding: const EdgeInsets.only(top: 4), // Tighter to Hanzi
+                  padding: const EdgeInsets.only(top: 4),
                   child: Text(card.pinyin, style: pinyinStyle),
                 ),
 
-              // Spacer instead of Divider
               const SizedBox(height: 40),
 
               // 2. EXAMPLES SECTION
@@ -120,11 +131,12 @@ class FlashcardFace extends StatelessWidget {
                     ),
                   ),
 
-                if (!isFront && card.exampleES.isNotEmpty)
+                // Show localized example translation on the back if it exists
+                if (!isFront && exampleTranslation.isNotEmpty)
                   Padding(
                     padding: const EdgeInsets.only(top: 12),
                     child: Text(
-                      card.exampleES,
+                      exampleTranslation,
                       style: exampleStyle.copyWith(
                         color: cs.secondary.withOpacity(0.8), 
                         fontSize: exampleStyle.fontSize! * 0.85,

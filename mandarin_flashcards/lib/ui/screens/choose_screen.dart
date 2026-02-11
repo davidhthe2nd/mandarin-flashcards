@@ -30,8 +30,8 @@ class ChooseScreen extends StatelessWidget {
     }
 
     final Flashcard card = choose.current!;
-    final front = card.frontText(invertPair: opts.invertPair);
-    final back = card.backText(invertPair: opts.invertPair);
+    final front = card.frontText(invertPair: opts.invertPair, localeCode: opts.localeCode,);
+    final back = card.backText(invertPair: opts.invertPair, localeCode: opts.localeCode,);
     return Scaffold(
       appBar: AppBar(title: Text('Choose (${choose.remaining})')),
       body: Padding(

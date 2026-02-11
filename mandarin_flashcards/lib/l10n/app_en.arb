@@ -1,13 +1,49 @@
 {
   "@@locale": "en",
-  "appTitle": "Mandarin Progress",
-  "@appTitle": {
-    "description": "The title of the application"
-  },
-  "studyHsk": "HSK Study",
-  "studyTextbook": "Textbook",
+  "appTitle": "Mandarin Flashcards",
+  "studyHsk": "HSK Practice",
+  "hskSubtitle": "Levels 1-3 • Random Selection",
+  "studyTextbook": "Textbook Practice",
+  "textbookSubtitle": "Random selection or by lesson",
   "settings": "Settings",
+  "settingsSubtitle": "App Preferences",
+  "optionsTitle": "Options",
+  "themePalette": "Theme palette",
+  "hskLevels": "HSK Levels",
+  "textbookLesson": "Textbook Lesson",
+  "allLessons": "All Lessons",
+  "lesson": "Lesson {number}",
+  "@lesson": {
+    "placeholders": { "number": { "type": "int" } }
+  },
+  "studyMix": "Study mix",
+  "toLearn": "To-learn",
+  "forgotten": "Forgotten",
+  "almost": "Almost",
+  "clearFilters": "Clear all filters",
+  "comingSoon": "Coming soon",
+  "fontSize": "Font size",
+  "fontSubtitle": "Adjust character and pinyin size",
+  "showPinyin": "Show pinyin",
+  "summaryWordsReviewed": "You reviewed {total} words.",
+  "@summaryWordsReviewed": {
+    "placeholders": { "total": { "type": "int" } }
+  },
   "mastered": "Mastered",
   "almostThere": "Almost there",
-  "needPractice": "Need practice"
+  "needPractice": "Need practice",
+  "studyMore": "Study 20 More",
+  "backToMenu": "Back to Main Menu",
+  "flipCard": "Flip card",
+  "iForgot": "I forgot",
+  "iGotIt": "I got it",
+  "learnTitle": "Learn",
+  "studyMixTotal": "Total: {percentage}%",
+  "@studyMixTotal": {
+    "placeholders": {
+      "percentage": {
+        "type": "int"
+      }
+    }
+  }
 }

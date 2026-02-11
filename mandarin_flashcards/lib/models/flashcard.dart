@@ -68,15 +68,35 @@ class Flashcard {
     );
   }
 
-  String get translation => esES.isNotEmpty ? esES : enUS;
+  /// UPDATED: Translation now respects the selected language
+  String getTranslation(String localeCode) {
+  if (localeCode == 'es') {
+    return esES.isNotEmpty ? esES : ''; 
+  }
+  if (localeCode == 'en') {
+    return enUS.isNotEmpty ? enUS : ''; 
+  }
+  // English users usually don't need a translation of the example sentence
+  return ''; 
+}
 
-  String frontText({required bool invertPair}) {
+  String getExampleTranslation(String localeCode) {
+  if (localeCode == 'es') {
+    return exampleES.isNotEmpty ? esES : ''; 
+  }
+  // English users usually don't need a translation of the example sentence
+  return ''; 
+}
+
+  /// UPDATED: Accepts localeCode to show correct text on front
+  String frontText({required bool invertPair, required String localeCode}) {
     if (!invertPair) return hanzi;
-    return translation;
+    return getTranslation(localeCode);
   }
 
-  String backText({required bool invertPair}) {
-    if (!invertPair) return translation;
-    return hanzi;
-  }
+  /// UPDATED: Accepts localeCode to show correct text on back
+  String backText({required bool invertPair, required String localeCode}) {
+  if (!invertPair) return getTranslation(localeCode);
+  return hanzi;
+}
 }

@@ -6,6 +6,7 @@ import '../../state/deck_state.dart';
 import '../screens/learn_screen.dart'; 
 import '../../state/options_state.dart';
 import '../../models/enums.dart';
+import "../../l10n/app_localizations.dart"; 
 
 class MainMenuScreen extends StatelessWidget {
   const MainMenuScreen({super.key});
@@ -13,7 +14,8 @@ class MainMenuScreen extends StatelessWidget {
   @override
 Widget build(BuildContext context) {
   final deck = context.watch<DeckState>();
-  final opts = context.read<OptionsState>();
+  final opts = context.watch<OptionsState>();
+  final l10n = AppLocalizations.of(context)!;
 
   return Scaffold(
     extendBodyBehindAppBar: true, 
@@ -47,7 +49,11 @@ Widget build(BuildContext context) {
           top: MediaQuery.of(context).padding.top + 10,
           right: 16,
           child: PopupMenuButton<String>(
-            icon: const Icon(Icons.language_rounded, color: Colors.white, size: 30),
+            // NEW: Dynamic Icon based on selected locale
+            icon: Text(
+              opts.localeCode == 'es' ? "🇪🇸" : "🇺🇸",
+              style: const TextStyle(fontSize: 28),
+            ),
             onSelected: (String code) => opts.setLocale(code),
             itemBuilder: (context) => [
               const PopupMenuItem(value: 'en', child: Text("🇺🇸 English")),
@@ -84,8 +90,8 @@ Widget build(BuildContext context) {
 
                     // --- BUTTONS (Removed 'const' from parent to allow theme lookup) ---
                     _MenuCard(
-                      title: "HSK Practice",
-                      subtitle: "Levels 1-3 • Random Selection",
+                      title: l10n.studyHsk,
+                      subtitle: l10n.hskSubtitle,
                       icon: Icons.school_rounded,
                       enabled: !deck.isBusy, // New property
                       onTap: () async {
@@ -95,8 +101,8 @@ Widget build(BuildContext context) {
                     ),
                     const SizedBox(height: 16),
                     _MenuCard(
-                      title: "Textbook Practice",
-                      subtitle: "Random selection or by lesson",
+                      title: l10n.studyTextbook,
+                      subtitle: l10n.textbookSubtitle,
                       icon: Icons.menu_book_rounded, // Fixed name
                       onTap: () async {
                         // Always reload source to apply current filters before entering LearnScreen
@@ -106,8 +112,8 @@ Widget build(BuildContext context) {
                     ),
                     const SizedBox(height: 16),
                     _MenuCard(
-                      title: "Settings",
-                      subtitle: "App Preferences",
+                      title: l10n.settings,
+                      subtitle: l10n.settingsSubtitle,
                       icon: Icons.settings_rounded,
                       onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const OptionsScreen())),
                     ),
