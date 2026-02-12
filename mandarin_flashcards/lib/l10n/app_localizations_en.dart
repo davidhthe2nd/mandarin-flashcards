@@ -15,7 +15,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get studyHsk => 'HSK Practice';
 
   @override
-  String get hskSubtitle => 'Levels 1-3 • Random Selection';
+  String get hskSubtitle => 'Select the levels in Options';
 
   @override
   String get studyTextbook => 'Textbook Practice';

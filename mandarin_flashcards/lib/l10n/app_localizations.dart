@@ -110,7 +110,7 @@ abstract class AppLocalizations {
   /// No description provided for @hskSubtitle.
   ///
   /// In en, this message translates to:
-  /// **'Levels 1-3 • Random Selection'**
+  /// **'Select the levels in Options'**
   String get hskSubtitle;
 
   /// No description provided for @studyTextbook.

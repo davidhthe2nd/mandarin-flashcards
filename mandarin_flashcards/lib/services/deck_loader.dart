@@ -18,7 +18,7 @@ class DeckLoader {
       } else {
         return _fromJson(raw);
       }
-    } catch (e, st) {
+    } catch (e) {
       debugPrint('[DeckLoader] Failed to load "$assetPath": $e');
       return Deck([]);
     }
