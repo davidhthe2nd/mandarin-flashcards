@@ -212,27 +212,23 @@ class DeckState extends ChangeNotifier {
   try {
     final deck = await DeckLoader.loadFromAsset(assetPath);
     _all = deck.cards; 
-    
+
     if (source == DeckSource.hsk) {
-      // NEW: If no levels are selected, include all 1-6
-      final activeLevels = opts.hskLevels.isEmpty 
-          ? {1, 2, 3, 4, 5, 6} 
-          : opts.hskLevels;
+      final activeLevels = opts.hskLevels;
+      // DEBUG: Verify what levels are actually being used
+      _t("Filtering HSK levels: $activeLevels"); 
 
+      // Ensure we are strictly filtering
       _pool = _all.where((c) => activeLevels.contains(c.hsk)).toList();
-    } else if (source == DeckSource.textbook) {
-      _pool = _all.where((c) {
-        if (opts.selectedLesson == 0) return true;
-        return c.lesson == opts.selectedLesson;
-      }).toList();
-    } else {
-      _pool = _all;
-    }
-
-    // Safety check: if pool is still empty, fallback to all cards
-    if (_pool.isEmpty) _pool = _all;
+    } 
+    // ... rest of the textbook logic ...
 
     _t('Filtered pool size: ${_pool.length}');
+    
+    // IMPORTANT: Reset the index and clear the old order before rebuilding
+    _idx = 0;
+    _order.clear();
+    
     rebuildDueQueueWeighted(target: opts.dailyTarget);
   } finally {
     _setBusy(false);
@@ -437,6 +433,16 @@ void applyCombinedFilter({Set<int>? levels, String? specificTag}) {
   ).toList();
   
   rebuildDueQueueWeighted();
+  notifyListeners();
+}
+
+Future<void> clearAllProgress() async {
+  // Clears the Hive box and resets the queue
+  await _progressBox.clear(); 
+  _idx = 0;
+  _current = null;
+  _order.clear();
+  _t("All card progress has been wiped from storage.");
   notifyListeners();
 }
 }

@@ -5,6 +5,7 @@ import '../../state/options_state.dart';
 import '../../utils/colors.dart'; // theming helpers
 import "../../state/deck_state.dart"; // new: to update mix 🌙
 import "../../l10n/app_localizations.dart";
+import "../widgets/confirm_dialog.dart"; // new: for reset confirmation dialog 🌙
 
 class OptionsScreen extends StatelessWidget {
   const OptionsScreen({super.key});
@@ -97,22 +98,17 @@ class OptionsScreen extends StatelessWidget {
               showCheckmark: false, // Prevents width change/jumping
               // Optional: Explicitly set padding to keep them consistent
               padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-              onSelected: (selected) => opts.toggleHSK(level, selected),
+              onSelected: (selected) async {
+                await opts.toggleHSK(level, selected);
+
+                final deck = context.read<DeckState>();
+                deck.applyHSKAndRequeue(
+                  opts.hskLevels,
+                  target: opts.dailyTarget,
+                );
+              },
               );
             }),
-          ),
-
-          const SizedBox(height: 12),
-          const Divider(),
-
-          DropdownButtonFormField<int>(
-            value: opts.selectedLesson,
-            decoration: InputDecoration(labelText: l10n.textbookLesson),
-            items: [
-              DropdownMenuItem(value: 0, child: Text(l10n.allLessons)),
-              ...List.generate(10, (i) => DropdownMenuItem(value: i + 1, child: Text(l10n.lesson(i + 1)))),
-            ],
-            onChanged: (val) => opts.setSelectedLesson(val ?? 0),
           ),
 
           const SizedBox(height: 6),
@@ -229,6 +225,47 @@ class OptionsScreen extends StatelessWidget {
           ),
 
           const Divider(),
+
+          const SizedBox(height: 12),
+          
+
+          if (opts.showBetaFeatures) ...[
+            const Divider(),
+            DropdownButtonFormField<int>(
+            value: opts.selectedLesson,
+            decoration: InputDecoration(labelText: l10n.textbookLesson),
+            items: [
+              DropdownMenuItem(value: 0, child: Text(l10n.allLessons)),
+              ...List.generate(10, (i) => DropdownMenuItem(value: i + 1, child: Text(l10n.lesson(i + 1)))),
+              ],
+              onChanged: (val) => opts.setSelectedLesson(val ?? 0),
+              ),
+             const Divider(),
+             Padding(
+              padding: const EdgeInsets.symmetric(vertical: 16),
+              child: OutlinedButton.icon(
+                style: OutlinedButton.styleFrom(foregroundColor: Colors.red),
+                onPressed: () async {
+                  final confirmed = await showConfirmDialog(
+                    context: context,
+                    title: "Clear all data?",
+                    message: "This will reset all your word mastery. This cannot be undone.",
+                    confirmText: "Reset",
+                  );
+
+                  if (confirmed == true && context.mounted) {
+                    await context.read<DeckState>().clearAllProgress();
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(content: Text("All progress cleared")),
+                    );
+                  }
+                },
+                icon: const Icon(Icons.delete_forever_rounded),
+                label: const Text("Reset App Progress"),
+              ),
+            ),
+
+          ],
         ],
       ),
     );

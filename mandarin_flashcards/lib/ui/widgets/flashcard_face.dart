@@ -45,7 +45,7 @@ class FlashcardFace extends StatelessWidget {
         ? card.hanzi 
         : card.getTranslation(opts.localeCode);
 
-    final exampleTranslation = card.getTranslation(opts.localeCode);
+    final exampleTranslation = card.getExampleTranslation(opts.localeCode);
 
     // Custom styles for better hierarchy
     final pinyinStyle = t.headlineSmall?.copyWith(

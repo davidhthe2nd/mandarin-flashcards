@@ -42,33 +42,36 @@ class OptionsState extends ChangeNotifier {
   String _localeCode = 'en'; // Default to English
   String get localeCode => _localeCode;
 
+  //Beta features tracking
+  bool _showBetaFeatures = true;
+  bool get showBetaFeatures => _showBetaFeatures;
+
   /// Initialize the box and load options.
   Future<void> init() async {
-    _box = await Hive.openBox(_optionsBoxName);
-    await _read();
-    _darkMode = _box.get('darkMode', defaultValue: false) as bool;
-    _activePaletteIndex = _box.get(kActivePaletteIndex, defaultValue: 0) as int;
+  // 1. OPEN the box first. Nothing else can happen until this is done.
+  _box = await Hive.openBox(_optionsBoxName);
 
-    final savedLevels = (_box.get(kHSKLevelsKey) as List?)?.cast<int>() ?? [1];
-    _hskLevels
-      ..clear()
-      ..addAll(savedLevels);
+  // 2. NOW you can safely read from the box.
+  _showBetaFeatures = _box.get('showBetaFeatures', defaultValue: false);
+  _darkMode = _box.get('darkMode', defaultValue: false) as bool;
+  _activePaletteIndex = _box.get(kActivePaletteIndex, defaultValue: 0) as int;
+  _localeCode = _box.get('localeCode', defaultValue: 'en') as String;
 
-    // new 🌙 – read the mix (fallback to defaults)
-    _mixToLearn = (_box.get(kMixToLearn, defaultValue: _mixToLearn) as num)
-        .toDouble();
-    _mixForgotten =
-        (_box.get(kMixForgotten, defaultValue: _mixForgotten) as num)
-            .toDouble();
-    _mixAlmost = (_box.get(kMixAlmost, defaultValue: _mixAlmost) as num)
-        .toDouble();
-    _normalizeMix(); // keep sums ≈ 1.0 // new 🌙
+  // 3. Continue with other initialization
+  await _read();
 
-    // (Loc) Load the saved preference
-    _localeCode = _box.get('localeCode', defaultValue: 'en') as String;
+  final savedLevels = (_box.get(kHSKLevelsKey) as List?)?.cast<int>() ?? [1];
+  _hskLevels
+    ..clear()
+    ..addAll(savedLevels);
 
-    notifyListeners();
-  }
+  _mixToLearn = (_box.get(kMixToLearn, defaultValue: _mixToLearn) as num).toDouble();
+  _mixForgotten = (_box.get(kMixForgotten, defaultValue: _mixForgotten) as num).toDouble();
+  _mixAlmost = (_box.get(kMixAlmost, defaultValue: _mixAlmost) as num).toDouble();
+  _normalizeMix();
+
+  notifyListeners();
+}
 
   Future<void> _read() async {
     final raw = _box.get(kOptionsPrefsKey);
@@ -201,6 +204,12 @@ Future<void> setLocale(String code) async {
   _localeCode = code;
   await _box.put('localeCode', code);
   notifyListeners();
+}
+
+Future<void> toggleBetaFeatures(bool value) async {
+_showBetaFeatures = value;
+await _box.put('showBetaFeatures', value);
+notifyListeners();
 }
 
 }
