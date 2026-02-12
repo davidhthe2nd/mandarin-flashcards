@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import "../../l10n/app_localizations.dart"; // for localized button text
 
 typedef AnswerCallback = void Function();
 
@@ -19,6 +20,7 @@ class AnswerButtons extends StatelessWidget {
   @override
 Widget build(BuildContext context) {
   final cs = Theme.of(context).colorScheme;
+  final l10n = AppLocalizations.of(context)!;
 
   // Helper to create a subtle tonal style
   ButtonStyle subtleStyle(Color baseColor) {
@@ -39,21 +41,21 @@ Widget build(BuildContext context) {
       FilledButton(
         onPressed: enabled ? onWrong : null,
         style: subtleStyle(Colors.redAccent.shade200),
-        child: const Text('I forgot'),
+        child: Text(l10n.iForgot),
       ),
 
       // 2. ALMOST (Subtle Amber/Sand)
       FilledButton(
         onPressed: enabled ? onUnsure : null,
         style: subtleStyle(Colors.orangeAccent.shade100),
-        child: const Text('Almost'),
+        child: Text(l10n.almostThere),
       ),
 
       // 3. GOT IT (Subtle Mint/Green)
       FilledButton(
         onPressed: enabled ? onCorrect : null,
         style: subtleStyle(Colors.tealAccent.shade700),
-        child: const Text('I got it'),
+        child: Text(l10n.iGotIt),
       ),
     ],
   );

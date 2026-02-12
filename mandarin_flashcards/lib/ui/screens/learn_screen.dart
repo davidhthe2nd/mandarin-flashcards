@@ -11,6 +11,7 @@ import '../widgets/flashcard_face.dart';
 import '../widgets/answer_buttons.dart';
 import '../widgets/daily_progress_header.dart';
 import '../screens/summary_screen.dart';
+import "../../l10n/app_localizations.dart"; // new: for localized strings in empty state 🌙
 
 class LearnScreen extends StatefulWidget {
   const LearnScreen({super.key});
@@ -34,6 +35,7 @@ class _LearnScreenState extends State<LearnScreen> {
     final deck = context.watch<DeckState>();
     final opts = context.watch<OptionsState>();
     final Flashcard? card = deck.current;
+    final l10n = AppLocalizations.of(context)!;
 
     // new: fire a one-time celebration when daily goal is reached 🌙
     if (!_celebratedToday &&
@@ -56,12 +58,12 @@ class _LearnScreenState extends State<LearnScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Learn'),
+        title: Text(l10n.learnTitle), // new: localized title 🌙
         actions: [
           // new: quick toggles so you can switch study mode on the fly 🌙
           Row(
             children: [
-              const Text('Show pinyin'),
+              Text(l10n.showPinyin),
               Switch(
                 value: opts.showPinyin,
                 onChanged: (v) => context.read<OptionsState>().toggleShowPinyin(
@@ -136,7 +138,7 @@ class _LearnScreenState extends State<LearnScreen> {
                               FilledButton(
                                 onPressed: () =>
                                     setState(() => isFront = false),
-                                child: const Text('Flip card'),
+                                child: Text(l10n.flipCard),
                               )
                             else
                               // Prefer this if your AnswerButtons supports an `enabled` flag:
@@ -202,6 +204,7 @@ class _EmptyState extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     final deck = context
         .watch<
           DeckState
@@ -220,7 +223,7 @@ class _EmptyState extends StatelessWidget {
         const SizedBox(height: 8),
         TextButton(
           onPressed: () => Navigator.of(context).maybePop(),
-          child: const Text('Back to menu'),
+          child: Text(l10n.backToMenu),
         ),
       ],
     );
@@ -274,9 +277,10 @@ class _BackFace extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final t = Theme.of(context).textTheme;
+    final opts = context.watch<OptionsState>();
 
     // Back face = meaning-first. If you later support other locales, swap 'esES'.
-    final es = card.esES ?? '';
+    final translation = card.getTranslation(opts.localeCode);
 
     // When invert==true your LearnScreen already swaps which side is shown first.
     // Here we always render the "meaning" layout for the back.
@@ -286,7 +290,7 @@ class _BackFace extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           // 1) Translation as the main title
-          Text(es, style: t.headlineMedium, textAlign: TextAlign.center),
+          Text(translation, style: t.headlineMedium, textAlign: TextAlign.center),
           const SizedBox(height: 16),
 
           // 2) Big Hanzi with optional pinyin to the right (single occurrence)

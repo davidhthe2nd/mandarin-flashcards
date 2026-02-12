@@ -38,6 +38,10 @@ class OptionsState extends ChangeNotifier {
 
   double exampleScale = 1.15; // new 🌙 fallback if you don’t persist it yet
 
+  //Localization
+  String _localeCode = 'en'; // Default to English
+  String get localeCode => _localeCode;
+
   /// Initialize the box and load options.
   Future<void> init() async {
     _box = await Hive.openBox(_optionsBoxName);
@@ -59,6 +63,9 @@ class OptionsState extends ChangeNotifier {
     _mixAlmost = (_box.get(kMixAlmost, defaultValue: _mixAlmost) as num)
         .toDouble();
     _normalizeMix(); // keep sums ≈ 1.0 // new 🌙
+
+    // (Loc) Load the saved preference
+    _localeCode = _box.get('localeCode', defaultValue: 'en') as String;
 
     notifyListeners();
   }
@@ -187,6 +194,12 @@ Future<void> clearAllFilters() async {
   await _box.put(kHSKLevelsKey, [1]);
   await _box.put('selectedLesson', 0);
   
+  notifyListeners();
+}
+
+Future<void> setLocale(String code) async {
+  _localeCode = code;
+  await _box.put('localeCode', code);
   notifyListeners();
 }
 

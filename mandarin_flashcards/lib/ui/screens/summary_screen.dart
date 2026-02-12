@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import '../../state/deck_state.dart';
 import '../../state/options_state.dart';
 import '../screens/learn_screen.dart'; // for navigation back to learning
+import "../../l10n/app_localizations.dart"; // for localized strings
 
 class SummaryScreen extends StatelessWidget {
   final int correct;
@@ -20,6 +21,7 @@ class SummaryScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final t = Theme.of(context).textTheme;
     final total = correct + unsure + wrong;
+    final l10n = AppLocalizations.of(context)!;
 
     return Scaffold(
       body: Center(
@@ -36,15 +38,15 @@ class SummaryScreen extends StatelessWidget {
               const SizedBox(height: 24),
               // Text("GOOD JOB!", style: t.displaySmall?.copyWith(fontWeight: FontWeight.w900)),
               const SizedBox(height: 8),
-              Text("You reviewed $total words.", style: t.bodyLarge),
+              Text(l10n.summaryWordsReviewed(total), style: t.bodyLarge),
               const SizedBox(height: 40),
               
               // Stats Table
-              _StatRow(label: "Mastered", count: correct, color: Colors.green),
+              _StatRow(label: l10n.mastered, count: correct, color: Colors.green),
               const Divider(),
-              _StatRow(label: "Almost there", count: unsure, color: Colors.orange),
+              _StatRow(label: l10n.almostThere, count: unsure, color: Colors.orange),
               const Divider(),
-              _StatRow(label: "Need practice", count: wrong, color: Colors.red),
+              _StatRow(label: l10n.needPractice, count: wrong, color: Colors.red),
               
               const SizedBox(height: 60),
 
@@ -63,7 +65,7 @@ class SummaryScreen extends StatelessWidget {
                   }
                 },
                 icon: const Icon(Icons.refresh_rounded),
-                label: const Text("Study 20 More"),
+                label: Text(l10n.studyMore),
                 style: FilledButton.styleFrom(
                   backgroundColor: Theme.of(context).colorScheme.secondary,
                   minimumSize: const Size(double.infinity, 56),
@@ -74,7 +76,7 @@ class SummaryScreen extends StatelessWidget {
               FilledButton.icon(
                 onPressed: () => Navigator.of(context).popUntil((route) => route.isFirst),
                 icon: const Icon(Icons.home_rounded),
-                label: const Text("Back to Main Menu"),
+                label: Text(l10n.backToMenu),
                 style: FilledButton.styleFrom(
                   minimumSize: const Size(double.infinity, 56),
                 ),

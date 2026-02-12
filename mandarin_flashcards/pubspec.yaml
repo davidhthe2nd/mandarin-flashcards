@@ -30,6 +30,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -41,6 +42,9 @@ dependencies:
   hive_flutter: ^1.1.0
   flutter_localizations:
     sdk: flutter
+  intl: 0.20.2 # Add this for date/number formatting
+
+
 
 
 
@@ -62,11 +66,12 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
-
+  generate: true # This is the "magic" switch for l10n
+  uses-material-design: true
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
-  uses-material-design: true
+  
 
   # To add assets to your application, add an assets section, like this:
   # assets:
