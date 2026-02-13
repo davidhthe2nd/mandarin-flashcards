@@ -45,5 +45,25 @@
         "type": "int"
       }
     }
-  }
+  },
+  "grammarTitle": "Grammar Library",
+  "tonesTitle": "Mandarin Tones",
+  "tonesIntro": "Mandarin Chinese is a tonal language. The meaning of a word changes depending on the pitch contour used.",
+  "tone1Name": "1st: High Flat",
+  "tone2Name": "2nd: Rising",
+  "tone3Name": "3rd: Dipping",
+  "tone4Name": "4th: Falling",
+  "toneSandhiTitle": "Tone Sandhi",
+  "toneSandhiDesc": "When two 3rd tones appear together, the first one changes to a 2nd tone. For example: Nǐ + hǎo = Níhǎo.",
+  "grammarTitle": "Grammar Library",
+  "examplesLabel": "Examples",
+  "tonesTitle": "Mandarin Tones",
+  "tonesIntro": "Mandarin is a tonal language. The meaning changes based on your pitch.",
+  "tone1Name": "1st: High Flat",
+  "tone2Name": "2nd: Rising",
+  "tone3Name": "3rd: Dipping",
+  "tone4Name": "4th: Falling",
+  "toneSandhiTitle": "Tone Sandhi",
+  "toneSandhiDesc": "When two 3rd tones follow each other, the first becomes a 2nd tone (e.g., Nǐhǎo).",
+  "examplesLabel": "Examples"
 }

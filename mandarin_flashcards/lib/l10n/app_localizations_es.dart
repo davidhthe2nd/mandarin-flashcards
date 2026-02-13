@@ -112,4 +112,34 @@ class AppLocalizationsEs extends AppLocalizations {
   String studyMixTotal(int percentage) {
     return 'Total: $percentage%';
   }
+
+  @override
+  String get grammarTitle => 'Biblioteca de Gramática';
+
+  @override
+  String get tonesTitle => 'Tonos del Mandarín';
+
+  @override
+  String get tonesIntro => 'El mandarín es un idioma tonal. El significado cambia según el tono.';
+
+  @override
+  String get tone1Name => '1º: Alto y Plano';
+
+  @override
+  String get tone2Name => '2º: Ascendente';
+
+  @override
+  String get tone3Name => '3º: Descendente-Ascendente';
+
+  @override
+  String get tone4Name => '4º: Descendente';
+
+  @override
+  String get toneSandhiTitle => 'Cambios de Tono (Sandhi)';
+
+  @override
+  String get toneSandhiDesc => 'Cuando dos terceros tonos van seguidos, el primero cambia a segundo tono (ej. Nǐhǎo).';
+
+  @override
+  String get examplesLabel => 'Ejemplos';
 }

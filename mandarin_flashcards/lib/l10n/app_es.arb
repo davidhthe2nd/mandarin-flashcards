@@ -45,5 +45,25 @@
         "type": "int"
       }
     }
-  }
+  },
+  "grammarTitle": "Biblioteca de Gramática",
+  "tonesTitle": "Tonos del Mandarín",
+  "tonesIntro": "El mandarín es un idioma tonal. El significado de una palabra cambia según el contorno del tono utilizado.",
+  "tone1Name": "1º: Alto y Plano",
+  "tone2Name": "2º: Ascendente",
+  "tone3Name": "3º: Descendente-Ascendente",
+  "tone4Name": "4º: Descendente",
+  "toneSandhiTitle": "Cambios de Tono (Sandhi)",
+  "toneSandhiDesc": "Cuando aparecen dos terceros tonos seguidos, el primero cambia a un segundo tono. Ejemplo: Nǐ + hǎo = Níhǎo.",
+  "grammarTitle": "Biblioteca de Gramática",
+  "examplesLabel": "Ejemplos",
+  "tonesTitle": "Tonos del Mandarín",
+  "tonesIntro": "El mandarín es un idioma tonal. El significado cambia según el tono.",
+  "tone1Name": "1º: Alto y Plano",
+  "tone2Name": "2º: Ascendente",
+  "tone3Name": "3º: Descendente-Ascendente",
+  "tone4Name": "4º: Descendente",
+  "toneSandhiTitle": "Cambios de Tono (Sandhi)",
+  "toneSandhiDesc": "Cuando dos terceros tonos van seguidos, el primero cambia a segundo tono (ej. Nǐhǎo).",
+  "examplesLabel": "Ejemplos"
 }

@@ -292,6 +292,66 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Total: {percentage}%'**
   String studyMixTotal(int percentage);
+
+  /// No description provided for @grammarTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Grammar Library'**
+  String get grammarTitle;
+
+  /// No description provided for @tonesTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Mandarin Tones'**
+  String get tonesTitle;
+
+  /// No description provided for @tonesIntro.
+  ///
+  /// In en, this message translates to:
+  /// **'Mandarin is a tonal language. The meaning changes based on your pitch.'**
+  String get tonesIntro;
+
+  /// No description provided for @tone1Name.
+  ///
+  /// In en, this message translates to:
+  /// **'1st: High Flat'**
+  String get tone1Name;
+
+  /// No description provided for @tone2Name.
+  ///
+  /// In en, this message translates to:
+  /// **'2nd: Rising'**
+  String get tone2Name;
+
+  /// No description provided for @tone3Name.
+  ///
+  /// In en, this message translates to:
+  /// **'3rd: Dipping'**
+  String get tone3Name;
+
+  /// No description provided for @tone4Name.
+  ///
+  /// In en, this message translates to:
+  /// **'4th: Falling'**
+  String get tone4Name;
+
+  /// No description provided for @toneSandhiTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Tone Sandhi'**
+  String get toneSandhiTitle;
+
+  /// No description provided for @toneSandhiDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'When two 3rd tones follow each other, the first becomes a 2nd tone (e.g., Nǐhǎo).'**
+  String get toneSandhiDesc;
+
+  /// No description provided for @examplesLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Examples'**
+  String get examplesLabel;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
