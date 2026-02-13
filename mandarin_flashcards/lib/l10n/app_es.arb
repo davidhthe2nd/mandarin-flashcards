@@ -65,5 +65,7 @@
   "tone4Name": "4º: Descendente",
   "toneSandhiTitle": "Cambios de Tono (Sandhi)",
   "toneSandhiDesc": "Cuando dos terceros tonos van seguidos, el primero cambia a segundo tono (ej. Nǐhǎo).",
-  "examplesLabel": "Ejemplos"
+  "examplesLabel": "Ejemplos",
+  "grammarTitle": "Gramática",
+  "grammarSubtitle": "Artículos básicos de gramática"
 }

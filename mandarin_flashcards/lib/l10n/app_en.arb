@@ -65,5 +65,7 @@
   "tone4Name": "4th: Falling",
   "toneSandhiTitle": "Tone Sandhi",
   "toneSandhiDesc": "When two 3rd tones follow each other, the first becomes a 2nd tone (e.g., Nǐhǎo).",
-  "examplesLabel": "Examples"
+  "examplesLabel": "Examples",
+  "grammarTitle": "Grammar",
+  "grammarSubtitle": "Basic grammar articles"
 }

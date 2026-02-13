@@ -114,7 +114,7 @@ class AppLocalizationsEs extends AppLocalizations {
   }
 
   @override
-  String get grammarTitle => 'Biblioteca de Gramática';
+  String get grammarTitle => 'Gramática';
 
   @override
   String get tonesTitle => 'Tonos del Mandarín';

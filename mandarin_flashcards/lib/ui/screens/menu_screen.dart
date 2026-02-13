@@ -105,6 +105,13 @@ class _MainMenuScreenState extends State<MainMenuScreen> {
                       ),
                       const SizedBox(height: 16),
                       _MenuCard(
+                        title: l10n.grammarTitle,
+                        subtitle: l10n.grammarTitle,
+                        icon: Icons.gavel_rounded,
+                        onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const OptionsScreen())),
+                      ),
+                      const SizedBox(height: 16),
+                      _MenuCard(
                         title: l10n.settings,
                         subtitle: l10n.settingsSubtitle,
                         icon: Icons.settings_rounded,
