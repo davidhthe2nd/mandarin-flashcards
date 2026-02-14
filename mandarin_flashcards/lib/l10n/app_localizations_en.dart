@@ -114,32 +114,47 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
-  String get grammarTitle => 'Grammar Library';
+  String get grammarTitle => 'Grammar';
 
   @override
   String get tonesTitle => 'Mandarin Tones';
 
   @override
-  String get tonesIntro => 'Mandarin is a tonal language. The meaning changes based on your pitch.';
+  String get tonesIntro => 'Mandarin is a tonal language. The same syllable can have different meanings based on its pitch.';
 
   @override
-  String get tone1Name => '1st: High Flat';
+  String get tone1Name => 'First Tone (High Flat)';
 
   @override
-  String get tone2Name => '2nd: Rising';
+  String get tone2Name => 'Second Tone (Rising)';
 
   @override
-  String get tone3Name => '3rd: Dipping';
+  String get tone3Name => 'Third Tone (Dipping)';
 
   @override
-  String get tone4Name => '4th: Falling';
+  String get tone4Name => 'Fourth Tone (Falling)';
 
   @override
-  String get toneSandhiTitle => 'Tone Sandhi';
+  String get toneSandhiTitle => 'Tone Sandhi (Changes)';
 
   @override
-  String get toneSandhiDesc => 'When two 3rd tones follow each other, the first becomes a 2nd tone (e.g., Nǐhǎo).';
+  String get toneSandhiDesc => 'When two 3rd tones appear together, the first one changes to a 2nd tone. For example: Nǐ + hǎo = Níhǎo.';
 
   @override
   String get examplesLabel => 'Examples';
+
+  @override
+  String get grammarSubtitle => 'Basic grammar articles';
+
+  @override
+  String get tone1Desc => 'Keep your voice high and steady, like a flat line. Imagine singing a high note.';
+
+  @override
+  String get tone2Desc => 'Start middle-pitch and rise quickly. It sounds like you are asking a question: \'What?\'';
+
+  @override
+  String get tone3Desc => 'Start low, go lower, then rise. It\'s the longest tone and feels like a \'dip\'.';
+
+  @override
+  String get tone4Desc => 'Start high and drop sharply. It sounds like a sharp command or an exclamation.';
 }

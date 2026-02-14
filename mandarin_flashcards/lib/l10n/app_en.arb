@@ -67,5 +67,17 @@
   "toneSandhiDesc": "When two 3rd tones follow each other, the first becomes a 2nd tone (e.g., Nǐhǎo).",
   "examplesLabel": "Examples",
   "grammarTitle": "Grammar",
-  "grammarSubtitle": "Basic grammar articles"
+  "grammarSubtitle": "Basic grammar articles",
+  "tonesTitle": "Mandarin Tones",
+  "tonesIntro": "Mandarin is a tonal language. The same syllable can have different meanings based on its pitch.",
+  "tone1Name": "First Tone (High Flat)",
+  "tone1Desc": "Keep your voice high and steady, like a flat line. Imagine singing a high note.",
+  "tone2Name": "Second Tone (Rising)",
+  "tone2Desc": "Start middle-pitch and rise quickly. It sounds like you are asking a question: 'What?'",
+  "tone3Name": "Third Tone (Dipping)",
+  "tone3Desc": "Start low, go lower, then rise. It's the longest tone and feels like a 'dip'.",
+  "tone4Name": "Fourth Tone (Falling)",
+  "tone4Desc": "Start high and drop sharply. It sounds like a sharp command or an exclamation.",
+  "toneSandhiTitle": "Tone Sandhi (Changes)",
+  "toneSandhiDesc": "When two 3rd tones appear together, the first one changes to a 2nd tone. For example: Nǐ + hǎo = Níhǎo."
 }

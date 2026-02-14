@@ -7,6 +7,7 @@ import '../screens/learn_screen.dart';
 import '../../state/options_state.dart';
 import '../../models/enums.dart';
 import "../../l10n/app_localizations.dart"; 
+import "../screens/grammar_screen.dart";
 
 class MainMenuScreen extends StatefulWidget {
   const MainMenuScreen({super.key});
@@ -108,7 +109,7 @@ class _MainMenuScreenState extends State<MainMenuScreen> {
                         title: l10n.grammarTitle,
                         subtitle: l10n.grammarTitle,
                         icon: Icons.gavel_rounded,
-                        onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const OptionsScreen())),
+                        onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const GrammarScreen())),
                       ),
                       const SizedBox(height: 16),
                       _MenuCard(

@@ -1,4 +1,5 @@
 // lib/ui/screens/grammar_tones.dart
+
 import 'package:flutter/material.dart';
 import '../../services/audio_service.dart';
 import '../../l10n/app_localizations.dart';
@@ -19,22 +20,55 @@ class GrammarTonesScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            // 1) Pitch Diagram Image
+            Center(
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(16),
+                child: Image.asset(
+                  'assets/images/tones_chart.png', // Ensure you save your image here
+                  height: 200,
+                  fit: BoxFit.contain,
+                ),
+              ),
+            ),
+            const SizedBox(height: 24),
             Text(l10n.tonesIntro, style: t.bodyLarge),
             const SizedBox(height: 32),
-            GridView.count(
-              shrinkWrap: true,
-              physics: const NeverScrollableScrollPhysics(),
-              crossAxisCount: 2,
-              mainAxisSpacing: 16,
-              crossAxisSpacing: 16,
-              childAspectRatio: 1.2,
-              children: [
-                _ToneCard(pinyin: "mā", label: l10n.tone1Name, audio: "tone1"),
-                _ToneCard(pinyin: "má", label: l10n.tone2Name, audio: "tone2"),
-                _ToneCard(pinyin: "mǎ", label: l10n.tone3Name, audio: "tone3"),
-                _ToneCard(pinyin: "mà", label: l10n.tone4Name, audio: "tone4"),
-              ],
+
+            // 2) Tone Detail List
+            _ToneRow(
+              number: 1,
+              title: l10n.tone1Name,
+              description: l10n.tone1Desc,
+              exampleHanzi: "天", // HSK1 ID: tian1
+              examplePinyin: "tiān",
+              audioId: "tian1",
             ),
+            _ToneRow(
+              number: 2,
+              title: l10n.tone2Name,
+              description: l10n.tone2Desc,
+              exampleHanzi: "來", // HSK1 ID: lai2
+              examplePinyin: "lái",
+              audioId: "lai2",
+            ),
+            _ToneRow(
+              number: 3,
+              title: l10n.tone3Name,
+              description: l10n.tone3Desc,
+              exampleHanzi: "你", // HSK1 ID: ni3
+              examplePinyin: "nǐ",
+              audioId: "ni3",
+            ),
+            _ToneRow(
+              number: 4,
+              title: l10n.tone4Name,
+              description: l10n.tone4Desc,
+              exampleHanzi: "去", // HSK1 ID: qu4
+              examplePinyin: "qù",
+              audioId: "qu4",
+            ),
+
             const SizedBox(height: 40),
             Text(l10n.toneSandhiTitle, style: t.titleLarge?.copyWith(color: cs.primary)),
             const Divider(),
@@ -46,26 +80,57 @@ class GrammarTonesScreen extends StatelessWidget {
   }
 }
 
-class _ToneCard extends StatelessWidget {
-  final String pinyin;
-  final String label;
-  final String audio;
-  const _ToneCard({required this.pinyin, required this.label, required this.audio});
+class _ToneRow extends StatelessWidget {
+  final int number;
+  final String title;
+  final String description;
+  final String exampleHanzi;
+  final String examplePinyin;
+  final String audioId;
+
+  const _ToneRow({
+    required this.number,
+    required this.title,
+    required this.description,
+    required this.exampleHanzi,
+    required this.examplePinyin,
+    required this.audioId,
+  });
 
   @override
   Widget build(BuildContext context) {
+    final t = Theme.of(context).textTheme;
     final cs = Theme.of(context).colorScheme;
-    return Card(
-      child: InkWell(
-        onTap: () => AudioService.play(audio), //
-        borderRadius: BorderRadius.circular(12),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(pinyin, style: Theme.of(context).textTheme.headlineMedium?.copyWith(color: cs.primary, fontWeight: FontWeight.bold)),
-            Text(label, style: Theme.of(context).textTheme.labelSmall),
-          ],
-        ),
+
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 24),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(title, style: t.titleMedium?.copyWith(fontWeight: FontWeight.bold, color: cs.primary)),
+          const SizedBox(height: 4),
+          Text(description, style: t.bodyMedium),
+          const SizedBox(height: 8),
+          Container(
+            padding: const EdgeInsets.all(12),
+            decoration: BoxDecoration(
+              color: cs.surfaceVariant.withOpacity(0.3),
+              borderRadius: BorderRadius.circular(12),
+            ),
+            child: Row(
+              children: [
+                Text(exampleHanzi, style: t.headlineMedium),
+                const SizedBox(width: 12),
+                Text(examplePinyin, style: t.titleMedium?.copyWith(fontStyle: FontStyle.italic)),
+                const Spacer(),
+                IconButton.filledTonal(
+                  onPressed: () => AudioService.play(audioId), //
+                  icon: const Icon(Icons.volume_up_rounded),
+                ),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }

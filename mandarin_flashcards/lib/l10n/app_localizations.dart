@@ -296,7 +296,7 @@ abstract class AppLocalizations {
   /// No description provided for @grammarTitle.
   ///
   /// In en, this message translates to:
-  /// **'Grammar Library'**
+  /// **'Grammar'**
   String get grammarTitle;
 
   /// No description provided for @tonesTitle.
@@ -308,43 +308,43 @@ abstract class AppLocalizations {
   /// No description provided for @tonesIntro.
   ///
   /// In en, this message translates to:
-  /// **'Mandarin is a tonal language. The meaning changes based on your pitch.'**
+  /// **'Mandarin is a tonal language. The same syllable can have different meanings based on its pitch.'**
   String get tonesIntro;
 
   /// No description provided for @tone1Name.
   ///
   /// In en, this message translates to:
-  /// **'1st: High Flat'**
+  /// **'First Tone (High Flat)'**
   String get tone1Name;
 
   /// No description provided for @tone2Name.
   ///
   /// In en, this message translates to:
-  /// **'2nd: Rising'**
+  /// **'Second Tone (Rising)'**
   String get tone2Name;
 
   /// No description provided for @tone3Name.
   ///
   /// In en, this message translates to:
-  /// **'3rd: Dipping'**
+  /// **'Third Tone (Dipping)'**
   String get tone3Name;
 
   /// No description provided for @tone4Name.
   ///
   /// In en, this message translates to:
-  /// **'4th: Falling'**
+  /// **'Fourth Tone (Falling)'**
   String get tone4Name;
 
   /// No description provided for @toneSandhiTitle.
   ///
   /// In en, this message translates to:
-  /// **'Tone Sandhi'**
+  /// **'Tone Sandhi (Changes)'**
   String get toneSandhiTitle;
 
   /// No description provided for @toneSandhiDesc.
   ///
   /// In en, this message translates to:
-  /// **'When two 3rd tones follow each other, the first becomes a 2nd tone (e.g., Nǐhǎo).'**
+  /// **'When two 3rd tones appear together, the first one changes to a 2nd tone. For example: Nǐ + hǎo = Níhǎo.'**
   String get toneSandhiDesc;
 
   /// No description provided for @examplesLabel.
@@ -352,6 +352,36 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Examples'**
   String get examplesLabel;
+
+  /// No description provided for @grammarSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Basic grammar articles'**
+  String get grammarSubtitle;
+
+  /// No description provided for @tone1Desc.
+  ///
+  /// In en, this message translates to:
+  /// **'Keep your voice high and steady, like a flat line. Imagine singing a high note.'**
+  String get tone1Desc;
+
+  /// No description provided for @tone2Desc.
+  ///
+  /// In en, this message translates to:
+  /// **'Start middle-pitch and rise quickly. It sounds like you are asking a question: \'What?\''**
+  String get tone2Desc;
+
+  /// No description provided for @tone3Desc.
+  ///
+  /// In en, this message translates to:
+  /// **'Start low, go lower, then rise. It\'s the longest tone and feels like a \'dip\'.'**
+  String get tone3Desc;
+
+  /// No description provided for @tone4Desc.
+  ///
+  /// In en, this message translates to:
+  /// **'Start high and drop sharply. It sounds like a sharp command or an exclamation.'**
+  String get tone4Desc;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

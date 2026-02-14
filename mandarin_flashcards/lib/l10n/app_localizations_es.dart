@@ -120,26 +120,41 @@ class AppLocalizationsEs extends AppLocalizations {
   String get tonesTitle => 'Tonos del Mandarín';
 
   @override
-  String get tonesIntro => 'El mandarín es un idioma tonal. El significado cambia según el tono.';
+  String get tonesIntro => 'El mandarín es un idioma tonal. La misma sílaba tiene diferentes significados según su tono.';
 
   @override
-  String get tone1Name => '1º: Alto y Plano';
+  String get tone1Name => 'Primer Tono (Alto y Plano)';
 
   @override
-  String get tone2Name => '2º: Ascendente';
+  String get tone2Name => 'Segundo Tono (Ascendente)';
 
   @override
-  String get tone3Name => '3º: Descendente-Ascendente';
+  String get tone3Name => 'Tercer Tono (Descendente-Ascendente)';
 
   @override
-  String get tone4Name => '4º: Descendente';
+  String get tone4Name => 'Cuarto Tono (Descendente)';
 
   @override
   String get toneSandhiTitle => 'Cambios de Tono (Sandhi)';
 
   @override
-  String get toneSandhiDesc => 'Cuando dos terceros tonos van seguidos, el primero cambia a segundo tono (ej. Nǐhǎo).';
+  String get toneSandhiDesc => 'Cuando aparecen dos terceros tonos seguidos, el primero cambia a un segundo tono. Ejemplo: Nǐ + hǎo = Níhǎo.';
 
   @override
   String get examplesLabel => 'Ejemplos';
+
+  @override
+  String get grammarSubtitle => 'Artículos básicos de gramática';
+
+  @override
+  String get tone1Desc => 'Mantén la voz alta y constante, como una línea plana. Imagina que cantas una nota alta.';
+
+  @override
+  String get tone2Desc => 'Empieza en un tono medio y sube rápido. Suena como si hicieras una pregunta: \'¿Qué?\'';
+
+  @override
+  String get tone3Desc => 'Empieza bajo, baja más y luego sube. Es el tono más largo y se siente como un \'bache\'.';
+
+  @override
+  String get tone4Desc => 'Empieza alto y cae bruscamente. Suena como una orden tajante o una exclamación.';
 }

@@ -67,5 +67,17 @@
   "toneSandhiDesc": "Cuando dos terceros tonos van seguidos, el primero cambia a segundo tono (ej. Nǐhǎo).",
   "examplesLabel": "Ejemplos",
   "grammarTitle": "Gramática",
-  "grammarSubtitle": "Artículos básicos de gramática"
+  "grammarSubtitle": "Artículos básicos de gramática",
+  "tonesTitle": "Tonos del Mandarín",
+  "tonesIntro": "El mandarín es un idioma tonal. La misma sílaba tiene diferentes significados según su tono.",
+  "tone1Name": "Primer Tono (Alto y Plano)",
+  "tone1Desc": "Mantén la voz alta y constante, como una línea plana. Imagina que cantas una nota alta.",
+  "tone2Name": "Segundo Tono (Ascendente)",
+  "tone2Desc": "Empieza en un tono medio y sube rápido. Suena como si hicieras una pregunta: '¿Qué?'",
+  "tone3Name": "Tercer Tono (Descendente-Ascendente)",
+  "tone3Desc": "Empieza bajo, baja más y luego sube. Es el tono más largo y se siente como un 'bache'.",
+  "tone4Name": "Cuarto Tono (Descendente)",
+  "tone4Desc": "Empieza alto y cae bruscamente. Suena como una orden tajante o una exclamación.",
+  "toneSandhiTitle": "Cambios de Tono (Sandhi)",
+  "toneSandhiDesc": "Cuando aparecen dos terceros tonos seguidos, el primero cambia a un segundo tono. Ejemplo: Nǐ + hǎo = Níhǎo."
 }
