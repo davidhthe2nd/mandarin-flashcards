@@ -79,5 +79,6 @@
   "tone4Name": "Fourth Tone (Falling)",
   "tone4Desc": "Start high and drop sharply. It sounds like a sharp command or an exclamation.",
   "toneSandhiTitle": "Tone Sandhi (Changes)",
-  "toneSandhiDesc": "When two 3rd tones appear together, the first one changes to a 2nd tone. For example: Nǐ + hǎo = Níhǎo."
+  "toneSandhiDesc": "When two 3rd tones appear together, the first one changes to a 2nd tone. For example: Nǐ + hǎo = Níhǎo.",
+  "openToneTool": "Open Interactive Tone Chart"
 }

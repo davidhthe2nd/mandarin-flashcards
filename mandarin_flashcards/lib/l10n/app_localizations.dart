@@ -382,6 +382,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Start high and drop sharply. It sounds like a sharp command or an exclamation.'**
   String get tone4Desc;
+
+  /// No description provided for @openToneTool.
+  ///
+  /// In en, this message translates to:
+  /// **'Open Interactive Tone Chart'**
+  String get openToneTool;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

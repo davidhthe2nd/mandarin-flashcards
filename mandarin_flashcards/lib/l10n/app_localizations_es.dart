@@ -157,4 +157,7 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get tone4Desc => 'Empieza alto y cae bruscamente. Suena como una orden tajante o una exclamación.';
+
+  @override
+  String get openToneTool => 'Abrir Gráfico de Tonos';
 }

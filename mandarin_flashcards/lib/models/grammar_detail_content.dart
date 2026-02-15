@@ -63,22 +63,12 @@ final List<GrammarArticle> grammarLibrary = [
     ],
   ),
   GrammarArticle(
-    id: 'tones_theory',
-    titleEn: 'Understanding Mandarin Tones',
-    titleEs: 'Entendiendo los Tonos del Mandarín',
-    previewEn: 'How pitch changes meaning',
-    previewEs: 'Cómo el tono cambia el significado',
-    contentEn: 'Mandarin is a tonal language. There are four main tones and a neutral tone. '
-               'For example, "ma" can mean mother, hemp, horse, or scold depending on the tone.',
-    contentEs: 'El mandarín es un idioma tonal. Hay cuatro tonos principales y un tono neutro. '
-               'Por ejemplo, "ma" puede significar madre, cáñamo, caballo o regañar según el tono.',
-    examples: [
-      GrammarExample(
-        chinese: '妈妈骑马，马慢，妈妈骂马。', 
-        pinyin: 'Māma qí mǎ, mǎ màn, māma mà mǎ.', 
-        translationEn: 'Mother rides a horse, the horse is slow, mother scolds the horse.', 
-        translationEs: 'Mamá monta a caballo, el caballo es lento, mamá regaña al caballo.'
-      ),
-    ],
+    id: 'tones_interactive', // Unique ID for our logic
+    titleEn: 'Mandarin Tones Guide',
+    titleEs: 'Guía de Tonos del Mandarín',
+    previewEn: 'Interactive chart with HSK1 examples and audio.',
+    previewEs: 'Gráfico interactivo con ejemplos de HSK1 y audio.',
+    contentEn: 'Mandarin is a tonal language. Click below to explore the four main tones, hear examples, and see the pitch chart.',
+    contentEs: 'El mandarín es un idioma tonal. Haz clic abajo para explorar los cuatro tonos, escuchar ejemplos y ver el gráfico de entonación.',
   ),
 ];

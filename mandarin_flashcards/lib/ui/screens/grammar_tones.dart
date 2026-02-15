@@ -20,13 +20,13 @@ class GrammarTonesScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // 1) Pitch Diagram Image
+            // 1. Pitch Chart Image
             Center(
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(16),
                 child: Image.asset(
-                  'assets/images/tones_chart.png', // Ensure you save your image here
-                  height: 200,
+                  'assets/images/tones_chart.png', 
+                  height: 220,
                   fit: BoxFit.contain,
                 ),
               ),
@@ -35,41 +35,37 @@ class GrammarTonesScreen extends StatelessWidget {
             Text(l10n.tonesIntro, style: t.bodyLarge),
             const SizedBox(height: 32),
 
-            // 2) Tone Detail List
+            // 2. Localized Tone Guides with HSK1 IDs
             _ToneRow(
-              number: 1,
               title: l10n.tone1Name,
-              description: l10n.tone1Desc,
-              exampleHanzi: "天", // HSK1 ID: tian1
-              examplePinyin: "tiān",
-              audioId: "tian1",
+              desc: l10n.tone1Desc,
+              hanzi: "三", // HSK1 Example
+              pinyin: "sān",
+              audioId: "p6q7r8s9t0u1", // ID from HSK_master.csv
             ),
             _ToneRow(
-              number: 2,
               title: l10n.tone2Name,
-              description: l10n.tone2Desc,
-              exampleHanzi: "來", // HSK1 ID: lai2
-              examplePinyin: "lái",
-              audioId: "lai2",
+              desc: l10n.tone2Desc,
+              hanzi: "來",
+              pinyin: "lái",
+              audioId: "m9n0o1p2q3r4", // ID from HSK_master.csv
             ),
             _ToneRow(
-              number: 3,
               title: l10n.tone3Name,
-              description: l10n.tone3Desc,
-              exampleHanzi: "你", // HSK1 ID: ni3
-              examplePinyin: "nǐ",
-              audioId: "ni3",
+              desc: l10n.tone3Desc,
+              hanzi: "你",
+              pinyin: "nǐ",
+              audioId: "a1b2c3d4e5f6", // ID from HSK_master.csv
             ),
             _ToneRow(
-              number: 4,
               title: l10n.tone4Name,
-              description: l10n.tone4Desc,
-              exampleHanzi: "去", // HSK1 ID: qu4
-              examplePinyin: "qù",
-              audioId: "qu4",
+              desc: l10n.tone4Desc,
+              hanzi: "去",
+              pinyin: "qù",
+              audioId: "o1p2q3r4s5t6", // ID from HSK_master.csv
             ),
 
-            const SizedBox(height: 40),
+            const SizedBox(height: 32),
             Text(l10n.toneSandhiTitle, style: t.titleLarge?.copyWith(color: cs.primary)),
             const Divider(),
             Text(l10n.toneSandhiDesc, style: t.bodyMedium),
@@ -81,19 +77,17 @@ class GrammarTonesScreen extends StatelessWidget {
 }
 
 class _ToneRow extends StatelessWidget {
-  final int number;
   final String title;
-  final String description;
-  final String exampleHanzi;
-  final String examplePinyin;
+  final String desc;
+  final String hanzi;
+  final String pinyin;
   final String audioId;
 
   const _ToneRow({
-    required this.number,
     required this.title,
-    required this.description,
-    required this.exampleHanzi,
-    required this.examplePinyin,
+    required this.desc,
+    required this.hanzi,
+    required this.pinyin,
     required this.audioId,
   });
 
@@ -108,23 +102,23 @@ class _ToneRow extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(title, style: t.titleMedium?.copyWith(fontWeight: FontWeight.bold, color: cs.primary)),
-          const SizedBox(height: 4),
-          Text(description, style: t.bodyMedium),
-          const SizedBox(height: 8),
+          Text(desc, style: t.bodyMedium?.copyWith(color: cs.onSurfaceVariant)),
+          const SizedBox(height: 10),
           Container(
-            padding: const EdgeInsets.all(12),
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
             decoration: BoxDecoration(
-              color: cs.surfaceVariant.withOpacity(0.3),
+              color: cs.surfaceContainerHighest.withOpacity(0.3),
               borderRadius: BorderRadius.circular(12),
+              border: Border.all(color: cs.outlineVariant.withOpacity(0.5)),
             ),
             child: Row(
               children: [
-                Text(exampleHanzi, style: t.headlineMedium),
+                Text(hanzi, style: t.headlineMedium),
                 const SizedBox(width: 12),
-                Text(examplePinyin, style: t.titleMedium?.copyWith(fontStyle: FontStyle.italic)),
+                Text(pinyin, style: t.titleMedium?.copyWith(fontStyle: FontStyle.italic)),
                 const Spacer(),
                 IconButton.filledTonal(
-                  onPressed: () => AudioService.play(audioId), //
+                  onPressed: () => AudioService.play(audioId), // Plays using the unique CSV ID
                   icon: const Icon(Icons.volume_up_rounded),
                 ),
               ],

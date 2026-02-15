@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import '../../models/grammar_detail_content.dart';
 import '../../state/options_state.dart';
 import '../../l10n/app_localizations.dart';
+import "grammar_tones.dart"; // Import the tones screen for navigation
 
 class GrammarDetailScreen extends StatelessWidget {
   final GrammarArticle article;
@@ -24,6 +25,22 @@ class GrammarDetailScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(article.getContent(opts.localeCode), style: t.bodyLarge),
+            
+            // ✅ The 'if' belongs inside the children list
+            if (article.id == 'tones_interactive') ...[
+              const SizedBox(height: 24),
+              Center(
+                child: FilledButton.icon(
+                  icon: const Icon(Icons.graphic_eq_rounded),
+                  label: Text(l10n.openToneTool), 
+                  onPressed: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (_) => const GrammarTonesScreen()),
+                  ),
+                ),
+              ),
+            ],
+
             const SizedBox(height: 32),
             if (article.examples.isNotEmpty) ...[
               Text(l10n.examplesLabel, style: t.titleLarge?.copyWith(color: cs.primary)),

@@ -157,4 +157,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get tone4Desc => 'Start high and drop sharply. It sounds like a sharp command or an exclamation.';
+
+  @override
+  String get openToneTool => 'Open Interactive Tone Chart';
 }

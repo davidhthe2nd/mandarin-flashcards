@@ -79,5 +79,6 @@
   "tone4Name": "Cuarto Tono (Descendente)",
   "tone4Desc": "Empieza alto y cae bruscamente. Suena como una orden tajante o una exclamación.",
   "toneSandhiTitle": "Cambios de Tono (Sandhi)",
-  "toneSandhiDesc": "Cuando aparecen dos terceros tonos seguidos, el primero cambia a un segundo tono. Ejemplo: Nǐ + hǎo = Níhǎo."
+  "toneSandhiDesc": "Cuando aparecen dos terceros tonos seguidos, el primero cambia a un segundo tono. Ejemplo: Nǐ + hǎo = Níhǎo.",
+  "openToneTool": "Abrir Gráfico de Tonos"
 }
