@@ -41,28 +41,28 @@ class GrammarTonesScreen extends StatelessWidget {
               desc: l10n.tone1Desc,
               hanzi: "三", // HSK1 Example
               pinyin: "sān",
-              audioId: "p6q7r8s9t0u1", // ID from HSK_master.csv
+              audioId: "000000018", // ID from HSK_master.csv
             ),
             _ToneRow(
               title: l10n.tone2Name,
               desc: l10n.tone2Desc,
               hanzi: "來",
               pinyin: "lái",
-              audioId: "m9n0o1p2q3r4", // ID from HSK_master.csv
+              audioId: "000000119", // ID from HSK_master.csv
             ),
             _ToneRow(
               title: l10n.tone3Name,
               desc: l10n.tone3Desc,
               hanzi: "你",
               pinyin: "nǐ",
-              audioId: "a1b2c3d4e5f6", // ID from HSK_master.csv
+              audioId: "000000003", // ID from HSK_master.csv
             ),
             _ToneRow(
               title: l10n.tone4Name,
               desc: l10n.tone4Desc,
               hanzi: "去",
               pinyin: "qù",
-              audioId: "o1p2q3r4s5t6", // ID from HSK_master.csv
+              audioId: "000000121", // ID from HSK_master.csv
             ),
 
             const SizedBox(height: 32),
