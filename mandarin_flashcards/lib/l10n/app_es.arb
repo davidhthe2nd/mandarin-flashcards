@@ -1,16 +1,16 @@
 {
   "@@locale": "es",
-  "appTitle": "Mandarin Flashcards",
-  "studyHsk": "HSK",
+  "appTitle": "Tarjetas de Mandarín",
+  "studyHsk": "Lección HSK",
   "hskSubtitle": "Niveles 1-3 • Selección aleatoria",
-  "studyTextbook": "Libro de texto",
+  "studyTextbook": "Práctica del libro de texto",
   "textbookSubtitle": "Selección aleatoria o por lección",
-  "settings": "Ajustes",
-  "settingsSubtitle": "Preferencias",
+  "settings": "Configuración",
+  "settingsSubtitle": "Preferencias de la aplicación",
   "optionsTitle": "Opciones",
-  "themePalette": "Paleta de colores",
+  "themePalette": "Paleta de temas",
   "hskLevels": "Niveles HSK",
-  "textbookLesson": "Lecciones del libro",
+  "textbookLesson": "Lección del libro de texto",
   "allLessons": "Todas las lecciones",
   "lesson": "Lección {number}",
   "@lesson": {
@@ -21,15 +21,15 @@
     }
   },
   "studyMix": "Mezcla de estudio",
-  "toLearn": "Nuevas",
-  "forgotten": "Olvidadas",
-  "almost": "Casi aprendidas",
-  "clearFilters": "Reiniciar filtros",
+  "toLearn": "Por aprender",
+  "forgotten": "Olvidado",
+  "almost": "Casi",
+  "clearFilters": "Borrar todos los filtros",
   "comingSoon": "Próximamente",
-  "fontSize": "Tamaño de la fuente",
-  "fontSubtitle": "Ajustar tamaño de caracteres y pinyin",
+  "fontSize": "Tamaño de fuente",
+  "fontSubtitle": "Ajustar el tamaño de los caracteres y del pinyin",
   "showPinyin": "Mostrar pinyin",
-  "summaryWordsReviewed": "Has revisado {total} palabras.",
+  "summaryWordsReviewed": "Revisaste {total} palabras.",
   "@summaryWordsReviewed": {
     "placeholders": {
       "total": {
@@ -37,14 +37,14 @@
       }
     }
   },
-  "mastered": "Aprendidas",
-  "almostThere": "Casi",
-  "needPractice": "Para revisar",
+  "mastered": "Dominado",
+  "almostThere": "Ya casi está",
+  "needPractice": "Necesita práctica",
   "studyMore": "Estudiar 20 más",
-  "backToMenu": "Menú principal",
-  "flipCard": "Girar tarjeta",
-  "iForgot": "Olvidada",
-  "iGotIt": "¡Me la sé!",
+  "backToMenu": "Volver al menú principal",
+  "flipCard": "Voltear tarjeta",
+  "iForgot": "Lo olvidé",
+  "iGotIt": "Entendido",
   "learnTitle": "Aprender",
   "studyMixTotal": "Total: {percentage}%",
   "@studyMixTotal": {
@@ -54,5 +54,6 @@
       }
     }
   },
-  "backToMenuConfirmation": "¿Realmente deseas volver al Menú Principal?"
+  "backToMenuConfirmation": "¿Realmente deseas volver al Menú Principal? Los cambios podrían no guardarse",
+  "studyEvenMore": "Estudiar 40 más"
 }
