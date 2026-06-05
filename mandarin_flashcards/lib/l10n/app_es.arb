@@ -20,7 +20,7 @@
       }
     }
   },
-  "studyMix": "Mezcla de estudio",
+  "studyMix": "Combinación de estudio",
   "toLearn": "Por aprender",
   "forgotten": "Olvidado",
   "almost": "Casi",
@@ -38,7 +38,7 @@
     }
   },
   "mastered": "Dominado",
-  "almostThere": "Ya casi",
+  "almostThere": "Ya casi está",
   "needPractice": "Necesita práctica",
   "studyMore": "Estudiar 20 más",
   "backToMenu": "Volver al menú principal",
