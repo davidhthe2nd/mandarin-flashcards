@@ -54,7 +54,7 @@
       }
     }
   },
-  "backToMenuConfirmation": "¿Realmente deseas volver al Menú Principal?",
+  "backToMenuConfirmation": "¿Realmente deseas volver al Menú Principal? Los cambios podrían perderse",
   "studyEvenMore": "Estudiar 40 más",
-  "studyEvenEvenMore": "Estudiar 80 más"
+  "studyEvenEvenMore": "Estudiar 120 más"
 }
