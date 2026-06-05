@@ -53,5 +53,6 @@
         "type": "int"
       }
     }
-  }
+  },
+  "backToMenuConfirmation": "¿Realmente deseas volver al Menú Principal?"
 }
