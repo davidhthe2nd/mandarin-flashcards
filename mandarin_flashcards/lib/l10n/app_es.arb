@@ -14,20 +14,28 @@
   "allLessons": "Todas las lecciones",
   "lesson": "Lección {number}",
   "@lesson": {
-    "placeholders": { "number": { "type": "int" } }
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
   },
-  "studyMix": "Study mix",
+  "studyMix": "Mezcla de estudio",
   "toLearn": "Nuevas",
   "forgotten": "Olvidadas",
   "almost": "Casi aprendidas",
   "clearFilters": "Reiniciar filtros",
-  "comingSoon": "Pronto disponible",
+  "comingSoon": "Próximamente",
   "fontSize": "Tamaño de la fuente",
   "fontSubtitle": "Ajustar tamaño de caracteres y pinyin",
   "showPinyin": "Mostrar pinyin",
   "summaryWordsReviewed": "Has revisado {total} palabras.",
   "@summaryWordsReviewed": {
-    "placeholders": { "total": { "type": "int" } }
+    "placeholders": {
+      "total": {
+        "type": "int"
+      }
+    }
   },
   "mastered": "Aprendidas",
   "almostThere": "Casi",
