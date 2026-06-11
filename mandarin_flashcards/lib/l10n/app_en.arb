@@ -36,7 +36,7 @@
   "studyEvenMore": "Study 40 More",
   "studyEvenEvenMore": "Study 120 More",
   "backToMenu": "Back to Main Menu",
-  "backToMenuConfirmation": "Do you really want to go back to Main Menu? Changes might be lost and cannot be recovered",
+  "backToMenuConfirmation": "Do you really want to go back to Main Menu? Changes might be lost and will pontentially not be able to be recovered",
   "flipCard": "Flip card",
   "iForgot": "I forgot",
   "iGotIt": "I got it",
