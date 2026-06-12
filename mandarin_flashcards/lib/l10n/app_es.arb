@@ -29,7 +29,7 @@
   "fontSize": "Tamaño de fuente",
   "fontSubtitle": "Ajustar el tamaño de los caracteres y del pinyin",
   "showPinyin": "Mostrar pinyin",
-  "summaryWordsReviewed": "Revisaste {total} palabras.",
+  "summaryWordsReviewed": "Revisaste palabras.",
   "@summaryWordsReviewed": {
     "placeholders": {
       "total": {
