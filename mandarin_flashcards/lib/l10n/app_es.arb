@@ -29,7 +29,7 @@
   "fontSize": "Tamaño de fuente",
   "fontSubtitle": "Ajustar el tamaño de los caracteres y del pinyin",
   "showPinyin": "Mostrar pinyin",
-  "summaryWordsReviewed": "Revisaste palabras.",
+  "summaryWordsReviewed": "Revisaste {total} palabras.",
   "@summaryWordsReviewed": {
     "placeholders": {
       "total": {
@@ -55,5 +55,6 @@
     }
   },
   "backToMenuConfirmation": "¿Realmente deseas volver al Menú Principal? Los cambios podrían perderse y potencialmente no podrán ser recuperados",
-  "studyEvenMore": "Estudiar 40 más"
+  "studyEvenMore": "Estudiar 40 más",
+  "studyEvenEvenMore": "Estudiar 120 más"
 }
